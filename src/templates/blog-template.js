@@ -7,10 +7,12 @@ const Blog = styled.div`
   widht: 100vw;
 `
 
-export const BlogTemplate = () => {
+const BlogTemplate = () => {
   return (
     <Blog>
       <h2>return blog template</h2>
     </Blog>
   )
 }
+
+export default BlogTemplate
