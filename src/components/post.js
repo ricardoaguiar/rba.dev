@@ -13,8 +13,8 @@ const getPosts = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            fluid {
-              ...GatsbyContentfulFluid_withWebp
+            fluid(maxWidth: 800, maxHeight: 600) {
+              ...GatsbyContentfulFluid
             }
           }
           text: description {
@@ -26,22 +26,16 @@ const getPosts = graphql`
   }
 `
 
-const FlexContainer = styled.div`
-  display: flex;
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   justify-content: center;
-  padding: 5rem;
   background-color: #88765444;
   border-bottom: 1px solid #99876522;
 `
-const FlexItem = styled.div`
-  width: 75vw;
-  height: 50vh;
+const GridItem = styled.div`
   background-color: #88765422;
   border: 0.5px solid #88765433;
-  padding: 1rem 3rem;
-`
-const Image = styled.div`
-  max-width: 20vw;
 `
 
 const Post = () => {
@@ -49,20 +43,18 @@ const Post = () => {
 
   return (
     <>
-      {post.edges.map(({ node }) => {
-        return (
-          <FlexContainer key={node.id}>
-            <FlexItem>
+      <GridContainer>
+        {post.edges.map(({ node }) => {
+          return (
+            <GridItem>
               <p>Title = {node.title}</p>
-              <Image>
-                <Img fluid={node.heroImage.fluid} alt={node.title} />
-              </Image>
+              <Img fluid={node.heroImage.fluid} alt={node.title} />
               <p>{node.slug}</p>
               <p>{node.text.description}</p>
-            </FlexItem>
-          </FlexContainer>
-        )
-      })}
+            </GridItem>
+          )
+        })}
+      </GridContainer>
     </>
   )
 }
