@@ -28,7 +28,7 @@ const getPosts = graphql`
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-content: center;
   background-color: #88765444;
   border-bottom: 1px solid #99876522;
