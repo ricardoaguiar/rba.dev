@@ -1,3 +1,71 @@
+:root {
+  outline: none;
+  /* main theme colors */
+  --black: #000;
+  --white: #fff;
+
+  /* neutral greys  */
+  --dark-grey: #666;
+  --grey: #dedede;
+
+  /* social media logo colors */
+  --facebook: #1877f2;
+  --github: #24292e;
+  --instagram-purple: #f00075;
+  --instagram: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+
+  --instagram-yellow: hsl(55, 96%, 79%);
+  --instagram-orange: hsl(5, 98%, 64%);
+  --instagram-purple: hsl(319, 71%, 49%);
+  --instagram-blue: hsl(225, 83%, 54%);
+
+  --linkedin: #2867b2;
+  --twitter: #1da1f2;
+  --whatsapp: #25d366;
+
+  /* Color Theme Swatches in Hex */
+  --rbadev-mono-1-hex: #f2f2f2;
+  --rbadev-mono-2-hex: #bfbfbf;
+  --rbadev-mono-3-hex: #8c8c8c;
+  --rbadev-mono-4-hex: #404040;
+  --rbadev-mono-5-hex: #0d0d0d;
+
+  /* Color Theme Swatches in RGBA */
+  --rbadev-mono-1-rgba: rgba(242, 242, 242, 1);
+  --rbadev-mono-2-rgba: rgba(191, 191, 191, 1);
+  --rbadev-mono-3-rgba: rgba(140, 140, 140, 1);
+  --rbadev-mono-4-rgba: rgba(63, 63, 63, 1);
+  --rbadev-mono-5-rgba: rgba(12, 12, 12, 1);
+
+  /* Color Theme Swatches in Hex */
+  --rbadev-duotone-1-hex: #0d0d0c;
+  --rbadev-duotone-2-hex: #8c281f;
+  --rbadev-duotone-3-hex: #f24738;
+  --rbadev-duotone-4-hex: #f2f2f2;
+  --rbadev-duotone-5-hex: #262626;
+
+  /* Color Theme Swatches in RGBA */
+  --rbadev-duotone-1-rgba: rgba(12, 12, 12, 1);
+  --rbadev-duotone-2-rgba: rgba(140, 39, 30, 1);
+  --rbadev-duotone-3-rgba: rgba(242, 71, 55, 1);
+  --rbadev-duotone-4-rgba: rgba(242, 242, 242, 1);
+  --rbadev-duotone-5-rgba: rgba(38, 38, 38, 1);
+}
+
+/* 
+  svg:hover path {
+  fill: #fff;
+  opacity: 1;
+  stroke: var(--rbadev-duotone-3-hex);}
+ */
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -200,7 +268,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: railroad-gothic-atf, bio-sans, georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -230,11 +298,13 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: railroad-gothic-atf, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  font-weight: 800;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  word-wrap: break-word;
+  font-size: 3rem;
   line-height: 1.1;
 }
 h2 {
@@ -247,11 +317,13 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: railroad-gothic-atf, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  font-weight: 800;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  word-wrap: break-word;
+  font-size: 2rem;
   line-height: 1.1;
 }
 h3 {
@@ -619,4 +691,11 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
 }

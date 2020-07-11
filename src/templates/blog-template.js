@@ -2,9 +2,10 @@ import React from "react"
 import styled from "styled-components"
 
 const Blog = styled.div`
-  background-color: #667890;
   height: 100vh;
-  widht: 100vw;
+  width: 100vw;
+  /* background-color: #667890; */
+  background-color: #f40;
 `
 
 const BlogTemplate = () => {

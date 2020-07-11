@@ -1,13 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Image from "gatsby-image"
+import { respondTo } from "../utils/_respondTo"
 
 const getPosts = graphql`
   {
     post: allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
+          id
           title
           slug
           publishDate(formatString: "MMMM Do, YYYY")
@@ -26,16 +28,21 @@ const getPosts = graphql`
   }
 `
 
-const GridContainer = styled.div`
+const GridContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-content: center;
-  background-color: #88765444;
-  border-bottom: 1px solid #99876522;
+  background: transparent;
+
+  ${respondTo.sm`
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin: 0 4vw 0 3vw;
+  `}
 `
-const GridItem = styled.div`
-  background-color: #88765422;
-  border: 0.5px solid #88765433;
+const GridItem = styled.article`
+  background: whitesmoke;
+  border: 1px solid #fff;
+  z-index: -1;
 `
 
 const Post = () => {
@@ -46,9 +53,9 @@ const Post = () => {
       <GridContainer>
         {post.edges.map(({ node }) => {
           return (
-            <GridItem>
+            <GridItem key={node.id}>
               <p>Title = {node.title}</p>
-              <Img fluid={node.heroImage.fluid} alt={node.title} />
+              <Image fluid={node.heroImage.fluid} alt={node.title} />
               <p>{node.slug}</p>
               <p>{node.text.description}</p>
             </GridItem>
