@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { respondTo } from "../../utils/_respondTo"
-import Footer from "../Footer/Footer.component"
+import Footer from "../Footer/Footer"
 
 const getPosts = graphql`
   {
