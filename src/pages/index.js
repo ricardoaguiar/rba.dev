@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react"
 import styled from "styled-components"
-import Layout from "../components/layout/Layout"
+import Layout from "../components/layout/layout"
 import SEO from "../components/Seo"
 import Home from "../components/Home/Home"
 import Post from "../components/Post/Post"
