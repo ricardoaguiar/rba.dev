@@ -1,12 +1,13 @@
 import React, { useState, useRef } from "react"
 import styled from "styled-components"
-import Layout from "../components/Layout"
+// import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Home from "../components/Home/Home"
 import Post from "../components/Post/Post"
 import { useOnClickOutside } from "../components/Hooks"
 import Burger from "../components/Burger/Burger"
 import Menu from "../components/Menu/Menu"
+import "./styles.css"
 
 const BurgerMenu = styled.div`
   left: 0;
