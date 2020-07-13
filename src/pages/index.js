@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react"
 import styled from "styled-components"
-import Layout from "../components/Layout"
+import Wrapper from "../components/wrapper/wrapper"
 import SEO from "../components/Seo"
 import Home from "../components/Home/Home"
 import Post from "../components/Post/Post"
@@ -22,7 +22,7 @@ const IndexPage = () => {
   useOnClickOutside(node, () => setOpen(false))
 
   return (
-    <Layout>
+    <Wrapper>
       <SEO title="Home" />
       <BurgerMenu ref={node}>
         <Burger open={open} setOpen={setOpen} />
@@ -30,7 +30,7 @@ const IndexPage = () => {
       </BurgerMenu>
       <Home />
       <Post />
-    </Layout>
+    </Wrapper>
   )
 }
 
