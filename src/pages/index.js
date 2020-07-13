@@ -5,7 +5,8 @@ import SEO from "../components/Seo"
 import Home from "../components/Home/Home"
 import Post from "../components/Post/Post"
 import { useOnClickOutside } from "../components/Hooks"
-import { Burger, Menu } from "../components"
+import Burger from "../components/Burger/Burger"
+import Menu from "../components/Menu/Menu"
 
 const BurgerMenu = styled.div`
   left: 0;
