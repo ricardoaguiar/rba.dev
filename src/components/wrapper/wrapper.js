@@ -6,7 +6,7 @@ const Wrapper = ({ children }) => {
   return <main>{children}</main>
 }
 
-Layout.propTypes = {
+Wrapper.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
