@@ -11,8 +11,6 @@ import Menu from "../components/Menu/Menu"
 const BurgerMenu = styled.div`
   left: 0;
   position: fixed;
-  /* outline: 4px dotted tomato; */
-  /* background: var(--rbadev-mono-4-hex); */
   background: #8765;
   height: 100vh;
   width: 2.95vw;
