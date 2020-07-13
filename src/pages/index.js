@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react"
 import styled from "styled-components"
-import Layout from "../Components/Layout.component"
-import SEO from "../Components/Seo.component"
-import Home from "../Components/Home/Home.component"
-import Post from "../Components/Post/Post.component"
-import { useOnClickOutside } from "../Components/Hooks.component"
+import Layout from "../Components/Layout"
+import SEO from "../Components/Seo"
+import Home from "../Components/Home/Home"
+import Post from "../Components/Post/Post"
+import { useOnClickOutside } from "../Components/Hooks"
 import { Burger, Menu } from "../Components"
 
 const BurgerMenu = styled.div`
