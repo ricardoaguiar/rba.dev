@@ -1,6 +1,5 @@
 import React from "react"
 import { HomeContainer, HomeItem, HomeTitle, HomeSubtitle } from "./Home.styled"
-import Social from "../Social/SocialMediaMenu"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
@@ -11,7 +10,6 @@ const Home = () => {
   return (
     <>
       <HomeContainer>
-        <Social />
         <HomeItem>
           <HomeTitle>Hi, I'm Ricardo</HomeTitle>
           <HomeSubtitle>

@@ -12,20 +12,21 @@ const SocialMediaMenu = () => {
   }
 
   const Menu = css`
-    background: ${background};
+    /* background: ${background}; */
+    background: #ccc4;
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    padding: 0.8rem;
-    margin: 0;
+    padding: .7rem;
     position: fixed;
+    /* outline: 5px dotted #a555 */
   `
 
   const github = css`
     color: var(--white);
-    background: var(--github);
+    background: var(--git);
   `
 
   const twitter = css`

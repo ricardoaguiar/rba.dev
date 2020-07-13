@@ -2,32 +2,31 @@ import styled from "styled-components"
 import { respondTo } from "../../utils/_respondTo"
 
 export const HomeContainer = styled.section`
-  min-height: 100vh;
+  min-height: calc(100vmax - 30%);
   min-width: 80vw;
-  background-color: var(--rbadev-mono-4-hex);
+  background-color: #f444;
   display: flex;
+  margin: 0 auto;
 `
 export const HomeItem = styled.article`
   display: flex;
   flex-wrap: wrap;
-  background-color: whitesmoke;
+  background-color: teal;
   color: #ccc;
   margin: 0;
   padding: 4rem 2rem;
 
   ${respondTo.xs`
-  min-height: calc(100vh - 24vh);
-  background-color: #ABBD1355;
+  background-color: white;
   margin: 0 auto;
-  border: solid 1px #123456;
   max-width: 85vw;
   padding: 5vh 5vw;
 `};
 
   ${respondTo.sm`
-  background-color: #66778866;
+  // full width
+  background: blue;
   margin: 5vw auto;
-  border: solid 1px #123456;
   max-width: 85vw;
   padding: 5vh 5vw;
   color: whitesmoke;

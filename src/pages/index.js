@@ -1,20 +1,21 @@
 import React, { useState, useRef } from "react"
-
 import styled from "styled-components"
 import Layout from "../Components/Layout.component"
 import SEO from "../Components/Seo.component"
 import Home from "../Components/Home/Home.component"
-import Post from "../Components/Post.component"
+import Post from "../Components/Post/Post.component"
 import { useOnClickOutside } from "../Components/Hooks.component"
 import { Burger, Menu } from "../Components"
 
 const BurgerMenu = styled.div`
-  left: 96vw;
+  left: 0;
   position: fixed;
-  border: 1px solid tomato;
-  background: var(--rbadev-mono-4-hex);
+  /* outline: 4px dotted tomato; */
+  /* background: var(--rbadev-mono-4-hex); */
+  background: #8765;
   height: 100vh;
-  width: 4vw;
+  width: 2.95vw;
+  z-index: 200;
 `
 const IndexPage = () => {
   const [open, setOpen] = useState(false)

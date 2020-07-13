@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import { respondTo } from "../utils/_respondTo"
+import { respondTo } from "../../utils/_respondTo"
+import Footer from "../Footer/Footer.component"
 
 const getPosts = graphql`
   {
@@ -32,7 +33,7 @@ const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-content: center;
-  background: transparent;
+  background: #f905;
 
   ${respondTo.sm`
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -62,6 +63,7 @@ const Post = () => {
           )
         })}
       </GridContainer>
+      <Footer />
     </>
   )
 }

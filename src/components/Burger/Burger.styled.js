@@ -2,19 +2,18 @@ import styled from "styled-components"
 
 export const StyledBurger = styled.button`
   position: absolute;
-  /* top: 1rem;
-  right: 2rem; */
+  top: 5%;
+  left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2em;
-  height: 2em;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
-  /* padding: 0.5rem; */
-  /* color: red; */
-  z-index: 100;
+  padding: 0;
+  z-index: 10;
 
   &:focus {
     outline: none;
@@ -23,7 +22,8 @@ export const StyledBurger = styled.button`
   div {
     width: 2rem;
     height: 0.2rem;
-    background: ${({ open }) => (open ? "#012345" : "whitesmoke")};
+    background: ${({ open }) =>
+      open ? "var( --rbadev-duotone-2-hex)" : "var(--rbadev-mono-4-hex)"};
     border-radius: 1px;
     transition: all 0.3s linear;
     position: relative;
@@ -35,7 +35,7 @@ export const StyledBurger = styled.button`
 
     :nth-child(2) {
       opacity: ${({ open }) => (open ? "0" : "1")};
-      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+      transform: ${({ open }) => (open ? "translateY(0px)" : "translateX(0)")};
     }
 
     :nth-child(3) {

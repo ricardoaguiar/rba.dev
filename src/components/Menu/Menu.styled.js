@@ -2,38 +2,30 @@ import styled from "styled-components"
 import { respondTo } from "../../utils/_respondTo"
 
 export const StyledMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: whitesmoke;
-  transform: ${({ open }) => (open ? "translateX(-45%)" : "")};
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0;
+  background: var(--rbadev-mono-2-hex);
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   height: 100vh;
-  text-align: left;
-  position: fixed;
+  width: 100vw;
+  position: absolute;
   top: 0;
-  left: 100%;
-  transition: transform 300ms ease-in-out;
-  border-left: 0.5px solid var(--rbadev-mono-4-hex);
-  /* z-index: 100; */
-
-  ${respondTo.sm`
-  width: 100%;
-  padding: 1rem 1rem;
-  
-  `}
+  left: 0;
+  transition: transform 220ms ease-in-out;
 
   a {
     display: block;
     font-size: 3.8rem;
     text-transform: uppercase;
     font-weight: bold;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     color: var(--rbadev-mono-4-hex);
     text-decoration: none;
-    margin-left: 10rem;
     position: relative;
     overflow: hidden;
     line-height: 1.25;
+    margin-left: 5rem;
 
     & span {
       position: absolute;
@@ -77,4 +69,36 @@ export const StyledMenu = styled.nav`
       text-align: center;
     }
   }
+`
+export const MenuList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: ${props => props.menuLeft || ""};
+  background: ${props => props.menuLeft || ""};
+  list-style: none;
+  height: 100vh;
+  text-align: left;
+  margin: 0;
+
+  & li {
+    font-size: 3rem;
+    line-height: 2;
+    margin: 0;
+    padding-left: 2em;
+  }
+
+  & h1 {
+    background: var(--rbadev-duotone-3-hex);
+    color: var(--rbadev-duotone-4-hex);
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    padding: 9rem 2em;
+  }
+`
+export const Contact = styled.ul`
+  display: flex;
+  flex-direction: row;
+  font-size: 2vh;
+  list-style: none;
 `
