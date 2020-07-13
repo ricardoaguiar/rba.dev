@@ -1,7 +1,6 @@
 import React from "react"
 import { bool } from "prop-types"
 import { StyledMenu, MenuList, Contact } from "./Menu.styled"
-import Social from "../Social/SocialMediaMenu"
 
 const Menu = ({ open }) => {
   return (
