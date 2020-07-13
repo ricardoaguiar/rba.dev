@@ -27,7 +27,6 @@
     "gatsby-plugin-svgr": "^2.0.2",
     "gatsby-source-contentful": "^2.3.18",
     "gatsby-source-filesystem": "^2.3.14",
-    "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-sharp": "^2.5.7",
     "gsap": "^3.3.4",
     "netlify-cli": "^2.54.0",
