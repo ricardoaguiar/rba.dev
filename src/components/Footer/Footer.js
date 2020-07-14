@@ -1,15 +1,15 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const FooterSection = styled.section`
-  width: 100%;
-  background: var(--rbadev-duotone-2-hex);
-  padding: 2rem;
+  max-width: 100vw;
+  min-height: 10vh;
+  background: var(--rbadev-duotone-4-hex);
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   bottom: 0;
-  outline: 4px dashed blueviolet;
+  padding: 2em;
 `
 
 const Footer = () => {

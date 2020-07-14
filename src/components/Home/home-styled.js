@@ -1,19 +1,18 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
 export const HomeContainer = styled.section`
   min-height: calc(100vmax - 30%);
-  min-width: 80vw;
-  background-color: #f444;
+  min-width: 100vw;
   display: flex;
   margin: 0 auto;
+  text-transform: uppercase;
+  background: var(--rbadev-mono-3-hex);
 `
 export const HomeItem = styled.article`
   display: flex;
   flex-wrap: wrap;
-  background-color: teal;
-  color: #ccc;
-  margin: 0;
+  margin: 0 auto;
   padding: 4rem 2rem;
 
   ${respondTo.xs`
@@ -24,9 +23,8 @@ export const HomeItem = styled.article`
 `};
 
   ${respondTo.sm`
-  // full width
-  background: blue;
-  margin: 5vw auto;
+  background: var(--rbadev-mono-3-hex);
+  margin: 0 auto;
   max-width: 85vw;
   padding: 5vh 5vw;
   color: whitesmoke;
@@ -34,12 +32,12 @@ export const HomeItem = styled.article`
 `
 
 export const HomeTitle = styled.h1`
-  line-height: normal;
-  font-size: 8vw;
+  line-height: 1;
+  font-size: calc(8vw - 40%);
 `
 export const HomeSubtitle = styled.h2`
-  line-height: 10vh;
-  font-size: 9vw;
+  line-height: calc(9vw - 60%);
+  font-size: calc(6vw - 45%);
   font-weight: 800;
 
   ${respondTo.md`

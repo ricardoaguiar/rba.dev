@@ -1,6 +1,6 @@
 import React from "react"
 import { bool } from "prop-types"
-import { StyledMenu, MenuList, Contact } from "./Menu.styled"
+import { StyledMenu, MenuList, Contact, Connect } from "./menu-styled"
 
 const Menu = ({ open }) => {
   return (
@@ -23,8 +23,8 @@ const Menu = ({ open }) => {
             </a>
           </li>
         </MenuList>
+        <Connect>Connect</Connect>
         <MenuList menuLeft="var(--rbadev-mono-1-hex)">
-          <h1>Connect</h1>
           <li>Github</li>
           <li>LinkedIn</li>
           <li>Instagram</li>

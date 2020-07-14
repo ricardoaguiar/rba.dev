@@ -3,10 +3,6 @@
   --black: #000;
   --white: #fff;
 
-  /* neutral greys  */
-  --dark-grey: #666;
-  --grey: #dedede;
-
   /* social media logo colors */
   --facebook: #1877f2;
   --github: #24292e;
@@ -76,6 +72,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    background: yellow;
+  }
+}
+
+/*
 article,
 aside,
 details,
@@ -687,6 +690,7 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+*/
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

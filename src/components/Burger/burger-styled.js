@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 export const StyledBurger = styled.button`
   position: absolute;
@@ -23,7 +23,7 @@ export const StyledBurger = styled.button`
     width: 2rem;
     height: 0.2rem;
     background: ${({ open }) =>
-      open ? "var( --rbadev-duotone-2-hex)" : "var(--rbadev-mono-4-hex)"};
+      open ? "var( --rbadev-duotone-3-hex)" : "var(--rbadev-mono-4-hex)"};
     border-radius: 1px;
     transition: all 0.3s linear;
     position: relative;
