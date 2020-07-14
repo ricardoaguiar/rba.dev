@@ -10,3 +10,18 @@ export const breakpoints = {
 }
 
 // the styles go into effect when the vp reaches the size above.
+// usage:
+
+// ${
+//   respondTo.sm`
+//     ${CssComponent}:hover & {
+//       background-color: tomato;
+//     }
+//   `}
+
+//   ${respondTo.xs`
+//   background-color: white;
+//   margin: 0 auto;
+//   max-width: 85vw;
+//   padding: 5vh 5vw;
+// `};

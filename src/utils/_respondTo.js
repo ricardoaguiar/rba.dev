@@ -1,4 +1,4 @@
-import { css } from "styled-components"
+import { css } from "emotion"
 import { breakpoints } from "./_variables"
 
 export const respondTo = Object.keys(breakpoints).reduce(

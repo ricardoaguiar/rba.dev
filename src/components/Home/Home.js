@@ -1,5 +1,5 @@
 import React from "react"
-import { HomeContainer, HomeItem, HomeTitle, HomeSubtitle } from "./Home.styled"
+import { HomeContainer, HomeItem, HomeTitle, HomeSubtitle } from "./home-styled"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
@@ -8,16 +8,15 @@ library.add(fab)
 
 const Home = () => {
   return (
-    <>
-      <HomeContainer>
-        <HomeItem>
-          <HomeTitle>Hi, I'm Ricardo</HomeTitle>
-          <HomeSubtitle>
-            a web developer based in 55°42'28.6"N 9°31'58.5"E
-          </HomeSubtitle>
-        </HomeItem>
-      </HomeContainer>
-    </>
+    <HomeContainer>
+      <HomeItem>
+        <HomeTitle>Hi, I'm glad you found the site.</HomeTitle>
+        <HomeSubtitle>
+          I'm Ricardo a curios full-stack developer. Take a look at my latests
+          projects below.
+        </HomeSubtitle>
+      </HomeItem>
+    </HomeContainer>
   )
 }
 
