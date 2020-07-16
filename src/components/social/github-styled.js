@@ -8,4 +8,5 @@ export const GitHubButton = styled.button`
   grid-area: 1/3/1/-1;
   margin: 0 auto;
   align-self: center;
+  z-index: 10;
 `
