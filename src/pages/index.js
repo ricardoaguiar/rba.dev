@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react"
-import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Wrapper from "../components/wrapper/wrapper"
 import Home from "../components/home/home"
@@ -8,15 +7,9 @@ import Footer from "../components/footer/footer"
 import { useOnClickOutside } from "../components/hooks"
 import Burger from "../components/burger/burger"
 import Menu from "../components/menu/menu"
+import { BurgerMenu } from "../components/menu/menu-styled"
+import Logo from "../components/logo"
 
-const BurgerMenu = styled.div`
-  left: 0;
-  position: fixed;
-  background: transparent;
-  height: 100vh;
-  width: 2.95vw;
-  z-index: 200;
-`
 const IndexPage = () => {
   const [open, setOpen] = useState(false)
   const node = useRef()
@@ -27,6 +20,7 @@ const IndexPage = () => {
       <Wrapper>
         <SEO title="Home" />
         <BurgerMenu ref={node}>
+          <Logo />
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
         </BurgerMenu>

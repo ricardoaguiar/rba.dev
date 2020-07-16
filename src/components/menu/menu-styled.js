@@ -1,6 +1,20 @@
 import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
+export const BurgerMenu = styled.header`
+  left: 0;
+  top: 0;
+  position: fixed;
+  background: var(--rbadev-mono-1-hex);
+  height: 8vh;
+  width: 100vw;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  outline: 1px solid blue;
+`
+
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
@@ -9,7 +23,7 @@ export const StyledMenu = styled.nav`
   /* grid-template-columns: 1fr; */
   /* grid-gap: 0; */
   /* grid-auto-rows: 0.5fr; */
-  background: var(--rbadev-mono-2-hex);
+  background: var(--rbadev-mono-3-hex);
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   position: absolute;
   top: 0;
