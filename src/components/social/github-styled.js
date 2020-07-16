@@ -1,0 +1,11 @@
+import styled from "@emotion/styled"
+
+export const GitHubButton = styled.button`
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  grid-area: 1/3/1/-1;
+  margin: 0 auto;
+  align-self: center;
+`
