@@ -2,17 +2,17 @@ import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
 export const BurgerMenu = styled.header`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  position: fixed;
   left: 0;
   top: 0;
-  position: fixed;
   background: var(--rbadev-mono-1-hex);
   height: 8vh;
   width: 100vw;
   z-index: 100;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5px;
-  outline: 1px solid blue;
+  border-bottom: 2px solid var(--rbadev-duotone-3-hex);
 `
 
 export const StyledMenu = styled.nav`

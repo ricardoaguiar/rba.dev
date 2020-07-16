@@ -9,6 +9,7 @@ import Burger from "../components/burger/burger"
 import Menu from "../components/menu/menu"
 import { BurgerMenu } from "../components/menu/menu-styled"
 import Logo from "../components/logo"
+import GitHub from "../components/social/github"
 
 const IndexPage = () => {
   const [open, setOpen] = useState(false)
@@ -23,6 +24,7 @@ const IndexPage = () => {
           <Logo />
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
+          <GitHub />
         </BurgerMenu>
         <Home />
         <Post />
