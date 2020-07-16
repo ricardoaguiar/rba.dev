@@ -2,12 +2,13 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const RBA = styled.div`
-  margin: calc(1em - 10%);
+  /* margin: calc(1em - 10%); */
   /* background: var(--rbadev-duotone-3-hex); */
-  max-width: 48%;
-  padding: 2px;
+  max-width: 50%;
+  /* padding: 2px; */
   text-align: center;
   border-radius: 2px;
+  align-self: center;
 
   & h3 {
     font-weight: 800;
