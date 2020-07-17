@@ -9,7 +9,7 @@ export const BurgerMenu = styled.header`
   left: 0;
   top: 0;
   background: var(--rbadev-mono-1-hex);
-  height: 8vh;
+  min-height: 8vh;
   width: 100vw;
   z-index: 100;
   border-bottom: 2px solid var(--rbadev-duotone-3-hex);
