@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
 export const GitHubButton = styled.button`
+display: flex;
   border: none;
   cursor: pointer;
   padding: 0;
