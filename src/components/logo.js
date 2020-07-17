@@ -10,8 +10,8 @@ const RBA = styled.div`
   border-radius: 2px;
   align-self: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+
 
   & h3 {
     font-weight: 800;
