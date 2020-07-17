@@ -13,7 +13,7 @@ export const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 30;
   grid-area: 1/2/1/3;
   margin: 0 auto;
   align-self: center;
