@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const RBA = styled.div`
-  background: var(--rbadev-duotone-3-hex);
+  / * background: var(--rbadev-duotone-3-hex); */
   max-width: 50%;
   padding: 3px;
   text-align: center;
