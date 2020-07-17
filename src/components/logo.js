@@ -5,7 +5,7 @@ const RBA = styled.div`
   / * background: var(--rbadev-duotone-3-hex); */
   max-width: 50%;
   padding: 3px;
-  text-align: center;
+  text-align: left;
   align-self: center;
 
 
