@@ -7,10 +7,7 @@ const RBA = styled.div`
   max-width: 50%;
   /* padding: 2px; */
   text-align: center;
-  border-radius: 2px;
   align-self: center;
-  display: flex;
-  flex-direction: column;
 
 
   & h3 {
