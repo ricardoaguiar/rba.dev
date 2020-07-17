@@ -9,4 +9,5 @@ export const GitHubButton = styled.button`
   margin: 0 auto;
   align-self: center;
   z-index: 10;
+  background: transparent;
 `
