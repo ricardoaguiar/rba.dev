@@ -2,12 +2,12 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const RBA = styled.div`
-  / * background: var(--rbadev-duotone-3-hex); */
+  /* background: var(--rbadev-duotone-3-hex); */
   max-width: 50%;
-  padding: 3px;
+  /* padding: 3px; */
   text-align: left;
   align-self: center;
-
+  margin-left: 1em;
 
   & h3 {
     font-weight: 800;
@@ -15,7 +15,6 @@ const RBA = styled.div`
     line-height: calc(100% - 20%);
   }
 `
-
 function Logo() {
   return (
     <RBA>
