@@ -117,7 +117,8 @@ export const SocialMediaList = styled.ul`
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  flex: 1 0 100%;
+  flex: 1 100%;
+  height: 100vh;
   width: 100vw;
   list-style: none;
   margin: 0 auto;
