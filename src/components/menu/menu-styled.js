@@ -91,8 +91,6 @@ export const MenuList = styled.ul`
   margin: 0;
 
   & li {
-    font-size: 1em;
-    line-height: 4;
     margin: 0;
     padding-left: 2em;
     border-bottom: 1px solid var(--rbadev-border-mono);
@@ -109,24 +107,35 @@ export const Connect = styled.div`
   margin: 0;
   text-align: center;
 
-  & h3{
-    margin: .5em;
-    font-size: clamp(1em, 1.5em, 22px)
+  & h3 {
+    margin: 0.5em;
+    font-size: clamp(1em, 1.5em, 22px);
   }
-}
 `
 
 export const SocialMediaList = styled.ul`
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  flex: 1 100%;
+  flex: 1 0 100%;
   width: 100vw;
   list-style: none;
   margin: 0 auto;
 
   & li {
-    justify-content: space-between;
+    width: calc(50vw - 1px);
+    justify-content: stretch;
+    border-bottom: 1px solid var(--rbadev-border-mono);
+    border-right: 1px solid var(--rbadev-border-mono);
+  }
+
+  & li:nth-of-type(2),
+  & li:nth-of-type(4) {
+    border-right: none;
+  }
+  & li:nth-of-type(5) {
+    width: 100vw;
+    border-bottom: none;
   }
 
   ${respondTo.M300`
@@ -140,12 +149,14 @@ export const Contact = styled.ul`
   list-style: none;
   margin: 0 0 1px 0;
   width: 100vw;
+  height: 5vh;
   justify-content: space-around;
   padding: 0;
-  border-top: 1px solid var(--rbadev-border-mono);
+  /* border-top: 1px solid var(--rbadev-border-mono); */
   border-bottom: 1px solid var(--rbadev-border-mono);
-  bottom: 0;
-  position: fixed;
+  /* bottom: 0;
+  position: fixed; */
+  /* z-index: 0; */
 
   & li {
     padding: 1vw;
@@ -153,6 +164,9 @@ export const Contact = styled.ul`
     border: none;
     width: 100%;
     text-align: center;
+    border-right: 1px solid var(--rbadev-mono-2-hex);
+  }
+  & li:nth-of-type(2) {
     border-right: 1px solid var(--rbadev-mono-2-hex);
   }
   & li:nth-of-type(3) {
