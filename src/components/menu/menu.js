@@ -44,13 +44,11 @@ const Menu = ({ open }) => {
           <li>LinkedIn</li>
           <li>Instagram</li>
           <li>Facebook</li>
-          <li>
-            <Contact>
-              <li>email</li>
-              <li>phone</li>
-              <li>message</li>
-            </Contact>
-          </li>
+          <Contact>
+            <li>email</li>
+            <li>phone</li>
+            <li>message</li>
+          </Contact>
         </SocialMediaList>
       </StyledNav>
     </>

@@ -114,29 +114,33 @@ export const Connect = styled.div`
 `
 
 export const SocialMediaList = styled.ul`
-  display: flex;
+  /* display: flex;
   flex-flow: row;
   flex-wrap: wrap;
   flex: 1 100%;
-  height: 80vh;
+  height: 80vh; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px;
   width: 100vw;
+  height: 60vh;
   list-style: none;
   margin: 0 auto;
 
   & li {
-    width: calc(50vw - 1px);
-    justify-content: stretch;
-    border-bottom: 1px solid var(--rbadev-border-mono);
-    border-right: 1px solid var(--rbadev-border-mono);
-  }
+    /* width: calc(50vw - 1px); */
+    /* justify-content: stretch; */
+   /* } */
 
-  & li:nth-of-type(2),
+  /* & li:nth-of-type(2),
   & li:nth-of-type(4) {
     border-right: none;
-  }
-  & li:nth-of-type(5) {
-    width: 100vw;
-    border-bottom: none;
+  } */
+  & :nth-of-type(4) {
+    /* width: 50vw;
+    border-bottom: none; */
+    background: olive;
+
   }
 
   ${respondTo.M300`
@@ -145,21 +149,24 @@ export const SocialMediaList = styled.ul`
 `
 
 export const Contact = styled.ul`
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
   list-style: none;
   margin: 0 0 1px 0;
   width: 100vw;
   height: 5vh;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   padding: 0;
   /* border-top: 1px solid var(--rbadev-border-mono); */
-  border-bottom: 1px solid var(--rbadev-border-mono);
+  /* border-bottom: 1px solid var(--rbadev-border-mono); */
   /* bottom: 0;
   position: fixed; */
   /* z-index: 0; */
+  background: blueviolet;
 
-  & li {
+  /* & li {
     padding: 1vw;
     margin: 0;
     border: none;
@@ -172,5 +179,5 @@ export const Contact = styled.ul`
   }
   & li:nth-of-type(3) {
     border-right: none;
-  }
+  } */
 `
