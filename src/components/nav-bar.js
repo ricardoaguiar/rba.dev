@@ -23,7 +23,7 @@ const NavLinks = styled.li`
   text-decoration: underline;
 
   /* when it reaches 800px wide: */
-  ${respondTo.sm`
+  ${respondTo.M300`
     ${NavItems}:hover & {
       background-color: tomato;
     }

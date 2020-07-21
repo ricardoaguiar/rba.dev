@@ -15,17 +15,17 @@ export const HomeItem = styled.article`
   margin: 0 auto;
   padding: 4rem 2rem;
 
-  ${respondTo.xs`
+  ${respondTo.M300`
   background-color: white;
   margin: 0 auto;
-  max-width: 85vw;
+  max-width: 100vw;
   padding: 5vh 5vw;
 `};
 
-  ${respondTo.sm`
+  ${respondTo.M375`
   background: var(--rbadev-mono-3-hex);
   margin: 0 auto;
-  max-width: 85vw;
+  max-width: 100vw;
   padding: 5vh 5vw;
   color: whitesmoke;
 `};
@@ -40,13 +40,13 @@ export const HomeSubtitle = styled.h2`
   font-size: calc(6vw - 45%);
   font-weight: 800;
 
-  ${respondTo.md`
+  ${respondTo.M300`
   line-height: normal;
   font-weight: 700;
   font-size: 7vw
   `}
 
-  ${respondTo.lg`
+  ${respondTo.T600`
   line-height: normal;
   font-weight: 700;
   font-size: 7vw
