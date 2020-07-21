@@ -114,70 +114,47 @@ export const Connect = styled.div`
 `
 
 export const SocialMediaList = styled.ul`
-  /* display: flex;
-  flex-flow: row;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 100%;
   flex-wrap: wrap;
-  flex: 1 100%;
-  height: 80vh; */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-gap: 10px;
   width: 100vw;
-  height: 60vh;
   list-style: none;
   margin: 0 auto;
 
   & li {
-    /* width: calc(50vw - 1px); */
-    /* justify-content: stretch; */
-   /* } */
-
-  /* & li:nth-of-type(2),
-  & li:nth-of-type(4) {
-    border-right: none;
-  } */
-  & :nth-of-type(4) {
-    /* width: 50vw;
-    border-bottom: none; */
-    background: olive;
-
+    width: 40vw;
+    outline: 1px solid greenyellow;
+    margin: 0;
+    padding: 0 1em;
+    border-bottom: 1px solid var(--rbadev-border-mono);
+  }
+  & li:last-of-type {
+    width: 100vw;
   }
 
   ${respondTo.M300`
-  background: var(--rbadev-duotone-3-hex);
+    flex-direction: row;
   `};
 `
 
 export const Contact = styled.ul`
-  /* display: flex;
-  flex-direction: row; */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  display: flex;
+  flex-direction: column;
   list-style: none;
-  margin: 0 0 1px 0;
   width: 100vw;
-  height: 5vh;
-  /* justify-content: space-around; */
+  margin-left: -0.01em;
   padding: 0;
-  /* border-top: 1px solid var(--rbadev-border-mono); */
-  /* border-bottom: 1px solid var(--rbadev-border-mono); */
-  /* bottom: 0;
-  position: fixed; */
-  /* z-index: 0; */
-  background: blueviolet;
+  font-size: 2.5vh;
 
-  /* & li {
-    padding: 1vw;
-    margin: 0;
-    border: none;
-    width: 100%;
-    text-align: center;
-    border-right: 1px solid var(--rbadev-mono-2-hex);
-  }
-  & li:nth-of-type(2) {
-    border-right: 1px solid var(--rbadev-mono-2-hex);
-  }
-  & li:nth-of-type(3) {
-    border-right: none;
-  } */
+  ${respondTo.M300`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    list-style: none;
+    margin: 0 0 1px 0;
+    height: 5vh;
+  `};
+  ${respondTo.M400`
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  `};
 `

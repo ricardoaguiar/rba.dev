@@ -1,7 +1,7 @@
 export const breakpoints = {
   M300: "300px",
   M375: "375px",
-  M425: "425px",
+  M400: "400px",
   T600: "600px",
   T800: "800px",
   T900: "900px",

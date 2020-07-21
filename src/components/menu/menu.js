@@ -30,25 +30,34 @@ const Menu = ({ open }) => {
               <span data-content="Contact" aria-hidden="true"></span>Contact
             </a>
           </li>
-          <li>
-            <a href="/">
-              <span data-content="Contact" aria-hidden="true"></span>Contact
-            </a>
-          </li>
         </MenuList>
         <Connect>
           <h3>Connect</h3>
         </Connect>
         <SocialMediaList>
-          <li>Github</li>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
-          <li>Facebook</li>
-          <Contact>
-            <li>email</li>
-            <li>phone</li>
-            <li>message</li>
-          </Contact>
+          <li>
+            <a href="#">Github</a>
+          </li>
+          <li>
+            <a href="#">LinkedIn</a>
+          </li>
+          <li>
+            <a href="#">Instagram</a>
+          </li>
+          <li>
+            <a href="#">Facebook</a>
+          </li>
+          <li>
+            <a href="#" id="">
+              phone
+            </a>
+          </li>
+          <li>
+            <a href="#">message</a>
+          </li>
+          <li>
+            <a href="mailto:rba@rba.dev">email</a>
+          </li>
         </SocialMediaList>
       </StyledNav>
     </>

@@ -71,8 +71,7 @@ body {
   margin: 0;
   color: var(--rbadev-duotone-5-hex);
   font-family: railroad-gothic-atf, bio-sans, georgia, serif;
-  /* font-size: calc(14px + (26 - 14) * ((100vw - 320px) / (1600 - 320))); */
-  font-size: clamp(2vw, 12px + 1.5vw, 2rem);
+  font-size: clamp(2vw, 12px + 1.2vw, 2rem);
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -602,9 +601,9 @@ li > ol {
   margin-top: calc(1.45rem / 2);
 }
 li > ul {
-  margin-left: 1.45rem;
+  /* margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-top: calc(1.45rem / 2); */
 }
 blockquote *:last-child {
   margin-bottom: 0;
