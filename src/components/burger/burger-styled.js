@@ -1,9 +1,6 @@
 import styled from "@emotion/styled"
 
 export const StyledBurger = styled.button`
-  /* position: absolute;
-  top: 0.55rem;
-  left: 0.9rem; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;

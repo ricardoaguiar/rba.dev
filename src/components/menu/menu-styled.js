@@ -9,11 +9,14 @@ export const BurgerMenu = styled.header`
   left: 0;
   top: 0;
   background: var(--rbadev-mono-1-hex);
-  min-height: 8vh;
+  height: 50px;
   width: 100vw;
   z-index: 200;
   border-bottom: 2px solid var(--rbadev-duotone-3-hex);
-  /* outline: 3px dotted skyblue; */
+
+  ${respondTo.M400`
+  max-height: 18vh;
+  `};
 `
 
 export const StyledNav = styled.nav`
@@ -82,6 +85,10 @@ export const StyledNav = styled.nav`
       transform: translateX(0);
     }
   }
+
+  ${respondTo.M400`
+  top: 18.6vh;
+  `};
 `
 export const MenuList = styled.ul`
   display: flex;

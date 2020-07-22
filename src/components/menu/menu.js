@@ -1,14 +1,8 @@
 import React from "react"
 import { bool } from "prop-types"
-import {
-  StyledNav,
-  MenuList,
-  Contact,
-  Connect,
-  SocialMediaList,
-} from "./menu-styled"
+import { StyledNav, MenuList, Connect, SocialMediaList } from "./menu-styled"
 
-// import SocialMediaMenu from "../social/social-media-menu"
+import SocialMediaMenu from "../social/social-media-menu"
 
 const Menu = ({ open }) => {
   return (
@@ -34,7 +28,7 @@ const Menu = ({ open }) => {
         <Connect>
           <h3>Connect</h3>
         </Connect>
-        <SocialMediaList>
+        {/* <SocialMediaList>
           <li>
             <a href="#">Github</a>
           </li>
@@ -58,7 +52,8 @@ const Menu = ({ open }) => {
           <li>
             <a href="mailto:rba@rba.dev">email</a>
           </li>
-        </SocialMediaList>
+        </SocialMediaList> */}
+        <SocialMediaMenu />
       </StyledNav>
     </>
   )
