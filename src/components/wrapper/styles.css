@@ -56,12 +56,6 @@
   --rbadev-duotone-5-rgba: rgba(38, 38, 38, 1);
 }
 
-/* 
-  svg:hover path {
-  fill: #fff;
-  opacity: 1;
-  stroke: var(--rbadev-duotone-3-hex);}
- */
 
 html {
   -ms-text-size-adjust: 100%;
@@ -83,27 +77,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* experimental for touch devices */
-/* @media (hover: hover) and (pointer: fine) {
-  a:hover {
-    background: yellow;
-  }
-} */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
+main {
+  display: flex;
+  flex-flow: column;
+  max-width: 80vw;
+  margin-left: 7%;
 }
+
+
 audio,
 canvas,
 progress,

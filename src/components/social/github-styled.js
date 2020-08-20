@@ -11,4 +11,5 @@ display: flex;
   align-self: center;
   z-index: 10;
   background: transparent;
+  font-size: 0.78em;
 `

@@ -3,7 +3,7 @@ import { respondTo } from "../../utils/_respondTo"
 
 export const HomeContainer = styled.section`
   min-height: calc(100vmax - 30%);
-  min-width: 100vw;
+  min-width: calc(100vw - 7%);
   display: flex;
   margin: 0 auto;
   text-transform: uppercase;

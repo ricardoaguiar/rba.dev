@@ -1,11 +1,13 @@
 import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
-export const BurgerMenu = styled.header`
+export const BurgerMenu = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
+  align-items: center;
   position: fixed;
+
   left: 0;
   top: 0;
   background: var(--rbadev-mono-1-hex);
@@ -17,6 +19,23 @@ export const BurgerMenu = styled.header`
   ${respondTo.M400`
   max-height: 18vh;
   `};
+
+  ${respondTo.T900`
+  display: flex;
+  min-height: 100vh;
+  max-width: 7%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 2px solid var(--rbadev-duotone-3-hex);
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  `};
+
+  ${respondTo.T1000`
+  min-height: 100vh;
+`};
 `
 
 export const StyledNav = styled.nav`
@@ -27,7 +46,7 @@ export const StyledNav = styled.nav`
   background: var(--rbadev-mono-1-hex);
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   position: absolute;
-  top: 8.4vh;
+  /* top: 8.4vh; */
   left: 0;
   transition: transform 220ms ease-in-out;
   align-content: center;

@@ -11,10 +11,7 @@ const Home = () => {
     <HomeContainer>
       <HomeItem>
         <HomeTitle>Hi, I'm glad you found the site.</HomeTitle>
-        <HomeSubtitle>
-          I'm Ricardo a curios full-stack developer. Take a look at my latests
-          projects below.
-        </HomeSubtitle>
+        <HomeSubtitle>Take a look at my latests projects below.</HomeSubtitle>
       </HomeItem>
     </HomeContainer>
   )
