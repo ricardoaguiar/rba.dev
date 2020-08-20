@@ -3,11 +3,17 @@ import { respondTo } from "../../utils/_respondTo"
 
 export const HomeContainer = styled.section`
   min-height: calc(100vmax - 30%);
-  min-width: calc(100vw - 7%);
   display: flex;
-  margin: 0 auto;
+  flex: 1 0 auto;
+  margin: 50px auto 0;
   text-transform: uppercase;
   background: var(--rbadev-mono-3-hex);
+
+  ${respondTo.T900`
+    max-width: calc(100vw - 7%);
+    margin: 0 auto;
+
+  `}
 `
 export const HomeItem = styled.article`
   display: flex;
@@ -15,10 +21,9 @@ export const HomeItem = styled.article`
   margin: 0 auto;
   padding: 4rem 2rem;
 
-  ${respondTo.M300`
+  ${respondTo.T900`
   background-color: white;
   margin: 0 auto;
-  max-width: 100vw;
   padding: 5vh 5vw;
 `};
 

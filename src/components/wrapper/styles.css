@@ -78,12 +78,6 @@ body {
 }
 
 
-main {
-  display: flex;
-  flex-flow: column;
-  max-width: 80vw;
-  margin-left: 7%;
-}
 
 
 audio,

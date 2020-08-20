@@ -7,7 +7,6 @@ const LOGO = styled.div`
   font-size: .9em;
   padding-left: 1em;
   min-width: 100%;
-  background: orange;
   display: table;
 
   ${respondTo.T900`
@@ -21,7 +20,7 @@ const LOGO = styled.div`
 `
 const RBA = styled.h4`
   margin: 0;
-  
+
   ${respondTo.T900`
     font-size: 1em;
     `}
