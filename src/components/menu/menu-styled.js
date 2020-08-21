@@ -43,6 +43,10 @@ export const StyledNav = styled.nav`
   text-transform: uppercase;
   /* border-top: 2px solid var(--rbadev-duotone-3-hex); */
 
+  ${respondTo.T900`
+    top:-50px; 
+`}
+
   a {
     display: block;
     text-transform: uppercase;
