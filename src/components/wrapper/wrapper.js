@@ -11,7 +11,7 @@ const MAIN = styled.main`
   flex-flow: column;
   max-width: 100vw;
 
-  ${respondTo.T900`
+  ${respondTo.T700`
    margin-left: 7%;
   `}
 
