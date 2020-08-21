@@ -1,57 +1,46 @@
 import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
+
 export const BurgerMenu = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
   align-items: center;
   position: fixed;
-
   left: 0;
   top: 0;
   background: var(--rbadev-mono-1-hex);
   height: 50px;
   width: 100vw;
-  z-index: 200;
   border-bottom: 2px solid var(--rbadev-duotone-3-hex);
 
-  ${respondTo.M400`
-  max-height: 18vh;
-  `};
-
   ${respondTo.T900`
-  display: flex;
-  min-height: 100vh;
-  max-width: 7%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-right: 2px solid var(--rbadev-duotone-3-hex);
-  border-bottom: none;
-  padding: 0;
-  margin: 0;
-  `};
-
-  ${respondTo.T1000`
-  min-height: 100vh;
-`};
+    display: flex;
+    min-height: 100vh;
+    max-width: 7%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 2px solid var(--rbadev-duotone-3-hex);
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+  `}
 `
 
+// mobile layout
 export const StyledNav = styled.nav`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  min-height: 91.5vh;
+  min-height: 50vh;
   background: var(--rbadev-mono-1-hex);
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transform: ${({ open }) => (open ? "translateY(50px)" : "translateY(-155%)")};
   position: absolute;
-  /* top: 8.4vh; */
-  left: 0;
   transition: transform 220ms ease-in-out;
   align-content: center;
   text-transform: uppercase;
-  z-index: 10;
   /* border-top: 2px solid var(--rbadev-duotone-3-hex); */
 
   a {
@@ -104,10 +93,6 @@ export const StyledNav = styled.nav`
       transform: translateX(0);
     }
   }
-
-  ${respondTo.M400`
-  top: 18.6vh;
-  `};
 `
 export const MenuList = styled.ul`
   display: flex;
@@ -159,9 +144,10 @@ export const SocialMediaList = styled.ul`
     width: 100vw;
   }
 
-  ${respondTo.M300`
+  /* desktop layout */
+  ${respondTo.T900`
     flex-direction: row;
-  `};
+  `}
 `
 
 export const Contact = styled.ul`
@@ -173,14 +159,15 @@ export const Contact = styled.ul`
   padding: 0;
   font-size: 2.5vh;
 
-  ${respondTo.M300`
+  ${respondTo.T900`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     list-style: none;
     margin: 0 0 1px 0;
     height: 5vh;
   `};
-  ${respondTo.M400`
+
+  ${respondTo.T900`
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   `};
 `

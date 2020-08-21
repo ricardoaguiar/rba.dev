@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useState, useRef } from "react"
 import PropTypes from "prop-types"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
-
-import "./styles.css"
-
+import GitHub from "../../components/social/github"
+import Burger from "../../components/burger/burger"
+import Logo from "../../components/logo"
+import { useOnClickOutside } from "../../components/hooks"
+import Menu from "../../components/menu/menu"
+import { BurgerMenu } from "../../components/menu/menu-styled"
 
 const MAIN = styled.main`
   display: flex;
@@ -14,13 +17,23 @@ const MAIN = styled.main`
   ${respondTo.T900`
    margin-left: 7%;
   `}
-
 `
-
-
-
 const Wrapper = ({ children }) => {
-  return <MAIN>{children}</MAIN>
+  const [open, setOpen] = useState(false)
+  const node = useRef()
+  useOnClickOutside(node, () => setOpen(false))
+
+  return (
+    <MAIN>
+      {children}
+      <Menu open={open} setOpen={setOpen} />
+      <BurgerMenu ref={node}>
+        <Logo />
+        <Burger open={open} setOpen={setOpen} />
+        <GitHub />
+      </BurgerMenu>
+    </MAIN>
+  )
 }
 
 Wrapper.propTypes = {

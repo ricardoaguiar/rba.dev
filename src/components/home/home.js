@@ -1,11 +1,6 @@
 import React from "react"
 import { HomeContainer, HomeItem, HomeTitle, HomeSubtitle } from "./home-styled"
 
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-
-library.add(fab)
-
 const Home = () => {
   return (
     <HomeContainer>

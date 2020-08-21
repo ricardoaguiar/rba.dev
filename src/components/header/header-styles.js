@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   text-transform: uppercase; */
   background: #fa4;
   min-width: 100vw;
-  height: 10vh;
+  /* height: 10vh; */
 `
 // export const HomeItem = styled.article`
 //   display: flex;

@@ -1,6 +1,6 @@
 import React from "react"
 import { bool } from "prop-types"
-import { StyledNav, MenuList, Connect, SocialMediaList } from "./menu-styled"
+import { StyledNav, MenuList, Connect } from "./menu-styled"
 
 import SocialMediaMenu from "../social/social-media-menu"
 

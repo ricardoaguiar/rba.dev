@@ -1,11 +1,12 @@
 import styled from "@emotion/styled"
+import { respondTo } from "../../utils/_respondTo"
 
-export const StyledBurger = styled.button`
+export const BurgerButton = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -14,6 +15,12 @@ export const StyledBurger = styled.button`
   grid-area: 1/2/1/3;
   margin: 0 auto;
   align-self: center;
+
+  /* width after 900px and above  */
+  ${respondTo.T900`
+    width: 2rem;
+    height: 1.6rem;
+`}
 
   &:focus {
     outline: none;
@@ -42,4 +49,9 @@ export const StyledBurger = styled.button`
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
+
+ ${respondTo.T900`
+    width: 2rem;
+ `}
+
 `
