@@ -1,50 +1,21 @@
 import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
-
-export const BurgerMenu = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5px;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: var(--rbadev-mono-1-hex);
-  height: 50px;
-  width: 100vw;
-  border-bottom: 2px solid var(--rbadev-duotone-3-hex);
-
-  ${respondTo.T900`
-    display: flex;
-    min-height: 100vh;
-    max-width: 7%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-right: 2px solid var(--rbadev-duotone-3-hex);
-    border-bottom: none;
-    padding: 0;
-    margin: 0;
-  `}
-`
-
 // mobile layout
-export const StyledNav = styled.nav`
+export const MenuNavigation = styled.nav`
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   width: 100vw;
-  min-height: 50vh;
+  min-height: 100vh;
   background: var(--rbadev-mono-1-hex);
-  transform: ${({ open }) => (open ? "translateY(50px)" : "translateY(-155%)")};
+  transform: ${({ open }) => (open ? "translateX(0px)" : "translateX(-100%)")};
   position: absolute;
   transition: transform 220ms ease-in-out;
   align-content: center;
   text-transform: uppercase;
-  /* border-top: 2px solid var(--rbadev-duotone-3-hex); */
 
   ${respondTo.T900`
-    top:-50px; 
+    top: 0px; 
 `}
 
   a {
@@ -118,7 +89,7 @@ export const Connect = styled.div`
   width: 100vw;
   background: var(--rbadev-duotone-3-hex);
   color: var(--rbadev-duotone-4-hex);
-  border-bottom: 1px solid var(--rbadev-border-mono);
+  /* border-bottom: 1px solid var(--rbadev-border-mono); */
   margin: 0;
   text-align: center;
 

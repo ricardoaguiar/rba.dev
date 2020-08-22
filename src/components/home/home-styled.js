@@ -7,7 +7,7 @@ export const HomeContainer = styled.section`
   flex: 1 0 auto;
   margin: 50px auto 0;
   text-transform: uppercase;
-  background: var(--rbadev-mono-3-hex);
+  background: var(--rbadev-mono-0-hex);
 
   ${respondTo.T900`
     max-width: calc(100vw - 7%);
@@ -25,35 +25,20 @@ export const HomeItem = styled.article`
   background-color: white;
   margin: 0 auto;
   padding: 5vh 5vw;
-`};
-
-  ${respondTo.M375`
-  background: var(--rbadev-mono-3-hex);
-  margin: 0 auto;
-  max-width: 100vw;
-  padding: 5vh 5vw;
-  color: whitesmoke;
-`};
+`}
 `
 
 export const HomeTitle = styled.h1`
   line-height: 1;
-  font-size: calc(8vw - 40%);
+  font-size: calc(8vw - 60%);
 `
 export const HomeSubtitle = styled.h2`
-  line-height: calc(9vw - 60%);
-  font-size: calc(6vw - 45%);
+  line-height: calc(10vw - 70%);
+  font-size: calc(7vw - 80%);
   font-weight: 800;
 
-  ${respondTo.M300`
+  ${respondTo.T900`
   line-height: normal;
   font-weight: 700;
-  font-size: 7vw
-  `}
-
-  ${respondTo.T600`
-  line-height: normal;
-  font-weight: 700;
-  font-size: 7vw
   `}
 `

@@ -1,55 +1,32 @@
 import styled from "@emotion/styled"
-// import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../../utils/_respondTo"
 
 export const HeaderContainer = styled.header`
-  /* min-height: calc(100vmax - 30%);
-  display: flex;
-  margin: 0 auto;
-  text-transform: uppercase; */
   background: #fa4;
   min-width: 100vw;
-  /* height: 10vh; */
+  height: 70px;
+  border-bottom: 2px solid var(--rbadev-duotone-2-hex); 
 `
-// export const HomeItem = styled.article`
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin: 0 auto;
-//   padding: 4rem 2rem;
+export const BurgerMenu = styled.nav`
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: var(--rbadev-mono-2-hex);
+  height: 50px;
+  width: 100vw;
 
-//   ${respondTo.M300`
-//   background-color: white;
-//   margin: 0 auto;
-//   max-width: 100vw;
-//   padding: 5vh 5vw;
-// `};
-
-//   ${respondTo.M375`
-//   background: var(--rbadev-mono-3-hex);
-//   margin: 0 auto;
-//   max-width: 100vw;
-//   padding: 5vh 5vw;
-//   color: whitesmoke;
-// `};
-// `
-
-// export const HomeTitle = styled.h1`
-//   line-height: 1;
-//   font-size: calc(8vw - 40%);
-// `
-// export const HomeSubtitle = styled.h2`
-//   line-height: calc(9vw - 60%);
-//   font-size: calc(6vw - 45%);
-//   font-weight: 800;
-
-//   ${respondTo.M300`
-//   line-height: normal;
-//   font-weight: 700;
-//   font-size: 7vw
-//   `}
-
-//   ${respondTo.T600`
-//   line-height: normal;
-//   font-weight: 700;
-//   font-size: 7vw
-//   `}
-// `
+  ${respondTo.T900`
+    display: flex;
+    min-height: 100vh;
+    max-width: 7%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+  `}
+`

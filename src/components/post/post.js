@@ -53,7 +53,7 @@ const Post = () => {
         {post.edges.map(({ node }) => {
           return (
             <GridItem key={node.id}>
-              <p>Title = {node.title}</p>
+              <p>{node.title}</p>
               <Image fluid={node.heroImage.fluid} alt={node.title} />
               <p>{node.slug}</p>
               <p>{node.text.description}</p>

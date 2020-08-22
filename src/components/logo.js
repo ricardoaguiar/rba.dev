@@ -9,8 +9,8 @@ const LOGO = styled.div`
   min-width: 100%;
   display: table;
 
+
   ${respondTo.T900`
-    background: tomato;
     display: block;
     min-width: 100%;
     padding: 1em 0;
@@ -19,8 +19,8 @@ const LOGO = styled.div`
   }
 `
 const RBA = styled.h4`
-  margin: 0;
-
+  margin-bottom: -.2em;
+  
   ${respondTo.T900`
     font-size: 1em;
     `}
@@ -28,8 +28,7 @@ const RBA = styled.h4`
   `
 const DEV = styled.h4`
   margin: 0;
-  line-height: clamp(0.3, 0.5, 1);
-  letter-spacing: .4mm;
+  letter-spacing: .2mm;
   
   ${respondTo.T900`
     letter-spacing: .3mm
@@ -37,14 +36,13 @@ const DEV = styled.h4`
   }
 `
 
-
-
 function Logo() {
   return (
-    <LOGO>
-        <RBA>RBA</RBA>
-        <DEV>DEV</DEV>
-    </LOGO>
+      <LOGO>
+          <RBA>RBA</RBA>
+          <DEV>DEV</DEV>
+      </LOGO>
+
   )
 }
 

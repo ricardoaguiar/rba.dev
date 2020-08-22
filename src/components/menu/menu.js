@@ -1,22 +1,22 @@
 import React from "react"
 import { bool } from "prop-types"
-import { StyledNav, MenuList, Connect } from "./menu-styled"
+import { MenuNavigation, MenuList, Connect } from "./menu-styled"
 
 import SocialMediaMenu from "../social/social-media-menu"
 
 const Menu = ({ open }) => {
   return (
     <>
-      <StyledNav open={open}>
+      <MenuNavigation open={open}>
         <MenuList>
           <li>
-            <a href="/">
-              <span data-content="About us" aria-hidden="true"></span>About us
+            <a href="/about/">
+              <span data-content="About us" aria-hidden="true"></span>About
             </a>
           </li>
           <li>
             <a href="/">
-              <span data-content="Pricing" aria-hidden="true"></span>Pricing
+              <span data-content="Pricing" aria-hidden="true"></span>Services
             </a>
           </li>
           <li>
@@ -28,33 +28,8 @@ const Menu = ({ open }) => {
         <Connect>
           <h3>Connect</h3>
         </Connect>
-        {/* <SocialMediaList>
-          <li>
-            <a href="#">Github</a>
-          </li>
-          <li>
-            <a href="#">LinkedIn</a>
-          </li>
-          <li>
-            <a href="#">Instagram</a>
-          </li>
-          <li>
-            <a href="#">Facebook</a>
-          </li>
-          <li>
-            <a href="#" id="">
-              phone
-            </a>
-          </li>
-          <li>
-            <a href="#">message</a>
-          </li>
-          <li>
-            <a href="mailto:rba@rba.dev">email</a>
-          </li>
-        </SocialMediaList> */}
         <SocialMediaMenu />
-      </StyledNav>
+      </MenuNavigation>
     </>
   )
 }

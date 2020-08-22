@@ -1,15 +1,9 @@
-import React, { useState, useRef } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
-import GitHub from "../../components/social/github"
-import Burger from "../../components/burger/burger"
-import Logo from "../../components/logo"
-import { useOnClickOutside } from "../../components/hooks"
-import Menu from "../../components/menu/menu"
-import { BurgerMenu } from "../../components/menu/menu-styled"
 
-const MAIN = styled.main`
+const Main = styled.main`
   display: flex;
   flex-flow: column;
   max-width: 100vw;
@@ -19,20 +13,11 @@ const MAIN = styled.main`
   `}
 `
 const Wrapper = ({ children }) => {
-  const [open, setOpen] = useState(false)
-  const node = useRef()
-  useOnClickOutside(node, () => setOpen(false))
 
   return (
-    <MAIN>
+    <Main>
       {children}
-      <Menu open={open} setOpen={setOpen} />
-      <BurgerMenu ref={node}>
-        <Logo />
-        <Burger open={open} setOpen={setOpen} />
-        <GitHub />
-      </BurgerMenu>
-    </MAIN>
+    </Main>
   )
 }
 

@@ -1,34 +1,27 @@
 import styled from "@emotion/styled"
-import { respondTo } from "../../utils/_respondTo"
 
-export const BurgerButton = styled.button`
+// this is the BurgerBtn element
+export const BurgerBtn = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 30;
-  grid-area: 1/2/1/3;
   margin: 0 auto;
   align-self: center;
-
-  /* width after 900px and above  */
-  ${respondTo.T900`
-    width: 2rem;
-    height: 1.6rem;
-`}
 
   &:focus {
     outline: none;
   }
 
   div {
-    width: 1.6rem;
-    height: 0.1rem;
+    width: 2.5rem;
+    height: 2px;
     background: ${({ open }) =>
       open ? "var( --rbadev-duotone-3-hex)" : "var(--rbadev-mono-4-hex)"};
     border-radius: 1px;
@@ -49,9 +42,5 @@ export const BurgerButton = styled.button`
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
-
- ${respondTo.T900`
-    width: 2rem;
- `}
 
 `

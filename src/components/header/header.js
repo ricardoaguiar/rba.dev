@@ -1,28 +1,23 @@
-import React from "react"
-import { HeaderContainer }  from "./header-styles"
-// import { BurgerMenu } from "../../components/menu/menu-styled"
-// import GitHub from "../../components/social/github"
-// import Burger from "../../components/burger/burger"
-// import Menu from "../../components/menu/menu"
-// import Logo from "../../components/logo"
-// import { useOnClickOutside } from "../../components/hooks"
-
+import React, { useState, useRef }  from "react"
+import { HeaderContainer, } from "./header-styles"
+import Menu from "../../components/menu/menu"
+import { useOnClickOutside } from "../../components/hooks"
+import Logo from "../../components/logo"
+import BurgerComponent from '../../components/burger/burger'
+import GitHub from "../../components/social/github"
 
 const Header = () => {
-  // const [open, setOpen] = useState(false)
-  // const node = useRef()
-  // useOnClickOutside(node, () => setOpen(false))
+  const [open, setOpen] = useState(false)
+  const node = useRef()
+  useOnClickOutside(node, () => setOpen(false))
 
   return (
-  
-  <HeaderContainer>
-        {/* <BurgerMenu ref={node}>
-          <Logo />
-          <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />
-          <GitHub />
-        </BurgerMenu> */}
- </HeaderContainer>
+    <HeaderContainer ref={node}>
+        <Menu open={open} setOpen={setOpen} />
+        <Logo />
+        <BurgerComponent open={open} setOpen={setOpen} />
+        <GitHub />
+    </HeaderContainer>
   )
 }
 
