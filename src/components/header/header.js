@@ -2,7 +2,7 @@ import React, { useState, useRef }  from "react"
 import { HeaderContainer, } from "./header-styles"
 import Menu from "../../components/menu/menu"
 import { useOnClickOutside } from "../../components/hooks"
-import Logo from "../../components/logo"
+import RbaLogo from "../logo/rba-logo"
 import BurgerComponent from '../../components/burger/burger'
 import GitHub from "../../components/social/github"
 
@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <HeaderContainer ref={node}>
         <Menu open={open} setOpen={setOpen} />
-        <Logo />
+        <RbaLogo />
         <BurgerComponent open={open} setOpen={setOpen} />
         <GitHub />
     </HeaderContainer>

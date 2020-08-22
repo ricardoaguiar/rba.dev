@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { respondTo } from "../utils/_respondTo"
+import { respondTo } from '../../utils/_respondTo'
 
 const LOGO = styled.div`
   font-weight: 700;

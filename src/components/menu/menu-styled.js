@@ -4,18 +4,20 @@ import { respondTo } from "../../utils/_respondTo"
 // mobile layout
 export const MenuNavigation = styled.nav`
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   width: 100vw;
   min-height: 100vh;
   background: var(--rbadev-mono-1-hex);
   transform: ${({ open }) => (open ? "translateX(0px)" : "translateX(-100%)")};
-  position: absolute;
+  position: fixed;
+  top:0;
+  left:0;
   transition: transform 220ms ease-in-out;
   align-content: center;
   text-transform: uppercase;
 
   ${respondTo.T900`
-    top: 0px; 
+    top: 50px; 
 `}
 
   a {
