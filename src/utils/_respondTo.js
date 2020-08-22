@@ -1,4 +1,4 @@
-import { css } from "emotion"
+import { css } from "@emotion/core"
 import { breakpoints } from "./_variables"
 
 export const respondTo = Object.keys(breakpoints).reduce(

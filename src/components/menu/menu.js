@@ -1,20 +1,22 @@
 import React from "react"
 import { bool } from "prop-types"
-import { StyledMenu, MenuList, Contact, Connect } from "./menu-styled"
+import { MenuNavigation, MenuList, Connect } from "./menu-styled"
+
+import SocialMediaMenu from "../social/social-media-menu"
 
 const Menu = ({ open }) => {
   return (
     <>
-      <StyledMenu open={open}>
-        <MenuList menuLeft="center">
+      <MenuNavigation open={open}>
+        <MenuList>
           <li>
-            <a href="/">
-              <span data-content="About us" aria-hidden="true"></span>About us
+            <a href="/about/">
+              <span data-content="About us" aria-hidden="true"></span>About
             </a>
           </li>
           <li>
             <a href="/">
-              <span data-content="Pricing" aria-hidden="true"></span>Pricing
+              <span data-content="Pricing" aria-hidden="true"></span>Services
             </a>
           </li>
           <li>
@@ -23,21 +25,11 @@ const Menu = ({ open }) => {
             </a>
           </li>
         </MenuList>
-        <Connect>Connect</Connect>
-        <MenuList menuLeft="var(--rbadev-mono-1-hex)">
-          <li>Github</li>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
-          <li>Facebook</li>
-          <li>
-            <Contact>
-              <li>email</li>
-              <li>phone</li>
-              <li>message</li>
-            </Contact>
-          </li>
-        </MenuList>
-      </StyledMenu>
+        <Connect>
+          <h3>Connect</h3>
+        </Connect>
+        <SocialMediaMenu />
+      </MenuNavigation>
     </>
   )
 }

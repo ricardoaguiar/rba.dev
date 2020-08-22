@@ -1,20 +1,17 @@
 import styled from "@emotion/styled"
 
-export const StyledBurger = styled.button`
-  /* position: absolute;
-  top: 0.55rem;
-  left: 0.9rem; */
+// this is the BurgerBtn element
+export const BurgerBtn = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
-  grid-area: 1/2/1/3;
+  z-index: 30;
   margin: 0 auto;
   align-self: center;
 
@@ -23,8 +20,8 @@ export const StyledBurger = styled.button`
   }
 
   div {
-    width: 1.6rem;
-    height: 0.1rem;
+    width: 2.5rem;
+    height: 2px;
     background: ${({ open }) =>
       open ? "var( --rbadev-duotone-3-hex)" : "var(--rbadev-mono-4-hex)"};
     border-radius: 1px;
@@ -45,4 +42,5 @@ export const StyledBurger = styled.button`
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
+
 `

@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
 
-export const GitHubButton = styled.button`
+export const RBA = styled.button`
   display: flex;
   border: none;
   cursor: pointer;

@@ -34,8 +34,8 @@ const GridContainer = styled.section`
   justify-content: center;
   background: transparent;
 
-  ${respondTo.sm`
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  ${respondTo.M300`
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     margin: 0 4vw 0 3vw;
   `}
 `
@@ -44,7 +44,6 @@ const GridItem = styled.article`
   border: 1px solid #fff;
   z-index: -1;
 `
-
 const Post = () => {
   const { post } = useStaticQuery(getPosts)
 
@@ -54,7 +53,7 @@ const Post = () => {
         {post.edges.map(({ node }) => {
           return (
             <GridItem key={node.id}>
-              <p>Title = {node.title}</p>
+              <p>{node.title}</p>
               <Image fluid={node.heroImage.fluid} alt={node.title} />
               <p>{node.slug}</p>
               <p>{node.text.description}</p>

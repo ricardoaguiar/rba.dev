@@ -3,11 +3,17 @@ import { respondTo } from "../../utils/_respondTo"
 
 export const HomeContainer = styled.section`
   min-height: calc(100vmax - 30%);
-  min-width: 100vw;
   display: flex;
-  margin: 0 auto;
+  flex: 1 0 auto;
+  margin: 50px auto 0;
   text-transform: uppercase;
-  background: var(--rbadev-mono-3-hex);
+  background: var(--rbadev-mono-0-hex);
+
+  ${respondTo.T900`
+    max-width: calc(100vw - 7%);
+    margin: 0 auto;
+
+  `}
 `
 export const HomeItem = styled.article`
   display: flex;
@@ -15,40 +21,24 @@ export const HomeItem = styled.article`
   margin: 0 auto;
   padding: 4rem 2rem;
 
-  ${respondTo.xs`
+  ${respondTo.T900`
   background-color: white;
   margin: 0 auto;
-  max-width: 85vw;
   padding: 5vh 5vw;
-`};
-
-  ${respondTo.sm`
-  background: var(--rbadev-mono-3-hex);
-  margin: 0 auto;
-  max-width: 85vw;
-  padding: 5vh 5vw;
-  color: whitesmoke;
-`};
+`}
 `
 
 export const HomeTitle = styled.h1`
   line-height: 1;
-  font-size: calc(8vw - 40%);
+  font-size: calc(8vw - 60%);
 `
 export const HomeSubtitle = styled.h2`
-  line-height: calc(9vw - 60%);
-  font-size: calc(6vw - 45%);
+  line-height: calc(10vw - 70%);
+  font-size: calc(7vw - 80%);
   font-weight: 800;
 
-  ${respondTo.md`
+  ${respondTo.T900`
   line-height: normal;
   font-weight: 700;
-  font-size: 7vw
-  `}
-
-  ${respondTo.lg`
-  line-height: normal;
-  font-weight: 700;
-  font-size: 7vw
   `}
 `

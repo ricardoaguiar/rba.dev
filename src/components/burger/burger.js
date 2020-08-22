@@ -1,20 +1,20 @@
 import React from "react"
 import { bool, func } from "prop-types"
-import { StyledBurger } from "./burger-styled"
+import { BurgerBtn } from "./burger-styled"
 
-const Burger = ({ open, setOpen }) => {
+const BurgerComponent = ({ open, setOpen }) => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <BurgerBtn open={open} onClick={() => setOpen(!open)}>
       <div />
       <div />
       <div />
-    </StyledBurger>
+    </BurgerBtn>
   )
 }
 
-Burger.propTypes = {
+BurgerComponent.propTypes = {
   open: bool.isRequired,
   setOpen: func.isRequired,
 }
 
-export default Burger
+export default BurgerComponent

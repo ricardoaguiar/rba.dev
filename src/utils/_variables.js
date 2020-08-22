@@ -1,15 +1,19 @@
 export const breakpoints = {
-  xxxs: "300px",
-  xxs: "400px",
-  xs: "600px",
-  sm: "800px",
-  md: "900px",
-  lg: "1200px",
-  xl: "1600px",
-  hd: "1920px",
+  M300: "300px",
+  M375: "375px",
+  M400: "400px",
+  T600: "600px",  
+  T700: "700px",
+  T800: "800px",
+  T900: "900px",
+  T1000: "1000px",
+  LP1200: "1200px",
+  D1600: "1600px",
+  HD: "1920px",
 }
 
-// the styles go into effect when the vp reaches the size above.
+// the styles go into effect when the 
+// vp reaches the size above.
 // usage:
 
 // ${

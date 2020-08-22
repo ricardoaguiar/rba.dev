@@ -5,23 +5,20 @@ import styled from "@emotion/styled"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SocialMediaMenu = () => {
-  const [background, setBackground] = useState("var(--rbadev-mono-4-hex)")
+  const [background, setBackground] = useState()
 
   const setStyle = background => {
     setBackground(background)
   }
 
   const Menu = css`
-    /* background: ${background}; */
-    background: #ccc4;
-    display: flex;
+    background: ${background};
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: .7rem;
-    position: fixed;
-    /* outline: 5px dotted #a555 */
+    place-items: center;
+    padding: 0.7rem;
+    position: relative;
   `
 
   const github = css`
@@ -46,32 +43,13 @@ const SocialMediaMenu = () => {
   `
 
   const SocialMediaIcon = styled.div`
-    display: flex;
+    display: grid;
     cursor: pointer;
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 1;
   `
 
   const linkedin = css`
     color: var(--white);
     background: var(--linkedin);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    &:hover::before {
-      transform: scaleX(0.5);
-      transform-origin: left;
-      transition: transform 1000ms ease-in;
-    }
   `
 
   return (
@@ -79,7 +57,7 @@ const SocialMediaMenu = () => {
       <a href="https://www.linkedin.com/in/jricardoaguiar/" target="blank">
         <SocialMediaIcon
           onMouseEnter={() => setStyle(`${linkedin}`)}
-          onMouseOut={() => setStyle("var(--rbadev-mono-4-hex)")}
+          onMouseOut={() => setStyle("#333")}
           className={css`
             color: var(--rbadev-mono-2-hex);
             &:hover {
@@ -91,7 +69,6 @@ const SocialMediaMenu = () => {
             icon={["fab", "linkedin"]}
             size="2x"
             pointerEvents="none"
-            transform="translate(100%)"
           />
         </SocialMediaIcon>
       </a>
@@ -99,7 +76,7 @@ const SocialMediaMenu = () => {
       <a href="https://www.github.com/ricardoaguiar/" target="blank">
         <SocialMediaIcon
           onMouseEnter={() => setStyle(`${github}`)}
-          onMouseOut={() => setStyle("var(--rbadev-mono-4-hex)")}
+          onMouseOut={() => setStyle()}
           className={css`
             color: var(--rbadev-mono-2-hex);
             &:hover {

@@ -27,6 +27,7 @@
   --whatsapp: #25d366;
 
   /* Color Theme Swatches in Hex */
+  --rbadev-mono-0-hex: #f2f2f235;
   --rbadev-mono-1-hex: #f2f2f2;
   --rbadev-mono-2-hex: #bfbfbf;
   --rbadev-mono-3-hex: #8c8c8c;
@@ -34,6 +35,7 @@
   --rbadev-mono-5-hex: #0d0d0d;
 
   /* Color Theme Swatches in RGBA */
+  --rbadev-border-mono: rgb(220, 220, 220);
   --rbadev-mono-1-rgba: rgba(242, 242, 242, 1);
   --rbadev-mono-2-rgba: rgba(191, 191, 191, 1);
   --rbadev-mono-3-rgba: rgba(140, 140, 140, 1);
@@ -55,12 +57,6 @@
   --rbadev-duotone-5-rgba: rgba(38, 38, 38, 1);
 }
 
-/* 
-  svg:hover path {
-  fill: #fff;
-  opacity: 1;
-  stroke: var(--rbadev-duotone-3-hex);}
- */
 
 html {
   -ms-text-size-adjust: 100%;
@@ -70,7 +66,7 @@ body {
   margin: 0;
   color: var(--rbadev-duotone-5-hex);
   font-family: railroad-gothic-atf, bio-sans, georgia, serif;
-  font-size: calc(14px + (26 - 14) * ((100vw - 320px) / (1600 - 320)));
+  font-size: clamp(2vw, 12px + 1.2vw, 2rem);
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -82,27 +78,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* experimental for touch devices */
-/* @media (hover: hover) and (pointer: fine) {
-  a:hover {
-    background: yellow;
-  }
-} */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
+
+
 audio,
 canvas,
 progress,
@@ -141,10 +119,10 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
+/* h1 {
   font-size: 2em;
   margin: 0.67em 0;
-}
+} */
 mark {
   background-color: #ff0;
   color: #000;
@@ -154,7 +132,7 @@ small {
 }
 sub,
 sup {
-  font-size: 75%;
+  /* font-size: 75%; */
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -265,11 +243,11 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-html {
+/* html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
-}
+} */
 * {
   box-sizing: inherit;
 }
@@ -308,7 +286,7 @@ h1 {
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
   /* font-size: 3rem; */
-  line-height: 1.1;
+  /* line-height: 1.1; */
 }
 h2 {
   margin-left: 0;
@@ -327,7 +305,7 @@ h2 {
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
   /* font-size: 2rem; */
-  line-height: 1.1;
+  /* line-height: 1.1; */
 }
 h3 {
   margin-left: 0;
@@ -339,12 +317,13 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: railroad-gothic-atf, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   /* font-size: 1.38316rem; */
-  line-height: 1.1;
+  /* line-height: 1.1; */
 }
 h4 {
   margin-left: 0;
@@ -356,12 +335,13 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: railroad-gothic-atf, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   /* font-size: 1rem; */
-  line-height: 1.1;
+  /* line-height: 1.1; */
 }
 h5 {
   margin-left: 0;
@@ -378,7 +358,7 @@ h5 {
   font-weight: bold;
   text-rendering: optimizeLegibility;
   /* font-size: 0.85028rem; */
-  line-height: 1.1;
+  /* line-height: 1.1; */
 }
 h6 {
   margin-left: 0;
@@ -395,7 +375,7 @@ h6 {
   font-weight: bold;
   text-rendering: optimizeLegibility;
   /* font-size: 0.78405rem; */
-  line-height: 1.1;
+  /* line-height: 1.1; */
 }
 hgroup {
   margin-left: 0;
@@ -583,9 +563,7 @@ dt {
 th {
   font-weight: bold;
 }
-li {
-  margin-bottom: calc(1.45rem / 2);
-}
+
 ol li {
   padding-left: 0;
 }
@@ -593,11 +571,6 @@ ul li {
   padding-left: 0;
 }
 li > ol {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
-}
-li > ul {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
@@ -691,11 +664,6 @@ pre tt:after {
   content: "";
 }
 
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min--moz-device-pixel-ratio: 2),
   only screen and (-o-min-device-pixel-ratio: 2/1),
