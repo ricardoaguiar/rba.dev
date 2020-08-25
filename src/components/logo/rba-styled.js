@@ -7,14 +7,12 @@ export const RBA = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
-  grid-area: 1/3/1/-1;
-  margin-right: 1em;
-  justify-content: flex-end;
+  margin: auto .8em;
   background: transparent;
-  font-size: 0.7em;
+  font-size: 21px;
+  align-self: center;
 
   ${respondTo.T900`
-   margin-bottom: 1em;
+    margin: .5em auto;
   `}
 `

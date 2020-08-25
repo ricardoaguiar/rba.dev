@@ -1,17 +1,28 @@
 import styled from "@emotion/styled"
-// import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../../utils/_respondTo"
 
-// container for the navigation
+//header is the container for the navigation
 export const HeaderContainer = styled.header`
-  background: #fa4;
-  border-bottom: 2px solid var(--rbadev-duotone-2-hex); 
+  background: var(--rbadev-mono-1-hex);
+  /* border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   position: fixed;
+  justify-content: space-between;
+  top:0;
+  left:0;
   height: 50px;
   width: 100vw;
 
 
+  ${respondTo.T900`
+    min-height: 100vh;
+    // border-right: 1px solid var(--rbadev-duotone-2-hex); 
+    max-width: 70px;
+    flex-flow: column;
+    padding: 0;
+    margin: 0;
+  `}
 
 `
 // export const BurgerMenu = styled.nav`
@@ -20,15 +31,4 @@ export const HeaderContainer = styled.header`
 //   top: 0;
 //   background: var(--rbadev-mono-2-hex);
 
-//   ${respondTo.T900`
-//     display: flex;
-//     min-height: 100vh;
-//     max-width: 7%;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     align-items: center;
-//     border: none;
-//     padding: 0;
-//     margin: 0;
-//   `}
 // `
