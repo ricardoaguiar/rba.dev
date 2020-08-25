@@ -30,11 +30,11 @@ export const HomeItem = styled.article`
 
 export const HomeTitle = styled.h1`
   line-height: 1;
-  font-size: calc(8vw - 60%);
+  font-size: calc(6vw - 60%);
 `
 export const HomeSubtitle = styled.h2`
   line-height: calc(10vw - 70%);
-  font-size: calc(7vw - 80%);
+  font-size: calc(6vw - 70%);
   font-weight: 800;
 
   ${respondTo.T900`

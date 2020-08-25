@@ -3,18 +3,16 @@ import { respondTo } from "../../utils/_respondTo"
 
 
 export const GitHubButton = styled.button`
-  display: flex;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
-  grid-area: 1/3/1/-1;
   margin-right: 1em;
-  justify-content: flex-end;
   background: transparent;
-  font-size: 0.7em;
+  font-size: 19px;
 
   ${respondTo.T900`
-   margin-bottom: 1em;
+   margin: .8em auto;
+
   `}
 `

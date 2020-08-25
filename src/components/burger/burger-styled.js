@@ -42,5 +42,4 @@ export const BurgerBtn = styled.button`
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
-
 `

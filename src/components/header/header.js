@@ -12,12 +12,14 @@ const Header = () => {
   useOnClickOutside(node, () => setOpen(false))
 
   return (
+    <>
     <HeaderContainer ref={node}>
-        <Menu open={open} setOpen={setOpen} />
         <RbaLogo />
         <BurgerComponent open={open} setOpen={setOpen} />
+        <Menu open={open} setOpen={setOpen} />
         <GitHub />
     </HeaderContainer>
+    </>
   )
 }
 

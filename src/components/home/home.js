@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <HomeContainer>
       <HomeItem>
-        <HomeTitle>Hi, I'm Ricardo. A full stack web developer.</HomeTitle>
+        <HomeTitle>Hi, I'm Ricardo, A full stack web developer.</HomeTitle>
         <HomeSubtitle>This is my portfolio.</HomeSubtitle>
       </HomeItem>
     </HomeContainer>
