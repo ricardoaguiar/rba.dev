@@ -10,13 +10,13 @@ const Menu = ({ open }) => {
       <MenuNavigation open={open}>
         <MenuList>
           <li>
-            <a href="/about/">
-              <span data-content="About us" aria-hidden="true"></span>About
+            <a href="/">
+              <span data-content="What can I do for you?" aria-hidden="true"></span>What can I do for you?
             </a>
           </li>
           <li>
-            <a href="/">
-              <span data-content="Pricing" aria-hidden="true"></span>Services
+            <a href="/about/">
+              <span data-content="About Me" aria-hidden="true"></span>About Me
             </a>
           </li>
           <li>
