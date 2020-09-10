@@ -6,7 +6,7 @@ const Home = () => {
     <HomeContainer>
       <HomeItem>
         <HomeTitle>Hi, I'm Ricardo, A full stack web developer.</HomeTitle>
-        <HomeSubtitle>This is my portfolio.</HomeSubtitle>
+        <HomeSubtitle>And this is my portfolio.</HomeSubtitle>
       </HomeItem>
     </HomeContainer>
   )
