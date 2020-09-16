@@ -16,10 +16,9 @@ const IndexPage = () => {
 
   return (
     <>
-    
+        wrap<Wrapper>
       header<Header />
-      wrap<Wrapper>
-    
+ 
         <SEO title="Home" />
         home<Home />
         posts<Post />
