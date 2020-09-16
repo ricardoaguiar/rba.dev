@@ -22,8 +22,9 @@ const IndexPage = () => {
         <SEO title="Home" />
         home<Home />
         posts<Post />
-            footer<Footer />
+    
       endWrap</Wrapper>
+            footer<Footer />
 
     </>
   )
