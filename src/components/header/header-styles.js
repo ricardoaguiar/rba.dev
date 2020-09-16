@@ -3,7 +3,7 @@ import { respondTo } from "../../utils/_respondTo"
 
 //header is the container for the navigation
 export const HeaderContainer = styled.header`
-  background: var(--rbadev-mono-1-hex);
+  background: var(--rbadev-mono-2-hex);
   /* border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
   display: flex;
   flex-flow: row;
