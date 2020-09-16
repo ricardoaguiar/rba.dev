@@ -16,13 +16,14 @@ const IndexPage = () => {
 
   return (
     <>
-      <Wrapper>
-        <Header />
-        <SEO title="Home" />
-        <Home />
-        <Post />
-        <Footer />
-      </Wrapper>
+      wrap<Wrapper>
+    
+        headers<Header />
+        seo<SEO title="Home" />
+        home<Home />
+        posts<Post />
+        footer<Footer />
+      endWrap</Wrapper>
     </>
   )
 }
