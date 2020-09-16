@@ -1,6 +1,13 @@
 #___gatsby {
 padding: 10px;
-  ouline: 8px solid dodgerblue;
+  margin: 5px;
+  outline: 8px solid dodgerblue;
+}
+
+#gatsby-focus-wrapper {
+padding: 10px;
+  margin: 5px;
+  outline: 6px solid purple !important;
 }
 
 * {
@@ -69,6 +76,8 @@ margin: 5px;
   
   outline: 8px solid orange;
   padding: 1.5em;
+  height: 100vh;
+  
 }
 
 
