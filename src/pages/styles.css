@@ -61,9 +61,10 @@ margin: 2px;
   --rbadev-duotone-4-rgba: rgba(242, 242, 242, 1);
   --rbadev-duotone-5-rgba: rgba(38, 38, 38, 1);
   
-  outline: 1px solid red;
+  outline: 1px solid orange;
   max-width: 80vw;
   margin: 2em;
+  padding: 1em;
 }
 
 
