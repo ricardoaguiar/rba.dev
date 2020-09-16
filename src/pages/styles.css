@@ -1,6 +1,7 @@
 * {
 outline: 1px solid blue;
-margin: 2px;
+margin: 5px;
+  padding: 4px;
 }
 
 :root {
