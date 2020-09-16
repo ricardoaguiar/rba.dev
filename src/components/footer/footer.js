@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const FooterSection = styled.section`
-  min-width: 100vw;
+  min-width: 600px;
   min-height: 5vh;
   background: var(--rbadev-duotone-4-hex);
   display: flex;
