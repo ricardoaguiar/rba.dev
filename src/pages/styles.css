@@ -55,6 +55,8 @@
   --rbadev-duotone-3-rgba: rgba(242, 71, 55, 1);
   --rbadev-duotone-4-rgba: rgba(242, 242, 242, 1);
   --rbadev-duotone-5-rgba: rgba(38, 38, 38, 1);
+  
+  outline: 1px solid red;
 }
 
 
@@ -63,6 +65,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  display: flex;
+  outline: 1px solid green;
   margin: 0;
   color: var(--rbadev-duotone-5-hex);
   font-family: railroad-gothic-atf, bio-sans, georgia, serif;
