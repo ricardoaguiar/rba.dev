@@ -1,3 +1,8 @@
+* {
+outline: 1px solid blue;
+margin: 2px;
+}
+
 :root {
   /* main theme colors */
   --black: #000;
