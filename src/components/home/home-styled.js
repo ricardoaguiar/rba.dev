@@ -7,7 +7,8 @@ export const HomeContainer = styled.section`
   flex: 1 0 auto;
   margin: 50px auto 0;
   text-transform: uppercase;
-  background: var(--rbadev-mono-2-hex);
+//   background: var(--rbadev-mono-2-hex);
+background: red;
 
   ${respondTo.T900`
     max-width: calc(100vw - 7%);
