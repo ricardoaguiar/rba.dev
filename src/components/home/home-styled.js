@@ -21,7 +21,7 @@ export const HomeItem = styled.article`
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 4rem 2rem;
-background: var(--rbadev-mono-2-hex);
+  background: grey;
 
   ${respondTo.T900`
   background-color: white;
