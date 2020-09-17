@@ -13,6 +13,8 @@ export const HeaderContainer = styled.header`
   left:0;
   height: 50px;
   width: 100vw;
+  margin: .5em;
+outline: 2px dotted green;
 
 
   ${respondTo.T900`
