@@ -3,8 +3,9 @@ import { respondTo } from "../../utils/_respondTo"
 
 //header is the container for the navigation
 export const HeaderContainer = styled.header`
-  background: var(--rbadev-mono-1-hex);
-  /* border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
+ /* background: var(--rbadev-mono-1-hex);
+   border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
+background: darkkhaki;
   display: flex;
   flex-flow: row;
   position: fixed;
