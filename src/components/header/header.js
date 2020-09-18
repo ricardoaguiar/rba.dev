@@ -13,14 +13,14 @@ const Header = () => {
 
   return (
     <>
-
+    <Menu open={open} setOpen={setOpen} />
     <HeaderContainer ref={node}>
         <RbaLogo />
         <BurgerComponent open={open} setOpen={setOpen} />
         
         <GitHub />
     </HeaderContainer>
-    <Menu open={open} setOpen={setOpen} />
+
     </>
   )
 }
