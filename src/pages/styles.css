@@ -71,7 +71,7 @@ html {
 }
 body {
   display: flex;
-  outline: 4px dotted tomato;
+  outline: 2px dotted black;
   padding: 2px;
   width: 85%;
   margin: 0 auto;
