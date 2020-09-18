@@ -9,11 +9,11 @@
 }
 
 * {
-outline: 1px solid blue;
+outline: 1px solid violet;
 }
 
 :root {
-    border: 4px dashed orange;
+    border: 2px dashed orange;
   
   /* main theme colors */
   --black: #000;
@@ -81,9 +81,10 @@ html {
 }
 body {
   display: flex;
-  outline: 2px dotted tomato;
-  width: 75%;
+  outline: 1px dotted tomato;
+  width: 85%;
   margin: 0 auto;
+  padding: 2px;
   color: var(--rbadev-duotone-5-hex);
   font-family: railroad-gothic-atf, bio-sans, georgia, serif;
   font-size: clamp(2vw, 12px + 1.2vw, 2rem);
