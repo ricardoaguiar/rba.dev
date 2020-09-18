@@ -13,7 +13,7 @@ outline: 1px solid blue;
 }
 
 :root {
-    border: 10px dashed orange;
+    border: 4px dashed orange;
   
   /* main theme colors */
   --black: #000;
