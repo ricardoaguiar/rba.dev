@@ -18,9 +18,9 @@ const IndexPage = () => {
     <>
       <Header />
       <SEO title="Home" />
-      home<Home />
-      posts<Post />
-      footer<Footer />
+      <Home />
+      <Post />
+      <Footer />
     </>
   )
 }
