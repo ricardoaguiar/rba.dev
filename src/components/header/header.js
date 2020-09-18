@@ -13,12 +13,14 @@ const Header = () => {
 
   return (
     <>
+
     <HeaderContainer ref={node}>
         <RbaLogo />
         <BurgerComponent open={open} setOpen={setOpen} />
-        <Menu open={open} setOpen={setOpen} />
+        
         <GitHub />
     </HeaderContainer>
+    <Menu open={open} setOpen={setOpen} />
     </>
   )
 }
