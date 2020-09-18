@@ -5,7 +5,7 @@
 
 #gatsby-focus-wrapper {
   margin: 2px;
-  outline: 4px solid blue !important;
+  outline: 1px dashed blue !important;
 }
 
 * {
