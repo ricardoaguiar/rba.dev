@@ -89,7 +89,7 @@ body {
   display: flex;
   outline: 2px solid green;
   width: 75%;
-  margin: 1.5em;
+  margin: 0 auto;
   color: var(--rbadev-duotone-5-hex);
   font-family: railroad-gothic-atf, bio-sans, georgia, serif;
   font-size: clamp(2vw, 12px + 1.2vw, 2rem);
