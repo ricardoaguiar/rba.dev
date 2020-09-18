@@ -12,8 +12,7 @@ padding: 10px;
 
 * {
 outline: 1px solid blue;
-margin: 5px;
-  padding: 4px;
+margin: 1px;
 }
 
 :root {
@@ -74,8 +73,7 @@ margin: 5px;
   --rbadev-duotone-4-rgba: rgba(242, 242, 242, 1);
   --rbadev-duotone-5-rgba: rgba(38, 38, 38, 1);
   
-  outline: 8px solid orange;
-  padding: 1.5em;
+  outline: 2px solid orange;
   height: 100vh;
   
 }
@@ -87,7 +85,7 @@ html {
 }
 body {
   display: flex;
-  outline: 2px solid green;
+  outline: 2px dotted tomato;
   width: 75%;
   margin: 0 auto;
   color: var(--rbadev-duotone-5-hex);
