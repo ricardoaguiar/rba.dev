@@ -1,15 +1,3 @@
-#___gatsby {
-  margin: 2px;
-  padding: 2px;
-  outline: 1px solid red;
-}
-
-#gatsby-focus-wrapper {
-  margin: 2px;
-  padding 2px;
-  outline: 1px dashed blue !important;
-}
-
 * {
 outline: 1px solid violet;
 }
@@ -83,10 +71,10 @@ html {
 }
 body {
   display: flex;
-  outline: 1px dotted tomato;
+  outline: 3px dotted tomato;
+  padding: 2px;
   width: 85%;
   margin: 0 auto;
-  padding: 2px;
   color: var(--rbadev-duotone-5-hex);
   font-family: railroad-gothic-atf, bio-sans, georgia, serif;
   font-size: clamp(2vw, 12px + 1.2vw, 2rem);
@@ -101,8 +89,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#___gatsby {
+  margin: 2px;
+  padding: 2px;
+  outline: 1px solid goldenrod;
+}
 
-
+#gatsby-focus-wrapper {
+  margin: 2px;
+  padding 2px;
+  outline: 1px dashed blue !important;
+}
 
 audio,
 canvas,
