@@ -13,6 +13,8 @@ outline: 1px solid blue;
 }
 
 :root {
+    border: 10px dashed orange;
+  
   /* main theme colors */
   --black: #000;
   --white: #fff;
@@ -69,8 +71,6 @@ outline: 1px solid blue;
   --rbadev-duotone-3-rgba: rgba(242, 71, 55, 1);
   --rbadev-duotone-4-rgba: rgba(242, 242, 242, 1);
   --rbadev-duotone-5-rgba: rgba(38, 38, 38, 1);
-  
-  outline: 10px solid orange;
   
 }
 
