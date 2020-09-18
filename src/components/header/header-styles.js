@@ -5,7 +5,7 @@ import { respondTo } from "../../utils/_respondTo"
 export const HeaderContainer = styled.header`
  /* background: var(--rbadev-mono-1-hex);
    border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
-background: darkkhaki;
+  background: lightgoldenrodyellow;
   display: flex;
   flex-flow: row;
   position: fixed;
@@ -14,8 +14,7 @@ background: darkkhaki;
   left:0;
   height: 50px;
   width: 100vw;
-  margin: .5em;
-outline: 2px dotted green;
+  margin: 0;
 
 
   ${respondTo.T900`
