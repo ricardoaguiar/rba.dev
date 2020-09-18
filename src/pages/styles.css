@@ -1,18 +1,16 @@
 #___gatsby {
-padding: 10px;
-  margin: 5px;
-  outline: 8px solid dodgerblue;
+  margin: 2px;
+  outline: 6px solid red;
 }
 
 #gatsby-focus-wrapper {
-padding: 10px;
-  margin: 5px;
-  outline: 6px solid purple !important;
+  margin: 2px;
+  outline: 4px solid blue !important;
 }
 
 * {
-outline: 1px solid blue;
-margin: 1px;
+outline: 2px solid blue;
+margin: 2px;
 }
 
 :root {
