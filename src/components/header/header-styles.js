@@ -3,8 +3,9 @@ import { respondTo } from "../../utils/_respondTo"
 
 //header is the container for the navigation
 export const HeaderContainer = styled.header`
-  background: var(--rbadev-mono-1-hex);
-  /* border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
+ /* background: var(--rbadev-mono-1-hex);
+   border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
+  background: lightgoldenrodyellow;
   display: flex;
   flex-flow: row;
   position: fixed;
@@ -13,8 +14,7 @@ export const HeaderContainer = styled.header`
   left:0;
   height: 50px;
   width: 100vw;
-  margin: .5em;
-outline: 2px dotted green;
+  margin: 0;
 
 
   ${respondTo.T900`
