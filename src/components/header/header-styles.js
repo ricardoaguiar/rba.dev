@@ -5,7 +5,7 @@ import { respondTo } from "../../utils/_respondTo"
 export const HeaderContainer = styled.header`
  /* background: var(--rbadev-mono-1-hex);
    border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
-  background: lightgoldenrodyellow;
+  background: transparent;
   display: flex;
   flex-flow: row;
   position: fixed;
