@@ -142,7 +142,7 @@ const SocialMediaMenu = () => {
           `}
         >
           <FontAwesomeIcon
-            icon={"faenvelop"}
+            icon={"faEnvelop"}
             size="2x"
             pointerEvents="none"
           />
