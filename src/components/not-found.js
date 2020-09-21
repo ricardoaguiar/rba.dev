@@ -2,8 +2,8 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const PageNotFound = styled.div`
-  height: 100vh;
-  width: 100vw;
+  height: 80vh;
+  width: 80vw;
   color: white;
   background-color: tomato;
   display: flex;
@@ -23,7 +23,7 @@ function NotFound() {
   return (
     <PageNotFound>
       <Paragraph>
-        <h1>ops, I think we are missing something here.</h1>
+        <h2>oops, I think we are missing something here.</h2>
       </Paragraph>
     </PageNotFound>
   )
