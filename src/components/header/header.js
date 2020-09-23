@@ -1,10 +1,11 @@
-import React, { useState, useRef }  from "react"
-import { HeaderContainer, } from "./header-styles"
+import React, { useState, useRef } from "react"
+import { HeaderContainer } from "./header-styles"
 import Menu from "../../components/menu/menu"
 import { useOnClickOutside } from "../../components/hooks"
 import RbaLogo from "../logo/rba-logo"
-import BurgerComponent from '../../components/burger/burger'
-import GitHub from "../../components/social/github"
+import BurgerComponent from "../../components/burger/burger"
+// import GitHub from "../../components/social/github"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -13,14 +14,15 @@ const Header = () => {
 
   return (
     <>
-    <Menu open={open} setOpen={setOpen} />
-    <HeaderContainer ref={node}>
+      <Menu open={open} setOpen={setOpen} />
+      <HeaderContainer ref={node}>
         <RbaLogo />
         <BurgerComponent open={open} setOpen={setOpen} />
-        
-        <GitHub />
-    </HeaderContainer>
 
+        <FontAwesomeIcon icon={"envelope"} size="2x" pointerEvents="none" />
+
+        {/* <GitHub /> */}
+      </HeaderContainer>
     </>
   )
 }
