@@ -1,9 +1,9 @@
-* {
+/* * {
 outline: 1px solid violet;
-}
+} */
 
 :root {
-    border: 2px dashed orange;
+/*     border: 2px dashed orange; */
   
   /* main theme colors */
   --black: #000;
@@ -72,8 +72,8 @@ html {
 body {
   display: flex;
   outline: 2px dotted black;
-  padding: 2px;
-  width: 85%;
+/*   padding: 2px;
+  width: 85%; */
   margin: 0 auto;
   color: var(--rbadev-duotone-5-hex);
   font-family: railroad-gothic-atf, bio-sans, georgia, serif;
@@ -89,6 +89,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*
 #___gatsby {
   margin: 2px;
   padding: 2px;
@@ -100,6 +101,7 @@ body {
   padding: 2px;
   outline: 1px dashed blue !important;
 }
+*/
 
 audio,
 canvas,
