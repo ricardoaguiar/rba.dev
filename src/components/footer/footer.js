@@ -2,14 +2,16 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const FooterSection = styled.section`
-  min-width: 600px;
-  min-height: 5vh;
-  background: var(--rbadev-duotone-4-hex);
+  width: 100%;
+  min-height: 8vh;
+  background: var(--rbadev-duotone-3-hex);
+  border: 1px solid var(--rbadev-duotone-2-hex);
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   bottom: 0;
   padding:.5em;
+  text-align: center;
 `
 
 const Footer = () => {
