@@ -43,7 +43,6 @@ const GridItem = styled.article`
   background: whitesmoke;
   border: 1px solid #fff;
   z-index: -1;
-  padding: .5em
 ` 
 
 const PostTitle = styled.p` 
