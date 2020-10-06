@@ -59,7 +59,7 @@ const Post = () => {
             <GridItem key={node.id}>
               <PostTitle>{node.title}</PostTitle>
               <Image fluid={node.heroImage.fluid} alt={node.title} />
-              <p>{node.slug}</p>
+//               <p>{node.slug}</p>
               <p>{node.text.description}</p>
             </GridItem>
           )
