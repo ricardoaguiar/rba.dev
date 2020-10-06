@@ -129,21 +129,6 @@ const SocialMediaMenu = () => {
           />
         </SocialMediaIcon>
       </a>
-
-      <a href="https://www.instagram.com/ricardoaguiar/" target="blank">
-        <SocialMediaIcon
-          onMouseEnter={() => setStyle(`${instagram}`)}
-          onMouseOut={() => setStyle("var(--rbadev-mono-4-hex)")}
-          className={css`
-            color: var(--rbadev-mono-2-hex);
-            &:hover {
-              color: var(--white);
-            }
-          `}
-        >
-          <FontAwesomeIcon icon={"envelope"} size="2x" pointerEvents="none" />
-        </SocialMediaIcon>
-      </a>
     </nav>
   )
 }
