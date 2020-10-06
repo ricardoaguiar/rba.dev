@@ -43,7 +43,12 @@ const GridItem = styled.article`
   background: whitesmoke;
   border: 1px solid #fff;
   z-index: -1;
-`
+  padding: .5em
+` 
+
+const PostTitle = styled.p` 
+  padding: .3em;
+` 
 const Post = () => {
   const { post } = useStaticQuery(getPosts)
 
@@ -53,7 +58,7 @@ const Post = () => {
         {post.edges.map(({ node }) => {
           return (
             <GridItem key={node.id}>
-              <p>{node.title}</p>
+              <PostTitle>{node.title}</PostTitle>
               <Image fluid={node.heroImage.fluid} alt={node.title} />
               <p>{node.slug}</p>
               <p>{node.text.description}</p>
