@@ -19,7 +19,7 @@ const Header = () => {
         <RbaLogo />
         <BurgerComponent open={open} setOpen={setOpen} />
 
-        <FontAwesomeIcon icon={"envelope"} size="12px" pointerEvents="none" />
+        <FontAwesomeIcon icon={"envelope"} size="14px" pointerEvents="none" />
 
         {/* <GitHub /> */}
       </HeaderContainer>
