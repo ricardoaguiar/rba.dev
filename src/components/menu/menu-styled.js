@@ -17,7 +17,7 @@ export const MenuNavigation = styled.nav`
   text-transform: uppercase;
 
   ${respondTo.T900`
-    top: 50px; 
+      margin-top: 50px; 
 `}
 
   a {
