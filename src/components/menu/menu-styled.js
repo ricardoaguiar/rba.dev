@@ -10,7 +10,7 @@ export const MenuNavigation = styled.nav`
   background: var(--rbadev-mono-1-hex);
   transform: ${({ open }) => (open ? "translateX(0px)" : "translateX(-100%)")};
   position: fixed;
-  top:0;
+  top:50px;
   left:0;
   transition: transform 220ms ease-in-out;
   align-content: center;
