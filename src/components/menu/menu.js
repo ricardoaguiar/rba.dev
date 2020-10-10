@@ -11,7 +11,11 @@ const Menu = ({ open }) => {
         <MenuList>
           <li>
             <a href="/">
-              <span data-content="What can I do for you?" aria-hidden="true"></span>What can I do for you?
+              <span
+                data-content="What can I do for you?"
+                aria-hidden="true"
+              ></span>
+              What can I do for you?
             </a>
           </li>
           <li>
@@ -22,6 +26,11 @@ const Menu = ({ open }) => {
           <li>
             <a href="/">
               <span data-content="Contact" aria-hidden="true"></span>Contact
+            </a>
+          </li>
+          <li>
+            <a href="/blog/">
+              <span data-content="Contact" aria-hidden="true"></span>Blog
             </a>
           </li>
         </MenuList>
