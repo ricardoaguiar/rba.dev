@@ -30,7 +30,7 @@ const Menu = ({ open }) => {
           </li>
           <li>
             <a href="/blog/">
-              <span data-content="Contact" aria-hidden="true"></span>Blog
+              <span data-content="Blog" aria-hidden="true"></span>Blog
             </a>
           </li>
         </MenuList>

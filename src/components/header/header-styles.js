@@ -5,7 +5,7 @@ import { respondTo } from "../../utils/_respondTo"
 export const HeaderContainer = styled.header`
   /* background: var(--rbadev-mono-1-hex);
    border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
-  background: grey;
+  background: var(--rbadev-mono-1-hex);
   display: flex;
   flex-flow: row;
   position: fixed;
@@ -18,7 +18,7 @@ export const HeaderContainer = styled.header`
 
   ${respondTo.T900`
     min-height: 100vh;
-    // border-right: 1px solid var(--rbadev-duotone-2-hex); 
+    border-right: 1px solid var(--rbadev-mono-2-hex); 
     max-width: 70px;
     flex-flow: column;
     padding: 0;

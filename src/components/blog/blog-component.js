@@ -6,13 +6,22 @@ const BlogContainer = styled.div`
   flex-flow: row wrap;
   margin: 3rem;
   padding: 0.5rem;
-  background-color: orange;
+  background-color: var(--rbadev-duotone-3-hex);
 `
 
 const BlogList = styled.ul`
   margin-left: 10vw;
   width: max-content;
   line-height: 1.5;
+  list-style: none;
+
+  && a {
+    color: var(--rbadev-mono-1-hex);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--rbadev-duotone-1-hex);
+  }
 `
 
 function Blog() {

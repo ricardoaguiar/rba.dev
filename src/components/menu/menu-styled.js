@@ -10,8 +10,8 @@ export const MenuNavigation = styled.nav`
   background: var(--rbadev-mono-1-hex);
   transform: ${({ open }) => (open ? "translateX(0px)" : "translateX(-100%)")};
   position: fixed;
-  top:50px;
-  left:0;
+  top: 50px;
+  left: 0;
   transition: transform 220ms ease-in-out;
   align-content: center;
   text-transform: uppercase;
@@ -80,7 +80,7 @@ export const MenuList = styled.ul`
   margin: 0;
 
   & li {
-    margin: 0;
+    margin-left: 3rem;
     padding-left: 2em;
     border-bottom: 1px solid var(--rbadev-border-mono);
   }
@@ -90,7 +90,7 @@ export const Connect = styled.div`
   display: flex;
   flex-flow: column;
   width: 100vw;
-  background: var(--rbadev-duotone-3-hex);
+  background: var(--rbadev-duotone-5-hex);
   color: var(--rbadev-duotone-4-hex);
   /* border-bottom: 1px solid var(--rbadev-border-mono); */
   margin: 0;
