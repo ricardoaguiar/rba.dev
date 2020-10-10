@@ -13,7 +13,7 @@ const Blog = () => (
   <>
     <Wrapper>
       <Header />
-      <SEO title="404: Not found" />
+      <SEO title="Blog" />
       <BlogList />
       <Footer />
     </Wrapper>

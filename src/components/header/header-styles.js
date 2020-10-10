@@ -25,10 +25,14 @@ export const HeaderContainer = styled.header`
     margin: 0;
   `}
 `
-// export const BurgerMenu = styled.nav`
-//   align-items: center;
-//   left: 0;
-//   top: 0;
-//   background: var(--rbadev-mono-2-hex);
-
-// `
+export const HeaderNav = styled.ul`
+  display: flex;
+  flex: 1 0 auto;
+  list-style: none;
+  flex-flow: column wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+`
+export const HeaderNavItem = styled.li`
+  text-align: center;
+`
