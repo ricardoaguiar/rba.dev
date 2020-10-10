@@ -3,19 +3,18 @@ import { respondTo } from "../../utils/_respondTo"
 
 //header is the container for the navigation
 export const HeaderContainer = styled.header`
- /* background: var(--rbadev-mono-1-hex);
+  /* background: var(--rbadev-mono-1-hex);
    border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
-  background: transparent;
+  background: grey;
   display: flex;
   flex-flow: row;
   position: fixed;
   justify-content: space-between;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   height: 50px;
   width: 100vw;
   margin: 0;
-
 
   ${respondTo.T900`
     min-height: 100vh;
@@ -25,7 +24,6 @@ export const HeaderContainer = styled.header`
     padding: 0;
     margin: 0;
   `}
-
 `
 // export const BurgerMenu = styled.nav`
 //   align-items: center;
