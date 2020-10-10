@@ -28,7 +28,7 @@ const Header = () => {
           <HeaderNavItem>
             <FontAwesomeIcon
               icon={"envelope"}
-              size="14px"
+              size="16px"
               pointerEvents="none"
             />
           </HeaderNavItem>
