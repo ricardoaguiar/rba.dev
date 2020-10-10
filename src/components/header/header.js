@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react"
-import { HeaderContainer } from "./header-styles"
+import { HeaderContainer, HeaderNav, HeaderNavItem } from "./header-styles"
 import Menu from "../../components/menu/menu"
 import { useOnClickOutside } from "../../components/hooks"
 import RbaLogo from "../logo/rba-logo"
@@ -16,12 +16,25 @@ const Header = () => {
     <>
       <Menu open={open} setOpen={setOpen} />
       <HeaderContainer ref={node}>
-        <RbaLogo />
-        <BurgerComponent open={open} setOpen={setOpen} />
+        <HeaderNav>
+          <HeaderNavItem>
+            <RbaLogo />
+          </HeaderNavItem>
 
-        <FontAwesomeIcon icon={"envelope"} size="14px" pointerEvents="none" />
+          <HeaderNavItem>
+            <BurgerComponent open={open} setOpen={setOpen} />
+          </HeaderNavItem>
 
-        {/* <GitHub /> */}
+          <HeaderNavItem>
+            <FontAwesomeIcon
+              icon={"envelope"}
+              size="14px"
+              pointerEvents="none"
+            />
+          </HeaderNavItem>
+
+          {/* <GitHub /> */}
+        </HeaderNav>
       </HeaderContainer>
     </>
   )
