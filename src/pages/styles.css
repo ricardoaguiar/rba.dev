@@ -3,8 +3,8 @@ outline: 1px solid violet;
 } */
 
 :root {
-/*     border: 2px dashed orange; */
-  
+  /*     border: 2px dashed orange; */
+
   /* main theme colors */
   --black: #000;
   --white: #fff;
@@ -61,9 +61,21 @@ outline: 1px solid violet;
   --rbadev-duotone-3-rgba: rgba(242, 71, 55, 1);
   --rbadev-duotone-4-rgba: rgba(242, 242, 242, 1);
   --rbadev-duotone-5-rgba: rgba(38, 38, 38, 1);
-  
-}
 
+  /* Color Theme Swatches in Hex */
+  --rbadev-fk-1-hex: #edf6ee;
+  --rbadev-fk-2-hex: #d1c089;
+  --rbadev-fk-3-hex: #b3204d;
+  --rbadev-fk-4-hex: #412e28;
+  --rbadev-fk-5-hex: #151101;
+
+  /* Color Theme Swatches in RGBA */
+  --rbadev-fkl-1-rgba: #edf6ee10;
+  --rbadev-fkl-2-rgba: #d1c08910;
+  --rbadev-fkl-3-rgba: #b3204d10;
+  --rbadev-fkl-4-rgba: #412e2810;
+  --rbadev-fkl-5-rgba: #15110110;
+}
 
 html {
   -ms-text-size-adjust: 100%;
@@ -72,7 +84,7 @@ html {
 body {
   display: flex;
   outline: 2px dotted black;
-/*   padding: 2px;
+  /*   padding: 2px;
   width: 85%; */
   margin: 0 auto;
   color: var(--rbadev-duotone-5-hex);

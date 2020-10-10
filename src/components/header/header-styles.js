@@ -35,4 +35,6 @@ export const HeaderNav = styled.ul`
 `
 export const HeaderNavItem = styled.li`
   text-align: center;
+  padding: 0;
+  margin: 0;
 `

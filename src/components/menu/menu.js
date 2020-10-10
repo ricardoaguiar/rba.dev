@@ -11,11 +11,8 @@ const Menu = ({ open }) => {
         <MenuList>
           <li>
             <a href="/">
-              <span
-                data-content="What can I do for you?"
-                aria-hidden="true"
-              ></span>
-              What can I do for you?
+              <span data-content="Home" aria-hidden="true"></span>
+              Home
             </a>
           </li>
           <li>
