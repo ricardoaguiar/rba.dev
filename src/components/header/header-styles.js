@@ -35,7 +35,7 @@ export const HeaderNav = styled.ul`
     align-items: center;
 
   ${respondTo.T900`
-    border-right: 1px solid var(--rbadev-mono-2-hex); 
+//     border-right: 1px solid var(--rbadev-mono-2-hex); 
     flex-flow: column;
     margin: .2rem;
   `}
