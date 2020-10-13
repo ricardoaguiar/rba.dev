@@ -32,6 +32,14 @@ export const HeaderNav = styled.ul`
   flex-flow: column wrap;
   margin: 0 auto;
   justify-content: space-between;
+
+  ${respondTo.T900`
+    align-items: center;
+    border-right: 1px solid var(--rbadev-mono-2-hex); 
+    flex-flow: row;
+    margin: .2rem;
+  `}
+
 `
 export const HeaderNavItem = styled.li`
   text-align: center;
