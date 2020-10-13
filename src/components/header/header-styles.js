@@ -29,14 +29,14 @@ export const HeaderNav = styled.ul`
   display: flex;
   flex: 1 0 auto;
   list-style: none;
-  flex-flow: column wrap;
-  margin: 0 auto;
+  flex-flow: row wrap;
+  margin: .2rem;
   justify-content: space-between;
+    align-items: center;
 
   ${respondTo.T900`
-    align-items: center;
     border-right: 1px solid var(--rbadev-mono-2-hex); 
-    flex-flow: row;
+    flex-flow: column;
     margin: .2rem;
   `}
 
