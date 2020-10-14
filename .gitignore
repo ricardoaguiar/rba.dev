@@ -71,3 +71,4 @@ yarn-error.log
 # Local Netlify folder
 .netlify
 rba.code-workspace
+src/components/logo/rba-logo copy.js
