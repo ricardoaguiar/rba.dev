@@ -37,7 +37,7 @@ export const MenuNavigation = styled.nav`
     & span {
       position: absolute;
       top: 0;
-      left: 0;
+
       overflow: hidden;
       -webkit-transform: translateX(-100%);
       transform: translateX(-100%);
@@ -73,6 +73,7 @@ export const MenuNavigation = styled.nav`
 
     ${respondTo.T900`
         text-align: left;
+        left: 0;
     `}
   }
 `
