@@ -26,14 +26,8 @@ const Header = () => {
           </HeaderNavItem>
 
           <HeaderNavItem>
-            <FontAwesomeIcon
-              icon={"envelope"}
-              size="16px"
-              pointerEvents="none"
-            />
+            <FontAwesomeIcon icon={"envelope"} size="lg" pointerEvents="none" />
           </HeaderNavItem>
-
-          {/* <GitHub /> */}
         </HeaderNav>
       </HeaderContainer>
     </>
