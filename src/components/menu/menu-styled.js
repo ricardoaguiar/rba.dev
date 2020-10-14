@@ -73,7 +73,6 @@ export const MenuNavigation = styled.nav`
     ${respondTo.T900`
         text-align: left;
         left: 0;
-
     `}
   }
 `
