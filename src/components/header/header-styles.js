@@ -15,6 +15,7 @@ export const HeaderContainer = styled.header`
   height: 50px;
   width: 100vw;
   margin: 0;
+  border-bottom: 1px solid var(--rbadev-mono-2-hex);
 
   ${respondTo.T900`
     min-height: 100vh;
@@ -30,16 +31,14 @@ export const HeaderNav = styled.ul`
   flex: 1 0 auto;
   list-style: none;
   flex-flow: row wrap;
-  margin: .2rem;
+  margin: 0.2rem;
   justify-content: space-between;
-    align-items: center;
+  align-items: center;
 
   ${respondTo.T900`
-//     border-right: 1px solid var(--rbadev-mono-2-hex); 
     flex-flow: column;
     margin: .2rem;
   `}
-
 `
 export const HeaderNavItem = styled.li`
   text-align: center;

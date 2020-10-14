@@ -8,7 +8,7 @@ export const MenuNavigation = styled.nav`
   width: 100vw;
   min-height: 100vh;
   background: var(--rbadev-mono-1-hex);
-  transform: ${({ open }) => (open ? "translateX(0px)" : "translateX(-100%)")};
+  transform: ${({ open }) => (open ? "translateY(0px)" : "translateY(-100%)")};
   position: fixed;
   top: 50px;
   left: 0;
@@ -31,7 +31,7 @@ export const MenuNavigation = styled.nav`
     position: relative;
     overflow: hidden;
     line-height: clamp(0.8, 1, 1.5);
-    text-align: left;
+    text-align: center;
     margin: 1em;
 
     & span {
@@ -70,6 +70,10 @@ export const MenuNavigation = styled.nav`
       -webkit-transform: translateX(0);
       transform: translateX(0);
     }
+
+    ${respondTo.T900`
+        text-align: left;
+    `}
   }
 `
 export const MenuList = styled.ul`
@@ -84,6 +88,11 @@ export const MenuList = styled.ul`
     padding-left: 2em;
     border-bottom: 1px solid var(--rbadev-border-mono);
   }
+
+  ${respondTo.T900`
+    margin-left: 0;
+    padding-left: 0;
+ `}
 `
 
 export const Connect = styled.div`
@@ -146,6 +155,6 @@ export const Contact = styled.ul`
   `};
 
   ${respondTo.T900`
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   `};
 `
