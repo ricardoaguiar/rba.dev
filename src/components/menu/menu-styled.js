@@ -79,9 +79,15 @@ export const MenuNavigation = styled.nav`
 export const MenuList = styled.ul`
   display: flex;
   flex-flow: column;
-  flex: 0 1 50%;
+  /* flex: 0 1 50%; */
   list-style: none;
   margin: 0;
+
+  & li:first-child {
+    ${respondTo.T900`
+      border-top: 1px solid var(--rbadev-border-mono);
+    `}
+  }
 
   & li {
     margin-left: 0;

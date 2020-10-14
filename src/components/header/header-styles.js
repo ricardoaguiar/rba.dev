@@ -27,21 +27,30 @@ export const HeaderContainer = styled.header`
   `}
 `
 export const HeaderNav = styled.ul`
-  display: flex;
-  flex: 1 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   list-style: none;
-  flex-flow: row wrap;
-  margin: 0.2rem;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
+  width: calc(100vw - 6%);
 
   ${respondTo.T900`
+    display: flex;
     flex-flow: column;
-    margin: .2rem;
+    flex: 1 0 auto;
+    max-width: 70px;
+    height: calc(100vh - 4%);
   `}
 `
 export const HeaderNavItem = styled.li`
-  text-align: center;
+  text-align: right;
   padding: 0;
   margin: 0;
+
+  &:last-child {
+    ${respondTo.T900`
+      margin-bottom: .8rem;
+  `}
+  }
 `

@@ -5,8 +5,8 @@ export const BurgerBtn = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -20,7 +20,7 @@ export const BurgerBtn = styled.button`
   }
 
   div {
-    width: 2.5rem;
+    width: 2rem;
     height: 2px;
     background: ${({ open }) =>
       open ? "var( --rbadev-duotone-3-hex)" : "var(--rbadev-mono-4-hex)"};
