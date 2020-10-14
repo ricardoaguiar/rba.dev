@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 import { css } from "emotion"
+import { respondTo } from "../../utils/_respondTo"
 
 import styled from "@emotion/styled"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SocialMediaMenu = () => {
-  const [background, setBackground] = useState()
+  const [background, setBackground] = useState("var(--rbadev-mono-4-hex)")
 
   const setStyle = background => {
     setBackground(background)
@@ -17,8 +18,13 @@ const SocialMediaMenu = () => {
     grid-template-columns: repeat(4, 1fr);
     flex-direction: column;
     place-items: center;
-    padding: 0.7rem;
     position: relative;
+
+    ${respondTo.T900`
+      width: calc(100% - 70px);
+      align-self: flex-end;
+  
+    `}
   `
 
   const github = css`
@@ -57,7 +63,7 @@ const SocialMediaMenu = () => {
       <a href="https://www.linkedin.com/in/jricardoaguiar/" target="blank">
         <SocialMediaIcon
           onMouseEnter={() => setStyle(`${linkedin}`)}
-          onMouseOut={() => setStyle("#333")}
+          onMouseOut={() => setStyle("var(--rbadev-mono-4-hex)")}
           className={css`
             color: var(--rbadev-mono-2-hex);
             &:hover {
@@ -76,7 +82,7 @@ const SocialMediaMenu = () => {
       <a href="https://www.github.com/ricardoaguiar/" target="blank">
         <SocialMediaIcon
           onMouseEnter={() => setStyle(`${github}`)}
-          onMouseOut={() => setStyle()}
+          onMouseOut={() => setStyle("var(--rbadev-mono-4-hex)")}
           className={css`
             color: var(--rbadev-mono-2-hex);
             &:hover {

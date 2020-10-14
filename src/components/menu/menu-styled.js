@@ -37,7 +37,6 @@ export const MenuNavigation = styled.nav`
     & span {
       position: absolute;
       top: 0;
-      left: 0;
       overflow: hidden;
       -webkit-transform: translateX(-100%);
       transform: translateX(-100%);
@@ -73,6 +72,8 @@ export const MenuNavigation = styled.nav`
 
     ${respondTo.T900`
         text-align: left;
+        left: 0;
+
     `}
   }
 `
@@ -84,26 +85,34 @@ export const MenuList = styled.ul`
   margin: 0;
 
   & li {
-    margin-left: 3rem;
-    padding-left: 2em;
-    border-bottom: 1px solid var(--rbadev-border-mono);
-  }
-
-  ${respondTo.T900`
     margin-left: 0;
     padding-left: 0;
+    border-bottom: 1px solid var(--rbadev-border-mono);
+
+    ${respondTo.T900`
+    padding-left: 2rem;
+ `}
+  }
+  ${respondTo.T900`
+    width: 100vw;
+    padding-left: 4rem;
+    margin: 0 auto;
  `}
 `
 
 export const Connect = styled.div`
   display: flex;
   flex-flow: column;
-  width: 100vw;
   background: var(--rbadev-duotone-5-hex);
   color: var(--rbadev-duotone-4-hex);
-  /* border-bottom: 1px solid var(--rbadev-border-mono); */
+  border-bottom: 1px solid var(--rbadev-duotone-4-hex);
   margin: 0;
   text-align: center;
+
+  ${respondTo.T900`
+    width: calc(100vw - 70px);
+    align-self: flex-end;
+  `}
 
   & h3 {
     margin: 0.5em;
