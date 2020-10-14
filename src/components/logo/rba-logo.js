@@ -7,7 +7,7 @@ function RbaLogo(props) {
       <svg
         x="0px"
         y="0px"
-        width="2.6em"
+        // width="2.6em"
         height="1.1em"
         viewBox="0 0 150 85"
         // enable-background="new 0 0 104 53.5"
