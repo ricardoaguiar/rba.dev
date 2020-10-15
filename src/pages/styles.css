@@ -466,7 +466,9 @@ dd {
   margin-bottom: 1.45rem;
 }
 p {
-  margin-left: 0;
+  font-family: bio-sans;
+  font-size: 20px;
+  margin-left: 2em;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;

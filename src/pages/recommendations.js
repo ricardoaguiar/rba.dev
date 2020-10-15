@@ -4,17 +4,18 @@ import Wrapper from "../components/wrapper/wrapper"
 import Header from "../components/header/header"
 import Footer from "../components/footer/footer"
 import SEO from "../components/seo"
-import BlogList from "../components/blog/blog-component"
+import Testimonials from "../components/recommendations/recommendations-component"
 
-const Blog = () => (
+// what people say
+const WPS = () => (
   <>
     <Wrapper>
       <Header />
-      <SEO title="Blog" />
-      <BlogList />
+      <SEO title="Recommendations" />
+      <Testimonials />
       <Footer />
     </Wrapper>
   </>
 )
 
-export default Blog
+export default WPS
