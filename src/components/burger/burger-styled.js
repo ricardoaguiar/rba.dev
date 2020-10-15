@@ -10,7 +10,7 @@ export const BurgerBtn = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 0 0 0 12px;
   z-index: 30;
   margin: 0 auto;
   align-self: center;
