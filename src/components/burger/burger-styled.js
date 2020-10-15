@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import { respondTo } from "../../utils/_respondTo"
 
 // this is the BurgerBtn element
 export const BurgerBtn = styled.button`
@@ -14,6 +15,10 @@ export const BurgerBtn = styled.button`
   z-index: 30;
   margin: 0 auto;
   align-self: center;
+
+    ${respondTo.T900`
+        padding: 0;
+    `}
 
   &:focus {
     outline: none;
