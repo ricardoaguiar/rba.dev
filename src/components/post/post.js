@@ -43,11 +43,11 @@ const GridItem = styled.article`
   background: whitesmoke;
   border: 1px solid #fff;
   z-index: -1;
-` 
+`
 
-const PostTitle = styled.p` 
-  padding: .3em;
-` 
+const PostTitle = styled.p`
+  padding: 0.3em;
+`
 const Post = () => {
   const { post } = useStaticQuery(getPosts)
 

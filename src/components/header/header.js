@@ -4,8 +4,7 @@ import Menu from "../../components/menu/menu"
 import { useOnClickOutside } from "../../components/hooks"
 import RbaLogo from "../logo/rba-logo"
 import BurgerComponent from "../../components/burger/burger"
-// import GitHub from "../../components/social/github"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import GitHub from "../../components/social/github"
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -26,7 +25,7 @@ const Header = () => {
           </HeaderNavItem>
 
           <HeaderNavItem>
-            <FontAwesomeIcon icon={"envelope"} size="lg" pointerEvents="none" />
+            <GitHub />
           </HeaderNavItem>
         </HeaderNav>
       </HeaderContainer>

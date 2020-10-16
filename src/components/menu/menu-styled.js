@@ -83,7 +83,7 @@ export const MenuList = styled.ul`
   list-style: none;
   margin: 0;
 
-  & li:first-child {
+  & li::first-of-type {
     ${respondTo.T900`
       border-top: 1px solid var(--rbadev-border-mono);
     `}

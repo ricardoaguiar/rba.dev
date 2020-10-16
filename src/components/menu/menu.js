@@ -10,9 +10,9 @@ const Menu = ({ open }) => {
       <MenuNavigation open={open}>
         <MenuList>
           <li>
-            <a href="/">
-              <span data-content="Home" aria-hidden="true"></span>
-              Home
+            <a href="/recommendations/">
+              <span data-content="Recommendations" aria-hidden="true"></span>
+              Recommendations
             </a>
           </li>
           <li>
