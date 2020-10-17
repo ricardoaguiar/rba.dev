@@ -27,8 +27,8 @@ export const HeaderContainer = styled.header`
   `}
 `
 export const HeaderNav = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
   list-style: none;
   margin: 0 auto;
   justify-content: space-between;
@@ -44,13 +44,13 @@ export const HeaderNav = styled.ul`
   `}
 `
 export const HeaderNavItem = styled.li`
-  text-align: right;
   padding: 0;
   margin: 0;
 
   &:last-child {
-    ${respondTo.T900`
+    text-align: right;
+    /* ${respondTo.T900`
       margin-bottom: .8rem;
-  `}
+  `} */
   }
 `
