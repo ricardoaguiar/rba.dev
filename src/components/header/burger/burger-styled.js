@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../../../utils/_respondTo"
 
 // this is the BurgerBtn element
 export const BurgerBtn = styled.button`
@@ -11,12 +11,12 @@ export const BurgerBtn = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0 0 0 12px;
+  padding: 0;
   z-index: 30;
   margin: 0 auto;
   align-self: center;
 
-    ${respondTo.T900`
+  ${respondTo.T900`
         padding: 0;
     `}
 

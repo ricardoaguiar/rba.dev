@@ -36,7 +36,7 @@ const GridContainer = styled.section`
 
   ${respondTo.M300`
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    margin: 0 4vw 0 3vw;
+    margin: 0 3vw;
   `}
 `
 const GridItem = styled.article`

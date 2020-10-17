@@ -2,9 +2,10 @@ import React, { useState, useRef } from "react"
 import { HeaderContainer, HeaderNav, HeaderNavItem } from "./header-styles"
 import Menu from "../../components/menu/menu"
 import { useOnClickOutside } from "../../components/hooks"
-import RbaLogo from "../logo/rba-logo"
-import BurgerComponent from "../../components/burger/burger"
-import GitHub from "../../components/social/github"
+import RbaLogo from "./logo/rba-logo"
+import BurgerComponent from "./burger/burger"
+import GitHub from "./github"
+import HeaderItemWrapper from "./header-item-wrapper"
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -17,15 +18,17 @@ const Header = () => {
       <HeaderContainer ref={node}>
         <HeaderNav>
           <HeaderNavItem>
-            <RbaLogo />
+            <HeaderItemWrapper>
+              <RbaLogo />
+            </HeaderItemWrapper>
           </HeaderNavItem>
-
           <HeaderNavItem>
             <BurgerComponent open={open} setOpen={setOpen} />
           </HeaderNavItem>
-
           <HeaderNavItem>
-            <GitHub />
+            <HeaderItemWrapper>
+              <GitHub />
+            </HeaderItemWrapper>
           </HeaderNavItem>
         </HeaderNav>
       </HeaderContainer>

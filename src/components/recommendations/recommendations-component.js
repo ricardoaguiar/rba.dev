@@ -17,7 +17,7 @@ const getReferences = graphql`
             testimonial
           }
           picture {
-            fixed(width: 100, height: 90) {
+            fixed(width: 100, height: 100) {
               ...GatsbyContentfulFixed
             }
           }
@@ -37,10 +37,6 @@ const RecomendationCard = styled.div`
   list-style: none;
   border-radius: 65px;
 
-  & img {
-    border-radius: 50%;
-  }
-
   /* ${respondTo.T900`
 
   `} */
@@ -59,7 +55,15 @@ const Testimonials = () => {
       {references.edges.map(({ node }) => {
         return (
           <RecomendationCard key={node.id}>
-            <Img fixed={node.picture.fixed} alt={node.author} />
+            <Img
+              fixed={node.picture.fixed}
+              alt={node.author}
+              imgStyle={{
+                borderRadius: "50%",
+                objectFit: "contain",
+                width: "100%",
+              }}
+            />
             <p>
               {node.author}
               <br />

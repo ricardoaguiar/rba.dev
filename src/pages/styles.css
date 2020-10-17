@@ -1,10 +1,4 @@
-/* * {
-outline: 1px solid violet;
-} */
-
 :root {
-  /*     border: 2px dashed orange; */
-
   /* main theme colors */
   --black: #000;
   --white: #fff;
@@ -83,7 +77,6 @@ html {
 }
 body {
   display: flex;
-  outline: 2px dotted black;
   /*   padding: 2px;
   width: 85%; */
   margin: 0 auto;
