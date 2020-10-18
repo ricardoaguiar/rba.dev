@@ -32,16 +32,20 @@ const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-content: center;
-  background: transparent;
+  margin: 0 auto;
 
   ${respondTo.M300`
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    margin: 0 3vw;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    `}
+  ${respondTo.T900`
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    margin-left: 70px;
   `}
 `
 const GridItem = styled.article`
-  background: whitesmoke;
-  border: 1px solid #fff;
+  background: var(--rbadev-duotone-3-hex);
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   z-index: -1;
 `
 

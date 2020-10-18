@@ -4,21 +4,16 @@ import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
 const Main = styled.main`
-  display: flex;
-  flex-flow: column;
-  max-width: 100vw;
+  /* display: flex; */
+  /* flex-flow: column; */
+  /* max-width: 100vw; */
 
-  ${respondTo.T900`
+  /* ${respondTo.T900`
    margin-left: 7%;
-  `}
+  `} */
 `
 const Wrapper = ({ children }) => {
-
-  return (
-    <Main>
-      {children}
-    </Main>
-  )
+  return <Main>{children}</Main>
 }
 
 Wrapper.propTypes = {
