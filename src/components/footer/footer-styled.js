@@ -2,8 +2,6 @@ import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
 export const FooterSection = styled.section`
-  display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   width: calc(100vw - 70px);
   min-height: 20vh;
@@ -17,17 +15,42 @@ export const FooterSection = styled.section`
     margin-left: 70px;
 `}
 `
-export const FooterItem = styled.div`
-  width: auto;
+export const FooterItems = styled.ul`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
   text-align: center;
   padding: 0.5rem;
-  margin: 0.3rem;
-  outline: 1px solid orange;
+  margin: 0 auto;
+  max-width: 50vw;
+  /* outline: 2px solid orange; */
 `
+export const FooterItem = styled.li`
+  align-items: center;
+  padding: 1rem;
+  width: auto;
+  /* outline: 1px solid blueviolet; */
+
+  &:first-child {
+    letter-spacing: 0.5mm;
+    font-family: bio-sans;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--rbadev-mono-1-hex);
+    padding: 0;
+    width: 100%;
+    /* outline: 1px solid white; */
+  }
+`
+
 export const FooterItemLabel = styled.p`
   margin: 1rem auto;
-  width: 100%;
+  width: auto;
   font-size: 0.8rem;
   color: var(--rbadev-mono-1-hex);
-  outline: 1px solid red;
+  display: inline-block;
+  /* outline: 1px solid red; */
 `
