@@ -43,14 +43,16 @@ const GridContainer = styled.section`
   `}
 `
 const GridItem = styled.article`
-  background: var(--rbadev-duotone-3-hex);
+  background: var(--rbadev-mono-1-hex);
   border-right: 1px solid #fff;
   border-bottom: 1px solid #fff;
   z-index: -1;
 `
 
 const PostTitle = styled.p`
-  padding: 0.3em;
+  padding: 1rem;
+  text-decoration: underline solid var(--logo);
+  text-decoration-thickness: 2px;
 `
 const Post = () => {
   const { post } = useStaticQuery(getPosts)
@@ -61,9 +63,9 @@ const Post = () => {
         {post.edges.map(({ node }) => {
           return (
             <GridItem key={node.id}>
-              <PostTitle>{node.title}</PostTitle>
               <Image fluid={node.heroImage.fluid} alt={node.title} />
-              <p>{node.text.description}</p>
+              <PostTitle>{node.title}</PostTitle>
+              {/* <p>{node.text.description}</p> */}
             </GridItem>
           )
         })}

@@ -15,6 +15,7 @@ export const BurgerBtn = styled.button`
   z-index: 30;
   margin: 0 auto;
   align-self: center;
+  /* outline: 1px solid red; */
 
   ${respondTo.T900`
         padding: 0;

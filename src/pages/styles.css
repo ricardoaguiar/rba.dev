@@ -2,6 +2,7 @@
   /* main theme colors */
   --black: #000;
   --white: #fff;
+  --logo: #ff8900;
 
   /* social media logo colors */
   --facebook: #1877f2;
@@ -90,20 +91,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/*
-#___gatsby {
-  margin: 2px;
-  padding: 2px;
-  outline: 1px solid goldenrod;
+p span {
+  color: var(--logo);
+  height: 4px;
+  width: auto;
 }
-
-#gatsby-focus-wrapper {
-  margin: 2px;
-  padding: 2px;
-  outline: 1px dashed blue !important;
-}
-*/
 
 audio,
 canvas,
@@ -143,10 +135,6 @@ strong {
 dfn {
   font-style: italic;
 }
-/* h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-} */
 mark {
   background-color: #ff0;
   color: #000;
@@ -156,7 +144,6 @@ small {
 }
 sub,
 sup {
-  /* font-size: 75%; */
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -267,11 +254,6 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-/* html {
-  font: 112.5%/1.45em georgia, serif;
-  box-sizing: border-box;
-  overflow-y: scroll;
-} */
 * {
   box-sizing: inherit;
 }
@@ -309,8 +291,6 @@ h1 {
   font-weight: 800;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
-  /* font-size: 3rem; */
-  /* line-height: 1.1; */
 }
 h2 {
   margin-left: 0;
@@ -328,8 +308,6 @@ h2 {
   font-weight: 800;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
-  /* font-size: 2rem; */
-  /* line-height: 1.1; */
 }
 h3 {
   margin-left: 0;
@@ -346,8 +324,6 @@ h3 {
     sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  /* font-size: 1.38316rem; */
-  /* line-height: 1.1; */
 }
 h4 {
   margin-left: 0;
@@ -364,8 +340,6 @@ h4 {
     sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  /* font-size: 1rem; */
-  /* line-height: 1.1; */
 }
 h5 {
   margin-left: 0;
@@ -381,8 +355,6 @@ h5 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  /* font-size: 0.85028rem; */
-  /* line-height: 1.1; */
 }
 h6 {
   margin-left: 0;
@@ -398,8 +370,6 @@ h6 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  /* font-size: 0.78405rem; */
-  /* line-height: 1.1; */
 }
 hgroup {
   margin-left: 0;
@@ -412,29 +382,12 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 0;
+  padding: 0;
   list-style-position: outside;
   list-style-image: none;
 }
-ol {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
-}
+
 dl {
   margin-left: 0;
   margin-right: 0;
@@ -458,24 +411,12 @@ dd {
 p {
   font-family: bio-sans;
   font-size: 20px;
-  margin-left: 2em;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 0;
+  padding: 0;
 }
 figure {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 0;
+  padding: 0;
 }
 pre {
   margin-left: 0;
@@ -568,14 +509,8 @@ hr {
   height: 1px;
 }
 address {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 0;
+  padding: 0;
 }
 b {
   font-weight: bold;
@@ -604,12 +539,7 @@ li > ol {
 blockquote *:last-child {
   margin-bottom: 0;
 }
-li *:last-child {
-  margin-bottom: 0;
-}
-p *:last-child {
-  margin-bottom: 0;
-}
+
 li > p {
   margin-bottom: calc(1.45rem / 2);
 }

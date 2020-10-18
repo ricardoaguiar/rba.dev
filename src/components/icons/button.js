@@ -5,7 +5,15 @@ export const Button = styled.a`
   display: inline-flex;
 
   ${respondTo.T900`
-   /* margin: .8em auto; */
+    margin: 1rem auto;
+  `}
+`
 
+export const GitHubHeader = styled.a`
+  z-index: 10;
+  display: inline-flex;
+
+  ${respondTo.T900`
+    margin: 1rem auto;
   `}
 `

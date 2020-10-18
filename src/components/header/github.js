@@ -4,7 +4,7 @@ import { GitHubButton } from "./github-styled"
 function GitHub(props) {
   return (
     <GitHubButton
-      href="https://www.github.com/ricardoaguiar"
+      href="https://www.github.com/ricardoaguiar/"
       target="blank"
       id="github"
     >
