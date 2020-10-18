@@ -2,17 +2,19 @@ import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
 export const FooterSection = styled.section`
+  display: flex;
   justify-content: center;
-  width: calc(100vw - 70px);
-  min-height: 20vh;
+  min-height: 30vh;
   background: var(--rbadev-mono-4-hex);
   margin: 0 auto;
-  padding: 4rem 8rem;
   bottom: 0;
   box-sizing: border-box;
+  align-items: center;
 
   ${respondTo.T900`
-    margin-left: 70px;
+    padding: 4rem 8rem;
+    width: calc(100vw - 70px);
+    margin-left: 70px
 `}
 `
 export const FooterItems = styled.ul`
@@ -22,21 +24,29 @@ export const FooterItems = styled.ul`
   justify-content: center;
   list-style: none;
   text-align: center;
-  padding: 0.5rem;
   margin: 0 auto;
-  max-width: 50vw;
   /* outline: 2px solid orange; */
+
+  ${respondTo.T900`
+    padding: 0.5rem;
+    max-width: 50vw;
+ `}
 `
 export const FooterItem = styled.li`
   align-items: center;
-  padding: 1rem;
   width: auto;
+  padding: 0.5rem;
   /* outline: 1px solid blueviolet; */
+
+  ${respondTo.T900`
+  padding: 1rem;
+  `}
 
   &:first-child {
     letter-spacing: 0.5mm;
     font-family: bio-sans;
     font-size: 1rem;
+    margin-bottom: 1rem;
     font-weight: bolder;
     text-transform: uppercase;
     color: var(--rbadev-mono-1-hex);

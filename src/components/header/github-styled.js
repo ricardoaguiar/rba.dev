@@ -7,6 +7,7 @@ export const GitHubButton = styled.a`
 
   ${respondTo.T900`
    margin: .8em auto;
+   color: red;
 
   `}
 `
