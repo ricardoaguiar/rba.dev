@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
-import ricardo from "../../images/ricardo.png"
+// import ricardo from "../../images/ricardo.png"
 
 export const HomeContainer = styled.section`
   min-height: calc(100vmax - 30%);
@@ -11,9 +11,9 @@ export const HomeContainer = styled.section`
   background-image: url(data:image/ricardo.cutout.png);
 
   ${respondTo.T900`
-    max-width: calc(100vw - 7%);
-    margin: 0 auto;
-
+    max-width: calc(100vw - 70px);
+    margin-left: 70px;
+    margin-top: 0;
   `};
 `
 export const HomeItem = styled.article`

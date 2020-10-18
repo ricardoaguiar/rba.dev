@@ -5,7 +5,7 @@ import { useOnClickOutside } from "../../components/hooks"
 import RbaLogo from "./logo/rba-logo"
 import BurgerComponent from "./burger/burger"
 import GitHub from "./github"
-import HeaderItemWrapper from "./header-item-wrapper"
+import ItemWrapper from "../item-wrapper"
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -18,17 +18,17 @@ const Header = () => {
       <HeaderContainer ref={node}>
         <HeaderNav>
           <HeaderNavItem>
-            <HeaderItemWrapper>
+            <ItemWrapper>
               <RbaLogo />
-            </HeaderItemWrapper>
+            </ItemWrapper>
           </HeaderNavItem>
           <HeaderNavItem>
             <BurgerComponent open={open} setOpen={setOpen} />
           </HeaderNavItem>
           <HeaderNavItem>
-            <HeaderItemWrapper>
+            <ItemWrapper>
               <GitHub />
-            </HeaderItemWrapper>
+            </ItemWrapper>
           </HeaderNavItem>
         </HeaderNav>
       </HeaderContainer>

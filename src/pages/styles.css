@@ -76,9 +76,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  display: flex;
-  /*   padding: 2px;
-  width: 85%; */
   margin: 0 auto;
   color: var(--rbadev-duotone-5-hex);
   font-family: railroad-gothic-atf, bio-sans, georgia, serif;

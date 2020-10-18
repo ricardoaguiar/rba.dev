@@ -3,8 +3,6 @@ import { respondTo } from "../../utils/_respondTo"
 
 //header is the container for the navigation
 export const HeaderContainer = styled.header`
-  /* background: var(--rbadev-mono-1-hex);
-   border-bottom: 1px solid var(--rbadev-duotone-2-hex);  */
   background: var(--rbadev-mono-1-hex);
   display: flex;
   flex-flow: row;
@@ -15,7 +13,7 @@ export const HeaderContainer = styled.header`
   height: 50px;
   width: 100vw;
   margin: 0;
-  border-bottom: 1px solid var(--rbadev-mono-2-hex);
+  border-bottom: 1px solid var(--rbadev-mono-3-hex);
 
   ${respondTo.T900`
     min-height: 100vh;
@@ -24,6 +22,7 @@ export const HeaderContainer = styled.header`
     flex-flow: column;
     padding: 0;
     margin: 0;
+    z-index: 999;
   `}
 `
 export const HeaderNav = styled.ul`
