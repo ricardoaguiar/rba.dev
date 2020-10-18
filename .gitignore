@@ -71,4 +71,4 @@ yarn-error.log
 # Local Netlify folder
 .netlify
 rba.code-workspace
-src/footer/svg/
+src/components/footer/svg/
