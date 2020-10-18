@@ -4,15 +4,13 @@ import { respondTo } from "../../utils/_respondTo"
 export const FooterSection = styled.section`
   display: flex;
   justify-content: center;
-  min-height: 30vh;
+  align-items: center;
+  min-height: 25vh;
   background: var(--rbadev-mono-4-hex);
   margin: 0 auto;
-  bottom: 0;
   box-sizing: border-box;
-  align-items: center;
 
   ${respondTo.T900`
-    padding: 4rem 8rem;
     width: calc(100vw - 70px);
     margin-left: 70px
 `}
@@ -45,14 +43,18 @@ export const FooterItem = styled.li`
   &:first-child {
     letter-spacing: 0.5mm;
     font-family: bio-sans;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
     font-weight: bolder;
     text-transform: uppercase;
     color: var(--rbadev-mono-1-hex);
     padding: 0;
+    margin-bottom: 0.2rem;
     width: 100%;
     /* outline: 1px solid white; */
+
+    ${respondTo.T900`
+      margin-bottom: -0.2rem;
+    `}
   }
 `
 

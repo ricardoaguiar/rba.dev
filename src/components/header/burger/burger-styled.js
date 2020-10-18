@@ -15,7 +15,6 @@ export const BurgerBtn = styled.button`
   z-index: 30;
   margin: 0 auto;
   align-self: center;
-  /* outline: 1px solid red; */
 
   ${respondTo.T900`
         padding: 0;
@@ -29,7 +28,7 @@ export const BurgerBtn = styled.button`
     width: 25px;
     height: 2px;
     background: ${({ open }) =>
-      open ? "var( --rbadev-duotone-3-hex)" : "var(--rbadev-mono-4-hex)"};
+      open ? "var( --logo)" : "var(--rbadev-mono-4-hex)"};
     border-radius: 1px;
     transition: all 0.3s linear;
     position: relative;
