@@ -63,10 +63,13 @@ const RecomendationCard = styled.ul`
 `
 
 const Avatar = styled.figure`
-  display: flex;
   margin: 1rem;
-  height: 100%;
   align-items: center;
+
+  ${respondTo.T900`
+     height: 100%;
+  `}
+
 `
 const Reference = styled.li`
   display: flex;
