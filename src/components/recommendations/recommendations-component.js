@@ -90,7 +90,7 @@ const Testimonials = () => {
       {references.edges.map(({ node }) => {
         return (
           <RecomendationCard key={node.id}>
-            <Avatar>
+           
               <Img
                 fixed={node.picture.fixed}
                 alt={node.author}
@@ -100,7 +100,7 @@ const Testimonials = () => {
                   width: "100%",
                 }}
               />
-            </Avatar>
+           
             <Reference>{node.author}<br />
             {node.title}<br />
             {node.text.testimonial}</Reference>
