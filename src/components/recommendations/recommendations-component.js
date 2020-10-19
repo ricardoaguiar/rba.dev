@@ -65,10 +65,11 @@ const RecomendationCard = styled.ul`
 const Avatar = styled.li`
   display: flex;
   margin: 1rem;
-  align-items: center;
+ align-self: center;
 
   ${respondTo.T900`
-     height: 100%;
+    align-items: center;
+    height: 100%;
   `}
 
 `
@@ -79,7 +80,11 @@ const Reference = styled.li`
   font-family: bio-sans;
   width: 75%;
   padding: 0.5rem;
-  margin-left: -3rem;
+
+  ${respondTo.T900`
+      margin-left: -3rem;
+  `}
+
 `
 
 const Testimonials = () => {
