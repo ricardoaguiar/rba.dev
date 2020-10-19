@@ -101,8 +101,8 @@ const Testimonials = () => {
                 }}
               />
             </Avatar>
-            <Reference>{node.author}<br>
-            {node.title}<br>
+            <Reference>{node.author}<br />
+            {node.title}<br />
             {node.text.testimonial}</Reference>
           </RecomendationCard>
         )
