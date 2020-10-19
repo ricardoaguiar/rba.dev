@@ -11,7 +11,7 @@ export const FooterSection = styled.section`
   box-sizing: border-box;
 
   ${respondTo.T900`
-    width: calc(100vw - 70px);
+    width: calc(100% - 70px);
     margin-left: 70px
 `}
 `
