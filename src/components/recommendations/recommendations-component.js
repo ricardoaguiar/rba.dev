@@ -63,6 +63,7 @@ const RecomendationCard = styled.ul`
 `
 
 const Avatar = styled.figure`
+  display: flex;
   margin: 1rem;
   align-items: center;
 
@@ -75,7 +76,9 @@ const Reference = styled.li`
   display: flex;
   align-items: center;
   font-size: 12px;
+  font-family: bio-sans;
   max-width: 80%;
+  padding: 1rem;
 `
 
 const Testimonials = () => {
@@ -98,9 +101,9 @@ const Testimonials = () => {
                 }}
               />
             </Avatar>
-            <Reference>{node.author}</Reference>
-            <Reference>{node.title}</Reference>
-            <Reference>{node.text.testimonial}</Reference>
+            <Reference>{node.author}<br>
+            {node.title}<br>
+            {node.text.testimonial}</Reference>
           </RecomendationCard>
         )
       })}
