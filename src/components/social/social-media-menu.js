@@ -19,11 +19,11 @@ const SocialMediaMenu = () => {
     flex-direction: column;
     place-items: center;
     position: relative;
+    border-bottom: 1px solid var(--rbadev-mono-1-hex);
 
     ${respondTo.T900`
       width: calc(100% - 70px);
       align-self: flex-end;
-  
     `}
   `
 
@@ -47,15 +47,13 @@ const SocialMediaMenu = () => {
       #285aeb 90%
     );
   `
-
-  const SocialMediaIcon = styled.div`
-    display: grid;
-    cursor: pointer;
-  `
-
   const linkedin = css`
     color: var(--white);
     background: var(--linkedin);
+  `
+  const SocialMediaIcon = styled.div`
+    display: grid;
+    cursor: pointer;
   `
 
   return (

@@ -7,7 +7,7 @@ export const MenuNavigation = styled.nav`
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  background: var(--rbadev-mono-1-hex);
+  background: var(--rbadev-mono-4-hex);
   transform: ${({ open }) => (open ? "translateY(0px)" : "translateY(-100%)")};
   position: fixed;
   top: 50px;
@@ -50,7 +50,7 @@ export const MenuNavigation = styled.nav`
     & span::before {
       display: inline-block;
       content: attr(data-content);
-      color: var(--rbadev-duotone-3-hex);
+      color: var(--logo);
       -webkit-transform: translateX(100%);
       transform: translateX(100%);
       -webkit-transition: -webkit-transform 225ms ease-in-out;
@@ -79,7 +79,7 @@ export const MenuNavigation = styled.nav`
 export const MenuList = styled.ul`
   display: flex;
   flex-flow: column;
-  /* flex: 0 1 50%; */
+  background: var(--rbadev-mono-1-hex);
   list-style: none;
   margin: 0;
 
@@ -123,52 +123,4 @@ export const Connect = styled.div`
     margin: 0.5em;
     font-size: clamp(1em, 1.5em, 22px);
   }
-`
-
-export const SocialMediaList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 100%;
-  flex-wrap: wrap;
-  width: 100vw;
-  list-style: none;
-  margin: 0 auto;
-
-  & li {
-    width: 40vw;
-    outline: 1px solid greenyellow;
-    margin: 0;
-    padding: 0 1em;
-    border-bottom: 1px solid var(--rbadev-border-mono);
-  }
-  & li:last-of-type {
-    width: 100vw;
-  }
-
-  /* desktop layout */
-  ${respondTo.T900`
-    flex-direction: row;
-  `}
-`
-
-export const Contact = styled.ul`
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  width: 100vw;
-  margin-left: -0.01em;
-  padding: 0;
-  font-size: 2.5vh;
-
-  ${respondTo.T900`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    list-style: none;
-    margin: 0 0 1px 0;
-    height: 5vh;
-  `};
-
-  ${respondTo.T900`
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  `};
 `

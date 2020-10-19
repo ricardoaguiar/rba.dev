@@ -13,7 +13,7 @@ export const HeaderContainer = styled.header`
   height: 50px;
   width: 100vw;
   margin: 0;
-  border-bottom: 1px solid var(--rbadev-mono-3-hex);
+  border-bottom: 1px solid var(--rbadev-mono-2-hex);
 
   ${respondTo.T900`
     min-height: 100vh;

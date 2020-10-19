@@ -91,11 +91,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-p span {
-  color: var(--logo);
-  height: 4px;
-  width: auto;
-}
 
 audio,
 canvas,

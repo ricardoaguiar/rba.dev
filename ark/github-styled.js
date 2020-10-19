@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../src/utils/_respondTo"
 
 export const GitHubButton = styled.a`
   z-index: 10;

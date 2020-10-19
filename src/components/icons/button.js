@@ -9,7 +9,7 @@ export const Button = styled.a`
   `}
 `
 
-export const GitHubHeader = styled.a`
+export const GitHubHeaderBtn = styled.a`
   z-index: 10;
   display: inline-flex;
 
