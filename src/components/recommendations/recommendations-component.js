@@ -59,7 +59,7 @@ const RecomendationCard = styled.ul`
   font-size: 14px;
   background-color: var(--rbadev-mono-1-hex);
   z-index: -1;
-  max-width: 80vw;
+  width: 75vw;
 `
 
 const Avatar = styled.li`
@@ -74,11 +74,12 @@ const Avatar = styled.li`
 `
 const Reference = styled.li`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-size: 12px;
   font-family: bio-sans;
-  max-width: 80%;
-  padding: 1rem;
+  width: 75%;
+  padding: 0.5rem;
+  margin-left: -3rem;
 `
 
 const Testimonials = () => {
