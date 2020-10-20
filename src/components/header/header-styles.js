@@ -14,6 +14,7 @@ export const HeaderContainer = styled.header`
   width: 100vw;
   margin: 0;
   border-bottom: 1px solid var(--rbadev-mono-2-hex);
+  z-index: 100;
 
   ${respondTo.T900`
     min-height: 100vh;
