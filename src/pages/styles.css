@@ -110,6 +110,7 @@ template {
   display: none;
 }
 a {
+  color: var(--rbadev-mono-5-hex);
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -368,6 +369,7 @@ h6 {
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
+
 hgroup {
   margin-left: 0;
   margin-right: 0;

@@ -15,6 +15,7 @@ export const MenuNavigation = styled.nav`
   transition: transform 220ms ease-in-out;
   align-content: center;
   text-transform: uppercase;
+  z-index: 20;
 
   ${respondTo.T900`
       padding-top: 50px;

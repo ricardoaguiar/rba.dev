@@ -1,5 +1,5 @@
 import React from "react"
-import { HomeContainer, HomeItem, HomeTitle, HomeSubtitle } from "./home-styled"
+import { HomeContainer, HomeItem, HomeTitle, HomeSubtitle } from "./hero-styled"
 
 const Home = () => {
   return (
