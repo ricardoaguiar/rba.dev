@@ -31,6 +31,7 @@ const getPosts = graphql`
 const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: 1fr;
   justify-content: center;
   margin: 0 auto;
 
@@ -49,10 +50,15 @@ const GridItem = styled.article`
   z-index: -1;
 `
 
-const PostTitle = styled.p`
+const PostTitle = styled.h5`
   padding: 1rem;
   text-decoration: underline solid var(--logo);
   text-decoration-thickness: 2px;
+`
+
+const PostDescription = styled.p`
+  display: block;
+  outline: 1px solid red;
 `
 const Post = () => {
   const { post } = useStaticQuery(getPosts)
@@ -65,7 +71,7 @@ const Post = () => {
             <GridItem key={node.id}>
               <Image fluid={node.heroImage.fluid} alt={node.title} />
               <PostTitle>{node.title}</PostTitle>
-              {/* <p>{node.text.description}</p> */}
+              <PostDescription>{node.text.description}</PostDescription>
             </GridItem>
           )
         })}
