@@ -1,7 +1,7 @@
 import React from "react"
 import { bool } from "prop-types"
 import { MenuNavigation, MenuList, Connect } from "./menu-styled"
-
+import { Link } from "gatsby"
 import SocialMediaMenu from "../social/social-media-menu"
 
 const Menu = ({ open }) => {
@@ -10,25 +10,25 @@ const Menu = ({ open }) => {
       <MenuNavigation open={open}>
         <MenuList>
           <li>
-            <a href="/recommendations/">
+            <Link to="/recommendations/">
               <span data-content="Recommendations" aria-hidden="true"></span>
               Recommendations
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about/">
+            <Link to="/about/">
               <span data-content="About Me" aria-hidden="true"></span>About Me
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <span data-content="Contact" aria-hidden="true"></span>Contact
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/blog/">
+            <Link to="/blog/">
               <span data-content="Blog" aria-hidden="true"></span>Blog
-            </a>
+            </Link>
           </li>
         </MenuList>
         <Connect>

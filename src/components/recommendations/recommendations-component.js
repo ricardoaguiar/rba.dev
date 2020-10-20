@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { respondTo } from "../../utils/_respondTo"
+
 // import { node } from "prop-types"
 
 const getReferences = graphql`
@@ -34,8 +35,8 @@ const RecomendationContainer = styled.section`
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  height: 80vh;
-  overflow: scroll;
+  /* height: 80vh; */
+  /* overflow: scroll; */
 
   ${respondTo.T900`
     margin-left: 70px;
@@ -65,13 +66,12 @@ const RecomendationCard = styled.ul`
 const Avatar = styled.li`
   display: flex;
   margin: 1rem;
- align-self: center;
+  align-self: center;
 
   ${respondTo.T900`
     align-items: center;
     height: 100%;
   `}
-
 `
 const Reference = styled.li`
   display: flex;
@@ -84,7 +84,6 @@ const Reference = styled.li`
   ${respondTo.T900`
       margin-left: -3rem;
   `}
-
 `
 
 const Testimonials = () => {
@@ -96,7 +95,7 @@ const Testimonials = () => {
       {references.edges.map(({ node }) => {
         return (
           <RecomendationCard key={node.id}>
-           <Avatar>
+            <Avatar>
               <Img
                 fixed={node.picture.fixed}
                 alt={node.author}
@@ -106,10 +105,14 @@ const Testimonials = () => {
                   width: "100%",
                 }}
               />
-           </Avatar>
-            <Reference>{node.author}<br />
-            {node.title}<br />
-            {node.text.testimonial}</Reference>
+            </Avatar>
+            <Reference>
+              {node.author}
+              <br />
+              {node.title}
+              <br />
+              {node.text.testimonial}
+            </Reference>
           </RecomendationCard>
         )
       })}
