@@ -4,7 +4,7 @@ import Wrapper from "../components/wrapper/wrapper"
 import Header from "../components/header/header"
 import Footer from "../components/footer/footer"
 import SEO from "../components/seo"
-import Testimonials from "../components/recommendations/recommendations-component"
+import Testimonials from "../components/recommendations/recomendations"
 
 // what people say
 const WPS = () => (

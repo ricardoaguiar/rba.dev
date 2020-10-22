@@ -112,12 +112,11 @@ const PostTitle = styled.h6`
 `
 
 const PostDescription = styled.p`
-  margin: 0 1rem;
+  margin: 0 3rem 1rem 1rem;
   bottom: 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  /* outline: 1px solid red; */
 `
 
 const Posts = () => {
