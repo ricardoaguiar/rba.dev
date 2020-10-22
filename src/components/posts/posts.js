@@ -5,9 +5,10 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import { respondTo } from "../../utils/_respondTo"
 
+// list of post on homepage
 const getPosts = graphql`
   {
-    post: allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    post: allContentfulPortfolio(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
           id
@@ -61,22 +62,65 @@ const GridPicture = styled.figure`
 const GridCaption = styled.figcaption`
   position: absolute;
   bottom: 0;
+  padding-bottom: 2rem;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.75);
+  /* transform: translateY(40%); */
+
+  /* &:hover {
+    @keyframes undefined-easeOutElastic {
+      0% {
+        transform: translateY(0%);
+      }
+
+      16% {
+        transform: translateY(-132.27%);
+      }
+
+      28% {
+        transform: translateY(-86.88%);
+      }
+
+      44% {
+        transform: translateY(-104.63%);
+      }
+
+      59% {
+        transform: translateY(-98.36%);
+      }
+
+      73% {
+        transform: translateY(-100.58%);
+      }
+
+      88% {
+        transform: translateY(-99.8%);
+      }
+
+      100% {
+        transform: translateY(-100%);
+      }
+    } */
+  }
 `
 
 const PostTitle = styled.h6`
   text-decoration: underline solid var(--logo);
   text-decoration-thickness: 2px;
+  /* margin: 2rem 1rem 4rem 2rem; */
   margin: 1rem;
 `
 
 const PostDescription = styled.p`
-  display: block;
-  margin: 1rem 1rem 3rem 1rem;
+  margin: 0 1rem;
+  bottom: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  /* outline: 1px solid red; */
 `
 
-const Post = () => {
+const Posts = () => {
   const { post } = useStaticQuery(getPosts)
 
   return (
@@ -100,4 +144,4 @@ const Post = () => {
   )
 }
 
-export default Post
+export default Posts

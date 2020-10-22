@@ -3,7 +3,7 @@ import "./styles.css"
 import SEO from "../components/seo"
 import Wrapper from "../components/wrapper/wrapper"
 import Home from "../components/hero/hero"
-import Post from "../components/post/post"
+import Posts from "../components/posts/posts"
 import Footer from "../components/footer/footer"
 // import Header from "../components/Header"
 import Header from "../components/header/header"
@@ -17,7 +17,7 @@ const IndexPage = () => {
       <Header />
       <SEO title="Home" />
       <Home />
-      <Post />
+      <Posts />
       <Footer />
     </Wrapper>
   )

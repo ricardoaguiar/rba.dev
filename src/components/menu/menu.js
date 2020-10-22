@@ -21,7 +21,7 @@ const Menu = ({ open }) => {
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/contact/">
               <span data-content="Contact" aria-hidden="true"></span>Contact
             </Link>
           </li>

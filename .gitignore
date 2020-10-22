@@ -72,3 +72,4 @@ yarn-error.log
 .netlify
 rba.code-workspace
 src/components/footer/svg/
+babel.config.json
