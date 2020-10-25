@@ -4,7 +4,7 @@ import { Button } from "./button"
 function Gatsby(props) {
   return (
     <Button href="https://www.gatsbyjs.org/" target="blank" id="gatsby">
-      <svg height={31} width={31} {...props}>
+      <svg style={{ height: 28 }} viewBox="0 0 28 28" {...props}>
         <g transform="scale(1.10714)">
           <circle cx={14} cy={14} r={14} fill="#639" />
           <path

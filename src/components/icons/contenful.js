@@ -7,10 +7,10 @@ function Contenful(props) {
       <svg
         x={0}
         y={0}
+        viewBox="0 0 28 28"
         xmlSpace="preserve"
         id="prefix__svg52"
-        width={28}
-        height={28}
+        style={{ height: 28 }}
         {...props}
       >
         <style type="text/css" id="style10" />

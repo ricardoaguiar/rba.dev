@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
 //header is the container for the navigation
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled.nav`
   background: var(--rbadev-mono-1-hex);
   display: flex;
   flex-flow: row;
@@ -29,7 +29,7 @@ export const HeaderContainer = styled.header`
 export const HeaderNav = styled.ul`
   display: flex;
   list-style: none;
-  margin: 1rem auto;
+  margin: 0 auto;
   justify-content: space-between;
   width: calc(100vw - 6%);
 

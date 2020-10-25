@@ -8,21 +8,19 @@ import { respondTo } from "../../utils/_respondTo"
 // list of post on homepage
 const getPosts = graphql`
   {
-    post: allContentfulPortfolio(sort: { fields: [publishDate], order: DESC }) {
+    post: allContentfulPortfolio(sort: { fields: publishDate, order: DESC }) {
       edges {
         node {
           id
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
+          shortDescription {
+            shortDescription
+          }
           heroImage {
-            fluid(maxWidth: 800, maxHeight: 600) {
+            fluid(maxHeight: 800, maxWidth: 600) {
               ...GatsbyContentfulFluid
             }
-          }
-          text: description {
-            description
           }
         }
       }
@@ -30,7 +28,7 @@ const getPosts = graphql`
   }
 `
 // grid
-const GridContainer = styled.section`
+const GridContainer = styled.nav`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: 1fr;
@@ -46,7 +44,7 @@ const GridContainer = styled.section`
   `}
 `
 // grid item / cell
-const GridItem = styled.article`
+const GridItem = styled.div`
   background: var(--rbadev-mono-1-hex);
   border-right: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -54,57 +52,21 @@ const GridItem = styled.article`
 `
 
 // grid content
-const GridPicture = styled.figure`
+const GridPicture = styled.div`
   overflow: hidden;
   position: relative;
 `
 // img caption
-const GridCaption = styled.figcaption`
+const GridCaption = styled.div`
   position: absolute;
   bottom: 0;
   padding-bottom: 2rem;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.75);
   /* transform: translateY(40%); */
-
-  /* &:hover {
-    @keyframes undefined-easeOutElastic {
-      0% {
-        transform: translateY(0%);
-      }
-
-      16% {
-        transform: translateY(-132.27%);
-      }
-
-      28% {
-        transform: translateY(-86.88%);
-      }
-
-      44% {
-        transform: translateY(-104.63%);
-      }
-
-      59% {
-        transform: translateY(-98.36%);
-      }
-
-      73% {
-        transform: translateY(-100.58%);
-      }
-
-      88% {
-        transform: translateY(-99.8%);
-      }
-
-      100% {
-        transform: translateY(-100%);
-      }
-    } */
-  }
 `
 
-const PostTitle = styled.h6`
+const PostTitle = styled.h3`
   text-decoration: underline solid var(--logo);
   text-decoration-thickness: 2px;
   /* margin: 2rem 1rem 4rem 2rem; */
@@ -132,7 +94,9 @@ const Posts = () => {
                 <Image fluid={node.heroImage.fluid} alt={node.title} />
                 <GridCaption>
                   <PostTitle>{node.title}</PostTitle>
-                  <PostDescription>{node.text.description}</PostDescription>
+                  <PostDescription>
+                    {node.shortDescription.shortDescription}
+                  </PostDescription>
                 </GridCaption>
               </GridPicture>
             </GridItem>

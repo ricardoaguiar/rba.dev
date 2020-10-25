@@ -1,13 +1,13 @@
 import React from "react"
-import { HomeContainer, HomeItem, HomeTitle, HomeSubtitle } from "./hero-styled"
+import { HomeContainer, HomeTitle, HomeSubtitle } from "./hero-styled"
 
 const Home = () => {
   return (
     <HomeContainer>
-      <HomeItem>
-        <HomeTitle>Hi, I'm Ricardo, A full stack web developer.</HomeTitle>
+      <HomeTitle>
+        Hi, I'm Ricardo, A full stack web developer.
         <HomeSubtitle>And this is my portfolio.</HomeSubtitle>
-      </HomeItem>
+      </HomeTitle>
     </HomeContainer>
   )
 }
