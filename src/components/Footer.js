@@ -1,5 +1,10 @@
+import React from "react"
 import styled from "@emotion/styled"
-import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../utils/_respondTo"
+import Contenful from "./icons/contenful"
+import { FaGithubAlt } from "react-icons/fa"
+import { SiNetlify } from "react-icons/si"
+import { GrGatsbyjs } from "react-icons/gr"
 
 export const FooterSection = styled.footer`
   display: flex;
@@ -32,27 +37,12 @@ export const FooterItems = styled.ul`
  `}
 `
 export const FooterItem = styled.li`
-  align-items: center;
-  width: auto;
-  padding: 0.5rem;
-  /* outline: 1px solid blueviolet; */
+  color: #fff;
 
   ${respondTo.T900`
-  padding: 1rem;
+    margin: 1rem;
   `}
-
-  /* &:first-child {
-    color: var(--rbadev-mono-1-hex);
-    padding: 0;
-    width: 100%; */
-    /* outline: 1px solid white; */
-    
-    ${respondTo.T900`
-    margin-bottom: -0.2rem;
-    `}
-  }
-  `
-
+`
 export const FooterItemLabel = styled.span`
   text-transform: uppercase;
   letter-spacing: 0.5mm;
@@ -61,8 +51,35 @@ export const FooterItemLabel = styled.span`
   font-family: bio-sans;
   width: auto;
   font-size: 0.8rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: -0.5rem;
   color: var(--rbadev-mono-1-hex);
-  /* display: inline-block; */
-  /* outline: 1px solid red; */
 `
+
+const Footer = () => {
+  return (
+    <FooterSection>
+      <FooterItemLabel>Built with</FooterItemLabel>
+      <nav>
+        <FooterItems>
+          <FooterItem>
+            <Contenful />
+          </FooterItem>
+          <FooterItem>
+            <GrGatsbyjs />
+          </FooterItem>
+          <FooterItem>
+            <FaGithubAlt />
+          </FooterItem>
+          <FooterItem>
+            <SiNetlify />
+          </FooterItem>
+        </FooterItems>
+      </nav>
+      <FooterItemLabel>
+        <p>&copy; Ricardo Aguiar {new Date().getFullYear}</p>
+      </FooterItemLabel>
+    </FooterSection>
+  )
+}
+
+export default Footer

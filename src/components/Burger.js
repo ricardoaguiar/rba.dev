@@ -1,5 +1,8 @@
+import React from "react"
+import { bool, func } from "prop-types"
+// import { BurgerBtn } from "./burger-styled"
 import styled from "@emotion/styled"
-import { respondTo } from "../../../utils/_respondTo"
+import { respondTo } from "../utils/_respondTo"
 
 // this is the BurgerBtn element
 export const BurgerBtn = styled.button`
@@ -48,3 +51,20 @@ export const BurgerBtn = styled.button`
     }
   }
 `
+
+export default function BurgerComponent({ open, setOpen }) {
+  return (
+    <BurgerBtn open={open} onClick={() => setOpen(!open)}>
+      <div />
+      <div />
+      <div />
+    </BurgerBtn>
+  )
+}
+
+BurgerComponent.propTypes = {
+  open: bool.isRequired,
+  setOpen: func.isRequired,
+}
+
+// export default BurgerComponent

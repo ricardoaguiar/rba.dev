@@ -3,11 +3,11 @@ import "../css/styles.css"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Wrapper from "../components/wrapper/wrapper"
-import Header from "../components/header/header"
-import Footer from "../components/footer/footer"
+import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import { respondTo } from "../utils/_respondTo"
+import Nav from "../components/Nav"
 
 export const query = graphql`
   query($slug: String!) {
@@ -132,7 +132,7 @@ const ProjectScope = styled.div`
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
   <Wrapper>
-    <Header />
+    <Nav />
     <SEO title="Home" />
     <PortfolioSection>
       <PortfolioArticle>

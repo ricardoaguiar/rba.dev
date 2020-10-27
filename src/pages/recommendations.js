@@ -1,16 +1,16 @@
 import React from "react"
 import "../css/styles.css"
 import Wrapper from "../components/wrapper/wrapper"
-import Header from "../components/header/header"
-import Footer from "../components/footer/footer"
+import Footer from "../components/Footer"
 import SEO from "../components/seo"
 import Testimonials from "../components/recommendations/recomendations"
+import Nav from "../components/Nav"
 
 // what people say
 const WPS = () => (
   <>
     <Wrapper>
-      <Header />
+      <Nav />
       <SEO title="Recommendations" />
       <Testimonials />
       <Footer />
