@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../../src/utils/_respondTo"
 // import ricardo from "../../images/ricardo.png"
 
 export const HomeContainer = styled.header`

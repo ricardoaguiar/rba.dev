@@ -1,8 +1,13 @@
+import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
-import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../utils/_respondTo"
+import Menu from "./menu/menu"
+import { useOnClickOutside } from "./hooks"
+import RbaLogo from "./logo/rba-logo"
+import BurgerComponent from "./Burger"
+import { FaEnvelope } from "react-icons/fa"
 
-//header is the container for the navigation
-export const HeaderContainer = styled.nav`
+export const NavComponent = styled.nav`
   background: var(--rbadev-mono-1-hex);
   display: flex;
   flex-flow: row;
@@ -48,10 +53,10 @@ export const HeaderNavItem = styled.li`
   padding: 0;
   margin: 0;
   width: 50px;
-  /* outline: 1px solid red; */
 
   ${respondTo.T900`
     width: unset;
+    margin: .7rem auto;
 
   `}
 
@@ -59,3 +64,30 @@ export const HeaderNavItem = styled.li`
     justify-content: flex-end;
   }
 `
+
+export default function Nav() {
+  const [open, setOpen] = useState(false)
+  const node = useRef()
+  useOnClickOutside(node, () => setOpen(false))
+
+  return (
+    <>
+      <Menu open={open} setOpen={setOpen} />
+      <NavComponent ref={node}>
+        <HeaderNav>
+          <HeaderNavItem>
+            <RbaLogo />
+          </HeaderNavItem>
+          <HeaderNavItem>
+            <BurgerComponent open={open} setOpen={setOpen} />
+          </HeaderNavItem>
+          <HeaderNavItem>
+            <FaEnvelope />
+          </HeaderNavItem>
+        </HeaderNav>
+      </NavComponent>
+    </>
+  )
+}
+
+// export default Header

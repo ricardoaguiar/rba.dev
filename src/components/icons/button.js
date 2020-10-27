@@ -14,6 +14,6 @@ export const GitHubHeaderBtn = styled.a`
   display: inline-flex;
 
   ${respondTo.T900`
-    margin: 1rem auto;
+    margin: 0 auto;
   `}
 `
