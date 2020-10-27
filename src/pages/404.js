@@ -1,5 +1,5 @@
 import React from "react"
-import "./styles.css"
+import "../css/styles.css"
 import Wrapper from "../components/wrapper/wrapper"
 import Header from "../components/header/header"
 import Footer from "../components/footer/footer"
@@ -9,16 +9,15 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 library.add(fab)
 
-const NotFoundPage = () => (
+const FourOFour = () => (
   <>
-  <Wrapper>
-    <Header />
-    <SEO title="404: Not found" />
-    <NotFound />
-    <Footer />
-  </Wrapper>
+    <Wrapper>
+      <Header />
+      <SEO title="404: Not found" />
+      <NotFound />
+      <Footer />
+    </Wrapper>
   </>
 )
 
-
-export default NotFoundPage
+export default FourOFour

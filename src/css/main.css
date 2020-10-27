@@ -4,4 +4,34 @@ html {
   --medium-teal: #008c9e;
   --light-teal: #00b4cc;
   --sky-blue: #00dffc;
+
+  --walking-away-1: #b90504;
+  --walking-away-2: #990100;
+  --walking-away-3: #333333;
+  --walking-away-4: #e8e8e8;
+  --walking-away-5: #f6f6f6;
+
+  --luna-rosa-1: #1d2e4c;
+  --luna-rosa-2: #1a5d65;
+  --luna-rosa-3: #3c8e77;
+  --luna-rosa-4: #9bc585;
+  --luna-rosa-5: #d2db9a;
+
+  --vicioussans-1: #6d7578;
+  --vicioussans-2: #8b9e9b;
+  --vicioussans-3: #ede3b4;
+  --vicioussans-4: #e6cba5;
+  --vicioussans-5: #e6b39a;
+
+  --equinorev-1: #111625;
+  --equinorev-2: #341931;
+  --equinorev-3: #571b3c;
+  --equinorev-4: #7a1e48;
+  --equinorev-5: #9d2053;
+
+  --amaranthys-1: #411f2d;
+  --amaranthys-2: #ac4147;
+  --amaranthys-3: #f88863;
+  --amaranthys-4: #ffc27f;
+  --amaranthys-5: #ffe29a;
 }

@@ -7,6 +7,21 @@ const BlogContainer = styled.div`
   margin: 3rem;
   padding: 0.5rem;
   background-color: var(--rbadev-duotone-3-hex);
+
+  h3 {
+    font-size: 3rem;
+    color: var(--rbadev-mono-1-hex);
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0 0 70px;
+  }
 `
 
 const BlogList = styled.ul`

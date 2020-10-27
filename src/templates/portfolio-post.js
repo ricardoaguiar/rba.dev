@@ -1,5 +1,5 @@
 import React from "react"
-import "../pages/styles.css"
+import "../css/styles.css"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Wrapper from "../components/wrapper/wrapper"

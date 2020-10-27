@@ -28,7 +28,7 @@ module.exports = {
         background_color: `#654321`,
         theme_color: `#123456`,
         display: `minimal-ui`,
-        icon: `src/images/rba-dev-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/rba-dev-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
