@@ -1,8 +1,9 @@
 import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
 
-export const FooterSection = styled.section`
+export const FooterSection = styled.footer`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 25vh;
@@ -40,29 +41,28 @@ export const FooterItem = styled.li`
   padding: 1rem;
   `}
 
-  &:first-child {
-    letter-spacing: 0.5mm;
-    font-family: bio-sans;
-    font-size: 0.8rem;
-    font-weight: bolder;
-    text-transform: uppercase;
+  /* &:first-child {
     color: var(--rbadev-mono-1-hex);
     padding: 0;
-    margin-bottom: 0.2rem;
-    width: 100%;
+    width: 100%; */
     /* outline: 1px solid white; */
-
+    
     ${respondTo.T900`
-      margin-bottom: -0.2rem;
+    margin-bottom: -0.2rem;
     `}
   }
-`
+  `
 
-export const FooterItemLabel = styled.p`
+export const FooterItemLabel = styled.span`
+  text-transform: uppercase;
+  letter-spacing: 0.5mm;
   margin: 1rem auto;
+  font-weight: bolder;
+  font-family: bio-sans;
   width: auto;
   font-size: 0.8rem;
+  margin-bottom: 0.2rem;
   color: var(--rbadev-mono-1-hex);
-  display: inline-block;
+  /* display: inline-block; */
   /* outline: 1px solid red; */
 `

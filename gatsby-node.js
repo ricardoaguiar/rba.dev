@@ -7,6 +7,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         nodes {
           slug
         }
+        group(field: tags, limit: 1000) {
+          field
+          fieldValue
+          totalCount
+        }
       }
     }
   `)

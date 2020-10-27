@@ -1,5 +1,5 @@
 import React from "react"
-import "./styles.css"
+import "../css/styles.css"
 import SEO from "../components/seo"
 import Wrapper from "../components/wrapper/wrapper"
 import Home from "../components/hero/hero"
@@ -10,7 +10,7 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 library.add(faEnvelope)
 
-const IndexPage = () => {
+export default function IndexPage() {
   return (
     <Wrapper>
       <Header />
@@ -22,4 +22,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+// export default IndexPage
