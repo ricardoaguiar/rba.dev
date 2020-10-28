@@ -17,6 +17,8 @@ export const HomeContainer = styled.header`
   padding: 1vh 0 0 5vw;
   background: var(--rbadev-mono-5-hex);
   align-items: center;
+border-right: 1px solid var(--rbadev-mono-1-hex);
+border-bottom: 1px solid var(--rbadev-mono-1-hex);
   `};
 `
 
