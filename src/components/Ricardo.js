@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import ricardo from "../assets/ricardo.png"
 
 const Portrait = styled.img`
-  width: 200px;
+  height: 20%;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;

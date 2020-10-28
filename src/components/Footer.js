@@ -38,9 +38,10 @@ export const FooterItems = styled.ul`
 `
 export const FooterItem = styled.li`
   color: #fff;
+  margin: 1rem;
 
   ${respondTo.T900`
-    margin: 1rem;
+    
   `}
 `
 export const FooterItemLabel = styled.span`
@@ -65,18 +66,18 @@ const Footer = () => {
             <Contenful />
           </FooterItem>
           <FooterItem>
-            <GrGatsbyjs />
+            <GrGatsbyjs size={25.59}/>
           </FooterItem>
           <FooterItem>
-            <FaGithubAlt />
+            <FaGithubAlt size={25.59} />
           </FooterItem>
           <FooterItem>
-            <SiNetlify />
+            <SiNetlify size={25.59} />
           </FooterItem>
         </FooterItems>
       </nav>
       <FooterItemLabel>
-        <p>&copy; Ricardo Aguiar {new Date().getFullYear}</p>
+        &copy; Ricardo Aguiar {new Date().getFullYear()}
       </FooterItemLabel>
     </FooterSection>
   )
