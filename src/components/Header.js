@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { respondTo } from "../utils/_respondTo"
-import Ricardo from "./Ricardo"
+//import Ricardo from "./Ricardo"
 
 export const HomeContainer = styled.header`
   display: flex;
@@ -42,7 +42,7 @@ const Home = () => {
         <br />A full stack web developer.
         <HomeSubtitle>This is my portfolio.</HomeSubtitle>
       </HomeTitle>
-      <Ricardo />
+     
     </HomeContainer>
   )
 }
