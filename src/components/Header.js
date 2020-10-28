@@ -11,14 +11,15 @@ export const HomeContainer = styled.header`
   color: var(--rbadev-mono-2-hex);
 
   ${respondTo.T900`
-  max-width: calc(100vw - 70px);
-  margin-left: 70px;
-  margin-top: 0;
-  padding: 1vh 0 0 5vw;
-  background: var(--rbadev-mono-5-hex);
-  align-items: center;
-border-right: 1px solid var(--logo);
-border-bottom: 1px solid var(--logo);
+    max-width: calc(100vw - 70px);
+    margin-left: 70px;
+    margin-top: 0;
+    padding: 1vh 0 0 5vw;
+    height: 50vh;
+    background: var(--rbadev-mono-1-hex);
+    align-items: center;
+    /* border-right: 1px solid var(--logo);
+    border-bottom: 1px solid var(--logo); */
   `};
 `
 
@@ -40,11 +41,12 @@ const Home = () => {
   return (
     <HomeContainer>
       <HomeTitle>
-        Hi, I'm Ricardo,
-        <br />A full stack web developer.
-        <HomeSubtitle>This is my portfolio.</HomeSubtitle>
+        Hi, I'm Ricardo.
+        <br />A Front End web developer.
+        <HomeSubtitle>
+          These are some of the projects I have worked on.
+        </HomeSubtitle>
       </HomeTitle>
-     
     </HomeContainer>
   )
 }
