@@ -70,6 +70,12 @@
   --rbadev-fkl-3-rgba: #b3204d10;
   --rbadev-fkl-4-rgba: #412e2810;
   --rbadev-fkl-5-rgba: #15110110;
+
+  --bluejay-1: #1f1f20;
+  --bluejay-2: #2b4c7e;
+  --bluejay-3: #567ebb;
+  --bluejay-4: #606d80;
+  --bluejay-5: #dce0e6;
 }
 
 html {
@@ -87,7 +93,7 @@ html {
 body {
   margin: 0 auto;
   color: var(--rbadev-duotone-5-hex);
-  font-family: railroad-gothic-atf, bio-sans, georgia, serif;
+  font-family: arboria, sans-serif;
   font-size: clamp(2vw, 12px + 1.2vw, 2rem);
   font-weight: normal;
   word-wrap: break-word;
@@ -279,6 +285,22 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: arboria, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+  font-weight: 400;
+  font-style: normal;
+}
+
+small {
+  font-family: arboria, sans-serif;
+}
 h1 {
   margin-left: 0;
   margin-right: 0;
@@ -289,9 +311,6 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: railroad-gothic-atf, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
   font-weight: 800;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
@@ -306,9 +325,6 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: railroad-gothic-atf, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
   font-weight: 800;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
@@ -323,9 +339,6 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: railroad-gothic-atf, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
@@ -339,9 +352,6 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: railroad-gothic-atf, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
@@ -355,9 +365,6 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: railroad-gothic-atf, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
@@ -371,9 +378,6 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: railroad-gothic-atf, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
@@ -633,4 +637,8 @@ pre tt:after {
   only screen and (min-device-pixel-ratio: 2),
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
+}
+
+* {
+  font-family: arboria, sans-serif !important;
 }

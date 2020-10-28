@@ -18,12 +18,12 @@ export const NavComponent = styled.nav`
   height: 50px;
   width: 100vw;
   margin: 0;
-  border-bottom: 1px solid var(--logo);
+  border-bottom: 1px solid var(--bluejay-5);
   z-index: 100;
 
   ${respondTo.T900`
     min-height: 100vh;
-    border-right: 1px solid var(--logo); 
+    border-right: 1px solid var(--bluejay-5); 
     max-width: 70px;
     flex-flow: column;
     padding: 0;
@@ -82,7 +82,7 @@ export default function Nav() {
             <BurgerComponent open={open} setOpen={setOpen} />
           </HeaderNavItem>
           <HeaderNavItem>
-            <FaEnvelope size={30} />
+            <FaEnvelope size={30} />{" "}
           </HeaderNavItem>
         </HeaderNav>
       </NavComponent>

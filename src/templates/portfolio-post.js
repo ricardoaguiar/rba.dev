@@ -15,21 +15,30 @@ export const query = graphql`
       author {
         name
       }
+      id
+      title
+      tags
+      slug
       portfolioDescription {
         json
       }
       scope: body {
         body
       }
-      publishDate
+      publishDate(formatString: "YYYY/MM/DD")
+      updatedAt
       heroImage {
         fluid(maxHeight: 1200, maxWidth: 800) {
           ...GatsbyContentfulFluid
         }
+        id
       }
-      title
-      updatedAt
-      tags
+      images {
+        file {
+          url
+        }
+        id
+      }
     }
   }
 `
@@ -66,7 +75,7 @@ const PortfolioTitle = styled.h1`
     margin: 50px 0 1rem 70px;
   `}
 `
-const PortfolioImage = styled.figure`
+const PortfolioImage = styled.div`
   width: 95%;
   margin: 1rem auto;
 
@@ -122,7 +131,6 @@ const ProjectSubtitle = styled.p`
 const ProjectScope = styled.div`
   margin-left: 0.5rem;
   margin-bottom: 100px;
-  font-family: bio-sans;
   font-size: 16px;
 
   ${respondTo.T900`
@@ -131,28 +139,36 @@ const ProjectScope = styled.div`
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
-  <Wrapper>
-    <Nav />
-    <SEO title="Home" />
-    <PortfolioSection>
-      <PortfolioArticle>
-        <PortfolioTitle>{portfolio.title}</PortfolioTitle>
-        <Line />
-        <ProjectSubtitle>Project Scope</ProjectSubtitle>
-        <ProjectScope>{portfolio.scope.body}</ProjectScope>
-        <PortfolioList>
-          <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
-          <PortfolioListItem>{portfolio.title}</PortfolioListItem>
-          <PortfolioListItem>{portfolio.publishDate}</PortfolioListItem>
-          <PortfolioListItem></PortfolioListItem>
-        </PortfolioList>
-      </PortfolioArticle>
-      <PortfolioImage>
-        <Image fluid={portfolio.heroImage.fluid} alt={portfolio.title} />
-      </PortfolioImage>
-    </PortfolioSection>
-    <Footer />
-  </Wrapper>
+  <>
+    {console.log(portfolio)}
+    <Wrapper>
+      <Nav />
+      <SEO title="Home" />
+      <PortfolioSection>
+        <PortfolioArticle>
+          <PortfolioTitle>{portfolio.title}</PortfolioTitle>
+          <Line />
+          <ProjectScope>
+            {portfolio.tags.map((tag, i) => (
+              <p key={i}>{tag}</p>
+            ))}
+          </ProjectScope>
+          <ProjectSubtitle>Project Scope</ProjectSubtitle>
+          <ProjectScope>{portfolio.scope.body}</ProjectScope>
+          <PortfolioList>
+            <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
+            <PortfolioListItem>{portfolio.title}</PortfolioListItem>
+            <PortfolioListItem>{portfolio.publishDate}</PortfolioListItem>
+            <PortfolioListItem></PortfolioListItem>
+          </PortfolioList>
+        </PortfolioArticle>
+        <PortfolioImage key={portfolio.heroImage.id}>
+          <Image fluid={portfolio.heroImage.fluid} alt={portfolio.title} />
+        </PortfolioImage>
+      </PortfolioSection>
+      <Footer />
+    </Wrapper>
+  </>
 )
 
 export default PortfolioTemplate
