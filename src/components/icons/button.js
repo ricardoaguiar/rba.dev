@@ -5,7 +5,7 @@ export const Button = styled.a`
   display: inline-flex;
 
   ${respondTo.T900`
-    margin: 1rem auto;
+   // margin: 1rem auto;
   `}
 `
 
