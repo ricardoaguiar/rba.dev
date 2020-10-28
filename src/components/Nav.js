@@ -82,7 +82,7 @@ export default function Nav() {
             <BurgerComponent open={open} setOpen={setOpen} />
           </HeaderNavItem>
           <HeaderNavItem>
-            <FaEnvelope />
+            <FaEnvelope size={32} />
           </HeaderNavItem>
         </HeaderNav>
       </NavComponent>
