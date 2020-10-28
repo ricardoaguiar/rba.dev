@@ -77,7 +77,7 @@ const Footer = () => {
         </FooterItems>
       </nav>
       <FooterItemLabel>
-        &copy; Ricardo Aguiar {new Date().getFullYear}
+        &copy; Ricardo Aguiar {new Date().getFullYear()}
       </FooterItemLabel>
     </FooterSection>
   )
