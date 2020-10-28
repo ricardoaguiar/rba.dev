@@ -46,8 +46,8 @@ const GridContainer = styled.nav`
 // grid item / cell
 const GridItem = styled.div`
   background: var(--rbadev-mono-1-hex);
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-right: 1px solid var(--logo);
+  border-bottom: 1px solid var(--logo);
   z-index: -999;
 `
 
