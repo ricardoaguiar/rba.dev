@@ -38,9 +38,10 @@ export const FooterItems = styled.ul`
 `
 export const FooterItem = styled.li`
   color: #fff;
+  margin: 1rem;
 
   ${respondTo.T900`
-    margin: 1rem;
+    
   `}
 `
 export const FooterItemLabel = styled.span`
