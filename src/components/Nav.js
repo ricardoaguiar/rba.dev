@@ -18,12 +18,12 @@ export const NavComponent = styled.nav`
   height: 50px;
   width: 100vw;
   margin: 0;
-  border-bottom: 1px solid var(--rbadev-mono-2-hex);
+  border-bottom: 1px solid var(--logo);
   z-index: 100;
 
   ${respondTo.T900`
     min-height: 100vh;
-    border-right: 1px solid var(--rbadev-mono-2-hex); 
+    border-right: 1px solid var(--logo); 
     max-width: 70px;
     flex-flow: column;
     padding: 0;
