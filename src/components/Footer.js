@@ -65,18 +65,18 @@ const Footer = () => {
             <Contenful />
           </FooterItem>
           <FooterItem>
-            <GrGatsbyjs />
+            <GrGatsbyjs size={25.59}/>
           </FooterItem>
           <FooterItem>
-            <FaGithubAlt />
+            <FaGithubAlt size={25.59} />
           </FooterItem>
           <FooterItem>
-            <SiNetlify />
+            <SiNetlify size={25.59} />
           </FooterItem>
         </FooterItems>
       </nav>
       <FooterItemLabel>
-        <p>&copy; Ricardo Aguiar {new Date().getFullYear}</p>
+        &copy; Ricardo Aguiar {new Date().getFullYear}
       </FooterItemLabel>
     </FooterSection>
   )
