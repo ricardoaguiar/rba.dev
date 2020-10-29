@@ -142,12 +142,17 @@ const ProjectScope = styled.div`
 const Stack = styled.ul`
 display: flex;
 flex-direction: row;
-margin-left: 80px;
+margin-left: 70px;
+list-style: none;
 ` 
 
 const StackTags = styled.li`
-  font-weight: smaller;
-  color: var(--logo);
+font-weight: 400;
+color: #fff;
+font-size: 1rem;
+background: gray;
+padding: 4px;
+margin: 4px;
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
