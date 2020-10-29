@@ -158,11 +158,11 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         <PortfolioArticle>
           <PortfolioTitle>{portfolio.title}</PortfolioTitle>
           <Line />
-          <ProjectScope>
+
             {portfolio.tags.map((tag, i) => (
               <StackTags key={i}>{tag}</StackTags>
             ))}
-          </ProjectScope>
+
           <ProjectSubtitle>Project Scope</ProjectSubtitle>
           <ProjectScope>{portfolio.scope.body}</ProjectScope>
           <PortfolioList>
