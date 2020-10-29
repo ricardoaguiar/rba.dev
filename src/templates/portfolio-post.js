@@ -139,17 +139,15 @@ const ProjectScope = styled.div`
   `}
 `
 
-
-const StackTags = styled.ul`
+const Stack = styled.ul`
 display: flex;
 flex-direction: row;
-  font-weight: bolder;
-  margin-left: 80px;
-  color: var(--logo);
+margin-left: 80px;
+` 
 
-  & li {
-  margin: 10px;
-}
+const StackTags = styled.li`
+  font-weight: smaller;
+  color: var(--logo);
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
@@ -162,11 +160,11 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         <PortfolioArticle>
           <PortfolioTitle>{portfolio.title}</PortfolioTitle>
           <Line />
-
+            <Stack>
             {portfolio.tags.map((tag, i) => (
               <StackTags key={i}>{tag}</StackTags>
             ))}
-
+            </Stack>
           <ProjectSubtitle>Project Scope</ProjectSubtitle>
           <ProjectScope>{portfolio.scope.body}</ProjectScope>
           <PortfolioList>
