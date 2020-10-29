@@ -32,9 +32,11 @@ const GridContainer = styled.nav`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: 1fr;
-  grid-gap: 15px;
+  grid-gap: 20px;
   justify-content: center;
   margin: 0 auto;
+  padding: 20px;
+  background: var(--rbadev-mono-2-hex);
 
   ${respondTo.M300`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
