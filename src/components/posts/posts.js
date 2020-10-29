@@ -61,14 +61,12 @@ const GridCaption = styled.div`
   bottom: 0;
   padding-bottom: 2rem;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.75);
-  /* transform: translateY(40%); */
+  background-color: rgba(255, 255, 255, 0.55);
 `
 
 const PostTitle = styled.h3`
   text-decoration: underline solid var(--logo);
   text-decoration-thickness: 2px;
-  /* margin: 2rem 1rem 4rem 2rem; */
   margin: 1rem;
 `
 
