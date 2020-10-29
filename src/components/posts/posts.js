@@ -32,8 +32,11 @@ const GridContainer = styled.nav`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: 1fr;
+  grid-gap: 20px;
   justify-content: center;
   margin: 0 auto;
+  padding: 20px;
+  background: var(--rbadev-mono-2-hex);
 
   ${respondTo.M300`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -46,8 +49,6 @@ const GridContainer = styled.nav`
 // grid item / cell
 const GridItem = styled.div`
   background: var(--rbadev-mono-1-hex);
-  border-right: 1px solid var(--logo);
-  border-bottom: 1px solid var(--logo);
   z-index: -999;
 `
 
@@ -62,14 +63,12 @@ const GridCaption = styled.div`
   bottom: 0;
   padding-bottom: 2rem;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.75);
-  /* transform: translateY(40%); */
+  background-color: rgba(255, 255, 255, 0.55);
 `
 
 const PostTitle = styled.h3`
   text-decoration: underline solid var(--logo);
   text-decoration-thickness: 2px;
-  /* margin: 2rem 1rem 4rem 2rem; */
   margin: 1rem;
 `
 

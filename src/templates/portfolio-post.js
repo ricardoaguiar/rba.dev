@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Wrapper from "../components/wrapper/wrapper"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
+import Img from "gatsby-image"
 import { respondTo } from "../utils/_respondTo"
 import Nav from "../components/Nav"
 
@@ -33,11 +33,18 @@ export const query = graphql`
         }
         id
       }
-      images {
-        file {
-          url
+    }
+    assets: allContentfulPortfolio(filter: { slug: { eq: $slug } }) {
+      edges {
+        node {
+          images {
+            fluid(maxWidth: 800) {
+              ...GatsbyContentfulFluid
+            }
+            title
+            id
+          }
         }
-        id
       }
     }
   }
@@ -112,6 +119,7 @@ const Line = styled.hr`
   margin-bottom: 4px;
   margin: -1.2rem 0 1rem -75px;
   width: 200%;
+  z-index: -1;
 
   ${respondTo.T900`
     height: 8px;
@@ -138,9 +146,24 @@ const ProjectScope = styled.div`
   `}
 `
 
-const PortfolioTemplate = ({ data: { portfolio } }) => (
+const Stack = styled.ul`
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+  list-style: none;
+`
+
+const StackTags = styled.li`
+  font-weight: 400;
+  color: #fff;
+  font-size: 1rem;
+  background: gray;
+  padding: 4px;
+  margin: 4px;
+`
+
+const PortfolioTemplate = ({ data: { portfolio, assets } }) => (
   <>
-    {console.log(portfolio)}
     <Wrapper>
       <Nav />
       <SEO title="Home" />
@@ -148,11 +171,11 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         <PortfolioArticle>
           <PortfolioTitle>{portfolio.title}</PortfolioTitle>
           <Line />
-          <ProjectScope>
+          <Stack>
             {portfolio.tags.map((tag, i) => (
-              <p key={i}>{tag}</p>
+              <StackTags key={i}>{tag}</StackTags>
             ))}
-          </ProjectScope>
+          </Stack>
           <ProjectSubtitle>Project Scope</ProjectSubtitle>
           <ProjectScope>{portfolio.scope.body}</ProjectScope>
           <PortfolioList>
@@ -163,7 +186,18 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           </PortfolioList>
         </PortfolioArticle>
         <PortfolioImage key={portfolio.heroImage.id}>
-          <Image fluid={portfolio.heroImage.fluid} alt={portfolio.title} />
+          <Img fluid={portfolio.heroImage.fluid} alt={portfolio.title} />
+        </PortfolioImage>
+        {console.log("########################")}
+        {console.log(assets.edges[0].node.images[0].fluid.src)}
+        {console.log(assets.edges[0].node.images[0].title)}
+        {console.log(assets.edges[0].node.images[0].id)}
+        <PortfolioImage>
+          <Img
+            fluid={assets.edges[0].node.images[0].fluid}
+            alt={assets.edges[0].node.images[0].title}
+            key={assets.edges[0].node.images[0].id}
+          />
         </PortfolioImage>
       </PortfolioSection>
       <Footer />
