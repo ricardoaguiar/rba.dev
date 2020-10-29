@@ -32,6 +32,7 @@ const GridContainer = styled.nav`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: 1fr;
+  grid-gap: 15px;
   justify-content: center;
   margin: 0 auto;
 
@@ -46,8 +47,6 @@ const GridContainer = styled.nav`
 // grid item / cell
 const GridItem = styled.div`
   background: var(--rbadev-mono-1-hex);
-  border-right: 1px solid var(--logo);
-  border-bottom: 1px solid var(--logo);
   z-index: -999;
 `
 
