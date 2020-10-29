@@ -138,6 +138,16 @@ const ProjectScope = styled.div`
   `}
 `
 
+
+const StackTags = styled.p`
+  font-weight: bolder;
+  margin: 1rem 0 1rem 0.5rem;
+
+  ${respondTo.T900`
+    margin: 35px 0 20px 70px;
+  `}
+`
+
 const PortfolioTemplate = ({ data: { portfolio } }) => (
   <>
     {console.log(portfolio)}
@@ -150,7 +160,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           <Line />
           <ProjectScope>
             {portfolio.tags.map((tag, i) => (
-              <p key={i}>{tag}</p>
+              <StackTags key={i}>{tag}</StackTags>
             ))}
           </ProjectScope>
           <ProjectSubtitle>Project Scope</ProjectSubtitle>
