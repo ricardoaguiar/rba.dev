@@ -41,10 +41,10 @@ const Home = () => {
   return (
     <HomeContainer>
       <HomeTitle>
-        Hi, I'm Ricardo.
-        <br />A Front End web developer.
+        Hi, I'm Ricardo.<br />
+        I work on Front End web development and have a strong interest in full-stack and system integrations.  
         <HomeSubtitle>
-          These are some of the projects I have worked on.
+          These are some of the projects I have built.
         </HomeSubtitle>
       </HomeTitle>
     </HomeContainer>
