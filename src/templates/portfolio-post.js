@@ -112,6 +112,7 @@ const Line = styled.hr`
   margin-bottom: 4px;
   margin: -1.2rem 0 1rem -75px;
   width: 200%;
+  z-index: -1;
 
   ${respondTo.T900`
     height: 8px;
@@ -139,14 +140,16 @@ const ProjectScope = styled.div`
 `
 
 
-const StackTags = styled.p`
+const StackTags = styled.ul`
+display: flex;
+flex-direction: row;
   font-weight: bolder;
-  margin: 1rem 0 1rem 0.5rem;
-  color: red;
+  margin-left: 80px;
+  color: var(--logo);
 
-  ${respondTo.T900`
-    margin: 15px;
-  `}
+  & li {
+  margin: 10px;
+}
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
