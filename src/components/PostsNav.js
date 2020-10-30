@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
-import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../utils/_respondTo"
 
 // list of post on homepage //grid
 const getPosts = graphql`
@@ -36,7 +36,7 @@ const GridContainer = styled.nav`
   justify-content: center;
   margin: 0 auto;
   padding: 20px;
-  background: var(--rbadev-mono-2-hex);
+  background: var(--white);
 
   ${respondTo.M300`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

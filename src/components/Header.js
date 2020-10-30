@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
+import css from "@emotion/css"
 import { respondTo } from "../utils/_respondTo"
-//import Ricardo from "./Ricardo"
 
 export const HomeContainer = styled.header`
   display: flex;
@@ -39,8 +39,16 @@ const Home = () => {
   return (
     <HomeContainer>
       <HomeTitle>
-        Hi, I'm Ricardo.<br />
-        I work on Front End web development and have a strong interest in full-stack and system integrations.  
+        Hi, I'm Ricardo.
+        <br />
+        <span
+          css={css`
+            color: var(--logo);
+          `}
+        >
+          Front End web developer
+        </span>
+        &nbsp;with a strong interest in Full-stack and System Integrations.
         <HomeSubtitle>
           These are some of the projects I have built.
         </HomeSubtitle>

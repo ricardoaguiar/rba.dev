@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../utils/_respondTo"
 
 // import { node } from "prop-types"
 

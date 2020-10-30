@@ -40,4 +40,18 @@ html {
   --bluejay-3: #567ebb;
   --bluejay-4: #606d80;
   --bluejay-5: #dce0e6;
+
+  /* Color Theme Swatches in Hex */
+  --rbadev-fk-1-hex: #edf6ee;
+  --rbadev-fk-2-hex: #d1c089;
+  --rbadev-fk-3-hex: #b3204d;
+  --rbadev-fk-4-hex: #412e28;
+  --rbadev-fk-5-hex: #151101;
+
+  /* Color Theme Swatches in RGBA */
+  --rbadev-fkl-1-rgba: #edf6ee10;
+  --rbadev-fkl-2-rgba: #d1c08910;
+  --rbadev-fkl-3-rgba: #b3204d10;
+  --rbadev-fkl-4-rgba: #412e2810;
+  --rbadev-fkl-5-rgba: #15110110;
 }

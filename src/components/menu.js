@@ -2,13 +2,19 @@ import React from "react"
 import { bool } from "prop-types"
 import { MenuNavigation, MenuList, Connect } from "./menu-styled"
 import { Link } from "gatsby"
-import SocialMediaMenu from "../SocialMedia"
+import SocialMediaMenu from "./SocialMedia"
 
 const Menu = ({ open }) => {
   return (
     <>
       <MenuNavigation open={open}>
         <MenuList>
+          <li>
+            <Link to="/">
+              <span data-content="Projects" aria-hidden="true"></span>
+              Projects
+            </Link>
+          </li>
           <li>
             <Link to="/recommendations/">
               <span data-content="Recommendations" aria-hidden="true"></span>
