@@ -33,18 +33,12 @@ export const query = graphql`
         }
         id
       }
-    }
-    assets: allContentfulPortfolio(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          images {
-            fluid(maxWidth: 800) {
-              ...GatsbyContentfulFluid
-            }
-            title
-            id
-          }
+      images {
+        fluid(maxWidth: 800) {
+          ...GatsbyContentfulFluid
         }
+        title
+        id
       }
     }
   }
@@ -162,7 +156,7 @@ const StackTags = styled.li`
   margin: 4px;
 `
 
-const PortfolioTemplate = ({ data: { portfolio, assets } }) => (
+const PortfolioTemplate = ({ data: { portfolio } }) => (
   <>
     <Wrapper>
       <Nav />
@@ -172,9 +166,8 @@ const PortfolioTemplate = ({ data: { portfolio, assets } }) => (
           <PortfolioTitle>{portfolio.title}</PortfolioTitle>
           <Line />
           <Stack>
-            {portfolio.tags.map((tag, i) => (
-              <StackTags key={i}>{tag}</StackTags>
-            ))}
+            {portfolio.tags &&
+              portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
           </Stack>
           <ProjectSubtitle>Project Scope</ProjectSubtitle>
           <ProjectScope>{portfolio.scope.body}</ProjectScope>
@@ -188,16 +181,11 @@ const PortfolioTemplate = ({ data: { portfolio, assets } }) => (
         <PortfolioImage key={portfolio.heroImage.id}>
           <Img fluid={portfolio.heroImage.fluid} alt={portfolio.title} />
         </PortfolioImage>
-        {console.log("########################")}
-        {console.log(assets.edges[0].node.images[0].fluid.src)}
-        {console.log(assets.edges[0].node.images[0].title)}
-        {console.log(assets.edges[0].node.images[0].id)}
         <PortfolioImage>
-          <Img
-            fluid={assets.edges[0].node.images[0].fluid}
-            alt={assets.edges[0].node.images[0].title}
-            key={assets.edges[0].node.images[0].id}
-          />
+          {portfolio.images &&
+            portfolio.images.map(image => (
+              <Img fluid={image.fluid} alt={image.title} key={image.id} />
+            ))}
         </PortfolioImage>
       </PortfolioSection>
       <Footer />

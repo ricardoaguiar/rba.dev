@@ -5,7 +5,7 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import { respondTo } from "../../utils/_respondTo"
 
-// list of post on homepage
+// list of post on homepage //grid
 const getPosts = graphql`
   {
     post: allContentfulPortfolio(sort: { fields: publishDate, order: DESC }) {
@@ -82,13 +82,12 @@ const PostDescription = styled.p`
 
 const Posts = () => {
   const { post } = useStaticQuery(getPosts)
-
   return (
     <GridContainer>
       {post.edges.map(({ node }) => {
         return (
-          <Link to={`/${node.slug}`}>
-            <GridItem key={node.id}>
+          <Link to={`/${node.slug}`} key={node.id}>
+            <GridItem>
               <GridPicture>
                 <Image fluid={node.heroImage.fluid} alt={node.title} />
                 <GridCaption>
