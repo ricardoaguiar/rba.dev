@@ -86,7 +86,7 @@ const Posts = () => {
     <GridContainer>
       {post.edges.map(({ node }) => {
         return (
-          <Link to={`/${node.slug}`} key={node.id}>
+          <Link to={`/${node.slug}/`} key={node.id}>
             <GridItem>
               <GridPicture>
                 <Image fluid={node.heroImage.fluid} alt={node.title} />

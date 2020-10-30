@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { css } from "emotion"
-import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../utils/_respondTo"
 import styled from "@emotion/styled"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 

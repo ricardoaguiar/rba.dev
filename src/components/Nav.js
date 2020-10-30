@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
 import { respondTo } from "../utils/_respondTo"
 import Menu from "./menu/menu"
-import { useOnClickOutside } from "./hooks"
+import { useOnClickOutside } from "./Hooks"
 import RbaLogo from "./logo/rba-logo"
 import BurgerComponent from "./Burger"
 import { FaEnvelope } from "react-icons/fa"
@@ -82,7 +82,7 @@ export default function Nav() {
             <BurgerComponent open={open} setOpen={setOpen} />
           </HeaderNavItem>
           <HeaderNavItem>
-            <FaEnvelope size={30} />{" "}
+            <FaEnvelope size={28} />
           </HeaderNavItem>
         </HeaderNav>
       </NavComponent>
