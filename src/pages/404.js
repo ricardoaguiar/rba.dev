@@ -1,6 +1,6 @@
 import React from "react"
 import "../css/styles.css"
-import Wrapper from "../components/wrapper/wrapper"
+import Wrapper from "../components/Wrapper"
 import Footer from "../components/Footer"
 import SEO from "../components/seo"
 import NotFound from "../components/FourOFour"

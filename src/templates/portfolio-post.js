@@ -2,7 +2,7 @@ import React from "react"
 import "../css/styles.css"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
-import Wrapper from "../components/wrapper/wrapper"
+import Wrapper from "../components/Wrapper"
 import Footer from "../components/Footer"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -181,12 +181,12 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         <PortfolioImage key={portfolio.heroImage.id}>
           <Img fluid={portfolio.heroImage.fluid} alt={portfolio.title} />
         </PortfolioImage>
-        <PortfolioImage>
-          {portfolio.images &&
-            portfolio.images.map(image => (
+        {portfolio.images &&
+          portfolio.images.map(image => (
+            <PortfolioImage>
               <Img fluid={image.fluid} alt={image.title} key={image.id} />
-            ))}
-        </PortfolioImage>
+            </PortfolioImage>
+          ))}
       </PortfolioSection>
       <Footer />
     </Wrapper>

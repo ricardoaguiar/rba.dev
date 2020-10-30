@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
-import { respondTo } from "../../utils/_respondTo"
+import { respondTo } from "../utils/_respondTo"
 
 const Main = styled.main`
   /* display: flex; */

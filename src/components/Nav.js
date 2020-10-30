@@ -1,14 +1,14 @@
 import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
 import { respondTo } from "../utils/_respondTo"
-import Menu from "./menu/menu"
-import { useOnClickOutside } from "./Hooks"
+import Menu from "./menu"
+import { useOnClickOutside } from "./hooks"
 import RbaLogo from "./logo/rba-logo"
 import BurgerComponent from "./Burger"
 import { FaEnvelope } from "react-icons/fa"
 
 export const NavComponent = styled.nav`
-  background: var(--rbadev-mono-1-hex);
+  background: var(--white);
   display: flex;
   flex-flow: row;
   position: fixed;
@@ -18,12 +18,12 @@ export const NavComponent = styled.nav`
   height: 50px;
   width: 100vw;
   margin: 0;
-  border-bottom: 1px solid var(--bluejay-5);
+  /* border-bottom: 1px solid var(--bluejay-5); */
   z-index: 100;
 
   ${respondTo.T900`
     min-height: 100vh;
-    border-right: 1px solid var(--bluejay-5); 
+    border-right: 1px solid var(--rbadev-mono-1-hex); 
     max-width: 70px;
     flex-flow: column;
     padding: 0;
