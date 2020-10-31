@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Button } from "./button"
+import { Button } from "../../src/components/icons/button"
 
 function Gatsby(props) {
   return (
