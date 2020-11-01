@@ -56,6 +56,7 @@ const GridItem = styled.div`
 const GridPicture = styled.div`
   overflow: hidden;
   position: relative;
+  border: 1px solid var(--logo-20);
 `
 // img caption
 const GridCaption = styled.div`
