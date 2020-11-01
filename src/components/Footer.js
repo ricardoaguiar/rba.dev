@@ -8,46 +8,45 @@ import Netlify from "./icons/netlify"
 
 export const FooterSection = styled.footer`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  min-height: 30vh;
-  align-items: flex-end;
-  background: transparent;
+  justify-content: space-between;
+  min-height: 20vh;
   margin: 0 auto;
-  padding-bottom: 50px;
-  box-sizing: border-box;
+  padding: 6vh 0;
+  width: 100%;
+  box-sizing: inherit;
 
   ${respondTo.T900`
+    flex-direction: row;
+    justify-content:space-around;
     width: calc(100vw - 70px);
     margin-left: 70px;
+    padding: 0;
 `}
 `
 export const FooterItems = styled.nav`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-  height: 24px;
-
+  justify-content: flex-start;
+  & a {
+    margin: 0 0.3rem;
+  }
   ${respondTo.T900`
     padding: 0;
  `}
 `
-export const FooterItem = styled.div`
-  margin: 0;
-  padding: 0;
+export const FooterItemsRight = styled.div`
+  display: flex;
+  flex-direction: row;
 `
 export const FooterItemLabel = styled.p`
-  text-transform: uppercase;
-  letter-spacing: 0.5mm;
-  margin: 0 0 6px 0;
-  font-weight: bolder;
-  width: auto;
-  font-size: 0.8rem;
-  color: var(--rbadev-mono-5-hex);
+  letter-spacing: 0.3mm;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: right;
 `
 
 const Footer = () => {
@@ -56,23 +55,15 @@ const Footer = () => {
       <FooterItemLabel>
         &copy; Ricardo Aguiar {new Date().getFullYear()}
       </FooterItemLabel>
-      <FooterItemLabel>Built with:</FooterItemLabel>
-      <nav>
+      <FooterItemsRight>
+        <FooterItemLabel>Built with:</FooterItemLabel>
         <FooterItems>
-          <FooterItem>
-            <Contenful />
-          </FooterItem>
-          <FooterItem>
-            <Gatsby />
-          </FooterItem>
-          <FooterItem>
-            <Github />
-          </FooterItem>
-          <FooterItem>
-            <Netlify />
-          </FooterItem>
+          <Contenful />
+          <Gatsby />
+          <Github />
+          <Netlify />
         </FooterItems>
-      </nav>
+      </FooterItemsRight>
     </FooterSection>
   )
 }
