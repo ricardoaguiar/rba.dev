@@ -2,10 +2,9 @@ import React from "react"
 import styled from "@emotion/styled"
 import { respondTo } from "../utils/_respondTo"
 import Contenful from "./icons/contenful"
-import { FaGithub } from "react-icons/fa"
-import { SiNetlify } from "react-icons/si"
-import { GrGatsbyjs } from "react-icons/gr"
-import { Link } from "gatsby"
+import Gatsby from "./icons/gatsby"
+import Github from "./icons/github"
+import Netlify from "./icons/netlify"
 
 export const FooterSection = styled.footer`
   display: flex;
@@ -14,13 +13,10 @@ export const FooterSection = styled.footer`
   align-items: center;
   min-height: 30vh;
   align-items: flex-end;
-  background: var(--bluejay-2);
+  background: transparent;
   margin: 0 auto;
   padding-bottom: 50px;
   box-sizing: border-box;
-  & > * {
-    outline: 1px solid red;
-  }
 
   ${respondTo.T900`
     width: calc(100vw - 70px);
@@ -40,7 +36,7 @@ export const FooterItems = styled.nav`
     padding: 0;
  `}
 `
-export const FooterItem = styled.span`
+export const FooterItem = styled.div`
   margin: 0;
   padding: 0;
 `
@@ -67,17 +63,13 @@ const Footer = () => {
             <Contenful />
           </FooterItem>
           <FooterItem>
-            <GrGatsbyjs size={20} />
+            <Gatsby />
           </FooterItem>
           <FooterItem>
-            <Link to="https://www.contentful.com" target="blank">
-              <FaGithub size={22} />
-            </Link>
+            <Github />
           </FooterItem>
           <FooterItem>
-            <Link to="https://www.contentful.com" target="blank">
-              <SiNetlify size={20} />
-            </Link>
+            <Netlify />
           </FooterItem>
         </FooterItems>
       </nav>

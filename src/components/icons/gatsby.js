@@ -1,16 +1,26 @@
 import * as React from "react"
-import { Button } from "../../src/components/icons/button"
+import { Button } from "./button"
 
 function Gatsby(props) {
   return (
     <Button href="https://www.gatsbyjs.org/" target="blank" id="gatsby">
-      <svg style={{ height: 28 }} viewBox="0 0 28 28" {...props}>
-        <g transform="scale(1.10714)">
-          <circle cx={14} cy={14} r={14} fill="#639" />
-          <path
-            fill="#fff"
-            d="M6.2 21.8C4.1 19.7 3 16.9 3 14.2L13.9 25c-2.8-.1-5.6-1.1-7.7-3.2zm10.2 2.9L3.3 11.6C4.4 6.7 8.8 3 14 3c3.7 0 6.9 1.8 8.9 4.5l-1.5 1.3C19.7 6.5 17 5 14 5c-3.9 0-7.2 2.5-8.5 6L17 22.5c2.9-1 5.1-3.5 5.8-6.5H18v-2h7c0 5.2-3.7 9.6-8.6 10.7z"
-          />
+      <svg
+        aria-labelledby="gatsby"
+        id="gatsby-svg"
+        role="img"
+        viewBox="0 0 28 28"
+        style={{ height: 24 }}
+        {...props}
+      >
+        <title id="gatsby-svg" lang="en">
+          Built with Gatsby
+        </title>
+        <g transform="translate(399 -301)">
+          <path fill="transparent" d="M-399 301h28v28h-28z" />
+          <circle r={12} cy={315} cx={-385} fill="#639" />
+          <g fill="#fff">
+            <path d="M-391.686 321.686c-1.8-1.8-2.743-4.197-2.743-6.514l9.343 9.258c-2.4-.087-4.8-.946-6.6-2.744zM-382.943 324.172l-11.229-11.229c.943-4.199 4.714-7.371 9.171-7.371 3.171 0 5.914 1.543 7.628 3.854l-1.286 1.114c-1.457-1.973-3.771-3.257-6.343-3.257-3.343 0-6.171 2.143-7.286 5.143l9.856 9.857c2.484-.857 4.373-3 4.973-5.572h-4.111V315h6c0 4.457-3.173 8.229-7.373 9.172z" />
+          </g>
         </g>
       </svg>
     </Button>
