@@ -33,3 +33,14 @@
     }
   }
 }
+
+        {console.log(assets.edges[0].node.images[0].fluid.src)}
+        {console.log(assets.edges[0].node.images[0].title)}
+        {console.log(assets.edges[0].node.images[0].id)}
+        <PortfolioImage>
+          <Img
+            fluid={assets.edges[0].node.images[0].fluid}
+            alt={assets.edges[0].node.images[0].title}
+            key={assets.edges[0].node.images[0].id}
+          />
+        </PortfolioImage>
