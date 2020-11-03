@@ -6,7 +6,12 @@ import { respondTo } from "../utils/_respondTo"
 export const HomeContainer = styled.header`
   display: flex;
   flex: 1 0 auto;
+<<<<<<< HEAD
+  margin: 50px 0 0 0;
+  max-width: 60vw;
+=======
   margin: 110px 5vw auto;
+>>>>>>> master
   padding: 0;
   color: var(--rbadev-mono-4-hex);
 
@@ -14,9 +19,7 @@ export const HomeContainer = styled.header`
     max-width: calc(100vw - 70px);
     margin-left: 70px;
     margin-top: 0;
-    padding: 1vh 0 0 5vw;
     height: 50vh;
-    background: #ffffff;
     align-items: center;
   `};
 `
@@ -24,6 +27,11 @@ export const HomeContainer = styled.header`
 export const HomeTitle = styled.h1`
   line-height: 1.4;
   font-size: 2.2rem;
+  margin: 0 auto;
+
+  ${respondTo.T900`
+    width: 70%;
+  `}
 `
 export const HomeSubtitle = styled.small`
   font-weight: 800;

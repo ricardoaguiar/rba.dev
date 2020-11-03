@@ -22,7 +22,6 @@ export const NavComponent = styled.nav`
 
   ${respondTo.T900`
     min-height: 100vh;
-//     border-right: 1px solid var(--logo); 
     max-width: 70px;
     flex-flow: column;
     padding: 0;
