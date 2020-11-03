@@ -43,7 +43,7 @@ export const FooterItemsRight = styled.div`
   order: -1;
 
   ${respondTo.T900`
-
+    order: 0;
  `}
 
 `
