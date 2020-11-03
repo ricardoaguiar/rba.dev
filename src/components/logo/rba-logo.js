@@ -8,11 +8,18 @@ export const RBA = styled.a`
 function RbaLogo(props) {
   return (
     <RBA href="/">
-      <svg height="23px" viewBox="0 0 100 39.713" {...props}>
-        <title id="title" lang="en">
-          RBA.DEV
+      <svg
+        aria-labelledby="rbalogo"
+        id="rba"
+        role="img"
+        viewBox="0 0 100 39.713"
+        style={{ height: "23px" }}
+        {...props}
+      >
+        <title id="rba" lang="en">
+          RBA.DEV - Ricardo Aguiar Frontend Dev
         </title>
-<g
+        <g
           id="prefix__g835"
           transform="matrix(.34913 0 0 .34913 -.01 0)"
           fill="#000"
