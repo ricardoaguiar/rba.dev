@@ -3,8 +3,8 @@ import styled from "@emotion/styled"
 
 export const RBA = styled.a`
   display: inline-flex;
-  /* align-self: center; */
-  outline: 1px solid red;
+  /* align-self: center;
+  outline: 1px solid red; */
 `
 
 function RbaLogo(props) {
