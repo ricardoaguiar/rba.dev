@@ -7,7 +7,7 @@ export const MenuNavigation = styled.nav`
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  background: var(--rbadev-mono-4-hex);
+  background: var(--white);
   transform: ${({ open }) => (open ? "translateY(0px)" : "translateY(-100%)")};
   position: fixed;
   top: 50px;
@@ -18,7 +18,7 @@ export const MenuNavigation = styled.nav`
   z-index: 20;
 
   ${respondTo.T900`
-      padding-top: 50px;
+      /* padding-top: 50px; */
       top: 0;
 `}
 
@@ -80,7 +80,7 @@ export const MenuNavigation = styled.nav`
 export const MenuList = styled.ul`
   display: flex;
   flex-flow: column;
-  background: var(--rbadev-mono-1-hex);
+  background: var(--white);
   list-style: none;
   margin: 0;
 
@@ -93,7 +93,7 @@ export const MenuList = styled.ul`
   & li {
     margin-left: 0;
     padding-left: 0;
-    border-bottom: 1px solid var(--rbadev-border-mono);
+    /* border-bottom: 1px solid var(--rbadev-border-mono); */
 
     ${respondTo.T900`
     padding-left: 2rem;
@@ -109,6 +109,7 @@ export const MenuList = styled.ul`
 export const Connect = styled.div`
   display: flex;
   flex-flow: column;
+  align-items: center;
   background: var(--rbadev-duotone-5-hex);
   color: var(--rbadev-duotone-4-hex);
   border-bottom: 1px solid var(--rbadev-duotone-4-hex);
@@ -116,8 +117,10 @@ export const Connect = styled.div`
   text-align: center;
 
   ${respondTo.T900`
-    width: calc(100vw - 70px);
-    align-self: flex-end;
+    /* width: calc(100vw - 70px); */
+    width: 50vw;
+    margin-left: 70px;
+    align-self: flex-start;
   `}
 
   & h3 {
