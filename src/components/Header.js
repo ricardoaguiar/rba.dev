@@ -6,7 +6,7 @@ import { respondTo } from "../utils/_respondTo"
 export const HomeContainer = styled.header`
   display: flex;
   flex: 1 0 auto;
-  margin: 50px 0 0 0;
+  margin: 110px 5vw auto;
   padding: 0;
   color: var(--rbadev-mono-4-hex);
 
