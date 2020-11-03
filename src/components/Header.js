@@ -48,7 +48,7 @@ const Home = () => {
         >
           Front End web developer
         </span>
-        &nbsp;with a strong interest in Full-stack and System Integrations.
+        &nbsp;interested in Full-stack and System Integrations.
         <HomeSubtitle>
           These are some of the projects I have built.
         </HomeSubtitle>
