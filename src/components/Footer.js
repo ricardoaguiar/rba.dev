@@ -40,6 +40,12 @@ export const FooterItems = styled.nav`
 export const FooterItemsRight = styled.div`
   display: flex;
   flex-direction: row;
+  order: -1;
+
+  ${respondTo.T900`
+    order: 0;
+ `}
+
 `
 export const FooterItemLabel = styled.p`
   letter-spacing: 0.3mm;

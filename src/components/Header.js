@@ -6,8 +6,12 @@ import { respondTo } from "../utils/_respondTo"
 export const HomeContainer = styled.header`
   display: flex;
   flex: 1 0 auto;
+<<<<<<< HEAD
   margin: 50px 0 0 0;
   max-width: 60vw;
+=======
+  margin: 110px 5vw auto;
+>>>>>>> master
   padding: 0;
   color: var(--rbadev-mono-4-hex);
 
@@ -52,7 +56,7 @@ const Home = () => {
         >
           Front End web developer
         </span>
-        &nbsp;with a strong interest in Full-stack and System Integrations.
+        &nbsp;interested in Full-stack and System Integrations.
         <HomeSubtitle>
           These are some of the projects I have built.
         </HomeSubtitle>

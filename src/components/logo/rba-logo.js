@@ -3,8 +3,11 @@ import styled from "@emotion/styled"
 
 export const RBA = styled.a`
   display: inline-flex;
+<<<<<<< HEAD
   /* align-self: center; */
   /* outline: 1px solid red; */
+=======
+>>>>>>> master
 `
 
 function RbaLogo(props) {
@@ -21,7 +24,7 @@ function RbaLogo(props) {
         <title id="logo-svg" lang="en">
           RBA.DEV - Ricardo Aguiar Developer
         </title>
-        <g
+<g
           id="prefix__g835"
           transform="matrix(.34913 0 0 .34913 -.01 0)"
           fill="#000"
