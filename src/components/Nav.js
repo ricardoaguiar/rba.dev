@@ -18,13 +18,10 @@ export const NavComponent = styled.nav`
   height: 50px;
   width: 100vw;
   margin: 0;
-  border-bottom: 1px solid var(--logo-20);
   z-index: 100;
 
   ${respondTo.T900`
     min-height: 100vh;
-    border-right: 1px solid var(--logo-20); 
-    border-bottom: none;
     max-width: 70px;
     flex-flow: column;
     padding: 0;
@@ -45,7 +42,7 @@ export const HeaderNav = styled.ul`
     flex: 1 0 auto;
     align-items: center;
     max-width: 70px;
-    height: calc(100vh - 4%);
+    height: calc(100vh - 10%);
   `}
 `
 export const HeaderNavItem = styled.li`
