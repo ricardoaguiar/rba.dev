@@ -3,28 +3,23 @@ import styled from "@emotion/styled"
 
 export const RBA = styled.a`
   display: inline-flex;
-<<<<<<< HEAD
-  /* align-self: center; */
-  /* outline: 1px solid red; */
-=======
->>>>>>> master
 `
 
 function RbaLogo(props) {
   return (
     <RBA href="/">
       <svg
-        aria-labelledby="logo"
-        id="logo-svg"
+        aria-labelledby="rbalogo"
+        id="rba"
         role="img"
         viewBox="0 0 100 39.713"
-        style={{ width: "50px" }}
+        style={{ height: "23px" }}
         {...props}
       >
-        <title id="logo-svg" lang="en">
-          RBA.DEV - Ricardo Aguiar Developer
+        <title id="rba" lang="en">
+          RBA.DEV - Ricardo Aguiar Frontend Dev
         </title>
-<g
+        <g
           id="prefix__g835"
           transform="matrix(.34913 0 0 .34913 -.01 0)"
           fill="#000"

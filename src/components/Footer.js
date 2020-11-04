@@ -29,10 +29,12 @@ export const FooterItems = styled.nav`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  align-items: center;
+
   & a {
-    margin: 0 0.3rem;
+    margin: 0 0 0 0.4rem;
   }
+
   ${respondTo.T900`
     padding: 0;
  `}
@@ -40,26 +42,27 @@ export const FooterItems = styled.nav`
 export const FooterItemsRight = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   order: -1;
 
   ${respondTo.T900`
     order: 0;
  `}
-
 `
 export const FooterItemLabel = styled.p`
   letter-spacing: 0.3mm;
-  text-transform: capitalize;
+  text-transform: lowercase;
   font-size: 0.9rem;
   font-weight: 500;
   text-align: right;
+  padding-bottom: 2px;
 `
 
 const Footer = () => {
   return (
     <FooterSection>
       <FooterItemLabel>
-        &copy; Ricardo Aguiar {new Date().getFullYear()}
+        &copy;Ricardo Aguiar • {new Date().getFullYear()}
       </FooterItemLabel>
       <FooterItemsRight>
         <FooterItemLabel>Built with:</FooterItemLabel>
