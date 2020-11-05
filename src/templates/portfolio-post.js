@@ -58,9 +58,9 @@ const PortfolioSection = styled.section`
 `
 
 const PortfolioArticle = styled.article`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+display: grid;
+grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+grid-template-rows: auto;
 
   ${respondTo.T900`
     width: 50vw;
