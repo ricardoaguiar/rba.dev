@@ -1,23 +1,17 @@
 import React from "react"
 import "../css/styles.css"
-import Wrapper from "../components/Wrapper"
-import Footer from "../components/Footer"
 import SEO from "../components/seo"
 import NotFound from "../components/FourOFour"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
-import Nav from "../components/Nav"
+import Layout from "../components/Layout"
 library.add(fab)
 
 const FourOFour = () => (
-  <>
-    <Wrapper>
-      <Nav />
-      <SEO title="404: Not found" />
-      <NotFound />
-      <Footer />
-    </Wrapper>
-  </>
+  <Layout>
+    <SEO title="404: Not found" />
+    <NotFound />
+  </Layout>
 )
 
 export default FourOFour

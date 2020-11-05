@@ -1,21 +1,19 @@
 import React from "react"
 import "../css/styles.css"
-import Wrapper from "../components/Wrapper"
 import Footer from "../components/Footer"
 import SEO from "../components/seo"
 import Testimonials from "../components/Recomendations"
 import Nav from "../components/Nav"
+import Layout from "../components/Layout"
 
 // what people say
 const WPS = () => (
-  <>
-    <Wrapper>
-      <Nav />
-      <SEO title="Recommendations" />
-      <Testimonials />
-      <Footer />
-    </Wrapper>
-  </>
+  <Layout>
+    <Nav />
+    <SEO title="Recommendations" />
+    <Testimonials />
+    <Footer />
+  </Layout>
 )
 
 export default WPS
