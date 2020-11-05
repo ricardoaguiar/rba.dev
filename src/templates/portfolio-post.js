@@ -164,7 +164,6 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <PortfolioSection>
         <PortfolioArticle>
           <PortfolioTitle>{portfolio.title}</PortfolioTitle>
-          <Line />
           <Stack>
             {portfolio.tags &&
               portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
