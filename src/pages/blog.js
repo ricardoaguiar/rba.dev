@@ -1,20 +1,18 @@
 import React from "react"
 import "../css/styles.css"
-import Wrapper from "../components/Wrapper"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 import SEO from "../components/seo"
 import BlogList from "../components/Blog"
+import Layout from "../components/Layout"
 
 const Blog = () => (
-  <>
-    <Wrapper>
-      <Nav />
-      <SEO title="Blog" />
-      <BlogList />
-      <Footer />
-    </Wrapper>
-  </>
+  <Layout>
+    <Nav />
+    <SEO title="Blog" />
+    <BlogList />
+    <Footer />
+  </Layout>
 )
 
 export default Blog

@@ -1,12 +1,18 @@
 import React from "react"
+import PropTypes from "prop-types"
+import Nav from "./Nav"
 import Footer from "./Footer"
-import Header from "./Nav"
 
-export default function Layout() {
+const Layout = ({ children }) => {
   return (
-    <>
-      <Header />
+    <main>
+      <Nav />
+      {children}
       <Footer />
-    </>
+    </main>
   )
 }
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+export default Layout
