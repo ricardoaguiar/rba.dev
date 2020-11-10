@@ -166,10 +166,12 @@ const ProjectScope = styled.div`
 `
 
 const ProjectImages = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  grid-gap: 20px;
+  align-items: center;
   margin-left: 70px;
+  background: #cccccc55;
 `
 
 const StackTags = styled.span`
