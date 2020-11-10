@@ -169,6 +169,7 @@ const ProjectImages = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: 70px;
 `
 
 const StackTags = styled.span`
