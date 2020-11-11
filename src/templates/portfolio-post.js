@@ -110,16 +110,11 @@ const Line = styled.div`
 `
 
 const PortfolioImage = styled.div`
-  flex: 1;
-  width: 95%;
+  width: 100%;
   margin: 1rem auto;
 
   ${respondTo.T900`
-    width: 50%;
-    align-self: flex-start;
-    margin-right: 40px;
     border: 1px solid var(--logo);
-    border-radius: 2px;
   `}
 `
 
@@ -166,9 +161,12 @@ const ProjectScope = styled.div`
 `
 
 const ProjectImages = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  grid-gap: 20px;
+  align-items: center;
+  margin-left: 70px;
+  background: #cccccc55;
 `
 
 const StackTags = styled.span`
