@@ -217,9 +217,6 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </PortfolioList>
     </PortfolioArticle>
     <ProjectImages>
-      <PortfolioImage key={portfolio.heroImage.id}>
-        <Img fluid={portfolio.heroImage.fluid} alt={portfolio.title} />
-      </PortfolioImage>
       {portfolio.images &&
         portfolio.images.map(image => (
           <PortfolioImage>
