@@ -62,7 +62,7 @@ const PortfolioArticle = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: #cccccc33;
+  background-color: transparent;
 
   ${respondTo.T900`
     `};
@@ -119,6 +119,7 @@ const PortfolioImage = styled.div`
 
   ${respondTo.T900`
     border: 1px solid #cccccc;
+    border-rarius: 10px;
   `}
 `
 
