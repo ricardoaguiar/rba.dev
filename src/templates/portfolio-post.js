@@ -44,7 +44,6 @@ export const query = graphql`
 `
 
 const ProjectDescription = styled.div`
-  outline: 1px solid green;
   display: flex;
   flex-direction: row;
   width: 95vw;
@@ -85,7 +84,7 @@ const PortfolioTitle = styled.div`
     margin-left: 0px;
 
   ${respondTo.T900`
-    margin-left: 170px;
+    margin-left: 20px;
   `}
   }
 `
@@ -119,7 +118,7 @@ const PortfolioImage = styled.div`
   margin: 1rem auto;
 
   ${respondTo.T900`
-    border: 1px solid var(--logo);
+    border: 1px solid #cccccc;
   `}
 `
 
@@ -136,13 +135,12 @@ const PortfolioList = styled.ul`
 `}
 `
 const PortfolioListItem = styled.li`
-  background-color: var(--rbadev-mono-2-hex);
+  background-color: transparent;
   margin-bottom: 1rem;
   padding: 2px 5px;
 `
 
 const ProjectSubtitle = styled.p`
-  background: var(--logo);
   font-weight: bolder;
   margin: 1rem 0 1rem 0.5rem;
   flex: 1;
