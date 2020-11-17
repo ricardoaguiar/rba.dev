@@ -163,9 +163,10 @@ const ProjectScope = styled.div`
 const ProjectImages = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 30px;
   align-items: center;
-  margin-left: 70px;
+  margin-left: 120px;
+  margin-right: 50px;
   background: #cccccc55;
 `
 
@@ -202,6 +203,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
     <PortfolioArticle>
       <ProjectSubtitle>Project Scope</ProjectSubtitle>
       <ProjectScope>{portfolio.scope.body}</ProjectScope>
+      <ProjectDescription>Project Description</ProjectDescription>
       <PortfolioList>
         <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
         <PortfolioListItem>{portfolio.title}</PortfolioListItem>

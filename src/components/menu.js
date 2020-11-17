@@ -1,8 +1,8 @@
 import React from "react"
 import { bool } from "prop-types"
 import { MenuNavigation, MenuList, Connect } from "./menu-styled"
-import { Link } from "gatsby"
 import SocialMediaMenu from "./SocialMedia"
+import { Link } from "gatsby"
 
 const Menu = ({ open }) => {
   return (

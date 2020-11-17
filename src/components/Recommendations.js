@@ -4,8 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { respondTo } from "../utils/_respondTo"
 
-// import { node } from "prop-types"
-
 const getReferences = graphql`
   {
     references: allContentfulTestimonials(
@@ -30,7 +28,7 @@ const getReferences = graphql`
   }
 `
 
-const RecomendationContainer = styled.section`
+const RecommendationContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,14 +40,14 @@ const RecomendationContainer = styled.section`
     margin-left: 70px;
   `}
 `
-const RecomentadionTitle = styled.h2`
+const RecommendationTitle = styled.h2`
   margin: 100px auto 70px;
 
   ${respondTo.T900`
     margin: 70px 0 0 70px;
   `}
 `
-const RecomendationCard = styled.ul`
+const RecommendationCard = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -90,11 +88,11 @@ const Testimonials = () => {
   const { references } = useStaticQuery(getReferences)
 
   return (
-    <RecomendationContainer>
-      <RecomentadionTitle>Recomendations</RecomentadionTitle>
+    <RecommendationContainer>
+      <RecommendationTitle>Recommendations</RecommendationTitle>
       {references.edges.map(({ node }) => {
         return (
-          <RecomendationCard key={node.id}>
+          <RecommendationCard key={node.id}>
             <Avatar>
               <Img
                 fixed={node.picture.fixed}
@@ -113,10 +111,10 @@ const Testimonials = () => {
               <br />
               {node.text.testimonial}
             </Reference>
-          </RecomendationCard>
+          </RecommendationCard>
         )
       })}
-    </RecomendationContainer>
+    </RecommendationContainer>
   )
 }
 
