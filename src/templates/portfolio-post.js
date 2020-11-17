@@ -27,13 +27,13 @@ export const query = graphql`
       publishDate(formatString: "YYYY/MM/DD")
       updatedAt
       heroImage {
-        fluid(maxHeight: 1200, maxWidth: 800) {
+        fluid(maxHeight: 1000, maxWidth: 1800) {
           ...GatsbyContentfulFluid
         }
         id
       }
       images {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 1800) {
           ...GatsbyContentfulFluid
         }
         title
@@ -44,7 +44,6 @@ export const query = graphql`
 `
 
 const ProjectDescription = styled.div`
-  outline: 1px solid green;
   display: flex;
   flex-direction: row;
   width: 95vw;
@@ -63,7 +62,7 @@ const PortfolioArticle = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: #cccccc33;
+  background-color: transparent;
 
   ${respondTo.T900`
     `};
@@ -74,15 +73,20 @@ const PortfolioTitle = styled.div`
   align-items: center;
   margin-top: 10vh;
   margin-left: 0.5rem;
-  background-color: #34589510;
 
-  & h1 {
-    font-size: 2rem;
-  }
   ${respondTo.T900`
     padding-right: 0.5rem;
     margin: 50px 0 1rem 70px;
   `}
+
+  & h1 {
+    font-size: 2rem;
+    margin-left: 0px;
+
+    ${respondTo.T900`
+    margin-left: 20px;
+  `}
+  }
 `
 
 const LineSlider = keyframes`
@@ -114,7 +118,8 @@ const PortfolioImage = styled.div`
   margin: 1rem auto;
 
   ${respondTo.T900`
-    border: 1px solid var(--logo);
+    border: 1px solid #cccccc;
+    border-rarius: 10px;
   `}
 `
 
@@ -131,13 +136,12 @@ const PortfolioList = styled.ul`
 `}
 `
 const PortfolioListItem = styled.li`
-  background-color: var(--rbadev-mono-2-hex);
+  background-color: transparent;
   margin-bottom: 1rem;
   padding: 2px 5px;
 `
 
 const ProjectSubtitle = styled.p`
-  background: var(--logo);
   font-weight: bolder;
   margin: 1rem 0 1rem 0.5rem;
   flex: 1;
@@ -165,9 +169,14 @@ const ProjectImages = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
   grid-gap: 30px;
   align-items: center;
-  margin-left: 120px;
-  margin-right: 50px;
-  background: #cccccc55;
+
+  background: transparent;
+
+  ${respondTo.T900`
+     grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+     margin-left: 90px;
+     margin-right: 20px;
+  `}
 `
 
 const StackTags = styled.span`
@@ -212,9 +221,6 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </PortfolioList>
     </PortfolioArticle>
     <ProjectImages>
-      <PortfolioImage key={portfolio.heroImage.id}>
-        <Img fluid={portfolio.heroImage.fluid} alt={portfolio.title} />
-      </PortfolioImage>
       {portfolio.images &&
         portfolio.images.map(image => (
           <PortfolioImage>
