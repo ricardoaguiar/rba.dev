@@ -167,6 +167,13 @@ const ProjectImages = styled.div`
   align-items: center;
   margin-left: 70px;
   background: #cccccc55;
+
+
+  ${respondTo.T900`
+     grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+     margin-left: 90px;
+     margin-right: 20px;
+  `}
 `
 
 const StackTags = styled.span`
