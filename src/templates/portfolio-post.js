@@ -75,14 +75,19 @@ const PortfolioTitle = styled.div`
   margin-top: 10vh;
   margin-left: 0.5rem;
 
-  & h1 {
-    font-size: 2rem;
-    margin-left: 170px;
-  }
   ${respondTo.T900`
     padding-right: 0.5rem;
     margin: 50px 0 1rem 70px;
   `}
+
+  & h1 {
+    font-size: 2rem;
+    margin-left: 0px;
+
+  ${respondTo.T900`
+    margin-left: 170px;
+  `}
+  }
 `
 
 const LineSlider = keyframes`
