@@ -74,10 +74,10 @@ const PortfolioTitle = styled.div`
   align-items: center;
   margin-top: 10vh;
   margin-left: 0.5rem;
-  background-color: #34589510;
 
   & h1 {
     font-size: 2rem;
+    margin-left: 170px;
   }
   ${respondTo.T900`
     padding-right: 0.5rem;
