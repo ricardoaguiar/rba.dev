@@ -27,13 +27,13 @@ export const query = graphql`
       publishDate(formatString: "YYYY/MM/DD")
       updatedAt
       heroImage {
-        fluid(maxHeight: 1200, maxWidth: 800) {
+        fluid(maxHeight: 1000, maxWidth: 1800) {
           ...GatsbyContentfulFluid
         }
         id
       }
       images {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 1800) {
           ...GatsbyContentfulFluid
         }
         title
