@@ -18,7 +18,6 @@ export default function IndexPage() {
       <SEO title="Home" />
       <Home />
       <Posts />
-      <Footer />
     </Layout>
   )
 }
