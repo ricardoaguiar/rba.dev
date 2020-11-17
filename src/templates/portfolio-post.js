@@ -169,8 +169,8 @@ const ProjectImages = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
   grid-gap: 20px;
   align-items: center;
-  margin-left: 70px;
-  background: #cccccc55;
+
+  background: transparent;
 
 
   ${respondTo.T900`
