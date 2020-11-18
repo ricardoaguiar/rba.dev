@@ -148,7 +148,7 @@ const ProjectSubtitle = styled.div`
 
   ${respondTo.T900`
     font-weight: bolder;
-    margin: 0 2rem auto;
+    margin: 1rem auto 2rem auto;
     width: 80vw;
     font-size: 34px;
   `}
