@@ -199,8 +199,8 @@ const Stack = styled.div`
   ${respondTo.T900`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 80vw;
-  margin-left: 120px;
+  margin-left: 1rem 0 2 rem 120px;
+  width: fit-content;
   `}
 `
 
