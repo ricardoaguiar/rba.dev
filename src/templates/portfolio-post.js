@@ -143,26 +143,27 @@ const PortfolioListItem = styled.li`
   padding: 2px 5px;
 `
 
-const ProjectSubtitle = styled.p`
-  font-weight: bolder;
-  margin: 1rem 0 1rem 0.5rem;
-  flex: 1;
+const ProjectSubtitle = styled.div`
+
 
   ${respondTo.T900`
-    margin: 35px 0 20px 70px;
+    font-weight: bolder;
+    margin: 0 auto;
+    width: 80vw;
+    font-size: 34px;
   `}
 `
 
 const ProjectScope = styled.div`
   flex: 1;
-  width: 50vw;
-  background-color: #fff444;
-  margin-left: 0.5rem;
+  width: 80vw;
   margin-bottom: 100px;
-  font-size: 16px;
+  font-size: 18px;
+  color: var(--rbadev-mono-4-hex);
+
 
   ${respondTo.T900`
-     margin-left: 70px;
+     margin: 0 auto;
   `}
 `
 
