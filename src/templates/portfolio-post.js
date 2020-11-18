@@ -108,9 +108,11 @@ const LineSlider = keyframes`
 `
 const Line = styled.div`
   height: 2px;
+  width: 30%;
   background: var(--logo);
   animation: 1s slidein;
   z-index: -1;
+  margin: 1rem 0 1rem 120px;
 `
 
 const PortfolioImage = styled.div`
@@ -141,26 +143,25 @@ const PortfolioListItem = styled.li`
   padding: 2px 5px;
 `
 
-const ProjectSubtitle = styled.p`
-  font-weight: bolder;
-  margin: 1rem 0 1rem 0.5rem;
-  flex: 1;
-
+const ProjectSubtitle = styled.div`
   ${respondTo.T900`
-    margin: 35px 0 20px 70px;
+    font-weight: bolder;
+    margin: 1rem auto 2rem auto;
+    width: 80vw;
+    font-size: 34px;
   `}
 `
 
 const ProjectScope = styled.div`
   flex: 1;
-  width: 50vw;
-  background-color: #fff444;
-  margin-left: 0.5rem;
+  width: 80vw;
   margin-bottom: 100px;
-  font-size: 16px;
+  font-size: 18px;
+  color: var(--rbadev-mono-4-hex);
+  line-height: 2;
 
   ${respondTo.T900`
-     margin-left: 70px;
+     margin: 0 auto;
   `}
 `
 
@@ -180,17 +181,24 @@ const ProjectImages = styled.div`
 `
 
 const StackTags = styled.span`
-  flex: 0;
-  font-weight: 500;
-  color: #fff;
-  font-size: 0.7rem;
+  font-weight: 600;
+  color: #000000;
+  font-size: 0.8rem;
   letter-spacing: 0.2mm;
-  background: gray;
   padding: 4px;
   margin: 4px;
   height: min-content;
   width: max-content;
-  border-radius: 3px;
+`
+const Stack = styled.div`
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  ${respondTo.T900`
+  margin: 3rem 0 3rem 120px;
+  width: fit-content;
+  `}
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
@@ -204,15 +212,17 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       >
         {portfolio.title}
       </h1>
-      <Line />
-      {portfolio.tags &&
-        portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
     </PortfolioTitle>
 
     <PortfolioArticle>
       <ProjectSubtitle>Project Scope</ProjectSubtitle>
       <ProjectScope>{portfolio.scope.body}</ProjectScope>
-      <ProjectDescription>Project Description</ProjectDescription>
+      <Line />
+      <Stack>
+        <div>col1</div>
+        {portfolio.tags &&
+          portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
+      </Stack>
       <PortfolioList>
         <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
         <PortfolioListItem>{portfolio.title}</PortfolioListItem>
