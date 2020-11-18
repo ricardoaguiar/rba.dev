@@ -148,7 +148,7 @@ const ProjectSubtitle = styled.div`
 
   ${respondTo.T900`
     font-weight: bolder;
-    margin: 0 auto;
+    margin: 0 2rem auto;
     width: 80vw;
     font-size: 34px;
   `}
@@ -160,6 +160,7 @@ const ProjectScope = styled.div`
   margin-bottom: 100px;
   font-size: 18px;
   color: var(--rbadev-mono-4-hex);
+  line-height: 2;
 
 
   ${respondTo.T900`
