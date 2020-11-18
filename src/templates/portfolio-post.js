@@ -182,8 +182,6 @@ const ProjectImages = styled.div`
 `
 
 const StackTags = styled.div`
-  display: grid;
-  grid-template-colums: auto;
   flex: 0;
   font-weight: 500;
   color: #fff;
@@ -195,6 +193,15 @@ const StackTags = styled.div`
   height: min-content;
   width: max-content;
   border-radius: 3px;
+`
+const Stack = styled.div`
+
+  ${respondTo.T900`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80vw;
+  margin-left: 120px;
+  `}
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
@@ -216,8 +223,9 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <ProjectSubtitle>Project Scope</ProjectSubtitle>
       <ProjectScope>{portfolio.scope.body}</ProjectScope>
         <Line />
+<Stack> 
        {portfolio.tags && portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
-
+</Stack>
       <PortfolioList>
         <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
         <PortfolioListItem>{portfolio.title}</PortfolioListItem>
