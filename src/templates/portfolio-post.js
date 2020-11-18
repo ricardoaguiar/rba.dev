@@ -108,10 +108,11 @@ const LineSlider = keyframes`
 `
 const Line = styled.div`
   height: 2px;
-  width: 15%;
+  width: 30%;
   background: var(--logo);
   animation: 1s slidein;
   z-index: -1;
+  margin: 1rem 0 1rem 120px;
 `
 
 const PortfolioImage = styled.div`
