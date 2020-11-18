@@ -108,6 +108,7 @@ const LineSlider = keyframes`
 `
 const Line = styled.div`
   height: 2px;
+  width: 15%;
   background: var(--logo);
   animation: 1s slidein;
   z-index: -1;
@@ -180,7 +181,9 @@ const ProjectImages = styled.div`
   `}
 `
 
-const StackTags = styled.span`
+const StackTags = styled.div`
+  display: grid;
+  grid-template-colums: auto;
   flex: 0;
   font-weight: 500;
   color: #fff;
@@ -205,14 +208,16 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       >
         {portfolio.title}
       </h1>
-      <Line />
-      {portfolio.tags &&
-        portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
+      
+
     </PortfolioTitle>
 
     <PortfolioArticle>
       <ProjectSubtitle>Project Scope</ProjectSubtitle>
       <ProjectScope>{portfolio.scope.body}</ProjectScope>
+        <Line />
+       {portfolio.tags && portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
+
       <PortfolioList>
         <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
         <PortfolioListItem>{portfolio.title}</PortfolioListItem>
