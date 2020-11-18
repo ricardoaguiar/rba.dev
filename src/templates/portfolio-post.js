@@ -182,20 +182,17 @@ const ProjectImages = styled.div`
 `
 
 const StackTags = styled.div`
-  flex: 0;
-  font-weight: 500;
-  color: #fff;
-  font-size: 0.7rem;
+  font-weight: 600;
+  color: #00000050;
+  font-size: 0.8rem;
   letter-spacing: 0.2mm;
-  background: gray;
   padding: 4px;
   margin: 4px;
   height: min-content;
   width: max-content;
-  border-radius: 3px;
 `
 const Stack = styled.div`
- margin: 1rem auto;
+  margin: 1rem auto;
 
   ${respondTo.T900`
   display: grid;
