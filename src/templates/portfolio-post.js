@@ -195,11 +195,12 @@ const StackTags = styled.div`
   border-radius: 3px;
 `
 const Stack = styled.div`
+ margin: 1rem auto;
 
   ${respondTo.T900`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-left: 1rem 0 2 rem 120px;
+  margin-left: 1rem 0 2rem 120px;
   width: fit-content;
   `}
 `
