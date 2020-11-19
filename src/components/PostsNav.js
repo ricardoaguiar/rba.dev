@@ -43,13 +43,9 @@ const GridContainer = styled.nav`
     `}
   ${respondTo.T700`
      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    margin-left: 90px;
-     margin-right: 20px;
   `}
   ${respondTo.T800`
      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-     margin-left: 90px;
-     margin-right: 20px;
   `}
   ${respondTo.T900`
      grid-template-columns: repeat(auto-fill, minmax(425px, 1fr));
