@@ -167,16 +167,24 @@ const ProjectScope = styled.div`
 
 const ProjectImages = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 30px;
   align-items: center;
-
   background: transparent;
+  margin-left: 90px;
+  margin-right: 20px;
 
+  ${respondTo.T700`
+     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  `}
+  ${respondTo.T800`
+     grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+  `}
   ${respondTo.T900`
-     grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
-     margin-left: 90px;
-     margin-right: 20px;
+     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  `}
+  ${respondTo.T1000`
+     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   `}
 `
 

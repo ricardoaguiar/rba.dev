@@ -30,7 +30,7 @@ const getPosts = graphql`
 // grid
 const GridContainer = styled.nav`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 1fr;
   grid-gap: 20px;
   justify-content: center;
@@ -38,13 +38,23 @@ const GridContainer = styled.nav`
   padding: 20px;
   background: var(--white);
 
-  ${respondTo.M300`
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  ${respondTo.M400`
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     `}
-  ${respondTo.T900`
-    grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+  ${respondTo.T700`
+     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     margin-left: 90px;
-    margin-right: 20px;
+     margin-right: 20px;
+  `}
+  ${respondTo.T800`
+     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+     margin-left: 90px;
+     margin-right: 20px;
+  `}
+  ${respondTo.T900`
+     grid-template-columns: repeat(auto-fill, minmax(425px, 1fr));
+     margin-left: 90px;
+     margin-right: 20px;  
   `}
 `
 // grid item / cell
