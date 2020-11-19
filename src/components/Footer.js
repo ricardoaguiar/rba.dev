@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { respondTo } from "../utils/_respondTo"
-import Contenful from "./icons/contenful"
+import Contentful from "./icons/contentful"
 import Gatsby from "./icons/gatsby"
 import Github from "./icons/github"
 import Netlify from "./icons/netlify"
@@ -50,8 +50,8 @@ export const FooterItemsRight = styled.div`
  `}
 `
 export const FooterItemLabel = styled.p`
-  letter-spacing: 0.3mm;
-  text-transform: lowercase;
+  letter-spacing: 0.1mm;
+  text-transform: capitalize;
   font-size: 0.9rem;
   font-weight: 500;
   text-align: right;
@@ -62,12 +62,12 @@ const Footer = () => {
   return (
     <FooterSection>
       <FooterItemLabel>
-        &copy;Ricardo Aguiar • {new Date().getFullYear()}
+        &copy; Ricardo Aguiar • {new Date().getFullYear()}
       </FooterItemLabel>
       <FooterItemsRight>
         <FooterItemLabel>Built with:</FooterItemLabel>
         <FooterItems>
-          <Contenful />
+          <Contentful />
           <Gatsby />
           <Github />
           <Netlify />

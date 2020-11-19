@@ -9,7 +9,7 @@ function Github(props) {
         id="github-svg"
         role="img"
         viewBox="0 0 28 28"
-        style={{ height: 23.5 }}
+        style={{ height: 24 }}
         {...props}
       >
         <title id="github-svg" lang="en">

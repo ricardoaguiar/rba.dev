@@ -27,13 +27,13 @@ export const query = graphql`
       publishDate(formatString: "YYYY/MM/DD")
       updatedAt
       heroImage {
-        fluid(maxHeight: 1200, maxWidth: 800) {
+        fluid(maxHeight: 1000, maxWidth: 1800) {
           ...GatsbyContentfulFluid
         }
         id
       }
       images {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 1800) {
           ...GatsbyContentfulFluid
         }
         title
@@ -44,7 +44,6 @@ export const query = graphql`
 `
 
 const ProjectDescription = styled.div`
-  outline: 1px solid green;
   display: flex;
   flex-direction: row;
   width: 95vw;
@@ -63,7 +62,7 @@ const PortfolioArticle = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: #cccccc33;
+  background-color: transparent;
 
   ${respondTo.T900`
     `};
@@ -74,15 +73,20 @@ const PortfolioTitle = styled.div`
   align-items: center;
   margin-top: 10vh;
   margin-left: 0.5rem;
-  background-color: #34589510;
 
-  & h1 {
-    font-size: 2rem;
-  }
   ${respondTo.T900`
     padding-right: 0.5rem;
     margin: 50px 0 1rem 70px;
   `}
+
+  & h1 {
+    font-size: 2rem;
+    margin-left: 0px;
+
+    ${respondTo.T900`
+    margin-left: 20px;
+  `}
+  }
 `
 
 const LineSlider = keyframes`
@@ -104,9 +108,11 @@ const LineSlider = keyframes`
 `
 const Line = styled.div`
   height: 2px;
+  width: 30%;
   background: var(--logo);
   animation: 1s slidein;
   z-index: -1;
+  margin: 1rem 0 1rem 120px;
 `
 
 const PortfolioImage = styled.div`
@@ -114,7 +120,8 @@ const PortfolioImage = styled.div`
   margin: 1rem auto;
 
   ${respondTo.T900`
-    border: 1px solid var(--logo);
+    border: 1px solid #cccccc;
+    border-rarius: 10px;
   `}
 `
 
@@ -131,56 +138,75 @@ const PortfolioList = styled.ul`
 `}
 `
 const PortfolioListItem = styled.li`
-  background-color: var(--rbadev-mono-2-hex);
+  background-color: transparent;
   margin-bottom: 1rem;
   padding: 2px 5px;
 `
 
-const ProjectSubtitle = styled.p`
-  background: var(--logo);
-  font-weight: bolder;
-  margin: 1rem 0 1rem 0.5rem;
-  flex: 1;
-
+const ProjectSubtitle = styled.div`
   ${respondTo.T900`
-    margin: 35px 0 20px 70px;
+    font-weight: bolder;
+    margin: 1rem auto 2rem auto;
+    width: 80vw;
+    font-size: 34px;
   `}
 `
 
 const ProjectScope = styled.div`
   flex: 1;
-  width: 50vw;
-  background-color: #fff444;
-  margin-left: 0.5rem;
+  width: 80vw;
   margin-bottom: 100px;
-  font-size: 16px;
+  font-size: 18px;
+  color: var(--rbadev-mono-4-hex);
+  line-height: 2;
 
   ${respondTo.T900`
-     margin-left: 70px;
+     margin: 0 auto;
   `}
 `
 
 const ProjectImages = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 30px;
   align-items: center;
-  margin-left: 70px;
-  background: #cccccc55;
+  background: transparent;
+  margin-left: 90px;
+  margin-right: 20px;
+
+  ${respondTo.T700`
+     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  `}
+  ${respondTo.T800`
+     grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+  `}
+  ${respondTo.T900`
+     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  `}
+  ${respondTo.T1000`
+     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  `}
 `
 
 const StackTags = styled.span`
-  flex: 0;
-  font-weight: 500;
-  color: #fff;
-  font-size: 0.7rem;
+  font-weight: 600;
+  color: #000000;
+  font-size: 0.8rem;
   letter-spacing: 0.2mm;
-  background: gray;
   padding: 4px;
   margin: 4px;
   height: min-content;
   width: max-content;
-  border-radius: 3px;
+`
+const Stack = styled.div`
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  ${respondTo.T900`
+  margin: 3rem 0 3rem 120px;
+  width: fit-content;
+  `}
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
@@ -194,14 +220,17 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       >
         {portfolio.title}
       </h1>
-      <Line />
-      {portfolio.tags &&
-        portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
     </PortfolioTitle>
 
     <PortfolioArticle>
       <ProjectSubtitle>Project Scope</ProjectSubtitle>
       <ProjectScope>{portfolio.scope.body}</ProjectScope>
+      <Line />
+      <Stack>
+        <div>col1</div>
+        {portfolio.tags &&
+          portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
+      </Stack>
       <PortfolioList>
         <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
         <PortfolioListItem>{portfolio.title}</PortfolioListItem>
@@ -210,9 +239,6 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </PortfolioList>
     </PortfolioArticle>
     <ProjectImages>
-      <PortfolioImage key={portfolio.heroImage.id}>
-        <Img fluid={portfolio.heroImage.fluid} alt={portfolio.title} />
-      </PortfolioImage>
       {portfolio.images &&
         portfolio.images.map(image => (
           <PortfolioImage>

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Button } from "./button"
 
-function Contenful(props) {
+function Contentful(props) {
   return (
     <Button href="https://www.contentful.com/" target="blank" id="contentful">
       <svg
@@ -62,5 +62,5 @@ function Contenful(props) {
   )
 }
 
-const MemoContenful = React.memo(Contenful)
-export default MemoContenful
+const MemoContentful = React.memo(Contentful)
+export default MemoContentful
