@@ -213,6 +213,13 @@ const Stack = styled.div`
   }
 `
 
+const ProjectSpecs = styled.div`
+  display: grid;
+  grid-template-colums: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin-left: 120px;
+`
+
 const PortfolioTemplate = ({ data: { portfolio } }) => (
   <Layout>
     <SEO title={portfolio.title} />
@@ -230,6 +237,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <ProjectSubtitle>Project Scope</ProjectSubtitle>
       <ProjectScope>{portfolio.scope.body}</ProjectScope>
       <Line />
+ <ProjectSpecs>
      <Stack>
         <h4>Project</h4>
         HYF Final Project
@@ -248,6 +256,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         <h4>Status</h4>
         Link to Live Site
       </Stack>
+</ProjectSpecs>
       <PortfolioList>
         <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
         <PortfolioListItem>{portfolio.title}</PortfolioListItem>
