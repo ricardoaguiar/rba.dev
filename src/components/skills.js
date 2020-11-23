@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import css from "@emotion/css"
 
 const SkillContainer = styled.ul`
     display: grid;
@@ -12,7 +13,12 @@ const SkillContainer = styled.ul`
 const Skills = () => {
     return (
    <>
-   <h4>Skills:</h4>
+   <h4
+      css={css`
+            color: var(--logo);
+            margin-left: 170px;
+          `}
+        >Skills:</h4>
    <SkillContainer>
     <li>React</li>
     <li>JavaScript</li>
