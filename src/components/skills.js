@@ -3,10 +3,10 @@ import styled from "@emotion/styled"
 
 const SkillContainer = styled.ul`
     display: grid;
-    grid-template-conlumns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
     margin: 3rem auto;
-    width: 50vw;
+    width: 60vw;
 `
 
 const Skills = () => {
