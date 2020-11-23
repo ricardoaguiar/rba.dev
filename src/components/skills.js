@@ -1,12 +1,13 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-const techskills = [React, JavaScript ES6, NodeJS, Gatsby, Git, HTML5, CSS3, Emotion, Contentful, Wordpress]
+const techskills = [React, JavaScript ES6, NodeJS, Gatsby, Git, HTML5, CSS3, Emotion, Contentful, Wordpress];
 
 const skillSet = styled.ul`
     display: grid;
-    grid-template-conlumns: 1fr 1fr 1fr
-    margin: 2rem auto;
+    grid-template-conlumns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 3rem auto;
 `
 
 const Skills = () => {
