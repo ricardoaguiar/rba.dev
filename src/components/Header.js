@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import css from "@emotion/css"
 import { respondTo } from "../utils/_respondTo"
+import Skills from "./skills"
 
 export const HomeContainer = styled.header`
   display: flex;
@@ -56,6 +57,7 @@ const Home = () => {
           These are some of the projects I have built.
         </HomeSubtitle>
       </HomeTitle>
+    <Skills />
     </HomeContainer>
   )
 }
