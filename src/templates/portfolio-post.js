@@ -207,6 +207,10 @@ const Stack = styled.div`
   margin: 3rem 0 3rem 120px;
   width: fit-content;
   `}
+  & h4 {
+      margin-left: 0;
+      text-transform: uppercase;
+  }
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
@@ -226,10 +230,23 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <ProjectSubtitle>Project Scope</ProjectSubtitle>
       <ProjectScope>{portfolio.scope.body}</ProjectScope>
       <Line />
+     <Stack>
+        <h4>Project</h4>
+        HYF Final Project
+        Team of 15 developers
+      </Stack>
       <Stack>
-        <div>col1</div>
+        <h4>Stack</h4>
         {portfolio.tags &&
           portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
+      </Stack>
+      <Stack>
+        <h4>Repo</h4>
+        Gtihub link to repo
+      </Stack>
+      <Stack>
+        <h4>Status</h4>
+        Link to Live Site
       </Stack>
       <PortfolioList>
         <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
