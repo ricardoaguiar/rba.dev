@@ -199,12 +199,11 @@ const StackTags = styled.span`
   width: max-content;
 `
 const Stack = styled.div`
-  margin: 1rem auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
 
   ${respondTo.T900`
-  margin: 3rem 0 3rem 120px;
+  margin-left: 120px;
   width: fit-content;
   `}
   & h4 {
