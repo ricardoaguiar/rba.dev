@@ -21,6 +21,6 @@ const Skills = () => {
     <li>Lightroom</li>
         </ul>
     )
-};
+}
 
-export default Skills;
+export default Skills
