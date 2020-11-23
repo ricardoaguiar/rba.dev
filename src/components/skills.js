@@ -1,16 +1,17 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-const skillSet = styled.ul`
+const SkillContainer = styled.ul`
     display: grid;
     grid-template-conlumns: 1fr 1fr 1fr;
     grid-gap: 1rem;
     margin: 3rem auto;
+    width: 50vw;
 `
 
 const Skills = () => {
     return (
-        <skillSet>
+   <SkillContainer>
     <li>Skills:</li>
     <li>React</li>
     <li>JavaScript</li>
@@ -27,7 +28,7 @@ const Skills = () => {
     <li>Photography</li>
     <li>Photoshop</li>
     <li>Lightroom</li>
-        </skillSet>
+   </SkillContainer>
     )
 }
 
