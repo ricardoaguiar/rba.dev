@@ -41,6 +41,7 @@ export const HomeSubtitle = styled.small`
 
 const Home = () => {
   return (
+    <>
     <HomeContainer>
       <HomeTitle>
         Hi, I'm Ricardo.
@@ -57,8 +58,9 @@ const Home = () => {
           These are some of the projects I have built.
         </HomeSubtitle>
       </HomeTitle>
-    <Skills />
     </HomeContainer>
+    <Skills />
+    </>
   )
 }
 
