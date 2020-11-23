@@ -1,8 +1,17 @@
-import React from "react";
+import React from "react"
+import styled from "@emotion/styled"
+
+const techskills = [React, JavaScript ES6, NodeJS, Gatsby, Git, HTML5, CSS3, Emotion, Contentful, Wordpress]
+
+const skillSet = styled.ul`
+    display: grid;
+    grid-template-conlumns: 1fr 1fr 1fr
+    margin: 2rem auto;
+`
 
 const Skills = () => {
     return (
-        <ul>
+        <skillSet>
     <li>Skills:</li>
     <li>React</li>
     <li>JavaScript</li>
@@ -19,7 +28,7 @@ const Skills = () => {
     <li>Photography</li>
     <li>Photoshop</li>
     <li>Lightroom</li>
-        </ul>
+        </skillSet>
     )
 }
 
