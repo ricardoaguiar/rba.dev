@@ -214,9 +214,8 @@ const Stack = styled.div`
 
 const ProjectSpecs = styled.div`
   display: grid;
-  grid-template-colums: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
-  margin-left: 120px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 3rem;
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
