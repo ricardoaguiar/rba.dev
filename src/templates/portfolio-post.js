@@ -199,14 +199,23 @@ const StackTags = styled.span`
   width: max-content;
 `
 const Stack = styled.div`
-  margin: 1rem auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
 
   ${respondTo.T900`
-  margin: 3rem 0 3rem 120px;
+  margin-left: 120px;
   width: fit-content;
   `}
+  & h4 {
+      margin-left: 0;
+      text-transform: uppercase;
+  }
+`
+
+const ProjectSpecs = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 3rem;
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
@@ -226,11 +235,26 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <ProjectSubtitle>Project Scope</ProjectSubtitle>
       <ProjectScope>{portfolio.scope.body}</ProjectScope>
       <Line />
+ <ProjectSpecs>
+     <Stack>
+        <h4>Project</h4>
+        HYF Final Project
+        Team of 15 developers
+      </Stack>
       <Stack>
-        <div>col1</div>
+        <h4>Stack</h4>
         {portfolio.tags &&
           portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
       </Stack>
+      <Stack>
+        <h4>Repo</h4>
+        Gtihub link to repo
+      </Stack>
+      <Stack>
+        <h4>Status</h4>
+        Link to Live Site
+      </Stack>
+</ProjectSpecs>
       <PortfolioList>
         <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
         <PortfolioListItem>{portfolio.title}</PortfolioListItem>

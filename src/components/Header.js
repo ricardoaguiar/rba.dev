@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import css from "@emotion/css"
 import { respondTo } from "../utils/_respondTo"
+import Skills from "./skills"
 
 export const HomeContainer = styled.header`
   display: flex;
@@ -40,6 +41,7 @@ export const HomeSubtitle = styled.small`
 
 const Home = () => {
   return (
+    <>
     <HomeContainer>
       <HomeTitle>
         Hi, I'm Ricardo.
@@ -57,6 +59,8 @@ const Home = () => {
         </HomeSubtitle>
       </HomeTitle>
     </HomeContainer>
+    <Skills />
+    </>
   )
 }
 
