@@ -41,14 +41,14 @@ const GridContainer = styled.nav`
   ${respondTo.M400`
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     `}
-  ${respondTo.T700`
-     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  /* ${respondTo.T700`
+     grid-template-columns: repeat(auto-fill, minmax(35vw, 1fr));
   `}
   ${respondTo.T800`
-     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  `}
+     grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+  `} */
   ${respondTo.T900`
-     grid-template-columns: repeat(auto-fill, minmax(425px, 1fr));
+     grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
      margin-left: 90px;
      margin-right: 20px;  
   `}
