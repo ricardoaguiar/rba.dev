@@ -13,10 +13,10 @@ const getSkills = graphql`
 
 const SkillContainer = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 1rem;
   margin: 1rem auto 5rem auto;
-  width: 60vw;
+  width: 65vw;
   font-weight: bolder;
 `
 
@@ -27,7 +27,7 @@ const Skills = () => {
       <h3
         css={css`
           color: var(--logo);
-          margin: 5rem 0 0 100px;
+          margin: 5rem 0 0 200px;
         `}
       >
         Skills:
