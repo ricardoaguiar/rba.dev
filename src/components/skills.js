@@ -1,42 +1,45 @@
 import React from "react"
 import styled from "@emotion/styled"
 import css from "@emotion/css"
+import { useStaticQuery, graphql } from "gatsby"
+
+const getSkills = graphql`
+  {
+    skill: contentfulPerson {
+      skills
+    }
+  }
+`
 
 const SkillContainer = styled.ul`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    margin: 3rem auto;
-    width: 60vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  margin: 1rem auto 5rem auto;
+  width: 60vw;
+  font-weight: bolder;
 `
 
 const Skills = () => {
-    return (
-   <>
-   <h4
-      css={css`
-            color: var(--logo);
-            margin-left: 170px;
-          `}
-        >Skills:</h4>
-   <SkillContainer>
-    <li>React</li>
-    <li>JavaScript</li>
-    <li>ES6</li>
-    <li>Styled Components</li>
-    <li>NodeJS</li>
-    <li>Git</li>
-    <li>Swagger</li>   
-    <li>Gatsby</li>
-    <li>Contentful</li>
-    <li>CSS3</li>
-    <li>HTML5</li>
-    <li>MySQL</li>
-    <li>Photography</li>
-    <li>Photoshop</li>
-   </SkillContainer>
-  </>
-    )
+  const { skill } = useStaticQuery(getSkills)
+  return (
+    <>
+      <h3
+        css={css`
+          color: var(--logo);
+          margin: 5rem 0 0 100px;
+        `}
+      >
+        Skills:
+      </h3>
+      <SkillContainer>
+        {skill.skills &&
+          skill.skills.map(skills => {
+            return <li key={skills}>{skills}</li>
+          })}
+      </SkillContainer>
+    </>
+  )
 }
 
 export default Skills
