@@ -2,18 +2,18 @@ import React from "react"
 import styled from "@emotion/styled"
 import css from "@emotion/css"
 import { respondTo } from "../utils/_respondTo"
-import Skills from "./skills"
 
 export const HomeContainer = styled.header`
   display: flex;
   flex: 1 0 auto;
   margin: 110px 5vw auto;
   padding: 0;
-  color: var(--rbadev-mono-4-hex);
+  color: var(--rba-9);
+  background: var(--rise-1);
 
   ${respondTo.T900`
-    max-width: calc(100vw - 70px);
-    margin-left: 70px;
+    width: calc(100% - 90px);
+    margin-left: 90px;
     margin-top: 0;
     height: 50vh;
     align-items: center;
@@ -42,24 +42,23 @@ export const HomeSubtitle = styled.small`
 const Home = () => {
   return (
     <>
-    <HomeContainer>
-      <HomeTitle>
-        Hi, I'm Ricardo.
-        <br />
-        <span
-          css={css`
-            color: var(--logo);
-          `}
-        >
-          Front End web developer
-        </span>
-        &nbsp;interested in Full-stack and System Integrations.
-        <HomeSubtitle>
-          These are some of the projects I have built.
-        </HomeSubtitle>
-      </HomeTitle>
-    </HomeContainer>
-    <Skills />
+      <HomeContainer>
+        <HomeTitle>
+          Hi, my name is Ricardo.
+          <br />
+          <span
+            css={css`
+              color: var(--rise-4);
+            `}
+          >
+            I'm a JavaScript Full Stack Web Developer.
+          </span>
+          &nbsp;
+          <HomeSubtitle>
+            These are some of the projects I have worked on.
+          </HomeSubtitle>
+        </HomeTitle>
+      </HomeContainer>
     </>
   )
 }

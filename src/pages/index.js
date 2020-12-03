@@ -6,6 +6,7 @@ import Posts from "../components/PostsNav"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/Layout"
+import Skills from "../components/Skills"
 
 library.add(faEnvelope)
 
@@ -14,6 +15,7 @@ export default function IndexPage() {
     <Layout>
       <SEO title="Home" />
       <Home />
+      <Skills />
       <Posts />
     </Layout>
   )

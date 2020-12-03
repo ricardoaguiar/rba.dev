@@ -28,26 +28,33 @@
   --twitter: #1da1f2;
   --whatsapp: #25d366;
 
-  /* Color Theme Swatches in Hex */
-  --rbadev-mono-0-hex: #f2f2f235;
-  --rbadev-mono-1-hex: #f2f2f2;
-  --rbadev-mono-2-hex: #bfbfbf;
-  --rbadev-mono-3-hex: #8c8c8c;
-  --rbadev-mono-4-hex: #404040;
-  --rbadev-mono-5-hex: #0d0d0d;
+  --game-1: #181717;
+  --game-1: #302f2f;
+  --game-1: #082345;
+  --game-2: #3299bb;
+  --game-4: #ff9616;
+  --game-4: #bcbcbc;
+  --game-5: #f4f4f4;
 
-  /* Color Theme Swatches in Hex */
-  --rbadev-duotone-1-hex: #0d0d0c;
-  --rbadev-duotone-2-hex: #8c281f;
-  --rbadev-duotone-3-hex: #f24738;
-  --rbadev-duotone-4-hex: #f2f2f2;
-  --rbadev-duotone-5-hex: #262626;
+  --rise-1: #041122;
+  --rise-2: #082448;
+  --rise-3: #259073;
+  --rise-4: #7fda8a;
+  --rise-45: #7fda8a9e;
+  --rise-5: #c8e98e;
+  --rise-6: #e6f99d;
+  --rise-7: #49bce335;
+  --rise-8: #fefefe;
 
-  --bluejay-1: #1f1f2050;
-  --bluejay-2: #2b4c7e7e;
-  --bluejay-3: #567ebb50;
-  --bluejay-4: #606d8050;
-  --bluejay-5: #dce0e650;
+  --rba-1: #004a98;
+  --rba-2: #1077c3;
+  --rba-3: #3a9dd8;
+  --rba-4: #49bce3;
+  --rba-5: #56042c;
+  --rba-6: #fec310;
+  --rba-7: #75c040;
+  --rba-8: #df1922;
+  --rba-9: #f2f2f2;
 }
 
 html {
@@ -79,7 +86,7 @@ body {
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue;
   margin: 0 auto;
-  color: var(--rbadev-mono-4-hex);
+  color: var(--SA-3);
   /* font-size: clamp(2vw, 12px + 1.2vw, 2rem); */
   font-weight: normal;
   word-wrap: break-word;
@@ -93,6 +100,7 @@ body {
   color: inherit;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
+  background-color: var(--SA-2);
 }
 div,
 span {

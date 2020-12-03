@@ -30,8 +30,7 @@ export const BurgerBtn = styled.button`
   div {
     width: 25px;
     height: 2px;
-    background: ${({ open }) =>
-      open ? "var( --logo)" : "var(--rbadev-mono-4-hex)"};
+    background: ${({ open }) => (open ? "var( --rise-6)" : "var(--rise-1)")};
     border-radius: 1px;
     transition: all 0.3s linear;
     position: relative;

@@ -80,7 +80,7 @@ export const MenuNavigation = styled.nav`
 export const MenuList = styled.ul`
   display: flex;
   flex-flow: column;
-  background: var(--white);
+  background: var(--rba-9);
   list-style: none;
   margin: 0;
 

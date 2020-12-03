@@ -6,7 +6,7 @@ const AboutContainer = styled.div`
   flex-flow: row wrap;
   margin: 3rem;
   padding: 0.5rem;
-  background-color: var(--rbadev-duotone-3-hex);
+  background-color: var(--rba-4);
 `
 
 const BlogList = styled.ul`

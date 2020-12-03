@@ -20,9 +20,11 @@ export const FooterSection = styled.footer`
   ${respondTo.T900`
     flex-direction: row;
     justify-content:space-around;
-    width: calc(100vw - 70px);
-    margin-left: 70px;
+    width: calc(100vw - 90px);
+    margin-left: 90px;
     padding: 0;
+    background: var(--rise-1);
+    color: var(--rise-8);
 `}
 `
 export const FooterItems = styled.nav`

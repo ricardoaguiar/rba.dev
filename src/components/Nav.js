@@ -19,10 +19,11 @@ export const NavComponent = styled.nav`
   width: 100vw;
   margin: 0;
   z-index: 100;
+  background: var(--rise-4);
 
   ${respondTo.T900`
     min-height: 100vh;
-    max-width: 70px;
+    max-width: 90px;
     flex-flow: column;
     padding: 0;
     margin: 0;
@@ -41,7 +42,7 @@ export const HeaderNav = styled.ul`
     flex-flow: column;
     flex: 1 0 auto;
     align-items: center;
-    max-width: 70px;
+    max-width: 90px;
     height: calc(100vh - 10%);
   `}
 `
