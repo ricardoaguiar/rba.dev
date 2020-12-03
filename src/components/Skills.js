@@ -36,7 +36,7 @@ const Skills = () => {
       <h3
         css={css`
           color: var(--rise-3);
-          margin: 5rem 0 0 200px;
+          margin: 4rem 0 0 200px;
           font-size: 1.5rem;
         `}
       >
