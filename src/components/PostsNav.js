@@ -32,11 +32,11 @@ const GridContainer = styled.nav`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 1fr;
-  grid-gap: 20px;
+  grid-gap: 2rem;
   justify-content: center;
   margin: 0 auto;
-  padding: 20px;
-  background: var(--white);
+  padding: 2rem;
+  background: var(--rise-8);
 
   ${respondTo.M400`
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -44,12 +44,11 @@ const GridContainer = styled.nav`
   ${respondTo.T900`
      grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
      margin-left: 90px;
-     margin-right: 20px;  
   `}
 `
 // grid item / cell
 const GridItem = styled.div`
-  background: var(--rbadev-mono-1-hex);
+  background: transparent;
   z-index: -999;
 `
 
@@ -57,7 +56,7 @@ const GridItem = styled.div`
 const GridPicture = styled.div`
   overflow: hidden;
   position: relative;
-  border: 1px solid var(--logo-20);
+  border: 1px solid var(--rise-7);
 `
 // img caption
 const GridCaption = styled.div`
