@@ -10,6 +10,7 @@ export const HomeContainer = styled.header`
   padding: 0;
   color: var(--rba-9);
   background: var(--rise-1);
+  border-bottom: 6px solid var(--rise-5);
 
   ${respondTo.T900`
     width: calc(100% - 90px);

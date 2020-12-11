@@ -37,6 +37,7 @@ const GridContainer = styled.nav`
   margin: 0 auto;
   padding: 2rem;
   background: var(--rise-8);
+  height: auto;
 
   ${respondTo.M400`
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -51,7 +52,6 @@ const GridItem = styled.div`
   background: transparent;
   z-index: -999;
 `
-
 // grid content
 const GridPicture = styled.div`
   overflow: hidden;
@@ -80,29 +80,38 @@ const PostDescription = styled.p`
   overflow: hidden;
   white-space: nowrap;
 `
+const Projects = styled.h3`
+  font-size: 2rem;
+  background-color: var(--rise-5);
+  width: min-content;
+  align-items: center;
+`
 
 const Posts = () => {
   const { post } = useStaticQuery(getPosts)
   return (
-    <GridContainer>
-      {post.edges.map(({ node }) => {
-        return (
-          <Link to={`/${node.slug}/`} key={node.id}>
-            <GridItem>
-              <GridPicture>
-                <Image fluid={node.heroImage.fluid} alt={node.title} />
-                <GridCaption>
-                  <PostTitle>{node.title}</PostTitle>
-                  <PostDescription>
-                    {node.shortDescription.shortDescription}
-                  </PostDescription>
-                </GridCaption>
-              </GridPicture>
-            </GridItem>
-          </Link>
-        )
-      })}
-    </GridContainer>
+    <>
+      <Projects>Projects</Projects>
+      <GridContainer>
+        {post.edges.map(({ node }) => {
+          return (
+            <Link to={`/${node.slug}/`} key={node.id}>
+              <GridItem>
+                <GridPicture>
+                  <Image fluid={node.heroImage.fluid} alt={node.title} />
+                  <GridCaption>
+                    <PostTitle>{node.title}</PostTitle>
+                    <PostDescription>
+                      {node.shortDescription.shortDescription}
+                    </PostDescription>
+                  </GridCaption>
+                </GridPicture>
+              </GridItem>
+            </Link>
+          )
+        })}
+      </GridContainer>
+    </>
   )
 }
 
