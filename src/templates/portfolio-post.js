@@ -1,36 +1,80 @@
 import React from "react"
 import "../css/styles.css"
-import { css, keyframes } from "@emotion/core"
+import { css, keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Layout from "../components/Layout"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { respondTo } from "../utils/_respondTo"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+
+// export const query = graphql`
+//   query($slug: String!) {
+//     portfolio: contentfulPortfolio(slug: { eq: $slug }) {
+//       author {
+//         name
+//       }
+//       id
+//       title
+//       tags
+//       slug
+//       scope: body {
+//         body
+//       }
+//       publishDate(formatString: "YYYY/MM/DD")
+//       updatedAt
+//       heroImage {
+//         fluid(maxHeight: 1000, maxWidth: 1800) {
+//           ...GatsbyContentfulFluid
+//         }
+//         id
+//       }
+//       images {
+//         fluid(maxWidth: 1800) {
+//           ...GatsbyContentfulFluid
+//         }
+//         title
+//         id
+//       }
+//     }
+//   }
+// `
 
 export const query = graphql`
   query($slug: String!) {
     portfolio: contentfulPortfolio(slug: { eq: $slug }) {
+      id
       author {
         name
       }
-      id
-      title
       tags
+      title
       slug
-      portfolioDescription {
-        json
-      }
-      scope: body {
+      body {
+        childMarkdownRemark {
+          html
+        }
         body
       }
-      publishDate(formatString: "YYYY/MM/DD")
-      updatedAt
+      childContentfulPortfolioBodyTextNode {
+        childMarkdownRemark {
+          html
+        }
+        body
+      }
+      childContentfulPortfolioShortDescriptionTextNode {
+        shortDescription
+        childMarkdownRemark {
+          html
+        }
+      }
+      publishDate(formatString: "YYYY.MM.DD")
+      updatedAt(formatString: "YYYY.MM.DD")
       heroImage {
         fluid(maxHeight: 1000, maxWidth: 1800) {
           ...GatsbyContentfulFluid
         }
-        id
       }
       images {
         fluid(maxWidth: 1800) {
@@ -207,8 +251,8 @@ const Stack = styled.div`
   width: fit-content;
   `}
   & h4 {
-      margin-left: 0;
-      text-transform: uppercase;
+    margin-left: 0;
+    text-transform: uppercase;
   }
 `
 
@@ -233,28 +277,28 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
 
     <PortfolioArticle>
       <ProjectSubtitle>Project Scope</ProjectSubtitle>
-      <ProjectScope>{portfolio.scope.body}</ProjectScope>
+      <ProjectScope>{portfolio.body.body}</ProjectScope>
       <Line />
- <ProjectSpecs>
-     <Stack>
-        <h4>Project</h4>
-        HYF Final Project
-        Team of 15 developers
-      </Stack>
-      <Stack>
-        <h4>Stack</h4>
-        {portfolio.tags &&
-          portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
-      </Stack>
-      <Stack>
-        <h4>Repo</h4>
-        Gtihub link to repo
-      </Stack>
-      <Stack>
-        <h4>Status</h4>
-        Link to Live Site
-      </Stack>
-</ProjectSpecs>
+      <ProjectSpecs>
+        <Stack>
+          <h4>Project</h4>
+          HYF Final Project Team of 15 developers
+        </Stack>
+        <Stack>
+          <h4>Stack</h4>
+          {portfolio.tags &&
+            portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
+        </Stack>
+        <Stack>
+          <h4>Repo</h4>
+          Gtihub link to repo
+        </Stack>
+        <Stack>
+          <h4>Status</h4>
+          Link to Live Site
+        </Stack>
+      </ProjectSpecs>
+      {/* <div>{documentToReactComponents(portfolio.portfolioDescription.raw)}</div> */}
       <PortfolioList>
         <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
         <PortfolioListItem>{portfolio.title}</PortfolioListItem>

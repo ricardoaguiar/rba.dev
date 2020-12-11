@@ -1,6 +1,5 @@
 import React from "react"
 import { bool, func } from "prop-types"
-// import { BurgerBtn } from "./burger-styled"
 import styled from "@emotion/styled"
 import { respondTo } from "../utils/_respondTo"
 
