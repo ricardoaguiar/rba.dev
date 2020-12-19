@@ -1,87 +1,51 @@
 import React from "react"
 import "../css/styles.css"
-import { css, keyframes } from "@emotion/react"
+import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Layout from "../components/Layout"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { respondTo } from "../utils/_respondTo"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-
-// export const query = graphql`
-//   query($slug: String!) {
-//     portfolio: contentfulPortfolio(slug: { eq: $slug }) {
-//       author {
-//         name
-//       }
-//       id
-//       title
-//       tags
-//       slug
-//       scope: body {
-//         body
-//       }
-//       publishDate(formatString: "YYYY/MM/DD")
-//       updatedAt
-//       heroImage {
-//         fluid(maxHeight: 1000, maxWidth: 1800) {
-//           ...GatsbyContentfulFluid
-//         }
-//         id
-//       }
-//       images {
-//         fluid(maxWidth: 1800) {
-//           ...GatsbyContentfulFluid
-//         }
-//         title
-//         id
-//       }
-//     }
-//   }
-// `
 
 export const query = graphql`
   query($slug: String!) {
-    portfolio: contentfulPortfolio(slug: { eq: $slug }) {
+    portfolio: contentfulProjects(slug: { eq: $slug }) {
       id
-      author {
-        name
-      }
-      tags
       title
       slug
-      body {
-        childMarkdownRemark {
-          html
-        }
-        body
-      }
-      childContentfulPortfolioBodyTextNode {
-        childMarkdownRemark {
-          html
-        }
-        body
-      }
-      childContentfulPortfolioShortDescriptionTextNode {
-        shortDescription
+      publishDate(formatString: "DD.MM.YYYY")
+      updatedAt(formatString: "DD.MM.YYYY")
+      overview {
         childMarkdownRemark {
           html
         }
       }
-      publishDate(formatString: "YYYY.MM.DD")
-      updatedAt(formatString: "YYYY.MM.DD")
+      projectType {
+        projectType
+      }
+      projectStack
+      repo {
+        childMarkdownRemark {
+          html
+        }
+      }
+      liveProject
       heroImage {
-        fluid(maxHeight: 1000, maxWidth: 1800) {
+        fluid(maxHeight: 1000, maxWidth: 1800, quality: 90) {
           ...GatsbyContentfulFluid
         }
+        id
+        description
+        title
       }
       images {
-        fluid(maxWidth: 1800) {
+        fluid(maxHeight: 1000, maxWidth: 1800, quality: 90) {
           ...GatsbyContentfulFluid
         }
-        title
         id
+        description
+        title
       }
     }
   }
@@ -89,20 +53,18 @@ export const query = graphql`
 
 const ProjectDescription = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 95vw;
-  margin: 80px auto 0;
+  flex-direction: column;
+  padding: 10vh 5vw;
+  line-height: 1.5;
+  margin: auto 0;
 
   ${respondTo.T900`
-    width: calc(100vw - 70px);
-    margin: 35px 0 35px 60px;
-    flex-direction: row;
+    padding: 10vh 12vw;
   `}
 `
 
 const PortfolioArticle = styled.div`
   margin: 1rem;
-  /* outline: 1px solid red; */
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -110,27 +72,6 @@ const PortfolioArticle = styled.div`
 
   ${respondTo.T900`
     `};
-`
-
-const PortfolioTitle = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 10vh;
-  margin-left: 0.5rem;
-
-  ${respondTo.T900`
-    padding-right: 0.5rem;
-    margin: 50px 0 1rem 70px;
-  `}
-
-  & h1 {
-    font-size: 2rem;
-    margin-left: 0px;
-
-    ${respondTo.T900`
-    margin-left: 20px;
-  `}
-  }
 `
 
 const LineSlider = keyframes`
@@ -153,10 +94,10 @@ const LineSlider = keyframes`
 const Line = styled.div`
   height: 2px;
   width: 30%;
-  background: var(--logo);
+  background: var(--rise-7);
   animation: 1s slidein;
   z-index: -1;
-  margin: 1rem 0 1rem 120px;
+  margin: auto 5vh;
 `
 
 const PortfolioImage = styled.div`
@@ -170,11 +111,11 @@ const PortfolioImage = styled.div`
 `
 
 const PortfolioList = styled.ul`
+  display: flex;
+  justify-content: center;
   list-style: none;
   margin-right: 1rem;
   width: auto;
-  justify-content: flex-start;
-  font-family: bio-sans;
 
   ${respondTo.T900`
    margin-left: 70px;
@@ -185,15 +126,6 @@ const PortfolioListItem = styled.li`
   background-color: transparent;
   margin-bottom: 1rem;
   padding: 2px 5px;
-`
-
-const ProjectSubtitle = styled.div`
-  ${respondTo.T900`
-    font-weight: bolder;
-    margin: 1rem auto 2rem auto;
-    width: 80vw;
-    font-size: 34px;
-  `}
 `
 
 const ProjectScope = styled.div`
@@ -232,7 +164,7 @@ const ProjectImages = styled.div`
   `}
 `
 
-const StackTags = styled.span`
+const TechStack = styled.span`
   font-weight: 600;
   color: #000000;
   font-size: 0.8rem;
@@ -242,7 +174,7 @@ const StackTags = styled.span`
   height: min-content;
   width: max-content;
 `
-const Stack = styled.div`
+const ProjectComponents = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -257,54 +189,46 @@ const Stack = styled.div`
 `
 
 const ProjectSpecs = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 3rem;
+  display: flex;
+  margin: 0 auto;
+  width: 80vw;
 `
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
   <Layout>
     <SEO title={portfolio.title} />
-    <PortfolioTitle>
-      <h1
-        css={css`
-          animation: ${LineSlider} 1s;
-        `}
-      >
-        {portfolio.title}
-      </h1>
-    </PortfolioTitle>
-
     <PortfolioArticle>
-      <ProjectSubtitle>Project Scope</ProjectSubtitle>
-      <ProjectScope>{portfolio.body.body}</ProjectScope>
+      <ProjectDescription
+        dangerouslySetInnerHTML={{
+          __html: portfolio.overview.childMarkdownRemark.html,
+        }}
+      />
       <Line />
       <ProjectSpecs>
-        <Stack>
+        <ProjectComponents>
           <h4>Project</h4>
-          HYF Final Project Team of 15 developers
-        </Stack>
-        <Stack>
+          {portfolio.projectType.projectType}
+        </ProjectComponents>
+        <ProjectComponents>
           <h4>Stack</h4>
-          {portfolio.tags &&
-            portfolio.tags.map(tag => <StackTags key={tag}>{tag}</StackTags>)}
-        </Stack>
-        <Stack>
+          {portfolio.projectStack &&
+            portfolio.projectStack.map(tag => (
+              <TechStack key={tag}>{tag}</TechStack>
+            ))}
+        </ProjectComponents>
+        <ProjectComponents>
           <h4>Repo</h4>
-          Gtihub link to repo
-        </Stack>
-        <Stack>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: portfolio.repo.childMarkdownRemark.html,
+            }}
+          />
+        </ProjectComponents>
+        <ProjectComponents>
           <h4>Status</h4>
-          Link to Live Site
-        </Stack>
+          {portfolio.liveProject}
+        </ProjectComponents>
       </ProjectSpecs>
-      {/* <div>{documentToReactComponents(portfolio.portfolioDescription.raw)}</div> */}
-      <PortfolioList>
-        <PortfolioListItem>{portfolio.updatedAt}</PortfolioListItem>
-        <PortfolioListItem>{portfolio.title}</PortfolioListItem>
-        <PortfolioListItem>{portfolio.publishDate}</PortfolioListItem>
-        <PortfolioListItem></PortfolioListItem>
-      </PortfolioList>
     </PortfolioArticle>
     <ProjectImages>
       {portfolio.images &&
@@ -314,6 +238,12 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           </PortfolioImage>
         ))}
     </ProjectImages>
+    <PortfolioList>
+      <PortfolioListItem>Published: {portfolio.publishDate}</PortfolioListItem>
+      •|•
+      <PortfolioListItem>Updated: {portfolio.updatedAt}</PortfolioListItem>
+      <PortfolioListItem></PortfolioListItem>
+    </PortfolioList>
   </Layout>
 )
 

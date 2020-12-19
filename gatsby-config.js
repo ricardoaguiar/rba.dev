@@ -11,10 +11,24 @@ module.exports = {
     `gatsby-plugin-svgr`,
     `gatsby-plugin-emotion`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: `pages`,
+        name: "pages",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/blog`,
+        name: "blog",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src`,
+        name: "src",
       },
     },
     `gatsby-transformer-sharp`,
@@ -25,8 +39,8 @@ module.exports = {
         name: `rba.dev`,
         short_name: `rba`,
         start_url: `/`,
-        background_color: `#654321`,
-        theme_color: `#123456`,
+        background_color: `#082448`,
+        theme_color: `#c8e98e`,
         display: `minimal-ui`,
         icon: `src/assets/rba-dev-icon.png`, // This path is relative to the root of the site.
       },

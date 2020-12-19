@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { css } from "@emotion/react"
 import { useStaticQuery, graphql } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { respondTo } from "../utils/_respondTo"
 
 const getSkills = graphql`
   {
@@ -20,45 +19,48 @@ const getSkills = graphql`
 const SkillSection = styled.div`
   background: var(--rise-7);
   border: 1px solid transparent;
-  height: 60%;
+  padding: 6vh 5vw;
+  border-bottom: 6px solid var(--rise-7);
 
   & p {
     letter-spacing: 0.03em;
-    max-width: 68vw;
-    margin: 2rem auto 4rem;
-    line-height: 1.7;
+    line-height: 1.8;
+    margin-bottom: 3rem;
   }
+  & h2 {
+    font-size: 2rem;
+  }
+
+  ${respondTo.T900`
+    padding: 10vh 10vw 10vh 15vw;
+  `}
 `
 
 const SkillsContainer = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr));
-  grid-gap: 1rem;
-  margin: 0 auto;
-  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
   font-weight: bolder;
+  width: 75vw;
+
   & li {
-    padding: 0;
-    margin: 1rem;
-    width: max-content;
-    flex: 1 0 50%;
+    padding: 0.5rem;
+    width: auto;
+    word-break: break-word;
+    width: 50%;
   }
+  ${respondTo.T900`
+   & li {
+    width: 25%;
+   }
+  
+  `}
 `
 
 const Skills = () => {
   const { skill } = useStaticQuery(getSkills)
   return (
     <SkillSection>
-      <h3
-        css={css`
-          color: var(--rise-3);
-          margin: 4rem 0 0 200px;
-          font-size: 1.5rem;
-        `}
-      >
-        Skills
-      </h3>
-      <div
+      <span
         dangerouslySetInnerHTML={{
           __html: skill.copy.childMarkdownRemark.html,
         }}
