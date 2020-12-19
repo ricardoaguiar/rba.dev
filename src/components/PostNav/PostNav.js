@@ -7,12 +7,11 @@ import {
   GridItem,
   GridPicture,
   GridCaption,
-  PostTitle,
-  PostDescription,
   Projects,
 } from "./PostNav.styles"
 
-// list of post on homepage //grid
+// import { INLINES } from "contentful/rich-test-types"
+
 const getPosts = graphql`
   {
     post: allContentfulProjects(sort: { fields: publishDate, order: DESC }) {
@@ -37,6 +36,15 @@ const getPosts = graphql`
   }
 `
 
+// const options = {
+//   renderNode: {
+//     [INLINES.HIPERLINK]: node => {
+//       return <a href={node.}
+//   }
+// }
+
+// }
+
 const Posts = ({ title = `Projects` }) => {
   const { post } = useStaticQuery(getPosts)
   return (
@@ -51,11 +59,9 @@ const Posts = ({ title = `Projects` }) => {
               <GridItem>
                 <GridPicture>
                   <Image fluid={node.heroImage.fluid} alt={node.title} />
-                  <GridCaption
-                    dangerouslySetInnerHTML={{
-                      __html: node.overview.childMarkdownRemark.html,
-                    }}
-                  />
+                  <GridCaption>
+                    <h3>{node.title}</h3>
+                  </GridCaption>
                 </GridPicture>
               </GridItem>
             </Link>

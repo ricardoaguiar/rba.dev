@@ -12,6 +12,7 @@ export const GridContainer = styled.nav`
   padding: 5vh 5vw;
   background: var(--rise-8);
   height: auto;
+  position: relative;
 
   ${respondTo.M400`
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -31,22 +32,25 @@ export const GridPicture = styled.div`
   overflow: hidden;
   position: relative;
   border: 1px solid var(--rise-7);
+
+  &:hover {
+    border-color: var(--rise-2);
+  }
 `
 // img caption
 export const GridCaption = styled.div`
-  position: absolute;
-  bottom: 0;
-  padding: 1rem 2rem;
+  padding: 10px 0 10px 20px;
   width: 100%;
-  background-color: rgba(155, 155, 155, 0.25);
+  background-color: var(--rise-7);
 
   & h3 {
-    text-decoration: underline solid var(--rise-5);
+    text-decoration: underline solid var(--rise-4);
     text-decoration-thickness: 2px;
-    margin-bottom: 1rem;
+    color: var(--rise-2);
+    margin: 0;
   }
   & p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     max-width: 95%;
   }
 `
