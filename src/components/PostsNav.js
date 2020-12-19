@@ -8,15 +8,11 @@ import { respondTo } from "../utils/_respondTo"
 // list of post on homepage //grid
 const getPosts = graphql`
   {
-    post: allContentfulPortfolio(sort: { fields: publishDate, order: DESC }) {
+    post: allContentfulProjects(sort: { fields: publishDate, order: DESC }) {
       edges {
         node {
           id
-          title
           slug
-          shortDescription {
-            shortDescription
-          }
           heroImage {
             fluid(maxHeight: 1000, maxWidth: 1800) {
               ...GatsbyContentfulFluid
@@ -35,7 +31,7 @@ const GridContainer = styled.nav`
   grid-gap: 2rem;
   justify-content: center;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5vh 5vw;
   background: var(--rise-8);
   height: auto;
 
@@ -102,7 +98,7 @@ const Posts = () => {
                   <GridCaption>
                     <PostTitle>{node.title}</PostTitle>
                     <PostDescription>
-                      {node.shortDescription.shortDescription}
+                      {/* {node.shortDescription.shortDescription} */}
                     </PostDescription>
                   </GridCaption>
                 </GridPicture>

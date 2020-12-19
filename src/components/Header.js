@@ -6,17 +6,15 @@ import { respondTo } from "../utils/_respondTo"
 export const HomeContainer = styled.header`
   display: flex;
   flex: 1 0 auto;
-  margin: 5vh 0 auto;
-  padding: 8vh 10vw;
+  margin: 0 auto;
+  padding: 12vh 10vw;
   color: var(--rba-9);
   background: var(--rise-1);
   border-bottom: 6px solid var(--rise-5);
 
   ${respondTo.T900`
-    width: calc(100% - 90px);
-    margin-left: 90px;
     height: 50vh;
-    margin-top: 0;
+    padding: 8vh 8vw 8vh 12vw;
     align-items: center;
   `};
 `
