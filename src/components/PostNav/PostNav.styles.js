@@ -38,7 +38,7 @@ export const GridCaption = styled.div`
   bottom: 0;
   padding: 1rem 2rem;
   width: 100%;
-  background-color: rgba(255, 155, 255, 0.55);
+  background-color: rgba(155, 155, 155, 0.25);
 
   & h3 {
     text-decoration: underline solid var(--rise-5);
@@ -50,7 +50,6 @@ export const GridCaption = styled.div`
     max-width: 95%;
   }
 `
-
 export const PostDescription = styled.span`
   margin: 0 3rem 1rem 1rem;
   bottom: 0;
