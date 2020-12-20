@@ -1,6 +1,6 @@
 import React from "react"
 import "../css/styles.css"
-import { keyframes } from "@emotion/react"
+// import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Layout from "../components/Layout"
@@ -22,7 +22,9 @@ export const query = graphql`
         }
       }
       projectType {
-        projectType
+        childMarkdownRemark {
+          html
+        }
       }
       projectStack
       repo {
@@ -30,7 +32,11 @@ export const query = graphql`
           html
         }
       }
-      liveProject
+      viewProject {
+        childMarkdownRemark {
+          html
+        }
+      }
       heroImage {
         fluid(maxHeight: 1000, maxWidth: 1800, quality: 90) {
           ...GatsbyContentfulFluid
@@ -74,23 +80,23 @@ const PortfolioArticle = styled.div`
     `};
 `
 
-const LineSlider = keyframes`
-  from, 20%, 53%, 80%, to {
-    transform: translate3d(0,0,0);
-  }
+// const LineSlider = keyframes`
+//   from, 20%, 53%, 80%, to {
+//     transform: translate3d(0,0,0);
+//   }
 
-  40%, 43% {
-    transform: translate3d(0, -30px, 0);
-  }
+//   40%, 43% {
+//     transform: translate3d(0, -30px, 0);
+//   }
 
-  70% {
-    transform: translate3d(0, -15px, 0);
-  }
+//   70% {
+//     transform: translate3d(0, -15px, 0);
+//   }
 
-  90% {
-    transform: translate3d(0,-4px,0);
-  }
-`
+//   90% {
+//     transform: translate3d(0,-4px,0);
+//   }
+// `
 const Line = styled.div`
   height: 2px;
   width: 30%;
@@ -128,18 +134,18 @@ const PortfolioListItem = styled.li`
   padding: 2px 5px;
 `
 
-const ProjectScope = styled.div`
-  flex: 1;
-  width: 80vw;
-  margin-bottom: 100px;
-  font-size: 18px;
-  color: var(--rbadev-mono-4-hex);
-  line-height: 2;
+// const ProjectScope = styled.div`
+//   flex: 1;
+//   width: 80vw;
+//   margin-bottom: 100px;
+//   font-size: 18px;
+//   color: var(--rbadev-mono-4-hex);
+//   line-height: 2;
 
-  ${respondTo.T900`
-     margin: 0 auto;
-  `}
-`
+//   ${respondTo.T900`
+//      margin: 0 auto;
+//   `}
+// `
 
 const ProjectImages = styled.div`
   display: grid;
@@ -207,7 +213,13 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <ProjectSpecs>
         <ProjectComponents>
           <h4>Project</h4>
-          {portfolio.projectType.projectType}
+          <PortfolioList>
+            <PortfolioListItem
+              dangerouslySetInnerHTML={{
+                __html: portfolio.projectType.childMarkdownRemark.html,
+              }}
+            />
+          </PortfolioList>
         </ProjectComponents>
         <ProjectComponents>
           <h4>Stack</h4>
@@ -225,8 +237,12 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           />
         </ProjectComponents>
         <ProjectComponents>
-          <h4>Status</h4>
-          {portfolio.liveProject}
+          <h4>Site</h4>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: portfolio.viewProject.childMarkdownRemark.html,
+            }}
+          />
         </ProjectComponents>
       </ProjectSpecs>
     </PortfolioArticle>
