@@ -37,6 +37,16 @@ export const query = graphql`
           html
         }
       }
+      stackSelection {
+        childMarkdownRemark {
+          html
+        }
+      }
+      projectChallenges {
+        childMarkdownRemark {
+          html
+        }
+      }
       heroImage {
         fluid(maxHeight: 1000, maxWidth: 1800, quality: 90) {
           ...GatsbyContentfulFluid
@@ -246,6 +256,11 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         </ProjectComponents>
       </ProjectSpecs>
     </PortfolioArticle>
+    <ProjectDescription
+      dangerouslySetInnerHTML={{
+        __html: portfolio.stackSelection.childMarkdownRemark.html,
+      }}
+    />
     <ProjectImages>
       {portfolio.images &&
         portfolio.images.map(image => (
@@ -254,6 +269,11 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           </PortfolioImage>
         ))}
     </ProjectImages>
+    <ProjectDescription
+      dangerouslySetInnerHTML={{
+        __html: portfolio.projectChallenges.childMarkdownRemark.html,
+      }}
+    />
     <PortfolioList>
       <PortfolioListItem>Published: {portfolio.publishDate}</PortfolioListItem>
       •|•
