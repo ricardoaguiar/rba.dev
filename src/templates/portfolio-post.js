@@ -250,7 +250,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           <h4>Site</h4>
           <span
             dangerouslySetInnerHTML={{
-              __html: portfolio.viewProject.childMarkdownRemark.html,
+              __html: portfolio.viewProject.childMarkdownRemark.html && portfolio.viewProject.childMarkdownRemark.html,
             }}
           />
         </ProjectComponents>
