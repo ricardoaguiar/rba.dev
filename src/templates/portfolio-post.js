@@ -258,7 +258,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
     </PortfolioArticle>
     <ProjectDescription
       dangerouslySetInnerHTML={{
-        __html: portfolio.stackSelection.childMarkdownRemark.html && __html: portfolio.stackSelection.childMarkdownRemark.html,
+        __html: portfolio.stackSelection.childMarkdownRemark.html,
       }}
     />
     <ProjectImages>
