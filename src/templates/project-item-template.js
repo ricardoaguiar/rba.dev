@@ -216,7 +216,11 @@ const PortfolioTemplate = ({ data: { portfolio, project } }) => (
     <PortfolioArticle>
       <ProjectDescription
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD:src/templates/project-item-template.js
           __html: portfolio.overview.childMarkdownRemark.html
+=======
+          __html: portfolio.overview.childMarkdownRemark.html,
+>>>>>>> 712cca6541dcb534a3ddad6b4c80ef4fa6dd0bf4:src/templates/portfolio-post.js
         }}
       />
       <Line />
@@ -226,7 +230,11 @@ const PortfolioTemplate = ({ data: { portfolio, project } }) => (
           <PortfolioList>
             <PortfolioListItem
               dangerouslySetInnerHTML={{
+<<<<<<< HEAD:src/templates/project-item-template.js
                 __html: portfolio.projectType.childMarkdownRemark.html
+=======
+                __html: portfolio.projectType.childMarkdownRemark.html,
+>>>>>>> 712cca6541dcb534a3ddad6b4c80ef4fa6dd0bf4:src/templates/portfolio-post.js
               }}
             />
           </PortfolioList>
@@ -250,7 +258,11 @@ const PortfolioTemplate = ({ data: { portfolio, project } }) => (
           <h4>Site</h4>
           <span
             dangerouslySetInnerHTML={{
+<<<<<<< HEAD:src/templates/project-item-template.js
               __html: portfolio.viewProject.childMarkdownRemark.html
+=======
+              __html: portfolio.viewProject.childMarkdownRemark.html,
+>>>>>>> 712cca6541dcb534a3ddad6b4c80ef4fa6dd0bf4:src/templates/portfolio-post.js
             }}
           />
         </ProjectComponents>
@@ -271,7 +283,11 @@ const PortfolioTemplate = ({ data: { portfolio, project } }) => (
     </ProjectImages>
     <ProjectDescription
       dangerouslySetInnerHTML={{
+<<<<<<< HEAD:src/templates/project-item-template.js
         __html: portfolio.projectChallenges.childMarkdownRemark.html
+=======
+        __html: portfolio.projectChallenges.childMarkdownRemark.html,
+>>>>>>> 712cca6541dcb534a3ddad6b4c80ef4fa6dd0bf4:src/templates/portfolio-post.js
       }}
     />
     <PortfolioList>

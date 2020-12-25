@@ -3,7 +3,8 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: 'RBA',
-    description: 'Web development portfolio with projects on Odoo, AWS Lightsail, Wordpress, Cpanel, Avada Theme, Gatsby among others.',
+    description:
+      'Web development portfolio with projects on Odoo, AWS Lightsail, Wordpress, Cpanel, Avada Theme, Gatsby among others.',
     author: '@devrba'
   },
   plugins: [
@@ -65,7 +66,8 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        downloadLocal: true
       }
     }
   ]
