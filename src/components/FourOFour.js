@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "@emotion/styled"
+import React from 'react'
+import styled from '@emotion/styled'
 
 const PageNotFound = styled.div`
   height: 80vh;
@@ -19,7 +19,7 @@ const Paragraph = styled.div`
   border: 0.5px solid #ffffff33;
 `
 
-function NotFound() {
+function NotFound () {
   return (
     <PageNotFound>
       <Paragraph>

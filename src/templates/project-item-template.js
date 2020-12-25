@@ -1,12 +1,12 @@
-import React from "react"
-import "../css/styles.css"
+import React from 'react'
+import '../css/styles.css'
 // import { keyframes } from "@emotion/react"
-import styled from "@emotion/styled"
-import SEO from "../components/seo"
-import Layout from "../components/Layout"
-import Img from "gatsby-image"
-import { graphql } from "gatsby"
-import { respondTo } from "../utils/_respondTo"
+import styled from '@emotion/styled'
+import SEO from '../components/seo'
+import Layout from '../components/Layout'
+import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
+import { respondTo } from '../utils/_respondTo'
 
 export const query = graphql`
   query($slug: String!) {
@@ -210,13 +210,13 @@ const ProjectSpecs = styled.div`
   width: 80vw;
 `
 
-const PortfolioTemplate = ({ data: { portfolio } }) => (
+const PortfolioTemplate = ({ data: { portfolio, project } }) => (
   <Layout>
     <SEO title={portfolio.title} />
     <PortfolioArticle>
       <ProjectDescription
         dangerouslySetInnerHTML={{
-          __html: portfolio.overview.childMarkdownRemark.html && portfolio.overview.childMarkdownRemark.html,
+          __html: portfolio.overview.childMarkdownRemark.html
         }}
       />
       <Line />
@@ -226,7 +226,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           <PortfolioList>
             <PortfolioListItem
               dangerouslySetInnerHTML={{
-                __html: portfolio.projectType.childMarkdownRemark.html && portfolio.projectType.childMarkdownRemark.html,
+                __html: portfolio.projectType.childMarkdownRemark.html
               }}
             />
           </PortfolioList>
@@ -242,7 +242,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           <h4>Repo</h4>
           <span
             dangerouslySetInnerHTML={{
-              __html: portfolio.repo.childMarkdownRemark.html,
+              __html: portfolio.repo.childMarkdownRemark.html
             }}
           />
         </ProjectComponents>
@@ -250,7 +250,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           <h4>Site</h4>
           <span
             dangerouslySetInnerHTML={{
-              __html: portfolio.viewProject.childMarkdownRemark.html && portfolio.viewProject.childMarkdownRemark.html,
+              __html: portfolio.viewProject.childMarkdownRemark.html
             }}
           />
         </ProjectComponents>
@@ -258,7 +258,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
     </PortfolioArticle>
     <ProjectDescription
       dangerouslySetInnerHTML={{
-        __html: portfolio.stackSelection.childMarkdownRemark.html,
+        __html: portfolio.stackSelection.childMarkdownRemark.html
       }}
     />
     <ProjectImages>
@@ -271,14 +271,14 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
     </ProjectImages>
     <ProjectDescription
       dangerouslySetInnerHTML={{
-        __html: portfolio.projectChallenges.childMarkdownRemark.html && portfolio.projectChallenges.childMarkdownRemark.html,
+        __html: portfolio.projectChallenges.childMarkdownRemark.html
       }}
     />
     <PortfolioList>
       <PortfolioListItem>Published: {portfolio.publishDate}</PortfolioListItem>
       •|•
       <PortfolioListItem>Updated: {portfolio.updatedAt}</PortfolioListItem>
-      <PortfolioListItem></PortfolioListItem>
+      <PortfolioListItem />
     </PortfolioList>
   </Layout>
 )

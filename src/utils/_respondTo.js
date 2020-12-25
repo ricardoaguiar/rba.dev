@@ -1,5 +1,5 @@
-import { css } from "@emotion/react"
-import { breakpoints } from "./_variables"
+import { css } from '@emotion/react'
+import { breakpoints } from './_variables'
 
 export const respondTo = Object.keys(breakpoints).reduce(
   (accumulator, label) => {

@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "@emotion/styled"
-import ricardo from "../assets/ricardo.png"
+import React from 'react'
+import styled from '@emotion/styled'
+import ricardo from '../assets/ricardo.png'
 
 const Portrait = styled.img`
   height: 20%;
@@ -9,6 +9,6 @@ const Portrait = styled.img`
   margin-right: auto;
   right: 0;
 `
-export default function Ricardo() {
-  return <Portrait src={ricardo} alt="Ricardo" />
+export default function Ricardo () {
+  return <Portrait src={ricardo} alt='Ricardo' />
 }

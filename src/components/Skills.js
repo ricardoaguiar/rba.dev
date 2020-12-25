@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
-import { respondTo } from "../utils/_respondTo"
+import React from 'react'
+import styled from '@emotion/styled'
+import { useStaticQuery, graphql } from 'gatsby'
+import { respondTo } from '../utils/_respondTo'
 
 const getSkills = graphql`
   {
@@ -60,11 +60,11 @@ const Skills = () => {
   const { skill } = useStaticQuery(getSkills)
   return (
     <SkillSection>
-      <span
+      {/* <span
         dangerouslySetInnerHTML={{
           __html: skill.copy.childMarkdownRemark.html,
         }}
-      />
+      /> */}
       <SkillsContainer>
         {skill.skills &&
           skill.skills.map(skills => {

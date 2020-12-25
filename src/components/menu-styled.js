@@ -1,5 +1,5 @@
-import styled from "@emotion/styled"
-import { respondTo } from "../utils/_respondTo"
+import styled from '@emotion/styled'
+import { respondTo } from '../utils/_respondTo'
 
 // mobile layout
 export const MenuNavigation = styled.nav`
@@ -8,7 +8,7 @@ export const MenuNavigation = styled.nav`
   width: 100vw;
   min-height: 100vh;
   background: var(--white);
-  transform: ${({ open }) => (open ? "translateY(0px)" : "translateY(-100%)")};
+  transform: ${({ open }) => (open ? 'translateY(0px)' : 'translateY(-100%)')};
   position: fixed;
   top: 50px;
   left: 0;

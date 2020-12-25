@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react"
-import styled from "@emotion/styled"
-import { respondTo } from "../utils/_respondTo"
-import Menu from "./menu"
-import { useOnClickOutside } from "./hooks/hooks"
-import RbaLogo from "./logo/rba-logo"
-import BurgerComponent from "./Burger"
-import { FaEnvelope } from "react-icons/fa"
+import React, { useState, useRef } from 'react'
+import styled from '@emotion/styled'
+import { respondTo } from '../utils/_respondTo'
+import Menu from './menu'
+import { useOnClickOutside } from './hooks/hooks'
+import RbaLogo from './logo/rba-logo'
+import BurgerComponent from './Burger'
+import { FaEnvelope } from 'react-icons/fa'
 
 export const NavComponent = styled.nav`
   background: var(--white);
@@ -64,7 +64,7 @@ export const HeaderNavItem = styled.li`
   }
 `
 
-export default function Nav() {
+export default function Nav () {
   const [open, setOpen] = useState(false)
   const node = useRef()
   useOnClickOutside(node, () => setOpen(false))

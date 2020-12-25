@@ -1,52 +1,52 @@
-require("dotenv").config()
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `RBA`,
-    description: `Web development portfolio with projects on Odoo, AWS Lightsail, Wordpress, Cpanel, Avada Theme, Gatsby among others.`,
-    author: `@devrba`,
+    title: 'RBA',
+    description: 'Web development portfolio with projects on Odoo, AWS Lightsail, Wordpress, Cpanel, Avada Theme, Gatsby among others.',
+    author: '@devrba'
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-svgr`,
-    `gatsby-plugin-emotion`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-svgr',
+    'gatsby-plugin-emotion',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
-        name: "pages",
-      },
+        name: 'pages'
+      }
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/blog`,
-        name: "blog",
-      },
+        name: 'blog'
+      }
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src`,
-        name: "src",
-      },
+        name: 'src'
+      }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `rba.dev`,
-        short_name: `rba`,
-        start_url: `/`,
-        background_color: `#082448`,
-        theme_color: `#c8e98e`,
-        display: `minimal-ui`,
-        icon: `src/assets/rba-dev-icon.png`, // This path is relative to the root of the site.
-      },
+        name: 'rba.dev',
+        short_name: 'rba',
+        start_url: '/',
+        background_color: '#082448',
+        theme_color: '#c8e98e',
+        display: 'minimal-ui',
+        icon: 'src/assets/rba-dev-icon.png' // This path is relative to the root of the site.
+      }
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         // CommonMark mode (default: true)
         commonmark: true,
@@ -57,16 +57,16 @@ module.exports = {
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
         // Plugins configs
-        plugins: [],
-      },
+        plugins: []
+      }
     },
 
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-  ],
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      }
+    }
+  ]
 }

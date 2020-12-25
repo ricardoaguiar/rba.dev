@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { css } from "@emotion/react"
-import { respondTo } from "../utils/_respondTo"
+import React from 'react'
+import styled from '@emotion/styled'
+import { css } from '@emotion/react'
+import { respondTo } from '../utils/_respondTo'
 
 export const HomeContainer = styled.header`
   display: flex;

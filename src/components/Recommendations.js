@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { respondTo } from "../utils/_respondTo"
+import React from 'react'
+import styled from '@emotion/styled'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { respondTo } from '../utils/_respondTo'
 
 const getReferences = graphql`
   {
@@ -98,9 +98,9 @@ const Testimonials = () => {
                 fixed={node.picture.fixed}
                 alt={node.author}
                 imgStyle={{
-                  borderRadius: "50%",
-                  objectFit: "contain",
-                  width: "100%",
+                  borderRadius: '50%',
+                  objectFit: 'contain',
+                  width: '100%'
                 }}
               />
             </Avatar>
