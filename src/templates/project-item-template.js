@@ -210,17 +210,13 @@ const ProjectSpecs = styled.div`
   width: 80vw;
 `
 
-const PortfolioTemplate = ({ data: { portfolio, project } }) => (
+const PortfolioTemplate = ({ data: { portfolio } }) => (
   <Layout>
     <SEO title={portfolio.title} />
     <PortfolioArticle>
       <ProjectDescription
         dangerouslySetInnerHTML={{
-<<<<<<< HEAD:src/templates/project-item-template.js
           __html: portfolio.overview.childMarkdownRemark.html
-=======
-          __html: portfolio.overview.childMarkdownRemark.html,
->>>>>>> 712cca6541dcb534a3ddad6b4c80ef4fa6dd0bf4:src/templates/portfolio-post.js
         }}
       />
       <Line />
@@ -230,11 +226,7 @@ const PortfolioTemplate = ({ data: { portfolio, project } }) => (
           <PortfolioList>
             <PortfolioListItem
               dangerouslySetInnerHTML={{
-<<<<<<< HEAD:src/templates/project-item-template.js
                 __html: portfolio.projectType.childMarkdownRemark.html
-=======
-                __html: portfolio.projectType.childMarkdownRemark.html,
->>>>>>> 712cca6541dcb534a3ddad6b4c80ef4fa6dd0bf4:src/templates/portfolio-post.js
               }}
             />
           </PortfolioList>
@@ -258,11 +250,7 @@ const PortfolioTemplate = ({ data: { portfolio, project } }) => (
           <h4>Site</h4>
           <span
             dangerouslySetInnerHTML={{
-<<<<<<< HEAD:src/templates/project-item-template.js
               __html: portfolio.viewProject.childMarkdownRemark.html
-=======
-              __html: portfolio.viewProject.childMarkdownRemark.html,
->>>>>>> 712cca6541dcb534a3ddad6b4c80ef4fa6dd0bf4:src/templates/portfolio-post.js
             }}
           />
         </ProjectComponents>
@@ -276,18 +264,14 @@ const PortfolioTemplate = ({ data: { portfolio, project } }) => (
     <ProjectImages>
       {portfolio.images &&
         portfolio.images.map(image => (
-          <PortfolioImage>
+          <PortfolioImage key={image.key}>
             <Img fluid={image.fluid} alt={image.title} key={image.id} />
           </PortfolioImage>
         ))}
     </ProjectImages>
     <ProjectDescription
       dangerouslySetInnerHTML={{
-<<<<<<< HEAD:src/templates/project-item-template.js
         __html: portfolio.projectChallenges.childMarkdownRemark.html
-=======
-        __html: portfolio.projectChallenges.childMarkdownRemark.html,
->>>>>>> 712cca6541dcb534a3ddad6b4c80ef4fa6dd0bf4:src/templates/portfolio-post.js
       }}
     />
     <PortfolioList>

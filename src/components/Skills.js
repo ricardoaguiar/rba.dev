@@ -60,11 +60,11 @@ const Skills = () => {
   const { skill } = useStaticQuery(getSkills)
   return (
     <SkillSection>
-      {/* <span
+      <span
         dangerouslySetInnerHTML={{
           __html: skill.copy.childMarkdownRemark.html,
         }}
-      /> */}
+      />
       <SkillsContainer>
         {skill.skills &&
           skill.skills.map(skills => {

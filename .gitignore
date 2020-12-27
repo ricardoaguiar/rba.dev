@@ -74,3 +74,4 @@ rba.code-workspace
 src/components/footer/svg/
 babel.config.json
 logos
+project-single-template.js

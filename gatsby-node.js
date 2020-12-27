@@ -1,6 +1,5 @@
 const path = require('path')
-
-exports.createProjectItemPages = async ({ graphql, actions, reporter }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     {
       allContentfulProjects {
@@ -18,7 +17,7 @@ exports.createProjectItemPages = async ({ graphql, actions, reporter }) => {
   result.data.allContentfulProjects.nodes.forEach(node => {
     actions.createPage({
       path: `/${node.slug}/`,
-      component: require.resolve('./src/templates/project-single-template.js'),
+      component: path.resolve('./src/templates/project-item-template.js'),
       context: {
         slug: node.slug
       }
