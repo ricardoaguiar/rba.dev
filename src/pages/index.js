@@ -6,8 +6,8 @@ import Posts from '../components/PostNav/PostNav'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Layout from '../components/Layout'
-import Skills from '../components/Skills'
 import Contact from '../components/ContactForm/Contact'
+import Skills from '../components/Skills'
 
 library.add(faEnvelope)
 
