@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Layout from '../components/Layout'
 import Skills from '../components/Skills'
+import Contact from '../components/ContactForm/Contact'
 
 library.add(faEnvelope)
 
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <Home />
     <Skills />
     <Posts />
+    <Contact />
   </Layout>
 )
 

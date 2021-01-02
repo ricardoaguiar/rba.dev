@@ -20,6 +20,7 @@ export const GridContainer = styled.nav`
   ${respondTo.T900`
      grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
      margin-left: 90px;
+     margin-bottom: 8vh;
   `}
 `
 // grid item / cell

@@ -165,6 +165,7 @@ const ProjectImages = styled.div`
   background: transparent;
   margin-left: 90px;
   margin-right: 20px;
+  padding-bottom: 30px;
 
   ${respondTo.T700`
      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

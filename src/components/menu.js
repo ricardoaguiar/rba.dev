@@ -39,16 +39,16 @@ const Menu = ({ open }) => {
               About Me
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to='/contact/'>
-              {/* <span
+              <span
                 data-content="Contact"
                 aria-hidden="true"
                 aria-label="Contact"
-              ></span> */}
+              ></span>
               Contact
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to='/blog/'>
               {/* <span
