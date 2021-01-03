@@ -20,15 +20,15 @@ const Contact = () => {
       "https://form.typeform.com/to/S2uERHXc",
       {
         mode: "widget",
-        hideHeader: true,
-        hideFooter: true,
-        opacity: 0,
+        hideHeader: false,
+        hideFooter: false,
+        opacity: 50,
       }
     )
   }, [typeformRef])
 
   return (
-    <ContactForm ref={typeformRef} style={{ height: "65vh", width: "100%", paddingTop: "5vh" }} /> 
+    <ContactForm ref={typeformRef} style={{ height: "75vh", width: "100%" }} /> 
   )
 }
 
