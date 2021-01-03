@@ -11,16 +11,16 @@ export const FooterSection = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 20vh;
+  min-height: 25vh;
   margin: 0 auto;
   padding: 6vh 0;
-  width: 100%;
+  max-width: 100%;
   box-sizing: inherit;
 
   ${respondTo.T900`
     flex-direction: row;
     justify-content:space-around;
-    width: calc(100vw - 90px);
+    /* width: calc(100vw - 90px); */
     margin-left: 90px;
     padding: 0;
     background: var(--rise-1);

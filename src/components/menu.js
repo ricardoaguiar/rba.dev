@@ -1,8 +1,9 @@
 import React from 'react'
-import { bool } from 'prop-types'
+// import { bool } from 'prop-types'
 import { MenuNavigation, MenuList, Connect } from './menu-styled'
 import SocialMediaMenu from './SocialMedia'
 import Link from './link'
+
 
 const Menu = ({ open }) => {
   return (
@@ -39,16 +40,6 @@ const Menu = ({ open }) => {
               About Me
             </Link>
           </li>
-          {/* <li>
-            <Link to='/contact/'>
-              <span
-                data-content="Contact"
-                aria-hidden="true"
-                aria-label="Contact"
-              ></span>
-              Contact
-            </Link>
-          </li> */}
           <li>
             <Link to='/blog/'>
               {/* <span
@@ -69,8 +60,8 @@ const Menu = ({ open }) => {
   )
 }
 
-Menu.propTypes = {
-  open: bool.isRequired
-}
+// Menu.propTypes = {
+//   open: bool.isRequired
+// }
 
 export default Menu
