@@ -1,11 +1,23 @@
-import React, { useState, useRef } from 'react'
-import styled from '@emotion/styled'
-import { respondTo } from '../utils/_respondTo'
-import Menu from './menu'
-import { useOnClickOutside } from './hooks/hooks'
-import RbaLogo from './logo/rba-logo'
-import BurgerComponent from './Burger'
-import { FaEnvelope } from 'react-icons/fa'
+import React from "react"
+import styled from "@emotion/styled"
+import { respondTo } from "../utils/_respondTo"
+// import Menu from "./menu"
+// import { useOnClickOutside } from "./hooks/hooks"
+import RbaLogo from "./logo/rba-logo"
+// import BurgerComponent from "./Burger"
+import SocialMediaMenu from "./SocialMedia"
+import {
+  // FaEnvelope,
+  // FaGrinStars,
+  // FaGithubSquare,
+  // FaLinkedin,
+  // FaComments,
+  // FaRegThumbsUp,
+  // FaWordpress,
+  FaCogs,
+  FaUser,
+} from "react-icons/fa"
+import { Link } from "gatsby"
 
 export const NavComponent = styled.nav`
   background: var(--white);
@@ -64,24 +76,41 @@ export const HeaderNavItem = styled.li`
   }
 `
 
-export default function Nav () {
-  const [open, setOpen] = useState(false)
-  const node = useRef()
-  useOnClickOutside(node, () => setOpen(false))
+export default function Nav() {
+  // const [open, setOpen] = useState(false)
+  // const node = useRef()
+  // useOnClickOutside(node, () => setOpen(false))
 
   return (
     <>
-      <Menu open={open} setOpen={setOpen} />
-      <NavComponent ref={node}>
+      {/* <Menu open={open} setOpen={setOpen} /> */}
+      <NavComponent>
         <HeaderNav>
           <HeaderNavItem>
             <RbaLogo />
           </HeaderNavItem>
           <HeaderNavItem>
-            <BurgerComponent open={open} setOpen={setOpen} />
+            <Link to="/about/">
+              <FaUser size={24} />
+            </Link>
           </HeaderNavItem>
           <HeaderNavItem>
-            <FaEnvelope size={28} />
+            <Link to="/">
+              <FaCogs size={24} />
+            </Link>
+          </HeaderNavItem>
+          {/* <HeaderNavItem>
+            <Link to="/blog/">
+              <FaLinkedin size={24} />
+            </Link>
+          </HeaderNavItem>
+          <HeaderNavItem>
+            <Link to="/blog/">
+              <FaGithubSquare size={24} />
+            </Link>
+          </HeaderNavItem> */}
+          <HeaderNavItem>
+            <SocialMediaMenu />
           </HeaderNavItem>
         </HeaderNav>
       </NavComponent>

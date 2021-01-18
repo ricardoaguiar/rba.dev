@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import { css } from '@emotion/react'
-import { respondTo } from '../utils/_respondTo'
-import styled from '@emotion/styled'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState } from "react"
+import { css } from "@emotion/react"
+import { respondTo } from "../utils/_respondTo"
+import styled from "@emotion/styled"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SocialMediaMenu = () => {
-  const [background, setBackground] = useState('var(--rbadev-mono-4-hex)')
+  const [background, setBackground] = useState("var(--rbadev-mono-4-hex)")
 
   const setStyle = background => {
     setBackground(background)
@@ -57,10 +57,10 @@ const SocialMediaMenu = () => {
 
   return (
     <nav className={Menu}>
-      <a href='https://www.linkedin.com/in/jricardoaguiar/' target='blank'>
+      <a href="https://www.linkedin.com/in/jricardoaguiar/" target="blank">
         <SocialMediaIcon
           onMouseEnter={() => setStyle(`${linkedin}`)}
-          onMouseOut={() => setStyle('var(--rbadev-mono-4-hex)')}
+          onMouseOut={() => setStyle("var(--rbadev-mono-4-hex)")}
           className={css`
             color: var(--rbadev-mono-2-hex);
             &:hover {
@@ -69,17 +69,17 @@ const SocialMediaMenu = () => {
           `}
         >
           <FontAwesomeIcon
-            icon={['fab', 'linkedin']}
-            size='2x'
-            pointerEvents='none'
+            icon={["fab", "linkedin"]}
+            size="2x"
+            pointerEvents="none"
           />
         </SocialMediaIcon>
       </a>
 
-      <a href='https://www.github.com/ricardoaguiar/' target='blank'>
+      <a href="https://www.github.com/ricardoaguiar/" target="blank">
         <SocialMediaIcon
           onMouseEnter={() => setStyle(`${github}`)}
-          onMouseOut={() => setStyle('var(--rbadev-mono-4-hex)')}
+          onMouseOut={() => setStyle("var(--rbadev-mono-4-hex)")}
           className={css`
             color: var(--rbadev-mono-2-hex);
             &:hover {
@@ -88,17 +88,17 @@ const SocialMediaMenu = () => {
           `}
         >
           <FontAwesomeIcon
-            icon={['fab', 'github-square']}
-            size='2x'
-            pointerEvents='none'
+            icon={["fab", "github-square"]}
+            size="2x"
+            pointerEvents="none"
           />
         </SocialMediaIcon>
       </a>
 
-      <a href='https://www.tiwtter.com/devrba' target='blank'>
+      <a href="https://www.twitter.com/jricardoaguiar" target="blank">
         <SocialMediaIcon
           onMouseEnter={() => setStyle(`${twitter}`)}
-          onMouseOut={() => setStyle('var(--rbadev-mono-4-hex)')}
+          onMouseOut={() => setStyle("var(--rbadev-mono-4-hex)")}
           className={css`
             color: var(--rbadev-mono-2-hex);
             &:hover {
@@ -107,17 +107,17 @@ const SocialMediaMenu = () => {
           `}
         >
           <FontAwesomeIcon
-            icon={['fab', 'twitter-square']}
-            size='2x'
-            pointerEvents='none'
+            icon={["fab", "twitter-square"]}
+            size="2x"
+            pointerEvents="none"
           />
         </SocialMediaIcon>
       </a>
 
-      <a href='https://www.instagram.com/ricardoaguiar/' target='blank'>
+      <a href="https://www.instagram.com/ricardoaguiar/" target="blank">
         <SocialMediaIcon
           onMouseEnter={() => setStyle(`${instagram}`)}
-          onMouseOut={() => setStyle('var(--rbadev-mono-4-hex)')}
+          onMouseOut={() => setStyle("var(--rbadev-mono-4-hex)")}
           className={css`
             color: var(--rbadev-mono-2-hex);
             &:hover {
@@ -126,9 +126,9 @@ const SocialMediaMenu = () => {
           `}
         >
           <FontAwesomeIcon
-            icon={['fab', 'instagram-square']}
-            size='2x'
-            pointerEvents='none'
+            icon={["fab", "instagram-square"]}
+            size="2x"
+            pointerEvents="none"
           />
         </SocialMediaIcon>
       </a>
