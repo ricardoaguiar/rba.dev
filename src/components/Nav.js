@@ -110,7 +110,7 @@ export default function Nav() {
             </Link>
           </HeaderNavItem> */}
           <HeaderNavItem>
-            <SocialMediaMenu />
+    {/* <SocialMediaMenu /> */}
           </HeaderNavItem>
         </HeaderNav>
       </NavComponent>
