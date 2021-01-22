@@ -6,7 +6,6 @@ export const ContactForm = styled.div`
   margin: 0 auto;
   width: 100%;
   background-color: var(--rise-5);
-  border-bottom: 6px solid var(--rise-7);
   padding: 0;
 
 `

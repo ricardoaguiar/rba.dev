@@ -61,14 +61,15 @@ html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  --minFontSize: 16px;
-  --maxFontSize: 24px;
+  /* --minFontSize: 16px;
+  --maxFontSize: 24px; */
   /* 1rem will be set to this: */
-  font-size: clamp(
+  /* font-size: clamp(
     var(--minFontSize),
     0.5vw + calc(0.75 * var(--minFontSize)),
     var(--maxFontSize)
-  );
+  ); */
+  font-size: clamp(100%, 1rem + 2vw, 24px);
 }
 
 *,

@@ -4,9 +4,10 @@ import styled from '@emotion/styled'
 const AboutContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
-  margin: 3rem;
-  padding: 0.5rem;
-  background-color: var(--rba-4);
+  padding: 8vh 8vw 8vh 12vw;
+  background-color: var(--white);
+  width: 100vw;
+  height: 75vh;
 `
 
 const BlogList = styled.ul`
@@ -26,8 +27,9 @@ const BlogList = styled.ul`
 
 function AboutPage () {
   return (
+    <>
     <AboutContainer>
-      <h3>Who is this guy?</h3>
+      <h3>Hi</h3>
       <BlogList>
         <li>
           <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
@@ -46,6 +48,7 @@ function AboutPage () {
         </li>
       </BlogList>
     </AboutContainer>
+    </>
   )
 }
 

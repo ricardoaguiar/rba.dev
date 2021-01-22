@@ -16,6 +16,10 @@ export const FooterSection = styled.footer`
   padding: 6vh 0;
   max-width: 100%;
   box-sizing: inherit;
+  background: var(--rise-1);
+  color: var(--rise-8);
+  border-top: 6px solid var(--rise-5);
+
 
   ${respondTo.T900`
     flex-direction: row;
@@ -23,8 +27,6 @@ export const FooterSection = styled.footer`
     /* width: calc(100vw - 90px); */
     margin-left: 90px;
     padding: 0;
-    background: var(--rise-1);
-    color: var(--rise-8);
 `}
 `
 export const FooterItems = styled.nav`

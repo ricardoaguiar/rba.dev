@@ -32,11 +32,16 @@ export const MenuNavigation = styled.nav`
     text-decoration: none;
     position: relative;
     overflow: hidden;
-    line-height: clamp(0.8, 1, 1.5);
-    /* text-align: center; */
     margin: auto;
-    font-size: 3rem;
-    line-height: 1.2;
+    font-size: clamp(1rem, 8vw, 2.5rem); 
+    line-height: 2;
+    text-align: center;
+
+    ${respondTo.T900`
+     line-height: 1.6;
+    `}
+
+
 
     & span {
       position: absolute;
