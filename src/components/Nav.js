@@ -1,21 +1,21 @@
-import React from "react"
+import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
 import { respondTo } from "../utils/_respondTo"
-// import Menu from "./menu"
-// import { useOnClickOutside } from "./hooks/hooks"
+import Menu from "./menu"
+import { useOnClickOutside } from "./hooks/hooks"
 import RbaLogo from "./logo/rba-logo"
-// import BurgerComponent from "./Burger"
-import SocialMediaMenu from "./SocialMedia"
+import BurgerComponent from "./Burger"
+// import SocialMediaMenu from "./SocialMedia"
 import {
   // FaEnvelope,
   // FaGrinStars,
-  // FaGithubSquare,
-  // FaLinkedin,
+  FaGithubSquare,
+  FaLinkedin,
   // FaComments,
   // FaRegThumbsUp,
   // FaWordpress,
-  FaCogs,
-  FaUser,
+  // FaCogs,
+  // FaUser,
 } from "react-icons/fa"
 import { Link } from "gatsby"
 
@@ -56,10 +56,12 @@ export const HeaderNav = styled.ul`
     align-items: center;
     max-width: 90px;
     height: calc(100vh - 10%);
+
   `}
 `
 export const HeaderNavItem = styled.li`
   display: flex;
+  flex-flow: column wrap;
   align-items: center;
   padding: 0;
   margin: 0;
@@ -70,50 +72,35 @@ export const HeaderNavItem = styled.li`
     margin: .7rem auto;
 
   `}
-
-  &:last-child {
-    justify-content: flex-end;
-  }
 `
 
 export default function Nav() {
-  // const [open, setOpen] = useState(false)
-  // const node = useRef()
-  // useOnClickOutside(node, () => setOpen(false))
+  const [open, setOpen] = useState(false)
+  const node = useRef()
+  useOnClickOutside(node, () => setOpen(false))
 
   return (
-    <>
-      {/* <Menu open={open} setOpen={setOpen} /> */}
-      <NavComponent>
-        <HeaderNav>
-          <HeaderNavItem>
-            <RbaLogo />
-          </HeaderNavItem>
-          <HeaderNavItem>
-            <Link to="/about/">
-              <FaUser size={24} />
-            </Link>
-          </HeaderNavItem>
-          <HeaderNavItem>
-            <Link to="/">
-              <FaCogs size={24} />
-            </Link>
-          </HeaderNavItem>
-          {/* <HeaderNavItem>
-            <Link to="/blog/">
-              <FaLinkedin size={24} />
-            </Link>
-          </HeaderNavItem>
-          <HeaderNavItem>
-            <Link to="/blog/">
-              <FaGithubSquare size={24} />
-            </Link>
-          </HeaderNavItem> */}
-          <HeaderNavItem>
-    {/* <SocialMediaMenu /> */}
-          </HeaderNavItem>
-        </HeaderNav>
-      </NavComponent>
-    </>
+    <NavComponent ref={node}>
+      <Menu open={open} setOpen={setOpen} />
+      <HeaderNav>
+        <HeaderNavItem>
+          <RbaLogo />
+        </HeaderNavItem>
+        <BurgerComponent open={open} setOpen={setOpen} />
+        {/* <HeaderNavItem>
+          <Link to="/about/">
+            <FaUser size={24} />
+          </Link>
+        </HeaderNavItem> */}
+        <HeaderNavItem>
+          <Link to="/">
+            <FaLinkedin size={24} />
+          </Link>
+          <Link to="/">
+            <FaGithubSquare size={24} />
+          </Link>
+        </HeaderNavItem>
+      </HeaderNav>
+    </NavComponent>
   )
 }

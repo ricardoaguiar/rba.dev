@@ -1,9 +1,9 @@
 import React from "react"
 // import { bool } from 'prop-types'
-import { MenuNavigation, MenuList, Connect } from "./menu-styled"
-import SocialMediaMenu from "./SocialMedia"
-// import Link from "./link"
-import { Link } from "gatsby"
+import { MenuNavigation, MenuList } from "./menu-styled"
+// import SocialMediaMenu from "./SocialMedia"
+import Link from "./link"
+// import { Link } from "gatsby"
 
 const Menu = ({ open }) => {
   return (
@@ -22,38 +22,31 @@ const Menu = ({ open }) => {
           </li>
           <li>
             <Link to="/recommendations/">
-              {/* <span
+              <span
                 data-content="Recommendations"
                 aria-hidden="true"
                 aria-label="Recommendations"
-              ></span> */}
+              />
               Recommendations
             </Link>
           </li>
           <li>
-            {/* <span
-              data-content="About Me"
-              aria-hidden="true"
-              aria-label="About Me"
-            ></span> */}
-            <Link to="/about/">About Me</Link>
-            {console.log(Link)}
-          </li>
-          <li>
-            <Link to="/blog/">
-              {/* <span
-                data-content="Blog"
+            <Link to="/about/">
+              <span
+                data-content="About Me"
                 aria-hidden="true"
-                aria-label="Blog"
-              ></span> */}
-              Blog
+                aria-label="About Me"
+              />
+              About Me
             </Link>
           </li>
+          {/* <li>
+            <Link to="/blog/">
+              <span data-content="Blog" aria-hidden="true" aria-label="Blog" />
+              Blog
+            </Link>
+          </li> */}
         </MenuList>
-        <Connect>
-          <h3>Connect</h3>
-        </Connect>
-        <SocialMediaMenu />
       </MenuNavigation>
     </>
   )
