@@ -8,7 +8,7 @@ export const HomeContainer = styled.header`
   flex: 1 0 auto;
   margin: 0 auto;
   padding: 12vh 10vw;
-  color: var(--rba-9);
+  color: var(--rise-8);
   background: var(--rise-1);
   border-bottom: 6px solid var(--rise-5);
 

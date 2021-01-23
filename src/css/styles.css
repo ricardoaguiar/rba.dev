@@ -2,8 +2,6 @@
   /* main theme colors */
   --black: #000;
   --white: #fff;
-  --logo: #ff8900;
-  --logo-20: #ff890040;
 
   /* social media logo colors */
   --facebook: #1877f2;
@@ -28,13 +26,6 @@
   --twitter: #1da1f2;
   --whatsapp: #25d366;
 
-  --game-1: #181717;
-  --game-1: #302f2f;
-  --game-1: #082345;
-  --game-2: #3299bb;
-  --game-4: #ff9616;
-  --game-4: #bcbcbc;
-  --game-5: #f4f4f4;
 
   --rise-1: #041122;
   --rise-2: #082448;
@@ -46,30 +37,20 @@
   --rise-7: #49bce335;
   --rise-8: #fefefe;
 
-  --rba-1: #004a98;
-  --rba-2: #1077c3;
-  --rba-3: #3a9dd8;
-  --rba-4: #49bce3;
-  --rba-5: #56042c;
-  --rba-6: #fec310;
-  --rba-7: #75c040;
-  --rba-8: #df1922;
-  --rba-9: #f2f2f2;
 }
 
 html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  /* --minFontSize: 16px;
-  --maxFontSize: 24px; */
+  --minFontSize: 16px;
+  --maxFontSize: 24px;
   /* 1rem will be set to this: */
-  /* font-size: clamp(
+  font-size: clamp(
     var(--minFontSize),
     0.5vw + calc(0.75 * var(--minFontSize)),
     var(--maxFontSize)
-  ); */
-  font-size: clamp(100%, 1rem + 2vw, 24px);
+  );
 }
 
 *,
@@ -78,17 +59,13 @@ html {
   box-sizing: inherit;
 }
 
-/* footer > * {
-  outline: 1px dashed purple;
-} */
-
 body {
   font-family: apertura, arboria, sans-serif, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue;
+  Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+  Helvetica Neue;
   margin: 0 auto;
-  color: var(--SA-3);
   /* font-size: clamp(2vw, 12px + 1.2vw, 2rem); */
+  /* font-size: clamp(100%, 1rem + 2vw, 24px); */
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -101,8 +78,8 @@ body {
   color: inherit;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
-  background-color: var(--SA-2);
 }
+
 div,
 span {
   font-family: "apertura", arboria, sans-serif, -apple-system,
@@ -110,13 +87,15 @@ span {
     Droid Sans, Helvetica Neue;
 }
 a {
-  color: var(--rbadev-mono-5-hex);
+  color: var(--rise-2);
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  text-decoration: underline;
 }
 abbr[title] {
   border-bottom: none;

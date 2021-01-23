@@ -93,12 +93,12 @@ export default function Nav() {
           </Link>
         </HeaderNavItem> */}
         <HeaderNavItem>
-          <Link to="/">
+          {/* <Link to="/">
             <FaLinkedin size={24} />
           </Link>
           <Link to="/">
             <FaGithubSquare size={24} />
-          </Link>
+          </Link> */}
         </HeaderNavItem>
       </HeaderNav>
     </NavComponent>

@@ -1,12 +1,13 @@
-import React from 'react'
-import '../css/styles.css'
+import React from "react"
+import "../css/styles.css"
 // import { keyframes } from "@emotion/react"
-import styled from '@emotion/styled'
-import SEO from '../components/seo'
-import Layout from '../components/Layout'
-import Img from 'gatsby-image'
-import { graphql } from 'gatsby'
-import { respondTo } from '../utils/_respondTo'
+import styled from "@emotion/styled"
+import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import Img from "gatsby-image"
+import { graphql } from "gatsby"
+import { respondTo } from "../utils/_respondTo"
+// import { INLINES } from '@contentful/rich-text-types'
 
 export const query = graphql`
   query($slug: String!) {
@@ -79,41 +80,34 @@ const ProjectDescription = styled.div`
   `}
 `
 
-const PortfolioArticle = styled.div`
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background-color: transparent;
-
-  ${respondTo.T900`
-    `};
+const Line = styled.div`
+  height: 4px;
+  width: 50%;
+  background: var(--rise-4);
+  margin: 0 auto 8vh;
 `
 
-// const LineSlider = keyframes`
-//   from, 20%, 53%, 80%, to {
-//     transform: translate3d(0,0,0);
-//   }
+const ProjectComponents = styled.div`
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  flex-flow: column wrap;
+  grid-gap: 10px;
+  margin: auto 10vw;
+  background-color: white;
+  justify-content: space-around;
 
-//   40%, 43% {
-//     transform: translate3d(0, -30px, 0);
-//   }
+  & h4 {
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+`
 
-//   70% {
-//     transform: translate3d(0, -15px, 0);
-//   }
-
-//   90% {
-//     transform: translate3d(0,-4px,0);
-//   }
-// `
-const Line = styled.div`
-  height: 2px;
-  width: 30%;
-  background: var(--rise-7);
-  animation: 1s slidein;
-  z-index: -1;
-  margin: auto 5vh;
+const TechStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.2mm;
 `
 
 const PortfolioImage = styled.div`
@@ -122,20 +116,16 @@ const PortfolioImage = styled.div`
 
   ${respondTo.T900`
     border: 1px solid #cccccc;
-    border-rarius: 10px;
+    border-radius: 10px;
   `}
 `
 
 const PortfolioList = styled.ul`
-  display: flex;
   justify-content: center;
   list-style: none;
-  margin-right: 1rem;
-  width: auto;
 
   ${respondTo.T900`
    margin-left: 70px;
-   font-size: 14px;
 `}
 `
 const PortfolioListItem = styled.li`
@@ -143,19 +133,6 @@ const PortfolioListItem = styled.li`
   margin-bottom: 1rem;
   padding: 2px 5px;
 `
-
-// const ProjectScope = styled.div`
-//   flex: 1;
-//   width: 80vw;
-//   margin-bottom: 100px;
-//   font-size: 18px;
-//   color: var(--rbadev-mono-4-hex);
-//   line-height: 2;
-
-//   ${respondTo.T900`
-//      margin: 0 auto;
-//   `}
-// `
 
 const ProjectImages = styled.div`
   display: grid;
@@ -181,87 +158,69 @@ const ProjectImages = styled.div`
   `}
 `
 
-const TechStack = styled.span`
-  font-weight: 600;
-  color: #000000;
-  font-size: 0.8rem;
-  letter-spacing: 0.2mm;
-  padding: 4px;
-  margin: 4px;
-  height: min-content;
-  width: max-content;
-`
-const ProjectComponents = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  ${respondTo.T900`
-  margin-left: 120px;
-  width: fit-content;
-  `}
-  & h4 {
-    margin-left: 0;
-    text-transform: uppercase;
-  }
-`
-
-const ProjectSpecs = styled.div`
-  display: flex;
-  margin: 0 auto;
-  width: 80vw;
-`
-
 const PortfolioTemplate = ({ data: { portfolio } }) => (
   <Layout>
     <SEO title={portfolio.title} />
-    <PortfolioArticle>
-      <ProjectDescription
-        dangerouslySetInnerHTML={{
-          __html: portfolio.overview.childMarkdownRemark.html
-        }}
-      />
-      <Line />
-      <ProjectSpecs>
-        <ProjectComponents>
-          <h4>Project</h4>
-          <PortfolioList>
-            <PortfolioListItem
-              dangerouslySetInnerHTML={{
-                __html: portfolio.projectType.childMarkdownRemark.html
-              }}
-            />
-          </PortfolioList>
-        </ProjectComponents>
-        <ProjectComponents>
-          <h4>Stack</h4>
-          {portfolio.projectStack &&
-            portfolio.projectStack.map(tag => (
-              <TechStack key={tag}>{tag}</TechStack>
-            ))}
-        </ProjectComponents>
-        <ProjectComponents>
-          <h4>Repo</h4>
-          <span
-            dangerouslySetInnerHTML={{
-              __html: portfolio.repo.childMarkdownRemark.html
-            }}
-          />
-        </ProjectComponents>
-        <ProjectComponents>
-          <h4>Site</h4>
-          <span
-            dangerouslySetInnerHTML={{
-              __html: portfolio.viewProject.childMarkdownRemark.html
-            }}
-          />
-        </ProjectComponents>
-      </ProjectSpecs>
-    </PortfolioArticle>
+
     <ProjectDescription
       dangerouslySetInnerHTML={{
-        __html: portfolio.stackSelection.childMarkdownRemark.html
+        __html: portfolio.overview.childMarkdownRemark.html,
       }}
     />
+
+    <Line />
+
+    <ProjectComponents>
+      <PortfolioList>
+        <PortfolioListItem>
+          <h4>Project</h4>
+        </PortfolioListItem>
+        <PortfolioListItem
+          dangerouslySetInnerHTML={{
+            __html: portfolio.projectType.childMarkdownRemark.html,
+          }}
+        />
+      </PortfolioList>
+
+      <PortfolioList>
+        <PortfolioListItem>
+          <h4>Stack</h4>
+        </PortfolioListItem>
+        {portfolio.projectStack &&
+          portfolio.projectStack.map(tag => (
+            <TechStack key={tag}>{tag}</TechStack>
+          ))}
+      </PortfolioList>
+
+      <PortfolioList>
+        <PortfolioListItem>
+          <h4>Repo</h4>
+        </PortfolioListItem>
+        <PortfolioListItem
+          dangerouslySetInnerHTML={{
+            __html: portfolio.repo.childMarkdownRemark.html,
+          }}
+        />
+      </PortfolioList>
+
+      <PortfolioList>
+        <PortfolioListItem>
+          <h4>Site</h4>
+        </PortfolioListItem>
+        <PortfolioListItem
+          dangerouslySetInnerHTML={{
+            __html: portfolio.viewProject.childMarkdownRemark.html,
+          }}
+        />
+      </PortfolioList>
+    </ProjectComponents>
+
+    <ProjectDescription
+      dangerouslySetInnerHTML={{
+        __html: portfolio.stackSelection.childMarkdownRemark.html,
+      }}
+    />
+
     <ProjectImages>
       {portfolio.images &&
         portfolio.images.map(image => (
@@ -270,11 +229,13 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           </PortfolioImage>
         ))}
     </ProjectImages>
+
     <ProjectDescription
       dangerouslySetInnerHTML={{
-        __html: portfolio.projectChallenges.childMarkdownRemark.html
+        __html: portfolio.projectChallenges.childMarkdownRemark.html,
       }}
     />
+
     <PortfolioList>
       <PortfolioListItem>Published: {portfolio.publishDate}</PortfolioListItem>
       •|•
