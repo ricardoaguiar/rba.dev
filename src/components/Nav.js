@@ -97,12 +97,20 @@ export default function Nav() {
             <FaUser size={24} />
           </Link> */}
         <HeaderNavItem>
-          <Link to="/">
+          <a
+            href="https://www.linkedin.com/in/jricardoaguiar/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedin size={24} />
-          </Link>
-          <Link to="/">
+          </a>
+          <a
+            href="https://github.com/ricardoaguiar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithubSquare size={24} />
-          </Link>
+          </a>
         </HeaderNavItem>
       </HeaderNav>
     </NavComponent>
