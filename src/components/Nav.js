@@ -24,7 +24,7 @@ export const NavComponent = styled.nav`
   display: flex;
   flex-flow: row;
   position: fixed;
-  justify-content: space-between;
+  justify-content: center;
   top: 0;
   left: 0;
   height: 50px;
@@ -55,6 +55,7 @@ export const HeaderNav = styled.ul`
     flex: 1 0 auto;
     align-items: center;
     max-width: 90px;
+    max-height: 98vh;
     height: calc(100vh - 10%);
 
   `}
@@ -63,6 +64,7 @@ export const HeaderNavItem = styled.li`
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
   width: 50px;
@@ -86,19 +88,21 @@ export default function Nav() {
         <HeaderNavItem>
           <RbaLogo />
         </HeaderNavItem>
-        <BurgerComponent open={open} setOpen={setOpen} />
-        {/* <HeaderNavItem>
-          <Link to="/about/">
-            <FaUser size={24} />
-          </Link>
-        </HeaderNavItem> */}
+
         <HeaderNavItem>
-          {/* <Link to="/">
+          <BurgerComponent open={open} setOpen={setOpen} />
+        </HeaderNavItem>
+
+        {/* <Link to="/about/">
+            <FaUser size={24} />
+          </Link> */}
+        <HeaderNavItem>
+          <Link to="/">
             <FaLinkedin size={24} />
           </Link>
           <Link to="/">
             <FaGithubSquare size={24} />
-          </Link> */}
+          </Link>
         </HeaderNavItem>
       </HeaderNav>
     </NavComponent>

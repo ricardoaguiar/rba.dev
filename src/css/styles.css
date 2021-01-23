@@ -26,7 +26,6 @@
   --twitter: #1da1f2;
   --whatsapp: #25d366;
 
-
   --rise-1: #041122;
   --rise-2: #082448;
   --rise-3: #259073;
@@ -36,7 +35,6 @@
   --rise-6: #e6f99d;
   --rise-7: #49bce335;
   --rise-8: #fefefe;
-
 }
 
 html {
@@ -61,8 +59,8 @@ html {
 
 body {
   font-family: apertura, arboria, sans-serif, -apple-system, BlinkMacSystemFont,
-  Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-  Helvetica Neue;
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue;
   margin: 0 auto;
   /* font-size: clamp(2vw, 12px + 1.2vw, 2rem); */
   /* font-size: clamp(100%, 1rem + 2vw, 24px); */
@@ -91,6 +89,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
+  margin: 0;
 }
 a:active,
 a:hover {
