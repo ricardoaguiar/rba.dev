@@ -81,7 +81,7 @@ const ProjectDescription = styled.div`
 `
 
 const Line = styled.div`
-  height: 4px;
+  height: 3px;
   width: 50%;
   background: var(--rise-4);
   margin: 0 auto 8vh;
@@ -96,20 +96,11 @@ const ProjectComponents = styled.div`
   align-items: flex-start;
   padding-block: 2vh;
   border-radius: 10px;
+  border: 6px solid var(--rise-5);
 
-  & h4 {
-    margin: 0;
-    text-transform: uppercase;
-  }
   ${respondTo.T900`
   flex-direction: row;
-`}
-`
-
-const TechStack = styled.span`
-  /* display: flex;
-  flex-direction: column; */
-  letter-spacing: 0.2mm;
+`};
 `
 
 const PortfolioImage = styled.div`
@@ -125,17 +116,23 @@ const PortfolioImage = styled.div`
 const PortfolioList = styled.ul`
   justify-content: center;
 
+  & li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 2px 5px;
+    justify-content: space-around;
+  }
+  & h4 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  & span {
+    letter-spacing: 0.5mm;
+  }
   ${respondTo.T900`
    /* margin-left: 70px; */
 `};
-`
-const PortfolioListItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  background-color: transparent;
-  margin-bottom: 1rem;
-  padding: 2px 5px;
-  justify-content: space-around;
 `
 
 const ProjectImages = styled.div`
@@ -172,14 +169,12 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       }}
     />
 
-    <Line />
-
     <ProjectComponents>
       <PortfolioList>
-        <PortfolioListItem>
+        <li>
           <h4>Project</h4>
-        </PortfolioListItem>
-        <PortfolioListItem
+        </li>
+        <li
           dangerouslySetInnerHTML={{
             __html: portfolio.projectType.childMarkdownRemark.html,
           }}
@@ -187,22 +182,20 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </PortfolioList>
 
       <PortfolioList>
-        <PortfolioListItem>
+        <li>
           <h4>Stack</h4>
-        </PortfolioListItem>
-        <PortfolioListItem>
+        </li>
+        <li>
           {portfolio.projectStack &&
-            portfolio.projectStack.map(tag => (
-              <TechStack key={tag}>{tag}</TechStack>
-            ))}
-        </PortfolioListItem>
+            portfolio.projectStack.map(tag => <span key={tag}>{tag}</span>)}
+        </li>
       </PortfolioList>
 
       <PortfolioList>
-        <PortfolioListItem>
+        <li>
           <h4>Repo</h4>
-        </PortfolioListItem>
-        <PortfolioListItem
+        </li>
+        <li
           dangerouslySetInnerHTML={{
             __html: portfolio.repo.childMarkdownRemark.html,
           }}
@@ -210,10 +203,10 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </PortfolioList>
 
       <PortfolioList>
-        <PortfolioListItem>
+        <li>
           <h4>Site</h4>
-        </PortfolioListItem>
-        <PortfolioListItem
+        </li>
+        <li
           dangerouslySetInnerHTML={{
             __html: portfolio.viewProject.childMarkdownRemark.html,
           }}
@@ -243,10 +236,9 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
     />
 
     <PortfolioList>
-      <PortfolioListItem>Published: {portfolio.publishDate}</PortfolioListItem>
+      <li>Published: {portfolio.publishDate}</li>
       •|•
-      <PortfolioListItem>Updated: {portfolio.updatedAt}</PortfolioListItem>
-      <PortfolioListItem />
+      <li>Updated: {portfolio.updatedAt}</li>
     </PortfolioList>
   </Layout>
 )
