@@ -89,24 +89,26 @@ const Line = styled.div`
 
 const ProjectComponents = styled.div`
   display: flex;
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-  flex-flow: column wrap;
-  grid-gap: 10px;
-  margin: auto 10vw;
-  background-color: white;
+  flex-direction: column;
+  margin: auto 15vw;
+  background-color: var(--rise-7);
   justify-content: space-around;
+  align-items: flex-start;
+  padding-block: 2vh;
+  border-radius: 10px;
 
   & h4 {
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
     text-transform: uppercase;
   }
+  ${respondTo.T900`
+  flex-direction: row;
+`}
 `
 
-const TechStack = styled.div`
-  display: flex;
-  flex-direction: column;
+const TechStack = styled.span`
+  /* display: flex;
+  flex-direction: column; */
   letter-spacing: 0.2mm;
 `
 
@@ -122,16 +124,18 @@ const PortfolioImage = styled.div`
 
 const PortfolioList = styled.ul`
   justify-content: center;
-  list-style: none;
 
   ${respondTo.T900`
-   margin-left: 70px;
-`}
+   /* margin-left: 70px; */
+`};
 `
 const PortfolioListItem = styled.li`
+  display: flex;
+  flex-direction: column;
   background-color: transparent;
   margin-bottom: 1rem;
   padding: 2px 5px;
+  justify-content: space-around;
 `
 
 const ProjectImages = styled.div`
@@ -186,10 +190,12 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         <PortfolioListItem>
           <h4>Stack</h4>
         </PortfolioListItem>
-        {portfolio.projectStack &&
-          portfolio.projectStack.map(tag => (
-            <TechStack key={tag}>{tag}</TechStack>
-          ))}
+        <PortfolioListItem>
+          {portfolio.projectStack &&
+            portfolio.projectStack.map(tag => (
+              <TechStack key={tag}>{tag}</TechStack>
+            ))}
+        </PortfolioListItem>
       </PortfolioList>
 
       <PortfolioList>
