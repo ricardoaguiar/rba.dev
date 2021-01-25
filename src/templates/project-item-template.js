@@ -79,7 +79,13 @@ const ProjectDescription = styled.div`
     padding: 10vh 12vw;
   `}
 `
+const ProjectDetails = styled.div`
+    width: 100vw;
+    display: flex;
+    padding-inline: 20vw;
+`
 
+`
 const Line = styled.div`
   height: 3px;
   width: 50%;
@@ -169,7 +175,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         __html: portfolio.overview.childMarkdownRemark.html,
       }}
     />
-<div>
+<ProjectDetails>
     <ProjectComponents>
       <PortfolioList>
         <li>
@@ -220,7 +226,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         />
       </PortfolioList>
     </ProjectComponents>
-  </div>
+  </ProjectDetails>
     <ProjectDescription
       dangerouslySetInnerHTML={{
         __html: portfolio.stackSelection.childMarkdownRemark.html,
