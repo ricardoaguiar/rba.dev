@@ -95,7 +95,7 @@ const ProjectComponents = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   padding-block: 2vh;
-  width: auto;
+  width: 5vw;
   border-radius: 10px;
   border: 2px solid var(--rise-5);
 
@@ -183,7 +183,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </PortfolioList>
     </ProjectComponents>
 
-      <ProjectComponents>
+     <ProjectComponents>
       <PortfolioList>
         <li>
           <h4>Stack</h4>
@@ -195,7 +195,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </PortfolioList>
     </ProjectComponents>
   
-      <ProjectComponents>
+     <ProjectComponents>
       <PortfolioList>
         <li>
           <h4>Repo</h4>
@@ -207,7 +207,8 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         />
       </PortfolioList>
     </ProjectComponents>
-      <ProjectComponents>
+  
+     <ProjectComponents>
       <PortfolioList>
         <li>
           <h4>Site</h4>
@@ -218,7 +219,6 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           }}
         />
       </PortfolioList>
-    </ProjectComponents>
     </ProjectComponents>
   
     <ProjectDescription
