@@ -101,7 +101,7 @@ const ProjectComponents = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   padding-block: 2vh;
-  width: 5vw;
+  width: 15vw;
   border-radius: 10px;
   border: 2px solid var(--rise-5);
 
