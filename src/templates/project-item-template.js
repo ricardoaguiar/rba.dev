@@ -82,7 +82,7 @@ const ProjectDescription = styled.div`
 const ProjectDetails = styled.div`
     width: 100vw;
     display: flex;
-    padding-inline: 20vw;
+    justify-content: center;
 `
 
 const Line = styled.div`
