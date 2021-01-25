@@ -181,6 +181,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         />
       </PortfolioList>
 
+      <ProjectComponents>
       <PortfolioList>
         <li>
           <h4>Stack</h4>
@@ -190,7 +191,9 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
             portfolio.projectStack.map(tag => <span key={tag}>{tag}</span>)}
         </li>
       </PortfolioList>
-
+    </ProjectComponents>
+  
+      <ProjectComponents>
       <PortfolioList>
         <li>
           <h4>Repo</h4>
@@ -201,7 +204,8 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           }}
         />
       </PortfolioList>
-
+    </ProjectComponents>
+      <ProjectComponents>
       <PortfolioList>
         <li>
           <h4>Site</h4>
@@ -213,7 +217,8 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         />
       </PortfolioList>
     </ProjectComponents>
-
+    </ProjectComponents>
+  
     <ProjectDescription
       dangerouslySetInnerHTML={{
         __html: portfolio.stackSelection.childMarkdownRemark.html,
