@@ -85,7 +85,6 @@ const ProjectDetails = styled.div`
     padding-inline: 20vw;
 `
 
-`
 const Line = styled.div`
   height: 3px;
   width: 50%;
@@ -137,9 +136,6 @@ const PortfolioList = styled.ul`
   & span {
     letter-spacing: 0.5mm;
   }
-  ${respondTo.T900`
-   /* margin-left: 70px; */
-`};
 `
 
 const ProjectImages = styled.div`
@@ -227,6 +223,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </PortfolioList>
     </ProjectComponents>
   </ProjectDetails>
+  
     <ProjectDescription
       dangerouslySetInnerHTML={{
         __html: portfolio.stackSelection.childMarkdownRemark.html,
