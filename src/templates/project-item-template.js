@@ -90,13 +90,14 @@ const Line = styled.div`
 const ProjectComponents = styled.div`
   display: flex;
   flex-direction: column;
-  margin: auto 15vw;
+  margin-inline: 5vw;
   background-color: var(--rise-7);
   justify-content: space-around;
   align-items: flex-start;
   padding-block: 2vh;
+  width: auto;
   border-radius: 10px;
-  border: 6px solid var(--rise-5);
+  border: 2px solid var(--rise-5);
 
   ${respondTo.T900`
   flex-direction: row;
@@ -180,6 +181,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           }}
         />
       </PortfolioList>
+    </ProjectComponents>
 
       <ProjectComponents>
       <PortfolioList>
