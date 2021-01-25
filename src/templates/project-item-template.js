@@ -122,22 +122,25 @@ const ProjectImages = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 30px;
+  max-width: 80vw;
   align-items: center;
   background: transparent;
-  margin-left: 90px;
-  margin-right: 20px;
+  margin-inline: auto;
   padding-bottom: 30px;
 
   ${respondTo.T700`
      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  `}
+     `}
   ${respondTo.T800`
+
      grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
-  `}
-  ${respondTo.T900`
+     `}
+     ${respondTo.T900`
+
      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  `}
-  ${respondTo.T1000`
+     `}
+     ${respondTo.T1000`
+
      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   `}
 `
