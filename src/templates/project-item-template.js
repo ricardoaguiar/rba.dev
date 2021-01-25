@@ -80,33 +80,13 @@ const ProjectDescription = styled.div`
   `}
 `
 const ProjectDetails = styled.div`
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-`
-
-const Line = styled.div`
-  height: 3px;
-  width: 50%;
-  background: var(--rise-4);
-  margin: 0 auto 8vh;
-`
-
-const ProjectComponents = styled.div`
+  max-width: 80vw;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  margin-inline: 5vw;
-  background-color: var(--rise-7);
+  flex-flow: row wrap;
   justify-content: space-around;
-  align-items: flex-start;
-  padding-block: 2vh;
-  width: 15vw;
-  border-radius: 10px;
-  border: 2px solid var(--rise-5);
-
-  ${respondTo.T900`
-  flex-direction: row;
-`};
+  align-items: center;
+  align-content: center;
 `
 
 const PortfolioImage = styled.div`
@@ -119,22 +99,22 @@ const PortfolioImage = styled.div`
   `}
 `
 
-const PortfolioList = styled.ul`
-  justify-content: center;
+const PortfolioList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-start;
+  text-align: center;
+  padding: 1rem;
+  width: 18%;
+  border-radius: 10px;
+  background-color: var(--rise-7);
+  border: 2px solid var(--rise-5);
 
-  & li {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-    padding: 2px 5px;
-    justify-content: space-around;
-  }
   & h4 {
-    margin: 0;
+    margin: 0 auto 1rem auto;
     text-transform: uppercase;
-  }
-  & span {
-    letter-spacing: 0.5mm;
+    display: block;
   }
 `
 
@@ -162,6 +142,27 @@ const ProjectImages = styled.div`
   `}
 `
 
+const Published = styled.div`
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  margin-block: 1rem;
+  align-items: center;
+  justify-content: center;
+  font-size: smaller;
+
+  & span[data-name="separator"]::after {
+    content: "🤓";
+  }
+
+  ${respondTo.T900`
+    & span[data-name="separator"]::after {
+    content: "•|•";
+  }
+  
+  `}
+`
+
 const PortfolioTemplate = ({ data: { portfolio } }) => (
   <Layout>
     <SEO title={portfolio.title} />
@@ -171,59 +172,40 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         __html: portfolio.overview.childMarkdownRemark.html,
       }}
     />
-<ProjectDetails>
-    <ProjectComponents>
+    <ProjectDetails>
       <PortfolioList>
-        <li>
-          <h4>Project</h4>
-        </li>
-        <li
+        <h4>Project</h4>
+        <span
           dangerouslySetInnerHTML={{
             __html: portfolio.projectType.childMarkdownRemark.html,
           }}
         />
       </PortfolioList>
-    </ProjectComponents>
 
-     <ProjectComponents>
       <PortfolioList>
-        <li>
-          <h4>Stack</h4>
-        </li>
-        <li>
-          {portfolio.projectStack &&
-            portfolio.projectStack.map(tag => <span key={tag}>{tag}</span>)}
-        </li>
+        <h4>Stack</h4>
+        {portfolio.projectStack &&
+          portfolio.projectStack.map(tag => <span key={tag}>{tag}</span>)}
       </PortfolioList>
-    </ProjectComponents>
-  
-     <ProjectComponents>
+
       <PortfolioList>
-        <li>
-          <h4>Repo</h4>
-        </li>
-        <li
+        <h4>Repo</h4>
+        <span
           dangerouslySetInnerHTML={{
             __html: portfolio.repo.childMarkdownRemark.html,
           }}
         />
       </PortfolioList>
-    </ProjectComponents>
-  
-     <ProjectComponents>
       <PortfolioList>
-        <li>
-          <h4>Site</h4>
-        </li>
-        <li
+        <h4>Site</h4>
+        <span
           dangerouslySetInnerHTML={{
             __html: portfolio.viewProject.childMarkdownRemark.html,
           }}
         />
       </PortfolioList>
-    </ProjectComponents>
-  </ProjectDetails>
-  
+    </ProjectDetails>
+
     <ProjectDescription
       dangerouslySetInnerHTML={{
         __html: portfolio.stackSelection.childMarkdownRemark.html,
@@ -245,11 +227,11 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       }}
     />
 
-    <PortfolioList>
-      <li>Published: {portfolio.publishDate}</li>
-      •|•
-      <li>Updated: {portfolio.updatedAt}</li>
-    </PortfolioList>
+    <Published>
+      <span>Published: {portfolio.publishDate}</span>
+      &nbsp;<span data-name="separator"></span>&nbsp;
+      <span>Updated: {portfolio.updatedAt}</span>
+    </Published>
   </Layout>
 )
 

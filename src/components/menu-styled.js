@@ -10,8 +10,8 @@ export const MenuNavigation = styled.nav`
   background: var(--rise-1);
   transform: ${({ open }) => (open ? "translateX(0px)" : "translateX(-100%)")};
   position: fixed;
-  top: 50px;
-  right: 0;
+  /* top: 50px; */
+  /* right: 0; */
   transition: transform 220ms ease-in-out;
   /* align-content: center; */
   text-transform: uppercase;
