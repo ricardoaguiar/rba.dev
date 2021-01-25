@@ -169,7 +169,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         __html: portfolio.overview.childMarkdownRemark.html,
       }}
     />
-
+<div>
     <ProjectComponents>
       <PortfolioList>
         <li>
@@ -220,7 +220,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         />
       </PortfolioList>
     </ProjectComponents>
-  
+  </div>
     <ProjectDescription
       dangerouslySetInnerHTML={{
         __html: portfolio.stackSelection.childMarkdownRemark.html,
