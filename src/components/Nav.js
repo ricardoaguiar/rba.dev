@@ -17,7 +17,6 @@ import {
   // FaCogs,
   // FaUser,
 } from "react-icons/fa"
-import { Link } from "gatsby"
 
 export const NavComponent = styled.nav`
   background: var(--white);
