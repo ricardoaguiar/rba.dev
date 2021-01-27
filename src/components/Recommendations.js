@@ -73,8 +73,6 @@ const Avatar = styled.li`
 const Reference = styled.li`
   display: flex;
   align-items: flex-start;
-  font-size: 12px;
-  font-family: bio-sans;
   width: 75%;
   padding: 0.5rem;
 
