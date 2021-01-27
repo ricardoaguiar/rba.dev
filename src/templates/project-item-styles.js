@@ -53,11 +53,9 @@ export const PortfolioList = styled.div`
     margin-block: 0;
     text-align: left;
   }
-
   & p {
     align-items: center;
   }
-
   ${respondTo.T600`
     flex: 0 1 auto;
   `}
@@ -100,7 +98,7 @@ export const Published = styled.div`
   font-size: smaller;
 
   & span[data-name="separator"]::after {
-    content: "🤓";
+    content: " 😃 ";
   }
 
   ${respondTo.T900`
