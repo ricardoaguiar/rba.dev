@@ -84,7 +84,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
     <ProjectDetails>
       <PortfolioList>
         <h4>Project</h4>
-        <span
+        <div
           dangerouslySetInnerHTML={{
             __html: portfolio.projectType.childMarkdownRemark.html,
           }}
@@ -95,13 +95,13 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         <h4>Stack</h4>
         <div>
           {portfolio.projectStack &&
-            portfolio.projectStack.map(tag => <span key={tag}>{tag}</span>)}
+            portfolio.projectStack.map(tag => <p key={tag}>{tag}</p>)}
         </div>
       </PortfolioList>
 
       <PortfolioList>
         <h4>Repo</h4>
-        <span
+        <div
           dangerouslySetInnerHTML={{
             __html: portfolio.repo.childMarkdownRemark.html,
           }}
@@ -109,7 +109,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </PortfolioList>
       <PortfolioList>
         <h4>Site</h4>
-        <span
+        <div
           dangerouslySetInnerHTML={{
             __html: portfolio.viewProject.childMarkdownRemark.html,
           }}

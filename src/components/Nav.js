@@ -81,37 +81,39 @@ export default function Nav() {
   useOnClickOutside(node, () => setOpen(false))
 
   return (
-    <NavComponent ref={node}>
-      <Menu open={open} setOpen={setOpen} />
-      <HeaderNav>
-        <HeaderNavItem>
-          <RbaLogo />
-        </HeaderNavItem>
+    <>
+      <NavComponent ref={node}>
+        <Menu open={open} setOpen={setOpen} />
+        <HeaderNav>
+          <HeaderNavItem>
+            <RbaLogo />
+          </HeaderNavItem>
 
-        <HeaderNavItem>
-          <BurgerComponent open={open} setOpen={setOpen} />
-        </HeaderNavItem>
+          <HeaderNavItem>
+            <BurgerComponent open={open} setOpen={setOpen} />
+          </HeaderNavItem>
 
-        {/* <Link to="/about/">
+          {/* <Link to="/about/">
             <FaUser size={24} />
           </Link> */}
-        <HeaderNavItem>
-          <a
-            href="https://www.linkedin.com/in/jricardoaguiar/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin size={24} />
-          </a>
-          <a
-            href="https://github.com/ricardoaguiar"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithubSquare size={24} />
-          </a>
-        </HeaderNavItem>
-      </HeaderNav>
-    </NavComponent>
+          <HeaderNavItem>
+            <a
+              href="https://www.linkedin.com/in/jricardoaguiar/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={24} />
+            </a>
+            <a
+              href="https://github.com/ricardoaguiar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithubSquare size={24} />
+            </a>
+          </HeaderNavItem>
+        </HeaderNav>
+      </NavComponent>
+    </>
   )
 }

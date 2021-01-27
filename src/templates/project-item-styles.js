@@ -30,36 +30,36 @@ export const PortfolioImage = styled.div`
 
 export const PortfolioList = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
-  text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 1rem;
   border-radius: 10px;
   background-color: var(--rise-7);
   border: 2px solid var(--rise-5);
   flex: 100%;
+  align-items: center;
 
-  & span > ul {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-    flex: 100%;
-  }
   & div {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
+    width: 100%;
+    margin-left: 0.5rem;
+    padding-inline: 1rem;
+    border-left: 1px solid var(--rise-5);
   }
+
   & h4 {
-    /* margin: 0 auto 1rem auto; */
     text-transform: uppercase;
-    display: block;
-    align-self: flex-start;
-    max-width: 40%;
+    margin-inline: 0.5rem;
+    margin-block: 0;
+    text-align: left;
   }
-  ${respondTo.T900`
-    flex: auto;
+
+  & p {
+    align-items: center;
+  }
+
+  ${respondTo.T600`
+    flex: 0 1 auto;
   `}
 `
 
