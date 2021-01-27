@@ -56,14 +56,17 @@ const RecommendationCard = styled.ul`
   border-radius: 10px;
   margin: 20px;
   font-size: 14px;
-  background-color: var(--rbadev-mono-1-hex);
+  background-color: var(--rise-7);
+  border: 4px solid var(--rise-7);
+  border-radius: 6rem;
+  padding: 2rem;
   z-index: -1;
-  width: 75vw;
+  max-width: 70vw;
 `
 
 const Avatar = styled.li`
   display: flex;
-  margin: 1rem;
+  margin-inline: 4rem;
   align-self: center;
 
   ${respondTo.T900`
