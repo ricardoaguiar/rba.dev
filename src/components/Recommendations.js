@@ -50,14 +50,9 @@ const RecommendationTitle = styled.h2`
 `
 const RecommendationCard = styled.ul`
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: center;
   border-radius: 10px;
   margin: 20px;
-  font-size: 14px;
-  background-color: var(--rise-7);
   border: 4px solid var(--rise-7);
   border-radius: 6rem;
   padding: 2rem;
