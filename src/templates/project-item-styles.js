@@ -30,7 +30,7 @@ export const PortfolioImage = styled.div`
 
 export const PortfolioList = styled.div`
   display: flex;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 1rem;
   border-radius: 10px;
   background-color: var(--rise-7);
