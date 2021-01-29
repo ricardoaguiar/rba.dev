@@ -44,6 +44,7 @@ export const PortfolioList = styled.div`
     width: 100%;
     margin-left: 0.5rem;
     padding-inline: 1rem;
+    padding: 0.5rem 1rem;
     border-left: 1px solid var(--rise-5);
   }
 
@@ -51,6 +52,7 @@ export const PortfolioList = styled.div`
     text-transform: uppercase;
     margin-inline: 0.5rem;
     margin-block: 0;
+    margin: 0 0.5rem;
     text-align: left;
   }
   & p {
@@ -70,6 +72,7 @@ export const ProjectImages = styled.div`
   background: transparent;
   margin-inline: auto;
   padding-bottom: 30px;
+  margin: auto auto auto 12vw;
 
   ${respondTo.T700`
      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -107,4 +110,9 @@ export const Published = styled.div`
   }
   
   `}
+`
+
+export const LeftImage = styled.div`
+  max-width: 40vw;
+  margin: auto;
 `

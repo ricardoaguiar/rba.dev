@@ -11,7 +11,9 @@ import {
   ProjectImages,
   PortfolioImage,
   Published,
+  LeftImage,
 } from "./project-item-styles"
+import { node } from "prop-types"
 
 export const query = graphql`
   query($slug: String!) {
@@ -52,7 +54,7 @@ export const query = graphql`
           html
         }
       }
-      heroImage {
+      images {
         fluid(maxHeight: 1000, maxWidth: 1800, quality: 90) {
           ...GatsbyContentfulFluid
         }
@@ -60,8 +62,9 @@ export const query = graphql`
         description
         title
       }
-      images {
-        fluid(maxHeight: 1000, maxWidth: 1800, quality: 90) {
+
+      singleImageLeft {
+        fluid(maxWidth: 1800, quality: 80) {
           ...GatsbyContentfulFluid
         }
         id
@@ -74,6 +77,8 @@ export const query = graphql`
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
   <Layout>
+    {console.log(portfolio)}
+    {console.log(portfolio.singleImageLeft)}
     <SEO title={portfolio.title} />
 
     <ProjectDescription
@@ -137,6 +142,14 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         __html: portfolio.projectChallenges.childMarkdownRemark.html,
       }}
     />
+
+    <LeftImage>
+      <Img
+        fluid={portfolio.singleImageLeft.fluid}
+        alt={portfolio.singleImageLeft.title}
+      />
+      <p>{portfolio.singleImageLeft.description}</p>
+    </LeftImage>
 
     <Published>
       <span>Published: {portfolio.publishDate}</span>
