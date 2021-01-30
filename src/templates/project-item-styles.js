@@ -75,7 +75,7 @@ export const ProjectImages = styled.div`
   margin: auto auto auto 12vw;
 
   ${respondTo.T700`
-     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+     grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
      `}/* ${respondTo.T800`
 
      grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
@@ -135,4 +135,9 @@ export const ImageDescription = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  order: -1;
+
+  ${respondTo.T700`
+    order: 0
+  `}
 `
