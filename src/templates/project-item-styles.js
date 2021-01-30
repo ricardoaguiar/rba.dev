@@ -76,8 +76,7 @@ export const ProjectImages = styled.div`
 
   ${respondTo.T700`
      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-     `}
-  ${respondTo.T800`
+     `}/* ${respondTo.T800`
 
      grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
      `}
@@ -88,7 +87,7 @@ export const ProjectImages = styled.div`
      ${respondTo.T1000`
 
      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  `}
+  `} */
 `
 
 export const Published = styled.div`
@@ -112,7 +111,28 @@ export const Published = styled.div`
   `}
 `
 
-export const LeftImage = styled.div`
-  max-width: 40vw;
-  margin: auto;
+export const SingleImage = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 80vw;
+  margin: 2rem auto;
+
+  & div {
+    flex: 100%;
+  }
+  & p {
+    flex: 100%;
+  }
+
+  ${respondTo.T900`
+   margin-left: 10vw;
+   flex-direction: row;
+  `}
+`
+export const ImageDescription = styled.div`
+  flex: 100%;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `

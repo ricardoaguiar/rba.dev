@@ -11,9 +11,9 @@ import {
   ProjectImages,
   PortfolioImage,
   Published,
-  LeftImage,
+  SingleImage,
+  ImageDescription,
 } from "./project-item-styles"
-import { node } from "prop-types"
 
 export const query = graphql`
   query($slug: String!) {
@@ -64,6 +64,14 @@ export const query = graphql`
       }
 
       singleImageLeft {
+        fluid(maxWidth: 1800, quality: 80) {
+          ...GatsbyContentfulFluid
+        }
+        id
+        description
+        title
+      }
+      singleImageRight {
         fluid(maxWidth: 1800, quality: 80) {
           ...GatsbyContentfulFluid
         }
@@ -137,19 +145,36 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         ))}
     </ProjectImages>
 
+    <SingleImage>
+      <PortfolioImage>
+        <Img
+          fluid={portfolio.singleImageLeft.fluid}
+          alt={portfolio.singleImageLeft.title}
+        />
+      </PortfolioImage>
+      <ImageDescription>
+        {portfolio.singleImageLeft.description}
+      </ImageDescription>
+    </SingleImage>
+
+    <SingleImage>
+      <ImageDescription>
+        {portfolio.singleImageRight.description}
+      </ImageDescription>
+
+      <PortfolioImage>
+        <Img
+          fluid={portfolio.singleImageRight.fluid}
+          alt={portfolio.singleImageRight.title}
+        />
+      </PortfolioImage>
+    </SingleImage>
+
     <ProjectDescription
       dangerouslySetInnerHTML={{
         __html: portfolio.projectChallenges.childMarkdownRemark.html,
       }}
     />
-
-    <LeftImage>
-      <Img
-        fluid={portfolio.singleImageLeft.fluid}
-        alt={portfolio.singleImageLeft.title}
-      />
-      <p>{portfolio.singleImageLeft.description}</p>
-    </LeftImage>
 
     <Published>
       <span>Published: {portfolio.publishDate}</span>

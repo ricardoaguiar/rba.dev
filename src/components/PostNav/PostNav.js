@@ -1,14 +1,14 @@
-import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
-import Image from 'gatsby-image'
+import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import Image from "gatsby-image"
 
 import {
   GridContainer,
   GridItem,
   GridPicture,
   GridCaption,
-  Projects
-} from './PostNav.styles'
+  Projects,
+} from "./PostNav.styles"
 
 // import { INLINES } from "contentful/rich-test-types"
 
@@ -36,16 +36,7 @@ const getPosts = graphql`
   }
 `
 
-// const options = {
-//   renderNode: {
-//     [INLINES.HIPERLINK]: node => {
-//       return <a href={node.}
-//   }
-// }
-
-// }
-
-const Posts = ({ title = 'Projects' }) => {
+const Posts = ({ title = "Projects" }) => {
   const { post } = useStaticQuery(getPosts)
   return (
     <>
