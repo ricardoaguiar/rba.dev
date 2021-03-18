@@ -26,6 +26,12 @@ export const PortfolioImage = styled.div`
   width: 100%;
   margin: 1rem auto;
   border: 1px solid var(--rise-4);
+  padding: 0.1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  & img {
+    border-radius: 0.4rem;
+  }
 `
 
 export const PortfolioList = styled.div`
