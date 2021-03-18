@@ -16,7 +16,6 @@ import {
   FaWordpress,
 } from "react-icons/fa"
 import Layout from "../components/Layout"
-import Contact from "../components/ContactForm/Contact"
 import Skills from "../components/Skills"
 
 library.add(
@@ -37,7 +36,6 @@ const IndexPage = () => (
     <Home />
     <Skills />
     <Posts />
-    <Contact />
   </Layout>
 )
 

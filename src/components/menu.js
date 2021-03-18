@@ -20,7 +20,7 @@ const Menu = ({ open }) => {
               Projects
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/recommendations/">
               <span
                 data-content="Recommendations"
@@ -29,23 +29,27 @@ const Menu = ({ open }) => {
               />
               Recommendations
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/about/">
               <span
-                data-content="About Me"
+                data-content="About"
                 aria-hidden="true"
-                aria-label="About Me"
+                aria-label="About"
               />
-              About Me
+              About
             </Link>
           </li>
-          {/* <li>
-            <Link to="/blog/">
-              <span data-content="Blog" aria-hidden="true" aria-label="Blog" />
-              Blog
+          <li>
+            <Link to="/contact/">
+              <span
+                data-content="Contact Me"
+                aria-hidden="true"
+                aria-label="Contact Me"
+              />
+              Contact Me
             </Link>
-          </li> */}
+          </li>
         </MenuList>
       </MenuNavigation>
     </>
