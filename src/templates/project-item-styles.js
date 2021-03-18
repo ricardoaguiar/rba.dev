@@ -130,12 +130,16 @@ export const SingleImage = styled.div`
   `}
 `
 export const ImageDescription = styled.div`
-  flex: 100%;
   align-items: center;
   display: flex;
   align-items: center;
   justify-content: center;
   order: -1;
+  text-align: center;
+  padding: 2rem;
+  max-width: 25vw;
+  font-size: 1.3rem;
+  line-height: 1.5;
 
   ${respondTo.T700`
     order: 0
