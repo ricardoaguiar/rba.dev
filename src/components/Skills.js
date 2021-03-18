@@ -52,7 +52,6 @@ const SkillsContainer = styled.ul`
    & li {
     width: 25%;
    }
-  
   `}
 `
 

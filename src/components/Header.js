@@ -40,25 +40,23 @@ export const HomeSubtitle = styled.small`
 
 const Home = () => {
   return (
-    <>
-      <HomeContainer>
-        <HomeTitle>
-          Hi, my name is Ricardo.
-          <br />
-          <span
-            css={css`
-              color: var(--rise-4);
-            `}
-          >
-            I'm a JavaScript Full Stack Web Developer.
-          </span>
-          &nbsp;
-          <HomeSubtitle>
-            These are some of the projects I have worked on.
-          </HomeSubtitle>
-        </HomeTitle>
-      </HomeContainer>
-    </>
+    <HomeContainer>
+      <HomeTitle>
+        Hi, my name is Ricardo.
+        <br />
+        <span
+          css={css`
+            color: var(--rise-4);
+          `}
+        >
+          I'm a JavaScript Full Stack Web Developer.
+        </span>
+        &nbsp;
+        <HomeSubtitle>
+          These are some of the projects I have worked on.
+        </HomeSubtitle>
+      </HomeTitle>
+    </HomeContainer>
   )
 }
 

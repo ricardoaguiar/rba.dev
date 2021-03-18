@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from '@emotion/styled'
-import { respondTo } from '../utils/_respondTo'
-import Contentful from './icons/contentful'
-import Gatsby from './icons/gatsby'
-import Github from './icons/github'
-import Netlify from './icons/netlify'
+import React from "react"
+import styled from "@emotion/styled"
+import { respondTo } from "../utils/_respondTo"
+import Contentful from "./icons/contentful"
+import Gatsby from "./icons/gatsby"
+import Github from "./icons/github"
+import Netlify from "./icons/netlify"
 
 export const FooterSection = styled.footer`
   display: flex;
@@ -19,7 +19,6 @@ export const FooterSection = styled.footer`
   background: var(--rise-1);
   color: var(--rise-8);
   border-top: 6px solid var(--rise-5);
-
 
   ${respondTo.T900`
     flex-direction: row;
