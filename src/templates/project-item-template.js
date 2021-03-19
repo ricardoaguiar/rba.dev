@@ -157,6 +157,14 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </ImageDescription>
     </SingleImage>
 
+
+    <ProjectDescription
+      dangerouslySetInnerHTML={{
+        __html: portfolio.projectChallenges.childMarkdownRemark.html,
+      }}
+    />
+
+
     <SingleImage>
       <ImageDescription>
         {portfolio.singleImageRight.description}
@@ -170,11 +178,6 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </PortfolioImage>
     </SingleImage>
 
-    <ProjectDescription
-      dangerouslySetInnerHTML={{
-        __html: portfolio.projectChallenges.childMarkdownRemark.html,
-      }}
-    />
 
     <Published>
       <span>Published: {portfolio.publishDate}</span>
