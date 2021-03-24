@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from '@emotion/styled'
-import { useStaticQuery, graphql } from 'gatsby'
-import { respondTo } from '../utils/_respondTo'
+import React from "react"
+import styled from "@emotion/styled"
+import { useStaticQuery, graphql } from "gatsby"
+import { respondTo } from "../../utils/_respondTo"
 
 const getSkills = graphql`
   {
@@ -32,7 +32,7 @@ const SkillSection = styled.div`
   }
 
   ${respondTo.T900`
-    padding: 10vh 10vw 10vh 15vw;
+    padding: 10vh 15vw 10vh 20vw;
   `}
 `
 

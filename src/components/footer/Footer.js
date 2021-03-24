@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { respondTo } from "../utils/_respondTo"
-import Contentful from "./icons/contentful"
-import Gatsby from "./icons/gatsby"
-import Github from "./icons/github"
-import Netlify from "./icons/netlify"
+import { respondTo } from "../../utils/_respondTo"
+import Contentful from "../icons/contentful"
+import Gatsby from "../icons/gatsby"
+import Github from "../icons/github"
+import Netlify from "../icons/netlify"
 
 export const FooterSection = styled.footer`
   display: flex;

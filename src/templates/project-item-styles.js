@@ -25,13 +25,11 @@ export const ProjectDetails = styled.div`
 export const PortfolioImage = styled.div`
   width: 100%;
   margin: 1rem auto;
-  border: 1px solid var(--rise-4);
+  /* border: 1px solid var(--rise-4); */
   padding: 0.1rem;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   background-color: #fff;
-  & img {
-    border-radius: 0.4rem;
-  }
+  outline: 1px solid green;
 `
 
 export const PortfolioList = styled.div`
@@ -129,10 +127,15 @@ export const SingleImage = styled.div`
   & p {
     flex: 100%;
   }
+  & picture > img {
+    object-fit: cover;
+  }
 
   ${respondTo.T900`
    margin-left: 10vw;
    flex-direction: row;
+   outline: 1px solid red;
+
   `}
 `
 export const ImageDescription = styled.div`

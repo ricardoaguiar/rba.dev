@@ -2,7 +2,7 @@ import React from "react"
 // import { bool } from 'prop-types'
 import { MenuNavigation, MenuList } from "./menu-styled"
 // import SocialMediaMenu from "./SocialMedia"
-import Link from "./link"
+import Link from "../link"
 // import { Link } from "gatsby"
 
 const Menu = ({ open }) => {

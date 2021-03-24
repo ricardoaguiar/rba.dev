@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
-import { respondTo } from "../utils/_respondTo"
-import Menu from "./menu"
-import { useOnClickOutside } from "./hooks/hooks"
-import RbaLogo from "./logo/rba-logo"
+import { respondTo } from "../../utils/_respondTo"
+import Menu from "../menu/menu"
+import { useOnClickOutside } from "../hooks/hooks"
+import RbaLogo from "../logo/rba-logo"
 import BurgerComponent from "./Burger"
 // import SocialMediaMenu from "./SocialMedia"
 import {

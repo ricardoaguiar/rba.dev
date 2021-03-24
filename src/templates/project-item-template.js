@@ -85,8 +85,6 @@ export const query = graphql`
 
 const PortfolioTemplate = ({ data: { portfolio } }) => (
   <Layout>
-    {console.log(portfolio)}
-    {console.log(portfolio.singleImageLeft)}
     <SEO title={portfolio.title} />
 
     <ProjectDescription
@@ -157,27 +155,22 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       </ImageDescription>
     </SingleImage>
 
-
     <ProjectDescription
       dangerouslySetInnerHTML={{
         __html: portfolio.projectChallenges.childMarkdownRemark.html,
       }}
     />
 
-
     <SingleImage>
       <ImageDescription>
         {portfolio.singleImageRight.description}
       </ImageDescription>
 
-      <PortfolioImage>
-        <Img
-          fluid={portfolio.singleImageRight.fluid}
-          alt={portfolio.singleImageRight.title}
-        />
-      </PortfolioImage>
+      <Img
+        fluid={portfolio.singleImageRight.fluid}
+        alt={portfolio.singleImageRight.title}
+      />
     </SingleImage>
-
 
     <Published>
       <span>Published: {portfolio.publishDate}</span>

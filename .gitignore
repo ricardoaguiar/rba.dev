@@ -75,3 +75,5 @@ src/components/footer/svg/
 babel.config.json
 logos
 project-single-template.js
+src/components/misc/Ricardo.js
+src/components/misc/SocialMedia.js
