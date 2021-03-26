@@ -8,8 +8,6 @@ import {
   PortfolioList,
   ProjectDescription,
   ProjectDetails,
-  ProjectImages,
-  PortfolioImage,
   Published,
   SingleImage,
   ImageDescription,
@@ -134,22 +132,26 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       }}
     />
 
-    <ProjectImages>
-      {portfolio.images &&
-        portfolio.images.map(image => (
-          <PortfolioImage key={image.key}>
-            <Img fluid={image.fluid} alt={image.title} key={image.id} />
-          </PortfolioImage>
-        ))}
-    </ProjectImages>
+    {portfolio.images &&
+      portfolio.images.map(image => (
+        <Img
+          fluid={image.fluid}
+          alt={image.title}
+          key={image.id}
+          css={{
+            maxWidth: "70vw",
+            padding: "4rem",
+            margin: "0 auto",
+          }}
+        />
+      ))}
 
     <SingleImage>
-      <PortfolioImage>
-        <Img
-          fluid={portfolio.singleImageLeft.fluid}
-          alt={portfolio.singleImageLeft.title}
-        />
-      </PortfolioImage>
+      <Img
+        fluid={portfolio.singleImageLeft.fluid}
+        alt={portfolio.singleImageLeft.title}
+        css={{ maxWidth: "20rem" }}
+      />
       <ImageDescription>
         {portfolio.singleImageLeft.description}
       </ImageDescription>
@@ -169,6 +171,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <Img
         fluid={portfolio.singleImageRight.fluid}
         alt={portfolio.singleImageRight.title}
+        css={{ maxWidth: "20rem" }}
       />
     </SingleImage>
 

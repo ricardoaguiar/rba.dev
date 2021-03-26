@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { respondTo } from "../utils/_respondTo"
+import { respondTo } from "../../utils/_respondTo"
 
 // mobile layout
 export const MenuNavigation = styled.nav`

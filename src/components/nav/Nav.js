@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react"
 import styled from "@emotion/styled"
 import { respondTo } from "../../utils/_respondTo"
-import Menu from "../menu/menu"
+import Menu from "../Menu/menu"
 import { useOnClickOutside } from "../hooks/hooks"
 import RbaLogo from "../logo/rba-logo"
-import BurgerComponent from "./Burger"
+import BurgerComponent from "../Menu/Burger"
 // import SocialMediaMenu from "./SocialMedia"
 import {
   // FaEnvelope,

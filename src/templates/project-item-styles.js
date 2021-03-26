@@ -23,13 +23,15 @@ export const ProjectDetails = styled.div`
 `
 
 export const PortfolioImage = styled.div`
-  width: 100%;
-  margin: 1rem auto;
+  /* width: 100%; */
+  /* margin: 1rem auto; */
   /* border: 1px solid var(--rise-4); */
-  padding: 0.1rem;
+  /* padding: 0.1rem; */
   /* border-radius: 0.5rem; */
-  background-color: #fff;
-  outline: 1px solid green;
+  /* background-color: "red";
+  outline: 2px solid green; */
+  /* max-height: auto; */
+  object-fit: contain;
 `
 
 export const PortfolioList = styled.div`
@@ -67,32 +69,21 @@ export const PortfolioList = styled.div`
   `}
 `
 
-export const ProjectImages = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 30px;
-  max-width: 80vw;
-  align-items: center;
-  background: transparent;
-  margin-inline: auto;
-  padding-bottom: 30px;
-  margin: auto auto auto 12vw;
+// export const ProjectImages = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+//   grid-gap: 30px;
+//   max-width: 75%;
+//   align-items: center;
+//   background: transparent;
+//   margin-inline: auto;
+//   padding-bottom: 30px;
+//   margin: auto auto auto 12vw;
 
-  ${respondTo.T700`
-     grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
-     `}/* ${respondTo.T800`
-
-     grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
-     `}
-     ${respondTo.T900`
-
-     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-     `}
-     ${respondTo.T1000`
-
-     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  `} */
-`
+//   ${respondTo.T700`
+//      grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+//      `}
+// `
 
 export const Published = styled.div`
   width: 100vw;
@@ -117,26 +108,13 @@ export const Published = styled.div`
 
 export const SingleImage = styled.div`
   display: flex;
-  flex-direction: column;
   max-width: 80vw;
-  margin: 2rem auto;
+  margin: auto;
+  /* border: 4px solid green; */
 
   & div {
-    flex: 100%;
+    flex: 1;
   }
-  & p {
-    flex: 100%;
-  }
-  & picture > img {
-    object-fit: cover;
-  }
-
-  ${respondTo.T900`
-   margin-left: 10vw;
-   flex-direction: row;
-   outline: 1px solid red;
-
-  `}
 `
 export const ImageDescription = styled.div`
   align-items: center;
@@ -146,7 +124,7 @@ export const ImageDescription = styled.div`
   order: -1;
   text-align: center;
   padding: 2rem;
-  max-width: 25vw;
+  max-width: 20vw;
   font-size: 1.3rem;
   line-height: 1.5;
 

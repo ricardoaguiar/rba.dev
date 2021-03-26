@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { respondTo } from "../../utils/_respondTo"
-import "../css/styles.css"
+import "../../css/styles.css"
 
 const getReferences = graphql`
   {

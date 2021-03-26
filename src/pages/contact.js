@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react"
 import * as typeformEmbed from "@typeform/embed"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
-import Nav from "../components/Nav"
+import Nav from "../components/Nav/Nav"
 import Layout from "../components/Layout"
 
 export const ContactForm = styled.div`

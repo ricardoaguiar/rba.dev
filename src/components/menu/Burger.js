@@ -1,7 +1,7 @@
 import React from "react"
 import { bool, func } from "prop-types"
 import styled from "@emotion/styled"
-import { respondTo } from "../utils/_respondTo"
+import { respondTo } from "../../utils/_respondTo"
 
 // this is the BurgerBtn element
 export const BurgerBtn = styled.button`
