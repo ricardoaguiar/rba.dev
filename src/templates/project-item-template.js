@@ -150,7 +150,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <Img
         fluid={portfolio.singleImageLeft.fluid}
         alt={portfolio.singleImageLeft.title}
-        css={{ maxWidth: "20rem" }}
+        css={{ maxWidth: "50vw" }}
       />
       <ImageDescription>
         {portfolio.singleImageLeft.description}
@@ -171,7 +171,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <Img
         fluid={portfolio.singleImageRight.fluid}
         alt={portfolio.singleImageRight.title}
-        css={{ maxWidth: "20rem" }}
+        css={{ maxWidth: "20vw" }}
       />
     </SingleImage>
 
