@@ -118,7 +118,7 @@ export const Published = styled.div`
 export const SingleImage = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 80vw;
+  max-width: 50vw;
   margin: 2rem auto;
 
   & div {
@@ -146,7 +146,7 @@ export const ImageDescription = styled.div`
   order: -1;
   text-align: center;
   padding: 2rem;
-  max-width: 25vw;
+  max-width: 45vw;
   font-size: 1.3rem;
   line-height: 1.5;
 
