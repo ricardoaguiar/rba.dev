@@ -5,18 +5,7 @@ import Menu from '../common/menu'
 import { useOnClickOutside } from '../hooks/hooks'
 import RbaLogo from '../logo/rba-logo'
 import BurgerComponent from '../common/Burger'
-// import SocialMediaMenu from "./SocialMedia"
-import {
-  // FaEnvelope,
-  // FaGrinStars,
-  FaGithubSquare,
-  FaLinkedin,
-  // FaComments,
-  // FaRegThumbsUp,
-  // FaWordpress,
-  // FaCogs,
-  // FaUser,
-} from 'react-icons/fa'
+import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 
 export const NavComponent = styled.nav`
   background: var(--white);

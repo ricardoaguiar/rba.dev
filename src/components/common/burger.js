@@ -64,5 +64,3 @@ BurgerComponent.propTypes = {
   open: bool.isRequired,
   setOpen: func.isRequired,
 }
-
-// export default BurgerComponent
