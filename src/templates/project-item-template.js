@@ -1,9 +1,9 @@
-import React from "react"
-import "../css/styles.css"
-import SEO from "../components/seo"
-import Layout from "../components/Layout"
-import Img from "gatsby-image"
-import { graphql } from "gatsby"
+import React from 'react'
+import '../css/styles.css'
+import SEO from '../components/seo'
+import Layout from '../components/Layout'
+import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import {
   PortfolioList,
   ProjectDescription,
@@ -11,7 +11,7 @@ import {
   Published,
   SingleImage,
   ImageDescription,
-} from "./project-item-styles"
+} from './project-item-styles'
 
 export const query = graphql`
   query($slug: String!) {
@@ -139,9 +139,9 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           alt={image.title}
           key={image.id}
           css={{
-            maxWidth: "70vw",
-            padding: "4rem",
-            margin: "0 auto",
+            maxWidth: '70vw',
+            padding: '4rem',
+            margin: '0 auto',
           }}
         />
       ))}
@@ -150,7 +150,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <Img
         fluid={portfolio.singleImageLeft.fluid}
         alt={portfolio.singleImageLeft.title}
-        css={{ maxWidth: "50vw" }}
+        css={{ maxWidth: '50vw' }}
       />
       <ImageDescription>
         {portfolio.singleImageLeft.description}
@@ -171,7 +171,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <Img
         fluid={portfolio.singleImageRight.fluid}
         alt={portfolio.singleImageRight.title}
-        css={{ maxWidth: "20vw" }}
+        css={{ maxWidth: '20vw' }}
       />
     </SingleImage>
 

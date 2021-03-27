@@ -25,19 +25,15 @@ const BlogList = styled.ul`
   }
 `
 
-function AboutPage () {
+function AboutPage() {
   return (
     <>
-    <AboutContainer>
-      <h1>Hi there!</h1>
-      <BlogList>
-        <li>
-
-
-
-        </li>
-      </BlogList>
-    </AboutContainer>
+      <AboutContainer>
+        <h1>Hi there!</h1>
+        <BlogList>
+          <li></li>
+        </BlogList>
+      </AboutContainer>
     </>
   )
 }
