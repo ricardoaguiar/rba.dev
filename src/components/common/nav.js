@@ -4,7 +4,7 @@ import { respondTo } from '../../utils/_respondTo'
 import Menu from '../common/menu'
 import { useOnClickOutside } from '../hooks/hooks'
 import RbaLogo from '../logo/rba-logo'
-import BurgerComponent from '../common/Burger'
+import BurgerComponent from '../common/burger'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 
 export const NavComponent = styled.nav`
