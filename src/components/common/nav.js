@@ -1,10 +1,10 @@
-import React, { useState, useRef } from "react"
-import styled from "@emotion/styled"
-import { respondTo } from "../../utils/_respondTo"
-import Menu from "../Menu/menu"
-import { useOnClickOutside } from "../hooks/hooks"
-import RbaLogo from "../logo/rba-logo"
-import BurgerComponent from "../Menu/Burger"
+import React, { useState, useRef } from 'react'
+import styled from '@emotion/styled'
+import { respondTo } from '../../utils/_respondTo'
+import Menu from '../common/menu'
+import { useOnClickOutside } from '../hooks/hooks'
+import RbaLogo from '../logo/rba-logo'
+import BurgerComponent from '../common/Burger'
 // import SocialMediaMenu from "./SocialMedia"
 import {
   // FaEnvelope,
@@ -16,7 +16,7 @@ import {
   // FaWordpress,
   // FaCogs,
   // FaUser,
-} from "react-icons/fa"
+} from 'react-icons/fa'
 
 export const NavComponent = styled.nav`
   background: var(--white);

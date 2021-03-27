@@ -1,9 +1,9 @@
-import React, { useRef, useEffect } from "react"
-import * as typeformEmbed from "@typeform/embed"
-import styled from "@emotion/styled"
-import SEO from "../components/seo"
-import Nav from "../components/Nav/Nav"
-import Layout from "../components/Layout"
+import React, { useRef, useEffect } from 'react'
+import * as typeformEmbed from '@typeform/embed'
+import styled from '@emotion/styled'
+import SEO from '../components/seo'
+import Nav from '../components/common/nav'
+import Layout from '../components/Layout'
 
 export const ContactForm = styled.div`
   margin: 0 auto;
@@ -18,9 +18,9 @@ const Contact = () => {
   useEffect(() => {
     typeformEmbed.makeWidget(
       typeformRef.current,
-      "https://form.typeform.com/to/S2uERHXc",
+      'https://form.typeform.com/to/S2uERHXc',
       {
-        mode: "widget",
+        mode: 'widget',
         hideHeader: false,
         hideFooter: false,
         opacity: 50,
@@ -34,7 +34,7 @@ const Contact = () => {
       <SEO title="Contact" />
       <ContactForm
         ref={typeformRef}
-        style={{ height: "75vh", width: "100%" }}
+        style={{ height: '75vh', width: '100%' }}
       />
     </Layout>
   )

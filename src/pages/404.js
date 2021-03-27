@@ -1,8 +1,8 @@
-import React from "react"
-import "../css/styles.css"
-import SEO from "../components/seo"
-import NotFound from "../components/FourOFour"
-import Layout from "../components/Layout"
+import React from 'react'
+import '../css/styles.css'
+import SEO from '../components/seo'
+import NotFound from '../components/FourOFour'
+import Layout from '../components/Layout'
 
 const FourOFour = () => (
   <Layout>
