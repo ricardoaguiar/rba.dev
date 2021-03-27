@@ -30,9 +30,7 @@ function AboutPage() {
     <>
       <AboutContainer>
         <h1>Hi there!</h1>
-        <BlogList>
-          <li></li>
-        </BlogList>
+        <BlogList></BlogList>
       </AboutContainer>
     </>
   )
