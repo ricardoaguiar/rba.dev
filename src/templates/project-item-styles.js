@@ -1,5 +1,5 @@
-import styled from "@emotion/styled"
-import { respondTo } from "../utils/_respondTo"
+import styled from '@emotion/styled'
+import { respondTo } from '../utils/_respondTo'
 
 export const ProjectDescription = styled.div`
   display: flex;
@@ -94,8 +94,8 @@ export const Published = styled.div`
   justify-content: center;
   font-size: smaller;
 
-  & span[data-name="separator"]::after {
-    content: " 😃 ";
+  & span[data-name='separator']::after {
+    content: ' 😃 ';
   }
 
   ${respondTo.T900`
@@ -110,10 +110,14 @@ export const SingleImage = styled.div`
   display: flex;
   max-width: 80vw;
   margin: auto;
-  /* border: 4px solid green; */
+  /* border: 1px solid green; */
 
+  & div:first-child {
+    max-width: 60%;
+  }
   & div {
-    flex: 1;
+    flex: 100%;
+    margin: 0 auto;
   }
 `
 export const ImageDescription = styled.div`
