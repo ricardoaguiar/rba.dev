@@ -64,8 +64,11 @@ export const PostDescription = styled.span`
 `
 export const Projects = styled.div`
   font-size: 2rem;
-  width: calc(100% - 90px);
   text-align: center;
-  margin: 2rem 0 0 90px;
+  margin: 2rem auto;
   color: var(--rise-2);
+
+  ${respondTo.T900`
+  padding-left: 90px;
+  `}
 `
