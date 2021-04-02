@@ -69,6 +69,7 @@ export const query = graphql`
         description
         title
       }
+
       singleImageRight {
         fluid(maxWidth: 1800, quality: 80) {
           ...GatsbyContentfulFluid
@@ -76,6 +77,14 @@ export const query = graphql`
         id
         description
         title
+      }
+      multipleRightImages {
+        fluid(maxWidth: 1000, quality: 80) {
+          ...GatsbyContentfulFluid
+        }
+        title
+        description
+        id
       }
     }
   }
@@ -173,6 +182,14 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
         alt={portfolio.singleImageRight.title}
         css={{ maxWidth: '20vw' }}
       />
+    </SingleImage>
+
+    <SingleImage>
+      <div>PLACE SOME TEXT HERE</div>
+      {portfolio.multipleRightImages &&
+        portfolio.multipleRightImages.map(image => (
+          <Img fluid={image.fluid} alt={image.title} key={image.id} />
+        ))}
     </SingleImage>
 
     <Published>

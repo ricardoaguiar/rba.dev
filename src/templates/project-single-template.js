@@ -15,7 +15,27 @@
 // `
 
 // const ProjectSinglePage = ({ data: { project } }) => {
-//   // ;<div>{documentToReactComponent(project.projectDescription.raw)}</div>
+//   ;<div>{documentToReactComponent(project.projectDescription.raw)}</div>
 // }
 
 // export default ProjectSinglePage
+
+//query for a portfolio item rich text
+// query MyQuery {
+//   contentfulPortfolioItem {
+//     id
+//     title
+//     projectDescription {
+//       raw
+//       references {
+//         ... on ContentfulAsset {
+//         contentful_id
+//         file {
+//           url
+//           contentType
+//         }
+//       }
+//     }
+//   }
+// }
+// }

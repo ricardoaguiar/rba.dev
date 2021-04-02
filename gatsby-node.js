@@ -1,4 +1,4 @@
-const path = require("path")
+const path = require('path')
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     {
@@ -11,13 +11,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `)
 
   if (result.errors) {
-    reporter.panic("Error loading page", JSON.stringify(result.errors))
+    reporter.panic('Error loading page', JSON.stringify(result.errors))
   }
 
   result.data.allContentfulProjects.nodes.forEach(node => {
     actions.createPage({
       path: `/${node.slug}/`,
-      component: path.resolve("./src/templates/project-item-template.js"),
+      component: path.resolve('./src/templates/project-item-template.js'),
       context: {
         slug: node.slug,
       },
@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html") {
+  if (stage === 'build-html') {
     actions.setWebpackConfig({
       module: {
         rules: [

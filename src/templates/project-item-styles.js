@@ -117,7 +117,7 @@ export const SingleImage = styled.div`
   }
   & div {
     flex: 100%;
-    margin: 0 auto;
+    margin: 1rem;
   }
 `
 export const ImageDescription = styled.div`
