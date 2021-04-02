@@ -4,14 +4,20 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/react'
 import Link from '../link'
+import { respondTo } from '../../utils/_respondTo'
 
 const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 6vh;
+  padding-top: 10vh;
   background-color: var(--rise-7);
   width: 100vw;
   line-height: 1.8;
+
+  ${respondTo.T900`
+    padding-top: 8vh;
+`}
 `
 
 const AboutContent = styled.div`
@@ -21,10 +27,15 @@ const AboutContent = styled.div`
   padding-inline: 10vw;
 `
 const AboutCopy = styled.div`
-  max-width: 60vw;
+  max-width: 90vw;
   margin: auto;
   margin-bottom: 2rem;
+
+  ${respondTo.T900`
   padding: 1rem;
+  max-width: 65vw;
+
+  `}
 `
 
 const AboutMe = () => (
@@ -60,22 +71,22 @@ const AboutMe = () => (
       render={data => (
         <AboutContent>
           <div
-            css={{
-              width: 'fit-content',
-              margin: '0 auto',
-            }}
+            css={css`
+              width: fit-content;
+              margin: 0 auto;
+            `}
           >
             <Img
               fluid={data.author.nodes[0].image.fluid}
               alt={data.author.nodes[0].image.description}
               key={data.author.nodes[0].image.id}
-              css={{
-                width: '250px',
-                height: '250px',
-                borderRadius: '50%',
-                backgroundColor: 'var(--rise-7)',
-                marginBottom: '4rem',
-              }}
+              css={css`
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                background-color: var(--rise-7);
+                margin-bottom: 3.2rem;
+              `}
             />
           </div>
           <AboutCopy
