@@ -89,7 +89,7 @@ export const Published = styled.div`
   width: 100vw;
   display: flex;
   flex-flow: row wrap;
-  margin-block: 2rem;
+  margin: 2rem;
   align-items: center;
   justify-content: center;
   font-size: smaller;
@@ -110,14 +110,8 @@ export const SingleImage = styled.div`
   display: flex;
   max-width: 80vw;
   margin: auto;
-  /* border: 1px solid green; */
-
-  & div:first-child {
-    max-width: 60%;
-  }
   & div {
-    flex: 100%;
-    margin: 1rem;
+    flex: 1;
   }
 `
 export const ImageDescription = styled.div`

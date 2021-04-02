@@ -3,6 +3,7 @@ import '../css/styles.css'
 import SEO from '../components/seo'
 import Layout from '../components/Layout'
 import Img from 'gatsby-image'
+import { css } from '@emotion/react'
 import { graphql } from 'gatsby'
 import {
   PortfolioList,
@@ -147,11 +148,12 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           fluid={image.fluid}
           alt={image.title}
           key={image.id}
-          css={{
-            maxWidth: '70vw',
-            padding: '4rem',
-            margin: '0 auto',
-          }}
+          css={css`
+            max-width: 70vw;
+            padding: 4rem;
+            margin: 0 auto;
+            outline: 1px solid green;
+          `}
         />
       ))}
 
@@ -159,9 +161,19 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       <Img
         fluid={portfolio.singleImageLeft.fluid}
         alt={portfolio.singleImageLeft.title}
-        css={{ maxWidth: '50vw' }}
+        css={css`
+          margin: 4rem;
+          padding: 1rem;
+          max-width: 60vw;
+          height: 100%;
+        `}
       />
-      <ImageDescription>
+      <ImageDescription
+        css={css`
+          flex: 1;
+          /* outline: 2px solid blue; */
+        `}
+      >
         {portfolio.singleImageLeft.description}
       </ImageDescription>
     </SingleImage>
