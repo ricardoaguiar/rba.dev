@@ -3,11 +3,11 @@ import styled from '@emotion/styled'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/react'
+import Link from '../link'
 
 const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* padding: 8vh 8vw 8vh 12vw; */
   padding: 6vh;
   background-color: var(--rise-7);
   width: 100vw;
@@ -19,14 +19,6 @@ const AboutContent = styled.div`
   line-height: 1.5;
   list-style: none;
   padding-inline: 10vw;
-
-  && a {
-    color: var(--rbadev-mono-1-hex);
-    text-decoration: none;
-  }
-  a:hover {
-    color: var(--rbadev-duotone-1-hex);
-  }
 `
 const AboutCopy = styled.div`
   max-width: 60vw;
@@ -99,12 +91,13 @@ const AboutMe = () => (
         </AboutContent>
       )}
     />
-    <span
+    <Link
+      to="/contact/"
       css={css`
         display: block;
         font-size: 1.5rem;
         font-weight: bold;
-        margin: 1rem auto;
+        margin: 2rem auto;
         border: 1px solid transparent;
         padding-inline: 0.8rem;
         padding-left: 0.8rem;
@@ -119,8 +112,8 @@ const AboutMe = () => (
         }
       `}
     >
-      CONTACT ME
-    </span>
+      <span>CONTACT ME</span>
+    </Link>
   </AboutContainer>
 )
 
