@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import Image from "gatsby-image"
+import React from 'react'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import Image from 'gatsby-image'
 
 import {
   GridContainer,
@@ -8,9 +8,7 @@ import {
   GridPicture,
   GridCaption,
   Projects,
-} from "./PostNav.styles"
-
-// import { INLINES } from "contentful/rich-test-types"
+} from './PostNav.styles'
 
 const getPosts = graphql`
   {
@@ -18,15 +16,13 @@ const getPosts = graphql`
       edges {
         node {
           title
-          overview {
-            childMarkdownRemark {
-              html
-            }
+          intro: shortDescription {
+            shortDescription
           }
           id
           slug
           heroImage {
-            fluid(maxHeight: 1000, maxWidth: 1800) {
+            fluid(maxWidth: 1400) {
               ...GatsbyContentfulFluid
             }
           }
@@ -36,7 +32,7 @@ const getPosts = graphql`
   }
 `
 
-const Posts = ({ title = "Projects" }) => {
+const Posts = ({ title = 'Projects' }) => {
   const { post } = useStaticQuery(getPosts)
   return (
     <>
@@ -45,16 +41,18 @@ const Posts = ({ title = "Projects" }) => {
       </Projects>
       <GridContainer>
         {post.edges.map(({ node }) => {
+          console.log(node)
           return (
             <Link to={`/${node.slug}/`} key={node.id}>
               <GridItem>
                 <GridPicture>
                   <Image fluid={node.heroImage.fluid} alt={node.title} />
-                  <GridCaption>
-                    <h3>{node.title}</h3>
-                  </GridCaption>
                 </GridPicture>
               </GridItem>
+              <GridCaption>
+                <h3>{node.title}</h3>
+                <p>{node.intro.shortDescription}</p>
+              </GridCaption>
             </Link>
           )
         })}

@@ -54,7 +54,7 @@ export const query = graphql`
         }
       }
       images {
-        fluid(maxHeight: 1000, maxWidth: 1800, quality: 90) {
+        fluid(maxWidth: 1400, quality: 100) {
           ...GatsbyContentfulFluid
         }
         id
@@ -63,7 +63,7 @@ export const query = graphql`
       }
 
       singleImageLeft {
-        fluid(maxWidth: 1800, quality: 80) {
+        fluid(maxWidth: 1400, quality: 100) {
           ...GatsbyContentfulFluid
         }
         id
@@ -72,21 +72,21 @@ export const query = graphql`
       }
 
       singleImageRight {
-        fluid(maxWidth: 1800, quality: 80) {
+        fluid(maxWidth: 1400, quality: 100) {
           ...GatsbyContentfulFluid
         }
         id
         description
         title
       }
-      multipleRightImages {
-        fluid(maxWidth: 1000, quality: 80) {
-          ...GatsbyContentfulFluid
-        }
-        title
-        description
-        id
-      }
+      #multipleRightImages {
+      #  fluid(maxWidth: 1400, quality: 100) {
+      #    ...GatsbyContentfulFluid
+      #  }
+      #  title
+      #  description
+      #  id
+      #}
     }
   }
 `
@@ -142,20 +142,29 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
       }}
     />
 
-    {portfolio.images &&
-      portfolio.images.map(image => (
-        <Img
-          fluid={image.fluid}
-          alt={image.title}
-          key={image.id}
-          css={css`
-            max-width: 70vw;
-            padding: 4rem;
-            margin: 0 auto;
-            outline: 1px solid green;
-          `}
-        />
-      ))}
+    <div
+      css={css`
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+        gap: 1.5rem;
+        max-width: 75%;
+        margin: auto;
+      `}
+    >
+      {portfolio.images &&
+        portfolio.images.map(image => (
+          <Img
+            fluid={image.fluid}
+            alt={image.title}
+            key={image.id}
+            css={css`
+              /* margin-bottom: 1rem; */
+              /* outline: 1px solid green; */
+              object-fit: cover;
+            `}
+          />
+        ))}
+    </div>
 
     <SingleImage>
       <Img

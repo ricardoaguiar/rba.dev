@@ -5,7 +5,7 @@ import { respondTo } from '../../utils/_respondTo'
 export const GridContainer = styled.nav`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: 1fr;
+  /* grid-template-rows: 1fr; */
   grid-gap: 2rem;
   justify-content: center;
   margin: 0 auto;
@@ -26,27 +26,22 @@ export const GridContainer = styled.nav`
 // grid item / cell
 export const GridItem = styled.div`
   background: transparent;
-  z-index: -999;
+  /* outline: 2px solid green; */
 `
 // grid content
 export const GridPicture = styled.div`
   overflow: hidden;
   position: relative;
-  border: 1px solid var(--rise-7);
-
-  &:hover {
-    border-color: var(--rise-2);
-  }
 `
 // img caption
 export const GridCaption = styled.div`
   padding: 10px 0 10px 20px;
   width: 100%;
-  background-color: var(--rise-7);
+  /* outline: 1px solid red; */
 
   & h3 {
-    text-decoration: underline solid var(--rise-4);
-    text-decoration-thickness: 2px;
+    /* text-decoration: underline solid var(--rise-4);
+    text-decoration-thickness: 2px; */
     color: var(--rise-2);
     margin: 0;
   }
@@ -69,6 +64,6 @@ export const Projects = styled.div`
   color: var(--rise-2);
 
   ${respondTo.T900`
-  padding-left: 90px;
+     padding-left: 90px;
   `}
 `
