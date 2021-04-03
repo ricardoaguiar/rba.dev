@@ -9,13 +9,14 @@ import { respondTo } from '../../utils/_respondTo'
 const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 6vh;
-  padding-top: 10vh;
-  background-color: var(--rise-7);
-  width: 100vw;
   line-height: 1.8;
+  background-color: var(--rise-7);
+  width: 100%;
+  padding-top: 13vh;
 
   ${respondTo.T900`
+    font-size: 1rem;
+    padding: 6vh;
     padding-top: 8vh;
 `}
 `
@@ -24,7 +25,6 @@ const AboutContent = styled.div`
   flex: 1;
   line-height: 1.5;
   list-style: none;
-  padding-inline: 10vw;
 `
 const AboutCopy = styled.div`
   max-width: 90vw;
@@ -72,7 +72,6 @@ const AboutMe = () => (
         <AboutContent>
           <div
             css={css`
-              width: fit-content;
               margin: 0 auto;
             `}
           >
@@ -81,10 +80,11 @@ const AboutMe = () => (
               alt={data.author.nodes[0].image.description}
               key={data.author.nodes[0].image.id}
               css={css`
-                width: 250px;
-                height: 250px;
+                width: 200px;
+                height: 200px;
                 border-radius: 50%;
                 background-color: var(--rise-7);
+                margin: 0 auto;
                 margin-bottom: 3.2rem;
               `}
             />
