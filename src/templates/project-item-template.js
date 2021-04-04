@@ -14,6 +14,7 @@ import {
   SingleImageLeft,
   SingleImageRight,
   MultipleImages,
+  MultipleImageDescription,
 } from './project-item-styles'
 
 export const query = graphql`
@@ -183,7 +184,7 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
     </SingleImageRight>
 
     <SingleImage>
-      <ImageDescription
+      <MultipleImageDescription
         dangerouslySetInnerHTML={{
           __html: portfolio.imagesDescription.childMarkdownRemark.html,
         }}
