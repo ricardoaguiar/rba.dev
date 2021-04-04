@@ -5,6 +5,7 @@ export const ProjectDescription = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  padding-top: 5rem;
   line-height: 1.6;
   margin: auto 0;
   font-size: 1.15rem;
@@ -68,12 +69,10 @@ export const SingleImage = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-  max-width: 95vw;
 
   & div {
-    width: 100%;
+    width: 95%;
     flex: 1;
-    padding: 1rem;
   }
   & div + div {
     padding: 0.5rem;
@@ -150,6 +149,10 @@ export const MultipleImages = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  & div {
+    margin-bottom: 0.5rem;
+  }
+
   ${respondTo.T900`
     grid-template-columns: 1fr 1fr 1fr 1fr;
   `}
@@ -165,15 +168,26 @@ export const ImageDescription = styled.div`
     max-width: 25vw;
   `}
 `
+export const MultipleImageDescription = styled.div`
+  display: flex;
+  padding: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-top: -10rem;
+
+  ${respondTo.T900`
+    max-width: 25vw;
+    margin-top: 0;
+  `}
+`
 
 export const Published = styled.div`
-  width: 100vw;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   font-size: smaller;
-  margin: 1rem;
+  margin: 2rem;
 
   & span[data-name='separator']::after {
     content: ' 😃 ';
