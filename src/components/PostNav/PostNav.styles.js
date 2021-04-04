@@ -32,12 +32,13 @@ export const GridItem = styled.div`
 export const GridPicture = styled.div`
   overflow: hidden;
   position: relative;
+  /* outline: 1px solid red; */
 `
 // img caption
 export const GridCaption = styled.div`
-  padding: 10px 0 10px 20px;
-  width: 100%;
+  width: 80%;
   /* outline: 1px solid red; */
+  margin: auto 2rem;
 
   & h3 {
     /* text-decoration: underline solid var(--rise-4);
@@ -47,15 +48,11 @@ export const GridCaption = styled.div`
   }
   & p {
     font-size: 0.8rem;
-    max-width: 95%;
+    /* max-width: 80%; */
   }
 `
-export const PostDescription = styled.span`
-  margin: 0 3rem 1rem 1rem;
-  bottom: 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+export const ViewProject = styled.span`
+  margin-left: 1rem;
 `
 export const Projects = styled.div`
   font-size: 2rem;

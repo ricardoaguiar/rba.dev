@@ -64,7 +64,7 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   #global-header .container:before,
   #global-header .container:after {
-    content: "";
+    content: '';
     display: table;
   }
   #global-header .container:after {
@@ -74,7 +74,7 @@
 @media screen and (max-width: 767px) {
   #global-header .container:before,
   #global-header .container:after {
-    content: "";
+    content: '';
     display: table;
   }
   #global-header .container:after {
@@ -87,7 +87,7 @@
 @media screen and (min-width: 1024px) {
   #global-header .container {
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: 1920px;
     position: relative;
   }
 }
@@ -151,7 +151,7 @@
   border-style: solid;
   border-width: 0 8px 8px 8px;
   bottom: 0;
-  content: "";
+  content: '';
   height: 0;
   left: 50%;
   margin-left: -8px;
@@ -159,7 +159,7 @@
   width: 0;
   z-index: 1000041;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-header
   .container
   .tools
@@ -167,14 +167,14 @@
   > a:before,
 #global-header
   .container
-  [data-appearance="dark"]
+  [data-appearance='dark']
   .tools
   > li.active
   > a:before,
-[data-appearance="dark"] #global-header .container .tools > li.hover > a:before,
+[data-appearance='dark'] #global-header .container .tools > li.hover > a:before,
 #global-header
   .container
-  [data-appearance="dark"]
+  [data-appearance='dark']
   .tools
   > li.hover
   > a:before {
@@ -283,7 +283,7 @@
   display: block;
   float: none !important;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-header
   .container
   .tools
@@ -338,7 +338,7 @@
   padding-left: 0;
   padding-top: 8px;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-header
   .container
   .tools
@@ -370,7 +370,7 @@
   margin-left: -10px;
   padding: 10px 8px;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-header
   .container
   .tools
@@ -402,7 +402,7 @@
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-header
   .container
   .tools
@@ -411,7 +411,7 @@
   > ul:first-child
   > li
   a:hover,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-header
   .container
   .tools
@@ -429,8 +429,8 @@
   -webkit-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Arial",
-    "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Arial',
+    'Helvetica Neue', 'Helvetica', sans-serif;
   font-size: 16px;
   font-weight: 400;
   height: 44px;
@@ -475,7 +475,7 @@
 #global-header .container .tools.focused > li.active > a:visited:before,
 #global-header .container .tools.focused > li.inactive > a:link:before,
 #global-header .container .tools.focused > li.inactive > a:visited:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
   filter: alpha(opacity=0);
   -moz-opacity: 0;
   -khtml-opacity: 0;
@@ -495,7 +495,7 @@
   .tools.focused
   > li.inactive
   > a:visited:hover:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
   filter: alpha(opacity=100);
   -moz-opacity: 1;
   -khtml-opacity: 1;
@@ -511,7 +511,7 @@
 #global-header .container .tools.focused > li.hover > a:visited:before,
 #global-header .container .tools.focused > li.hover > a:hover:before,
 #global-header .container .tools.focused > li.hover > a:visited:hover:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
   filter: alpha(opacity=100);
   -moz-opacity: 1;
   -khtml-opacity: 1;
@@ -532,7 +532,7 @@
 }
 #global-header .container .tools.focused > li > a:link:before,
 #global-header .container .tools.focused > li > a:visited:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
   filter: alpha(opacity=0);
   -moz-opacity: 0;
   -khtml-opacity: 0;
@@ -548,7 +548,7 @@
 }
 #global-header .container .tools.focused > li > a:hover:before,
 #global-header .container .tools.focused > li > a:visited:hover:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
   filter: alpha(opacity=100);
   -moz-opacity: 1;
   -khtml-opacity: 1;
@@ -610,7 +610,7 @@
   position: relative;
   text-align: left;
 }
-[data-appearance="dark"] .global-user .current-favorites .feed-title.favorites {
+[data-appearance='dark'] .global-user .current-favorites .feed-title.favorites {
   color: #fff;
 }
 .global-user .current-favorites ul > li {
@@ -651,7 +651,7 @@
 .global-user .current-favorites ul > li > a:hover {
   background: #fff;
 }
-[data-appearance="dark"] .global-user .current-favorites ul > li > a:hover {
+[data-appearance='dark'] .global-user .current-favorites ul > li > a:hover {
   background-color: #48494a;
   color: #fff;
 }
@@ -746,7 +746,7 @@
     padding-top: 12px;
   }
   .global-user .footer-links .legal:after {
-    content: ":";
+    content: ':';
   }
 }
 @media screen and (min-width: 1024px) {
@@ -760,13 +760,13 @@
   }
   .global-user .footer-wrapper:before {
     background: #edeef0;
-    content: "";
+    content: '';
     height: 1px;
     position: absolute;
     left: 8px;
     right: 8px;
   }
-  [data-appearance="dark"] .global-user .footer-wrapper:before {
+  [data-appearance='dark'] .global-user .footer-wrapper:before {
     background: #3a3b3c;
   }
   .global-user .footer-links ul {
@@ -786,7 +786,7 @@
   .global-user .footer-links ul li + li {
     border-left: 1px #dcdddf solid;
   }
-  [data-appearance="dark"] .global-user .footer-links ul li + li {
+  [data-appearance='dark'] .global-user .footer-links ul li + li {
     border-color: #3a3b3c;
   }
   .global-user .footer-links ul a:hover {
@@ -802,7 +802,7 @@
   .global-user ul:first-child > li > a {
     color: #2b2c2d;
   }
-  [data-appearance="dark"] .global-user ul:first-child > li > a {
+  [data-appearance='dark'] .global-user ul:first-child > li > a {
     color: #a5a6a7;
   }
   .global-user .current-favorites {
@@ -890,7 +890,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-header
   .tools
   .global-user-container
@@ -1056,84 +1056,84 @@
   background-repeat: no-repeat;
 }
 #global-nav > ul > li.more-espn .whatsOnSg > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-sg-30x30@2x.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-sg-30x30@2x.png');
   background-size: 30px 30px;
 }
 #global-nav > ul > li.more-espn .standRed > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-standred-30x30@2x.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-standred-30x30@2x.png');
   background-size: 30px 30px;
 }
 #global-nav > ul > li.more-espn .espnw > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-espnw-26x30.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-espnw-26x30.png');
   background-size: 26px 30px;
 }
 #global-nav > ul > li.more-espn .magazine > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-espn-mag-26x30.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-espn-mag-26x30.png');
   background-size: 26px 30px;
 }
 #global-nav > ul > li.more-espn .fivethirtyeight > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-538-24x31.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-538-24x31.png');
   background-size: 24px 31px;
 }
 #global-nav > ul > li.more-espn .sec > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/networks/espn-sec-vertical.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/networks/espn-sec-vertical.png');
   background-size: 27px 37px;
 }
 #global-nav > ul > li.more-espn .insider > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/inisider-moremenu.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/inisider-moremenu.png');
   background-size: 27px 27px;
 }
 #global-nav > ul > li.more-espn .insider > a:before {
   display: none;
 }
 #global-nav > ul > li.more-espn .espnplus > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espnplus/ePlus2.svg");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espnplus/ePlus2.svg');
   background-size: 36px 36px;
   background-repeat: no-repeat;
   background-position: 10px center;
 }
 #global-nav > ul > li.more-espn .fc > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-fc.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-fc.png');
   background-size: 24px 24px;
 }
 #global-nav > ul > li.more-espn .espnplayer > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/networks/logo2-espnplayer@2x.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/networks/logo2-espnplayer@2x.png');
   background-size: 30px 15px;
 }
 #global-nav > ul > li.more-espn .cricinfo > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-cricinfo-30x30.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-cricinfo-30x30.png');
   background-size: 30px 30px;
 }
 #global-nav > ul > li.more-espn .tcm > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-tcm-30x30.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-tcm-30x30.png');
   background-size: 30px 30px;
 }
 #global-nav > ul > li.more-espn .sportsnation > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-sportsnation-48x27.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-sportsnation-48x27.png');
   background-size: 48px 27px;
   background-position-x: 4px;
 }
 #global-nav > ul > li.more-espn .shop > a {
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuNCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwb2x5Z29uIGZpbGw9IiNDQ0NDQ0MiIHBvaW50cz0iMTEuOTAzLDM4LjY0OCAxMy44MTYsMzguNjQ4IDE0LjMyOSwzNC4xMzYgNDUuMjg0LDM0LjE0MSA1MCwxMy45OTggOS4yNzIsMTAuNjEyIDcuMjIyLDIuMTYzIAoJCTAuMTIyLDIuOTYgMCw1LjE1NyA0LjgzNiw1LjAxNSAxMS44NjQsMzIuOTgzIAkiLz4KCTxnPgoJCTxwYXRoIGZpbGw9IiNDQ0NDQ0MiIGQ9Ik00MC4zMzIsNDYuNTU1Yy0yLjIxOCwwLTQuMDIxLTEuODA2LTQuMDIxLTQuMDIyYy0wLjAwMy0yLjE2MiwxLjY4OC0zLjkyNywzLjg0Ny00LjAybDAuMTc1LTAuMDA0CgkJCWMyLjIxOCwwLDQuMDIzLDEuODA2LDQuMDIzLDQuMDIzQzQ0LjM1NSw0NC43NDksNDIuNTUsNDYuNTU1LDQwLjMzMiw0Ni41NTV6IE00MC4zMzIsNDAuMDkzIi8+Cgk8L2c+Cgk8Zz4KCQk8cGF0aCBmaWxsPSIjQ0NDQ0NDIiBkPSJNMTIuNjIyLDQ2LjU1NWMtMi4yMTcsMC00LjAyMS0xLjgwNi00LjAyMS00LjAyMmMtMC4wMDMtMi4xNjIsMS42ODgtMy45MjcsMy44NDgtNC4wMmwwLjE3My0wLjAwNAoJCQljMi4yMTgsMCw0LjAyMywxLjgwNiw0LjAyMyw0LjAyM0MxNi42NDUsNDQuNzQ5LDE0Ljg0LDQ2LjU1NSwxMi42MjIsNDYuNTU1eiIvPgoJPC9nPgoJPHJlY3QgeD0iMTIuMzI3IiB5PSIzOC41MDkiIGZpbGw9IiNDQ0NDQ0MiIHdpZHRoPSIyNy44ODMiIGhlaWdodD0iMS41Ii8+CjwvZz4KPC9zdmc+Cg==");
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuNCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwb2x5Z29uIGZpbGw9IiNDQ0NDQ0MiIHBvaW50cz0iMTEuOTAzLDM4LjY0OCAxMy44MTYsMzguNjQ4IDE0LjMyOSwzNC4xMzYgNDUuMjg0LDM0LjE0MSA1MCwxMy45OTggOS4yNzIsMTAuNjEyIDcuMjIyLDIuMTYzIAoJCTAuMTIyLDIuOTYgMCw1LjE1NyA0LjgzNiw1LjAxNSAxMS44NjQsMzIuOTgzIAkiLz4KCTxnPgoJCTxwYXRoIGZpbGw9IiNDQ0NDQ0MiIGQ9Ik00MC4zMzIsNDYuNTU1Yy0yLjIxOCwwLTQuMDIxLTEuODA2LTQuMDIxLTQuMDIyYy0wLjAwMy0yLjE2MiwxLjY4OC0zLjkyNywzLjg0Ny00LjAybDAuMTc1LTAuMDA0CgkJCWMyLjIxOCwwLDQuMDIzLDEuODA2LDQuMDIzLDQuMDIzQzQ0LjM1NSw0NC43NDksNDIuNTUsNDYuNTU1LDQwLjMzMiw0Ni41NTV6IE00MC4zMzIsNDAuMDkzIi8+Cgk8L2c+Cgk8Zz4KCQk8cGF0aCBmaWxsPSIjQ0NDQ0NDIiBkPSJNMTIuNjIyLDQ2LjU1NWMtMi4yMTcsMC00LjAyMS0xLjgwNi00LjAyMS00LjAyMmMtMC4wMDMtMi4xNjIsMS42ODgtMy45MjcsMy44NDgtNC4wMmwwLjE3My0wLjAwNAoJCQljMi4yMTgsMCw0LjAyMywxLjgwNiw0LjAyMyw0LjAyM0MxNi42NDUsNDQuNzQ5LDE0Ljg0LDQ2LjU1NSwxMi42MjIsNDYuNTU1eiIvPgoJPC9nPgoJPHJlY3QgeD0iMTIuMzI3IiB5PSIzOC41MDkiIGZpbGw9IiNDQ0NDQ0MiIHdpZHRoPSIyNy44ODMiIGhlaWdodD0iMS41Ii8+CjwvZz4KPC9zdmc+Cg==');
   background-size: 30px 30px;
 }
 html.no-svg #global-nav > ul > li.more-espn .shop > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/icons/icon-shop.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/icons/icon-shop.png');
 }
 #global-nav > ul > li.more-espn .tickets > a {
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuNCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGZpbGw9IiNDQ0NDQ0MiIGQ9Ik0zMS4zOTksMzEuOTQzYzAuMjY0LTAuNzI1LDAuNzA4LTEuMzI0LDEuMjQ3LTEuODAxSDEzLjMzOVYxMy45NTJsLTUuOTk4LTIuMTg0TDUuMTk5LDE3LjY1CgkJYzIuMzIsMC44NDQsMy41MTcsMy40MSwyLjY3Miw1LjczYy0wLjg0NCwyLjMxOS0zLjQxLDMuNTE2LTUuNzI5LDIuNjcyTDAsMzEuOTM2bDMxLjkzMSwxMS42MTlsMi4xNDEtNS44ODEKCQlDMzEuNzUxLDM2LjgzLDMwLjU1NSwzNC4yNjQsMzEuMzk5LDMxLjk0M3oiLz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGZpbGw9IiNDQ0NDQ0MiIGQ9Ik01MCwxMi4yNTlWNkgxNi4wOTZ2Ni4yNTljMi40NywwLDQuMzk2LDIuMDAyLDQuMzk2LDQuNDcxYzAsMi40NjktMS45MjcsNC40NzEtNC4zOTYsNC40NzF2Ni4yNkg1MHYtNi4yNgoJCQljLTIuNDY4LDAtNC40NzEtMi4wMDItNC40NzEtNC40NzFDNDUuNTI5LDE0LjI2MSw0Ny41MzIsMTIuMjU5LDUwLDEyLjI1OXoiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K");
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuNCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTAgNTAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGZpbGw9IiNDQ0NDQ0MiIGQ9Ik0zMS4zOTksMzEuOTQzYzAuMjY0LTAuNzI1LDAuNzA4LTEuMzI0LDEuMjQ3LTEuODAxSDEzLjMzOVYxMy45NTJsLTUuOTk4LTIuMTg0TDUuMTk5LDE3LjY1CgkJYzIuMzIsMC44NDQsMy41MTcsMy40MSwyLjY3Miw1LjczYy0wLjg0NCwyLjMxOS0zLjQxLDMuNTE2LTUuNzI5LDIuNjcyTDAsMzEuOTM2bDMxLjkzMSwxMS42MTlsMi4xNDEtNS44ODEKCQlDMzEuNzUxLDM2LjgzLDMwLjU1NSwzNC4yNjQsMzEuMzk5LDMxLjk0M3oiLz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGZpbGw9IiNDQ0NDQ0MiIGQ9Ik01MCwxMi4yNTlWNkgxNi4wOTZ2Ni4yNTljMi40NywwLDQuMzk2LDIuMDAyLDQuMzk2LDQuNDcxYzAsMi40NjktMS45MjcsNC40NzEtNC4zOTYsNC40NzF2Ni4yNkg1MHYtNi4yNgoJCQljLTIuNDY4LDAtNC40NzEtMi4wMDItNC40NzEtNC40NzFDNDUuNTI5LDE0LjI2MSw0Ny41MzIsMTIuMjU5LDUwLDEyLjI1OXoiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K');
   background-size: 34px 34px;
 }
 html.no-svg #global-nav > ul > li.more-espn .tickets > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/icons/icon-tickets.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/icons/icon-tickets.png');
 }
 #global-nav > ul > li.more-espn .undefeated > a {
-  background-image: url("https://a.espncdn.com/i/espn/networks_shows/500/undefeated.png");
+  background-image: url('https://a.espncdn.com/i/espn/networks_shows/500/undefeated.png');
   background-position: 10px center;
   background-size: 34px 34px;
 }
 #global-nav > ul > li.more-espn .longform > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-doubletruck-80@2x.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-doubletruck-80@2x.png');
   background-position: 10px center;
   background-size: 34px 34px;
 }
@@ -1149,13 +1149,13 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   right: 8px;
   top: 50%;
 }
-[data-appearance="dark"] #global-nav > ul > li.more-espn .external > a:after {
+[data-appearance='dark'] #global-nav > ul > li.more-espn .external > a:after {
   color: #fff;
 }
 #global-nav > ul > li.more-espn .external > a:hover:after {
   color: #06c;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav
   > ul
   > li.more-espn
@@ -1558,7 +1558,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 }
 #global-nav-mobile-trigger span:before,
 #global-nav-mobile-trigger span:after {
-  content: "";
+  content: '';
   position: absolute;
 }
 #global-nav-mobile-trigger span,
@@ -1624,8 +1624,8 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   z-index: 1000042;
   background: #fff;
 }
-[data-appearance="dark"] #global-nav-secondary,
-[data-appearance="dark"] #global-nav-tertiary {
+[data-appearance='dark'] #global-nav-secondary,
+[data-appearance='dark'] #global-nav-tertiary {
   background: #252627;
 }
 #global-nav-secondary .global-nav-container,
@@ -1634,7 +1634,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-tertiary .tertiary-nav-container {
   display: block;
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1920px;
   position: relative;
 }
 #global-nav-secondary .global-nav-container > ul,
@@ -1655,7 +1655,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-tertiary .global-nav-container > ul:after,
 #global-nav-tertiary .tertiary-nav-container > ul:before,
 #global-nav-tertiary .tertiary-nav-container > ul:after {
-  content: "";
+  content: '';
   display: table;
 }
 #global-nav-secondary .global-nav-container > ul:after,
@@ -1726,7 +1726,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > ul.focused
   > li.active
   > a:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
   filter: alpha(opacity=100);
   -moz-opacity: 0;
   -khtml-opacity: 0;
@@ -1802,7 +1802,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > ul.focused
   > li.active
   > a:visited:hover:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
   filter: alpha(opacity=100);
   -moz-opacity: 1;
   -khtml-opacity: 1;
@@ -1850,97 +1850,97 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > a:visited:hover {
   color: #2b2c2d;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul.focused
   > li.hover
   > a:link,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul.focused
   > li.hover
   > a:visited,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul.focused
   > li.hover
   > a:hover,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul.focused
   > li.hover
   > a:visited:hover,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul.focused
   > li.hover
   > a:link,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul.focused
   > li.hover
   > a:visited,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul.focused
   > li.hover
   > a:hover,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul.focused
   > li.hover
   > a:visited:hover,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul.focused
   > li.hover
   > a:link,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul.focused
   > li.hover
   > a:visited,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul.focused
   > li.hover
   > a:hover,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul.focused
   > li.hover
   > a:visited:hover,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul.focused
   > li.hover
   > a:link,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul.focused
   > li.hover
   > a:visited,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul.focused
   > li.hover
   > a:hover,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul.focused
@@ -2028,7 +2028,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > ul.focused
   > li.hover
   > a:visited:hover:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
   filter: alpha(opacity=100);
   -moz-opacity: 1;
   -khtml-opacity: 1;
@@ -2044,49 +2044,49 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-tertiary .tertiary-nav-container > ul.focused > li > a:visited {
   color: #a5a6a7;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul.focused
   > li
   > a:link,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul.focused
   > li
   > a:visited,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul.focused
   > li
   > a:link,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul.focused
   > li
   > a:visited,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul.focused
   > li
   > a:link,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul.focused
   > li
   > a:visited,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul.focused
   > li
   > a:link,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul.focused
@@ -2098,7 +2098,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-secondary .tertiary-nav-container > ul.focused > li > a:before,
 #global-nav-tertiary .global-nav-container > ul.focused > li > a:before,
 #global-nav-tertiary .tertiary-nav-container > ul.focused > li > a:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
   filter: alpha(opacity=100);
   -moz-opacity: 0;
   -khtml-opacity: 0;
@@ -2150,7 +2150,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > ul.focused
   > li
   > a:visited:hover:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
   filter: alpha(opacity=100);
   -moz-opacity: 1;
   -khtml-opacity: 1;
@@ -2196,7 +2196,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > ul.focused
   > li.insider
   > a:visited:before {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
   filter: alpha(opacity=100);
   -moz-opacity: 1;
   -khtml-opacity: 1;
@@ -2264,7 +2264,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   background: #fff;
   padding: 0 10px;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   :not(.alt-format)
   #global-nav-secondary
   .global-nav-container
@@ -2272,7 +2272,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > li
   > div
   > ul:first-child:not(.alt-format),
-[data-appearance="dark"]
+[data-appearance='dark']
   :not(.alt-format)
   #global-nav-secondary
   .tertiary-nav-container
@@ -2280,7 +2280,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > li
   > div
   > ul:first-child:not(.alt-format),
-[data-appearance="dark"]
+[data-appearance='dark']
   :not(.alt-format)
   #global-nav-tertiary
   .global-nav-container
@@ -2288,7 +2288,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > li
   > div
   > ul:first-child:not(.alt-format),
-[data-appearance="dark"]
+[data-appearance='dark']
   :not(.alt-format)
   #global-nav-tertiary
   .tertiary-nav-container
@@ -2337,8 +2337,8 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   border-radius: 3px;
   color: #6c6d6f;
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Arial",
-    "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Arial',
+    'Helvetica Neue', 'Helvetica', sans-serif;
   font-size: 13px;
   font-weight: 400;
   height: auto;
@@ -2348,7 +2348,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   position: relative;
   text-align: left;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   :not(.alt-format)
   #global-nav-secondary
   .global-nav-container
@@ -2358,7 +2358,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > ul:first-child:not(.alt-format)
   > li
   > a,
-[data-appearance="dark"]
+[data-appearance='dark']
   :not(.alt-format)
   #global-nav-secondary
   .tertiary-nav-container
@@ -2368,7 +2368,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > ul:first-child:not(.alt-format)
   > li
   > a,
-[data-appearance="dark"]
+[data-appearance='dark']
   :not(.alt-format)
   #global-nav-tertiary
   .global-nav-container
@@ -2378,7 +2378,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > ul:first-child:not(.alt-format)
   > li
   > a,
-[data-appearance="dark"]
+[data-appearance='dark']
   :not(.alt-format)
   #global-nav-tertiary
   .tertiary-nav-container
@@ -2584,7 +2584,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-tertiary .global-nav-container > ul > li.sports:after,
 #global-nav-tertiary .tertiary-nav-container > ul > li.sports:after {
   border-left: 1px solid #cbccce;
-  content: "";
+  content: '';
   height: 25px;
   margin-top: -13px;
   position: absolute;
@@ -2611,28 +2611,28 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   display: table;
   position: relative;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul
   > li.sports
   .positioning
   a,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul
   > li.sports
   .positioning
   a,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul
   > li.sports
   .positioning
   a,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul
@@ -2937,7 +2937,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-tertiary .global-nav-container > ul > li.section-home:after,
 #global-nav-tertiary .tertiary-nav-container > ul > li.section-home:after {
   border-left: 1px solid #cbccce;
-  content: "";
+  content: '';
   height: 25px;
   margin-top: -13px;
   position: absolute;
@@ -3052,8 +3052,8 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-tertiary .global-nav-container > ul > li > a,
 #global-nav-tertiary .tertiary-nav-container > ul > li > a {
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Arial",
-    "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Arial',
+    'Helvetica Neue', 'Helvetica', sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 44px;
@@ -3072,7 +3072,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-tertiary .tertiary-nav-container > ul > li > a.hover:before {
   background-color: #d00;
   bottom: 0;
-  content: "";
+  content: '';
   height: 4px;
   left: 0;
   position: absolute;
@@ -3139,49 +3139,49 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   color: #2b2c2d;
   position: relative;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul
   > li.active
   > a,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul
   > li.hover:not(.insider):not(.espnplus)
   > a,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul
   > li.active
   > a,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul
   > li.hover:not(.insider):not(.espnplus)
   > a,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul
   > li.active
   > a,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul
   > li.hover:not(.insider):not(.espnplus)
   > a,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul
   > li.active
   > a,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul
@@ -3215,55 +3215,55 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   > a:before {
   background-color: #d00;
   bottom: 0;
-  content: "";
+  content: '';
   height: 4px;
   left: 0;
   position: absolute;
   right: 0;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul
   > li.active
   > a:before,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul
   > li.hover:not(.insider):not(.espnplus)
   > a:before,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul
   > li.active
   > a:before,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul
   > li.hover:not(.insider):not(.espnplus)
   > a:before,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul
   > li.active
   > a:before,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul
   > li.hover:not(.insider):not(.espnplus)
   > a:before,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul
   > li.active
   > a:before,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul
@@ -3281,7 +3281,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-tertiary .tertiary-nav-container > ul > li.hover.espnplus:before {
   background-color: #d00;
   bottom: 0;
-  content: "";
+  content: '';
   height: 4px;
   left: 0;
   position: absolute;
@@ -3424,25 +3424,25 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   right: 3px;
   top: 50%;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul
   > li.has-sub
   > a:after,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .tertiary-nav-container
   > ul
   > li.has-sub
   > a:after,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .global-nav-container
   > ul
   > li.has-sub
   > a:after,
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul
@@ -3564,7 +3564,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-tertiary .tertiary-nav-container > ul > li.divider-left:before,
 #global-nav-tertiary .tertiary-nav-container > ul > li.divider-right:after {
   border-left: 1px solid #edeef0;
-  content: "";
+  content: '';
   height: 30px;
   margin-top: -14px;
   position: absolute;
@@ -3651,7 +3651,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
 #global-nav-tertiary .fav-added.short {
   display: none;
 }
-.index.page-context-top:not([data-sport="cricket"])
+.index.page-context-top:not([data-sport='cricket'])
   #global-nav-secondary
   .global-nav-container
   > ul {
@@ -3661,7 +3661,7 @@ html.no-svg #global-nav > ul > li.more-espn .tickets > a {
   display: -ms-flexbox;
   display: flex;
 }
-.index.page-context-top:not([data-sport="cricket"])
+.index.page-context-top:not([data-sport='cricket'])
   #global-nav-secondary
   .global-nav-container
   > ul
@@ -3679,7 +3679,7 @@ body:not(.page-context-top)
   padding: 0 10px;
 }
 @media screen and (max-width: 767px) {
-  [data-sport="cricket"]
+  [data-sport='cricket']
     #global-nav-secondary
     .global-nav-container
     > ul
@@ -3688,7 +3688,7 @@ body:not(.page-context-top)
     a {
     height: 44px;
   }
-  [data-sport="cricket"]
+  [data-sport='cricket']
     #global-nav-secondary
     .global-nav-container
     > ul
@@ -3698,7 +3698,7 @@ body:not(.page-context-top)
     .link-text-short {
     display: table-cell;
   }
-  [data-sport="cricket"]
+  [data-sport='cricket']
     #global-nav-secondary
     .global-nav-container
     > ul
@@ -3725,8 +3725,8 @@ body:not(.page-context-top)
     padding-right: 8px;
   }
 }
-[data-appearance="dark"] .tertiary #global-nav-secondary .ClubhouseHeader,
-[data-appearance="dark"] .secondary #global-nav-secondary .ClubhouseHeader {
+[data-appearance='dark'] .tertiary #global-nav-secondary .ClubhouseHeader,
+[data-appearance='dark'] .secondary #global-nav-secondary .ClubhouseHeader {
   background: #252627;
   border-bottom-color: #3a3b3c;
 }
@@ -3850,8 +3850,8 @@ body:not(.page-context-top)
     padding-top: 4px;
   }
 }
-[data-appearance="dark"] .tertiary #global-nav-secondary .ClubhouseHeader__Rank,
-[data-appearance="dark"]
+[data-appearance='dark'] .tertiary #global-nav-secondary .ClubhouseHeader__Rank,
+[data-appearance='dark']
   .secondary
   #global-nav-secondary
   .ClubhouseHeader__Rank {
@@ -3933,11 +3933,11 @@ body:not(.page-context-top)
 .secondary #global-nav-secondary .ClubhouseHeader__DisplayName {
   font-weight: 700;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   .tertiary
   #global-nav-secondary
   .ClubhouseHeader__DisplayName,
-[data-appearance="dark"]
+[data-appearance='dark']
   .secondary
   #global-nav-secondary
   .ClubhouseHeader__DisplayName {
@@ -3998,11 +3998,11 @@ body:not(.page-context-top)
   line-height: 16px;
   font-size: 12px;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   .tertiary
   #global-nav-secondary
   .ClubhouseHeader__Record,
-[data-appearance="dark"]
+[data-appearance='dark']
   .secondary
   #global-nav-secondary
   .ClubhouseHeader__Record {
@@ -4016,7 +4016,7 @@ body:not(.page-context-top)
 }
 .tertiary #global-nav-secondary .ClubhouseHeader__Record li:before,
 .secondary #global-nav-secondary .ClubhouseHeader__Record li:before {
-  content: "\2022";
+  content: '\2022';
   color: #6c6d6f;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -4029,7 +4029,7 @@ body:not(.page-context-top)
   #global-nav-secondary
   .ClubhouseHeader__Record
   li:first-of-type:before {
-  content: "";
+  content: '';
   padding-left: 0;
   padding-right: 0;
 }
@@ -4053,14 +4053,14 @@ body:not(.page-context-top)
   border-bottom: #f1f2f3 1px solid;
   color: #2b2c2d;
 }
-[data-appearance="dark"] #global-nav-tertiary {
+[data-appearance='dark'] #global-nav-tertiary {
   border-bottom: #3a3b3c 1px solid;
   color: #cbccce;
 }
 #global-nav-tertiary .tertiary-nav-container > ul > li > a {
   line-height: 40px;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-tertiary
   .tertiary-nav-container
   > ul
@@ -4075,22 +4075,22 @@ body:not(.page-context-top)
 }
 @media screen and (max-width: 767px) {
   head {
-    font-family: "mobile";
+    font-family: 'mobile';
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   head {
-    font-family: "tablet";
+    font-family: 'tablet';
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1259px) {
   head {
-    font-family: "desktop";
+    font-family: 'desktop';
   }
 }
 @media screen and (min-width: 1260px) {
   head {
-    font-family: "desktop-lg";
+    font-family: 'desktop-lg';
   }
 }
 body:after {
@@ -4106,22 +4106,22 @@ body:after {
 }
 @media screen and (max-width: 767px) {
   body:after {
-    content: "mobile";
+    content: 'mobile';
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   body:after {
-    content: "tablet";
+    content: 'tablet';
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1259px) {
   body:after {
-    content: "desktop";
+    content: 'desktop';
   }
 }
 @media screen and (min-width: 1260px) {
   body:after {
-    content: "desktop-lg";
+    content: 'desktop-lg';
   }
 }
 .Editions__Item {
@@ -4134,13 +4134,13 @@ body:after {
   height: 50px;
   border-top: 1px solid #edeef0;
 }
-[data-appearance="dark"] .Editions__Item--more {
+[data-appearance='dark'] .Editions__Item--more {
   border-color: #3a3b3c;
 }
 .Editions__Item:hover {
   background: #f9f9fb;
 }
-[data-appearance="dark"] .Editions__Item:hover {
+[data-appearance='dark'] .Editions__Item:hover {
   background: #48494a;
 }
 .Editions__Item__Image {
@@ -4168,7 +4168,7 @@ body:after {
   line-height: 13px;
   color: #6c6d6f;
 }
-[data-appearance="dark"] .Editions__Item__Title {
+[data-appearance='dark'] .Editions__Item__Title {
   color: #fff;
 }
 .Editions__Item__Country {
@@ -4547,7 +4547,7 @@ body:after {
   .tier-2
   > li
   > h1.footer.label:after {
-  content: "";
+  content: '';
   display: table;
 }
 #global-viewport
@@ -4741,7 +4741,7 @@ body:after {
   > a.whatsOnSg
   > .link-text {
   background: transparent
-    url("https://a.espncdn.com/redesign/assets/img/logos/logo-sg-30x30@2x.png")
+    url('https://a.espncdn.com/redesign/assets/img/logos/logo-sg-30x30@2x.png')
     no-repeat 0 center;
   background-size: 25px 25px;
 }
@@ -4754,7 +4754,7 @@ body:after {
   > a.standRed
   > .link-text {
   background: transparent
-    url("https://a.espncdn.com/redesign/assets/img/logos/logo-standred-30x30@2x.png")
+    url('https://a.espncdn.com/redesign/assets/img/logos/logo-standred-30x30@2x.png')
     no-repeat 0 center;
   background-size: 25px 25px;
 }
@@ -4767,7 +4767,7 @@ body:after {
   > a.fivethirtyeight
   > .link-text {
   background: transparent
-    url("https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-538.png")
+    url('https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-538.png')
     no-repeat 0 center;
   background-size: 17px 24px;
 }
@@ -4784,7 +4784,7 @@ body:after {
     > li
     > a.fivethirtyeight
     > .link-text {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-538@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-538@2x.png');
     background-size: 17px 24px;
   }
 }
@@ -4797,7 +4797,7 @@ body:after {
   > a.espnw
   > .link-text {
   background: transparent
-    url("https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-espnw.png")
+    url('https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-espnw.png')
     no-repeat 0 center;
   background-size: 25px 22px;
 }
@@ -4814,7 +4814,7 @@ body:after {
     > li
     > a.espnw
     > .link-text {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-espnw@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-espnw@2x.png');
     background-size: 25px 22px;
   }
 }
@@ -4827,7 +4827,7 @@ body:after {
   > a.sec
   > .link-text {
   background: transparent
-    url("https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-sec.png")
+    url('https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-sec.png')
     no-repeat 0 center;
   background-size: 20px 24px;
 }
@@ -4844,7 +4844,7 @@ body:after {
     > li
     > a.sec
     > .link-text {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-sec@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-sec@2x.png');
     background-size: 20px 24px;
   }
 }
@@ -4857,7 +4857,7 @@ body:after {
   > a.magazine
   > .link-text {
   background: transparent
-    url("https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-magazine.png")
+    url('https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-magazine.png')
     no-repeat 0 center;
   background-size: 22px 22px;
 }
@@ -4874,7 +4874,7 @@ body:after {
     > li
     > a.magazine
     > .link-text {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-magazine@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/icons/icon-mobile-nav-magazine@2x.png');
     background-size: 22px 22px;
   }
 }
@@ -4886,7 +4886,7 @@ body:after {
   > li
   > a.fc
   > .link-text {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-fc.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-fc.png');
   background-size: 20px 20px;
   background-position: 0 center;
   background-repeat: no-repeat;
@@ -4904,7 +4904,7 @@ body:after {
     > li
     > a.fc
     > .link-text {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-fc@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-fc@2x.png');
   }
 }
 #global-viewport
@@ -4915,7 +4915,7 @@ body:after {
   > li
   > a.sportsnation
   > .link-text {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-sportsnation-48x27.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-sportsnation-48x27.png');
   background-size: 27px 15px;
   background-position: -2px center;
   background-repeat: no-repeat;
@@ -4934,7 +4934,7 @@ body:after {
     > li
     > a.sportsnation
     > .link-text {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-sportsnation-48x27@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-sportsnation-48x27@2x.png');
   }
 }
 #global-viewport
@@ -4945,7 +4945,7 @@ body:after {
   > li
   > a.espnplayer
   > .link-text {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/networks/logo2-espnplayer@2x.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/networks/logo2-espnplayer@2x.png');
   background-position: 0 center;
   background-repeat: no-repeat;
   background-size: 25px 12px;
@@ -4958,7 +4958,7 @@ body:after {
   > li
   > a.cricinfo
   > .link-text {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-cricinfo-30x30.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-cricinfo-30x30.png');
   background-size: 25px 25px;
   background-position: 0 center;
   background-repeat: no-repeat;
@@ -4977,7 +4977,7 @@ body:after {
     > li
     > a.cricinfo
     > .link-text {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-cricinfo-30x30@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-cricinfo-30x30@2x.png');
   }
 }
 #global-viewport
@@ -4988,7 +4988,7 @@ body:after {
   > li
   > a.tcm
   > .link-text {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-tcm-30x30.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-tcm-30x30.png');
   background-size: 25px 25px;
   background-position: 0 center;
   background-repeat: no-repeat;
@@ -5007,7 +5007,7 @@ body:after {
     > li
     > a.tcm
     > .link-text {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-tcm-30x30@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-tcm-30x30@2x.png');
   }
 }
 #global-viewport
@@ -5019,7 +5019,7 @@ body:after {
   > a.undefeated
   > .link-text {
   background: transparent
-    url("https://a.espncdn.com/redesign/assets/img/logos/icon-undefeated.png")
+    url('https://a.espncdn.com/redesign/assets/img/logos/icon-undefeated.png')
     no-repeat 0 center;
   background-size: 23px 23px;
 }
@@ -5036,7 +5036,7 @@ body:after {
     > li
     > a.undefeated
     > .link-text {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/icon-undefeated.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/icon-undefeated.png');
     background-size: 25px 25px;
   }
 }
@@ -5049,7 +5049,7 @@ body:after {
   > a.longform
   > .link-text {
   background: transparent
-    url("https://a.espncdn.com/redesign/assets/img/logos/logo-doubletruck-80@2x.png")
+    url('https://a.espncdn.com/redesign/assets/img/logos/logo-doubletruck-80@2x.png')
     no-repeat 0 center;
   background-size: 22px 22px;
 }
@@ -5066,7 +5066,7 @@ body:after {
     > li
     > a.longform
     > .link-text {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-doubletruck-80@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-doubletruck-80@2x.png');
     background-size: 22px 22px;
   }
 }
@@ -5160,7 +5160,7 @@ body:after {
   background-image: none !important;
 }
 .touch
-  body:not(.page-context-top):not(.gamepackage):not(.clubhouse):not([data-sport="doubletruck"]):not(.draftcast):not(.page-context-tier3)
+  body:not(.page-context-top):not(.gamepackage):not(.clubhouse):not([data-sport='doubletruck']):not(.draftcast):not(.page-context-tier3)
   #global-nav-secondary
   .global-nav-container {
   height: 44px;
@@ -5168,7 +5168,7 @@ body:after {
 }
 .touch
   #global-viewport.tertiary
-  body:not(.page-context-top):not(.gamepackage):not(.clubhouse):not([data-sport="doubletruck"]):not(.draftcast):not(.page-context-tier3)
+  body:not(.page-context-top):not(.gamepackage):not(.clubhouse):not([data-sport='doubletruck']):not(.draftcast):not(.page-context-tier3)
   #global-nav-secondary
   .global-nav-container {
   height: 101px;
@@ -5256,7 +5256,7 @@ body:after {
 #global-nav-tertiary .tertiary-nav-container > ul > li.show > a:before {
   background-color: #d00;
   bottom: 0;
-  content: "";
+  content: '';
   height: 4px;
   left: 0;
   position: absolute;
@@ -5276,7 +5276,7 @@ body:after {
 #global-nav-tertiary .global-nav-container > ul > li.show > div:after,
 #global-nav-tertiary .tertiary-nav-container > ul > li.show > div:before,
 #global-nav-tertiary .tertiary-nav-container > ul > li.show > div:after {
-  content: "";
+  content: '';
   display: table;
 }
 #global-nav-secondary .global-nav-container > ul > li.show > div:after,
@@ -5688,7 +5688,7 @@ body:after {
   span:before {
   background-color: #d00;
   bottom: -15px;
-  content: "";
+  content: '';
   height: 4px;
   left: -10px;
   position: absolute;
@@ -5716,7 +5716,7 @@ body:after {
   display: block;
   padding: 0 8px;
 }
-[data-appearance="dark"]
+[data-appearance='dark']
   #global-nav-secondary
   .global-nav-container
   > ul.tertiary-mobile {
@@ -5917,7 +5917,7 @@ body.scroll-locked #pane-main {
 }
 #global-viewport .global-user ul:before,
 #global-viewport .global-user ul:after {
-  content: "";
+  content: '';
   display: table;
 }
 #global-viewport .global-user ul:after {
@@ -5998,7 +5998,7 @@ body > .shim {
 }
 #global-viewport .menu-overlay-primary,
 #global-viewport .more-overlay-primary {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
   filter: alpha(opacity=0);
   -moz-opacity: 0;
   -khtml-opacity: 0;
@@ -6025,7 +6025,7 @@ body > .shim {
 }
 #global-viewport .menu-overlay-primary.active,
 #global-viewport .more-overlay-primary.active {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
   filter: alpha(opacity=70);
   -moz-opacity: 0.7;
   -khtml-opacity: 0.7;
@@ -6045,7 +6045,7 @@ body > .shim {
   z-index: 1000045;
 }
 #global-viewport #global-header .menu-overlay-secondary {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
   filter: alpha(opacity=0);
   -moz-opacity: 0;
   -khtml-opacity: 0;
@@ -6065,7 +6065,7 @@ body > .shim {
   z-index: 1000043 !important;
 }
 #global-viewport #global-header .menu-overlay-secondary.active {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
   filter: alpha(opacity=70);
   -moz-opacity: 0.7;
   -khtml-opacity: 0.7;
@@ -6080,7 +6080,7 @@ body > .shim {
 }
 #global-viewport #pane-main:before,
 #global-viewport #pane-main:after {
-  content: "";
+  content: '';
   display: table;
 }
 #global-viewport #pane-main:after {
@@ -6089,7 +6089,7 @@ body > .shim {
 #global-viewport #pane-main .clearfix {
   zoom: 1;
 }
-[data-appearance="dark"] #global-viewport #pane-main {
+[data-appearance='dark'] #global-viewport #pane-main {
   background: #101113;
 }
 @media screen and (max-width: 767px) {
@@ -6114,15 +6114,15 @@ body > .shim {
   transition: opacity 0.08s ease-in-out;
   background: #edeef0;
 }
-[data-appearance="dark"] #global-viewport #pane-main .main-content {
+[data-appearance='dark'] #global-viewport #pane-main .main-content {
   background: #101113;
 }
 #global-header .container,
 #global-header #global-nav {
   background: #2b2c2d;
 }
-[data-appearance="dark"] #global-header .container,
-[data-appearance="dark"] #global-header #global-nav {
+[data-appearance='dark'] #global-header .container,
+[data-appearance='dark'] #global-header #global-nav {
   background: #000;
 }
 #global-header .container > h1:before,
@@ -6130,7 +6130,7 @@ body > .shim {
   -webkit-transform: skew(-25deg, 0);
   -ms-transform: skewX(-25deg) skewY(0);
   transform: skew(-25deg, 0);
-  content: "";
+  content: '';
   display: block;
   height: 44px;
   position: absolute;
@@ -6152,12 +6152,12 @@ body > .shim {
   right: -20px;
   z-index: -1;
 }
-[data-appearance="dark"] #global-header .container > h1:before,
-[data-appearance="dark"] #global-header .container > h1:after {
+[data-appearance='dark'] #global-header .container > h1:before,
+[data-appearance='dark'] #global-header .container > h1:after {
   display: none;
 }
 #global-header .container > h1 a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-espn-82x20.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-espn-82x20.png');
   background-size: 82px 20px;
   width: 88px;
 }
@@ -6167,7 +6167,7 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   #global-header .container > h1 a {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-espn-82x20@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-espn-82x20@2x.png');
   }
 }
 #global-header #global-nav > ul {
@@ -6178,7 +6178,7 @@ body > .shim {
   background: #2b2c2d;
 }
 .deportes #global-header .container > h1 a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-Deportes-76x90.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-Deportes-76x90.png');
   background-size: 76px 30px;
   margin-left: 5px;
   width: 88px;
@@ -6189,7 +6189,7 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   .deportes #global-header .container > h1 a {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-Deportes-76x90@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-Deportes-76x90@2x.png');
   }
 }
 .deportes #global-header #global-nav > ul {
@@ -6200,7 +6200,7 @@ body > .shim {
   background: #2b2c2d;
 }
 .espn-tv5 #global-header .container > h1 a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espn5-30x94.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espn5-30x94.png');
   background-size: 94px 30px;
   width: 94px;
 }
@@ -6210,7 +6210,7 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   .espn-tv5 #global-header .container > h1 a {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espn5-30x94@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espn5-30x94@2x.png');
   }
 }
 .espn-tv5 #global-header #global-nav > ul {
@@ -6225,7 +6225,7 @@ body > .shim {
   display: none;
 }
 .espnfc #global-header .container > h1 a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espnfc-logo.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espnfc-logo.png');
   background-size: 125px 28px;
   width: 125px;
 }
@@ -6235,7 +6235,7 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   .espnfc #global-header .container > h1 a {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espnfc-logo@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espnfc-logo@2x.png');
   }
 }
 .espnfc #global-header #global-nav > ul {
@@ -6250,7 +6250,7 @@ body > .shim {
   display: none;
 }
 .sony-espn #global-header .container > h1 a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-sony-86x48.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-sony-86x48.png');
   background-size: 86px 48px;
   width: 86px;
   margin-left: 0;
@@ -6261,7 +6261,7 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   .sony-espn #global-header .container > h1 a {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/logo-sony-86x48@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/logo-sony-86x48@2x.png');
   }
 }
 .sony-espn #global-header #global-nav > ul {
@@ -6292,7 +6292,7 @@ body > .shim {
   display: none;
 }
 .espncricinfo #global-header .container > h1 a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espncricinfo-navigation-logo-3.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espncricinfo-navigation-logo-3.png');
   background-size: 154px 22px;
   width: 154px;
 }
@@ -6302,12 +6302,12 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   .espncricinfo #global-header .container > h1 a {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espncricinfo-navigation-logo-3@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espncricinfo-navigation-logo-3@2x.png');
   }
 }
 @media screen and (min-width: 1px) and (max-width: 1023px) {
   .espncricinfo #global-header .container > h1 a {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espncricinfo-navigation-logo-320.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espncricinfo-navigation-logo-320.png');
     background-size: 139px 21px;
     width: 139px;
   }
@@ -6318,7 +6318,7 @@ body > .shim {
   only screen and (min-width: 1px) and (max-width: 1023px) and (min-resolution: 125dpi),
   only screen and (min-width: 1px) and (max-width: 1023px) and (min-resolution: 1.3dppx) {
   .espncricinfo #global-header .container > h1 a {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espncricinfo-navigation-logo-320@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espncricinfo-navigation-logo-320@2x.png');
   }
 }
 .espncricinfo #global-header #global-nav > ul {
@@ -6339,7 +6339,7 @@ body > .shim {
   width: 100%;
 }
 .espncricinfo #global-nav > ul > li.more-espn .wisden > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/wisden.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/wisden.png');
   background-size: 33px 35px;
   background-repeat: no-repeat;
   background-position: 10px center;
@@ -6350,11 +6350,11 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   .espncricinfo #global-nav > ul > li.more-espn .wisden > a {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/wisden@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/wisden@2x.png');
   }
 }
 .espncricinfo #global-nav > ul > li.more-espn .espnin > a {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espn-logo-cric.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espn-logo-cric.png');
   background-size: 22px 22px;
   background-repeat: no-repeat;
   background-position: 15px center;
@@ -6365,7 +6365,7 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   .espncricinfo #global-nav > ul > li.more-espn .espnin > a {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espn-logo-cric@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espn-logo-cric@2x.png');
   }
 }
 .espncricinfo #global-nav,
@@ -6426,7 +6426,7 @@ body > .shim {
   .global-nav-container
   > ul
   > li
-  > a[data-icon="cricinfo-app"]
+  > a[data-icon='cricinfo-app']
   .link-text {
   font-size: 12px;
   color: #6c6d6f;
@@ -6544,10 +6544,10 @@ body > .shim {
   .tier-1
   > li
   > .menu-trigger.teams:after {
-  background: url("https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/default-team-logo-white-500.png")
+  background: url('https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/default-team-logo-white-500.png')
     no-repeat;
   background-size: 24px 24px;
-  content: "";
+  content: '';
   display: block;
   height: 24px;
   margin: 15px auto 0;
@@ -6569,7 +6569,7 @@ body > .shim {
   padding-left: 40px;
 }
 .espncricinfo#global-viewport #global-nav-mobile .tier-2 > li > a.wisden {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/wisden.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/wisden.png');
   background-size: 22px 22px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
@@ -6578,11 +6578,11 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   .espncricinfo#global-viewport #global-nav-mobile .tier-2 > li > a.wisden {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/wisden@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/wisden@2x.png');
   }
 }
 .espncricinfo#global-viewport #global-nav-mobile .tier-2 > li > a.espnin {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espn-logo-cric.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espn-logo-cric.png');
   background-size: 22px 22px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
@@ -6591,7 +6591,7 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   .espncricinfo#global-viewport #global-nav-mobile .tier-2 > li > a.espnin {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/logos/espn-logo-cric@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/logos/espn-logo-cric@2x.png');
   }
 }
 .espncricinfo .story_progress .bar {
@@ -6627,7 +6627,7 @@ body > .shim {
   display: none;
 }
 .cricinfo-25years #global-header .container > h1:before {
-  background-image: url("https://a.espncdn.com/redesign/assets/img/icons/icon-menu-cricinfo-25.png");
+  background-image: url('https://a.espncdn.com/redesign/assets/img/icons/icon-menu-cricinfo-25.png');
   background-size: 35px 35px;
   -webkit-transform: skew(0, 0);
   -ms-transform: skewX(0) skewY(0);
@@ -6648,7 +6648,7 @@ body > .shim {
   only screen and (min-resolution: 125dpi),
   only screen and (min-resolution: 1.3dppx) {
   .cricinfo-25years #global-header .container > h1:before {
-    background-image: url("https://a.espncdn.com/redesign/assets/img/icons/icon-menu-cricinfo-25@2x.png");
+    background-image: url('https://a.espncdn.com/redesign/assets/img/icons/icon-menu-cricinfo-25@2x.png');
   }
 }
 @media screen and (max-width: 320px) {
