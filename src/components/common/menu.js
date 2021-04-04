@@ -17,16 +17,6 @@ const Menu = ({ open }) => {
               Projects
             </Link>
           </li>
-          {/* <li>
-            <Link to="/recommendations/">
-              <span
-                data-content="Recommendations"
-                aria-hidden="true"
-                aria-label="Recommendations"
-              />
-              Recommendations
-            </Link>
-          </li> */}
           <li>
             <Link to="/about/">
               <span
