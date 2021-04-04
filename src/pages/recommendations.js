@@ -5,7 +5,6 @@ import Testimonials from '../components/Recommendations/Recommendations'
 import Nav from '../components/common/nav'
 import Layout from '../components/Layout'
 
-// what people say
 const WPS = () => (
   <Layout>
     <Nav />
