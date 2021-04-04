@@ -15,9 +15,9 @@ const AboutContainer = styled.div`
   padding-top: 13vh;
 
   ${respondTo.T900`
-    font-size: 1rem;
-    padding: 6vh;
-    padding-top: 8vh;
+  padding: 6vh;
+  padding-top: 8vh;
+  font-size: 1rem;
 `}
 `
 
@@ -30,11 +30,12 @@ const AboutCopy = styled.div`
   max-width: 90vw;
   margin: auto;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
 
   ${respondTo.T900`
   padding: 1rem;
   max-width: 65vw;
-
+  font-size: 1rem;
   `}
 `
 
