@@ -39,6 +39,7 @@ export const GridCaption = styled.div`
   width: 80%;
   /* outline: 1px solid red; */
   margin: auto 2rem;
+  margin-bottom: 1rem;
 
   & h3 {
     /* text-decoration: underline solid var(--rise-4);
