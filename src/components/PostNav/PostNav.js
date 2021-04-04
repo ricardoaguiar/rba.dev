@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
+import { css } from '@emotion/react'
 
 import {
   GridContainer,
@@ -22,7 +23,7 @@ const getPosts = graphql`
           id
           slug
           heroImage {
-            fluid(maxWidth: 1400) {
+            fluid(maxWidth: 1920) {
               ...GatsbyContentfulFluid
             }
           }
@@ -43,7 +44,17 @@ const Posts = ({ title = 'Projects' }) => {
         {post.edges.map(({ node }) => {
           console.log(node)
           return (
-            <Link to={`/${node.slug}/`} key={node.id}>
+            <Link
+              to={`/${node.slug}/`}
+              key={node.id}
+              css={css`
+                &:hover {
+                  border: 1px solid var(--rise-7);
+                  background-color: var(--rise-75);
+                  border-radius: 8px;
+                }
+              `}
+            >
               <GridItem>
                 <GridPicture>
                   <Image fluid={node.heroImage.fluid} alt={node.title} />
@@ -51,7 +62,15 @@ const Posts = ({ title = 'Projects' }) => {
               </GridItem>
               <GridCaption>
                 <h3>{node.title}</h3>
-                <p>{node.intro.shortDescription}</p>
+                <p>
+                  {node.intro.shortDescription}
+                  {/* <ViewProject>
+                    View Project&nbsp;
+                    <span role="img" aria-label="view-project">
+                      👉
+                    </span>
+                  </ViewProject> */}
+                </p>
               </GridCaption>
             </Link>
           )
