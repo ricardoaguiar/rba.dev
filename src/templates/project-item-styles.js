@@ -80,7 +80,7 @@ export const SingleImage = styled.div`
 
   ${respondTo.T900`
     max-width: 80vw;
-    margin-left: 14vw;
+    margin-left: 10vw;
     flex-direction: row;
     flex-wrap: nowrap;
   `}
