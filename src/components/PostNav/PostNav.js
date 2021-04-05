@@ -24,7 +24,7 @@ const getPosts = graphql`
           slug
           heroImage {
             fluid(maxWidth: 1920) {
-              ...GatsbyContentfulFluid
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }
@@ -35,6 +35,7 @@ const getPosts = graphql`
 
 const Posts = ({ title = 'Projects' }) => {
   const { post } = useStaticQuery(getPosts)
+
   return (
     <>
       <Projects>
@@ -42,7 +43,6 @@ const Posts = ({ title = 'Projects' }) => {
       </Projects>
       <GridContainer>
         {post.edges.map(({ node }) => {
-          console.log(node)
           return (
             <Link
               to={`/${node.slug}/`}
