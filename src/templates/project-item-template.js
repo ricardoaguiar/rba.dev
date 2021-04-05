@@ -58,7 +58,7 @@ export const query = graphql`
       }
       images {
         fluid(maxWidth: 1920, quality: 100) {
-          ...GatsbyContentfulFluid
+          ...GatsbyContentfulFluid_tracedSVG
         }
         id
         description
@@ -67,7 +67,7 @@ export const query = graphql`
 
       singleImageLeft {
         fluid(maxWidth: 1920, quality: 100) {
-          ...GatsbyContentfulFluid
+          ...GatsbyContentfulFluid_tracedSVG
         }
         id
         description
@@ -76,7 +76,7 @@ export const query = graphql`
 
       singleImageRight {
         fluid(maxWidth: 1920, quality: 100) {
-          ...GatsbyContentfulFluid
+          ...GatsbyContentfulFluid_tracedSVG
         }
         id
         description
@@ -84,7 +84,7 @@ export const query = graphql`
       }
       multipleRightImages {
         fluid(maxWidth: 1920, quality: 100) {
-          ...GatsbyContentfulFluid
+          ...GatsbyContentfulFluid_tracedSVG
         }
         title
         description
