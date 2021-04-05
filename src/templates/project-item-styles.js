@@ -68,6 +68,7 @@ export const SingleImage = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  align-content: space-around;
   margin: auto;
 
   & div {
@@ -79,10 +80,11 @@ export const SingleImage = styled.div`
   }
 
   ${respondTo.T900`
-    max-width: 80vw;
-    margin-left: 10vw;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    max-width: 80vw;
+    margin-left: 10vw;
   `}
 `
 
@@ -154,7 +156,7 @@ export const MultipleImages = styled.div`
   }
 
   ${respondTo.T900`
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
   `}
 `
 
