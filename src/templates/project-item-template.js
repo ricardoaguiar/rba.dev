@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 import {
+  ProjectIntro,
   PortfolioList,
   ProjectDescription,
   ProjectDetails,
@@ -95,6 +96,11 @@ export const query = graphql`
           html
         }
       }
+      lessons: childContentfulProjectsLessonsTextNode {
+        childMarkdownRemark {
+          html
+        }
+      }
     }
   }
 `
@@ -102,7 +108,7 @@ export const query = graphql`
 const PortfolioTemplate = ({ data: { portfolio } }) => (
   <Layout>
     <SEO title={portfolio.title} />
-    <ProjectDescription
+    <ProjectIntro
       dangerouslySetInnerHTML={{
         __html: portfolio.overview.childMarkdownRemark.html,
       }}
@@ -196,6 +202,12 @@ const PortfolioTemplate = ({ data: { portfolio } }) => (
           ))}
       </MultipleImages>
     </SingleImage>
+
+    <ProjectDescription
+      dangerouslySetInnerHTML={{
+        __html: portfolio.lessons.childMarkdownRemark.html,
+      }}
+    />
 
     <Published>
       <span>Published: {portfolio.publishDate}</span>

@@ -1,11 +1,23 @@
 import styled from '@emotion/styled'
 import { respondTo } from '../utils/_respondTo'
 
+export const ProjectIntro = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  padding-top: 5rem;
+  line-height: 1.6;
+  margin: auto 0;
+  font-size: 1.15rem;
+
+  ${respondTo.T900`
+    padding: 10vh 14vw;
+  `}
+`
 export const ProjectDescription = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  padding-top: 5rem;
   line-height: 1.6;
   margin: auto 0;
   font-size: 1.15rem;
@@ -172,14 +184,20 @@ export const ImageDescription = styled.div`
 `
 export const MultipleImageDescription = styled.div`
   display: flex;
-  padding: 2rem;
-  font-size: 1.3rem;
+  flex-direction: column;
+  padding: 1.4rem;
+  font-size: 1.125rem;
   line-height: 1.5;
   margin-top: -10rem;
 
   ${respondTo.T900`
+    flex-flow: row wrap;
     max-width: 25vw;
     margin-top: 0;
+
+    & p {
+      margin-bottom: .8rem;
+    }
   `}
 `
 
