@@ -96,10 +96,11 @@ export const query = graphql`
           html
         }
       }
-      lessons: childContentfulProjectsLessonsTextNode {
-        childMarkdownRemark {
-          html
-        }
+      lessons {
+      childMarkdownRemark {
+        html
+      }
+    }
       }
     }
   }

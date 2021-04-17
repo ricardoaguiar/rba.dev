@@ -17,7 +17,7 @@ export const ProjectIntro = styled.div`
 export const ProjectDescription = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 0.8rem;
   line-height: 1.6;
   margin: auto 0;
   font-size: 1.15rem;
