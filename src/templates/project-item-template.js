@@ -97,10 +97,9 @@ export const query = graphql`
         }
       }
       lessons {
-      childMarkdownRemark {
-        html
-      }
-    }
+        childMarkdownRemark {
+          html
+        }
       }
     }
   }
