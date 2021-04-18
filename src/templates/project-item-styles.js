@@ -35,7 +35,7 @@ export const ProjectDetails = styled.div`
   align-content: center;
 
   ${respondTo.T900`
-    max-width: 75vw;
+    max-width: 80vw;
   
   `}
 `
@@ -43,7 +43,7 @@ export const ProjectDetails = styled.div`
 export const PortfolioList = styled.div`
   display: flex;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0.4rem 0.8rem;
   border-radius: 10px;
   background-color: var(--rise-7);
   border: 2px solid var(--rise-5);
@@ -72,6 +72,7 @@ export const PortfolioList = styled.div`
   }
   ${respondTo.T900`
     flex: 0 1 auto;
+    margin: 0.4rem;
   `}
 `
 export const SingleImage = styled.div`
@@ -140,7 +141,8 @@ export const SingleImageRight = styled.div`
   align-items: center;
   max-width: 75vw;
   margin: auto;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
+
   & div + div {
     order: -1;
     margin-bottom: -1rem;
