@@ -40,18 +40,27 @@ const SkillsContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
   font-weight: bolder;
-  width: 75vw;
+  margin: 0 auto;
 
   & li {
     padding: 0.5rem;
-    width: auto;
     word-break: break-word;
-    width: 50%;
+    flex: 1 0 160px;
   }
   ${respondTo.T900`
+
    & li {
-    width: 25%;
+     border-top: 1px solid var(--rise-7);
+     border-right: 1px solid var(--rise-7);
+     flex: 1 0 25%;
    }
+   & li:nth-child(1), li:nth-child(5), li:nth-child(9) {
+     border-left: 1px solid var(--rise-7);
+   }
+   & li:nth-child(9), li:nth-child(10), li:nth-child(11), li:nth-child(12) {
+     border-bottom: 1px solid var(--rise-7);
+   }
+
   `}
 `
 
